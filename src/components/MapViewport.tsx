@@ -1,5 +1,5 @@
 import { useEffect, useRef, type ReactNode } from 'react';
-import { Map as MapLibreMap, setWorkerUrl } from 'maplibre-gl';
+import { Map as MapLibreMap, setWorkerUrl, type ErrorEvent } from 'maplibre-gl';
 import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { INITIAL_MAP_VIEW, MAP_STYLE } from '../map/mapConfig';
@@ -47,7 +47,11 @@ export function MapViewport({
     mapRef.current = map;
 
     const handleRotate = () => onMapBearingChange(map.getBearing());
+    const handleMapError = (event: ErrorEvent) => {
+      console.warn('MapLibre resource error:', event.error.message);
+    };
     map.on('rotate', handleRotate);
+    map.on('error', handleMapError);
     onMapBearingChange(map.getBearing());
 
     onMapZoomActionsChange({
@@ -64,6 +68,7 @@ export function MapViewport({
 
     return () => {
       map.off('rotate', handleRotate);
+      map.off('error', handleMapError);
       map.remove();
       mapRef.current = null;
       onMapZoomActionsChange(null);
