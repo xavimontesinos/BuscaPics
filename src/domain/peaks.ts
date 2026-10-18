@@ -66,6 +66,7 @@ export interface PeakFeatureCollection {
       peakId: string;
       name: string;
       elevationM: number;
+      elevationLabel: string;
     };
   }>;
 }
@@ -111,6 +112,9 @@ export function toPeakFeatureCollection(
         peakId: peak.id,
         name: peak.name,
         elevationM: peak.elevation.valueM,
+        elevationLabel: `${new Intl.NumberFormat("ca-ES", {
+          maximumFractionDigits: 0,
+        }).format(Math.round(peak.elevation.valueM))} m`,
       },
     })),
   };

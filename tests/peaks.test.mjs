@@ -74,6 +74,7 @@ test("map feature coordinates preserve the verified longitude and latitude", () 
   assert.deepEqual(feature?.geometry.coordinates, [1.8926653703265297, 42.320588691949062]);
   assert.equal(feature?.properties.name, "la Tosa");
   assert.equal(feature?.properties.elevationM, 2536.40991);
+  assert.equal(feature?.properties.elevationLabel, "2.536 m");
 });
 
 test("empty FEEC and over-3000m selections produce empty map collections", () => {

@@ -7,7 +7,11 @@ import {
 } from 'maplibre-gl';
 import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { INITIAL_MAP_VIEW, MAP_STYLE } from '../map/mapConfig';
+import {
+  INITIAL_MAP_VIEW,
+  MAP_STYLE,
+  PEAK_MOUNTAIN_ICON,
+} from '../map/mapConfig';
 import type { PeakFeatureCollection } from '../domain/peaks';
 
 setWorkerUrl(maplibreWorkerUrl);
@@ -55,11 +59,27 @@ export function MapViewport({
     });
     map.touchZoomRotate.disableRotation();
     mapRef.current = map;
+    let isActive = true;
+    let peakImagesStarted = false;
+    const peakImages: HTMLImageElement[] = [];
 
     const handleRotate = () => onMapBearingChange(map.getBearing());
     const handleLoad = () => {
       const source = map.getSource('peak-candidates') as GeoJSONSource | undefined;
       source?.setData(peakFeaturesRef.current);
+
+      if (peakImagesStarted) return;
+      peakImagesStarted = true;
+      const url = '/images/peak-mountain.svg';
+      if (map.hasImage(PEAK_MOUNTAIN_ICON)) return;
+      const image = new Image();
+      peakImages.push(image);
+      image.onload = () => {
+        if (!isActive || map.hasImage(PEAK_MOUNTAIN_ICON)) return;
+        map.addImage(PEAK_MOUNTAIN_ICON, image);
+      };
+      image.onerror = () => console.warn(`Could not load peak map image: ${url}`);
+      image.src = url;
     };
     const handleMapError = (event: ErrorEvent) => {
       console.warn('MapLibre resource error:', event.error.message);
@@ -82,6 +102,11 @@ export function MapViewport({
     });
 
     return () => {
+      isActive = false;
+      for (const image of peakImages) {
+        image.onload = null;
+        image.onerror = null;
+      }
       map.off('rotate', handleRotate);
       map.off('load', handleLoad);
       map.off('error', handleMapError);
