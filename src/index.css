@@ -1,52 +1,425 @@
 :root {
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
-  color: #25332c;
-  background: #f5f3ed;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
+  color: #26322c;
+  background: #e9ede8;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+
+  --control-surface: rgb(255 255 255 / 94%);
+  --control-border: rgb(38 50 44 / 9%);
+  --control-shadow: 0 8px 24px rgb(38 50 44 / 11%), 0 1px 3px rgb(38 50 44 / 7%);
+  --safe-top: max(16px, env(safe-area-inset-top));
+  --safe-right: max(16px, env(safe-area-inset-right));
+  --safe-bottom: max(16px, env(safe-area-inset-bottom));
+  --safe-left: max(16px, env(safe-area-inset-left));
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
+html,
+body,
+#root {
+  width: 100%;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100%;
+  height: 100%;
   margin: 0;
 }
 
-.welcome-screen {
-  display: grid;
-  min-height: 100vh;
-  align-content: center;
-  justify-items: center;
-  padding: 2rem;
-  text-align: center;
+body {
+  overflow: hidden;
 }
 
-.eyebrow {
-  margin: 0 0 0.75rem;
-  color: #687c68;
-  font-size: 0.8rem;
+button {
+  font: inherit;
+}
+
+.map-viewport {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: #e9ede8;
+}
+
+.map-placeholder {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 51% 53%, rgb(255 255 255 / 22%), transparent 48%),
+    #e9ede8;
+}
+
+.map-status {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  max-width: calc(100% - 40px);
+  padding: 11px 15px;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgb(255 255 255 / 75%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 45%);
+  color: #727d75;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
+.map-status__marker {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #96a297;
+}
+
+.top-controls {
+  position: absolute;
+  z-index: 2;
+  top: var(--safe-top);
+  right: var(--safe-right);
+  left: var(--safe-left);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.top-controls__right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 9px;
+}
+
+.control-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 48px;
+  border: 1px solid var(--control-border);
+  border-radius: 15px;
+  background: var(--control-surface);
+  color: #34423a;
+  box-shadow: var(--control-shadow);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+button.control-button:not(:disabled) {
+  cursor: pointer;
+  transition: background-color 140ms ease, border-color 140ms ease,
+    box-shadow 140ms ease, transform 140ms ease;
+}
+
+button.control-button:not(:disabled):hover {
+  border-color: rgb(38 50 44 / 16%);
+  background: #fff;
+  box-shadow: 0 10px 28px rgb(38 50 44 / 13%), 0 1px 3px rgb(38 50 44 / 7%);
+}
+
+button.control-button:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+button.control-button:focus-visible,
+.peak-menu__option:focus-visible {
+  outline: 3px solid #76927e;
+  outline-offset: 3px;
+}
+
+button.control-button:disabled {
+  cursor: not-allowed;
+  color: #66736a;
+}
+
+.icon {
+  display: block;
+  width: 19px;
+  height: 19px;
+  flex: 0 0 auto;
+}
+
+.gps-button,
+.top-action {
+  min-height: 50px;
+  padding: 0 14px;
+}
+
+.gps-button {
+  color: #3a5c47;
+}
+
+.provisional-tag {
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: #eff2ed;
+  color: #748078;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.camera-button .provisional-tag {
+  background: #f1f1ee;
+}
+
+.zoom-controls {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: var(--safe-right);
+  display: grid;
+  gap: 8px;
+  transform: translateY(-50%);
+}
+
+.zoom-button {
+  width: 48px;
+  min-height: 48px;
+  padding: 0;
+  border-radius: 14px;
+  color: #6e7971;
+}
+
+.peak-filter {
+  position: absolute;
+  z-index: 3;
+  bottom: var(--safe-bottom);
+  left: var(--safe-left);
+}
+
+.peak-filter__trigger {
+  min-height: 52px;
+  padding: 0 15px;
+  border-radius: 16px;
+  color: #34443a;
+}
+
+.peak-filter__trigger > .icon:first-child {
+  color: #55715c;
+}
+
+.peak-filter__current {
+  max-width: min(32vw, 210px);
+  overflow: hidden;
+  color: #727d75;
+  font-size: 12px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+}
+
+.peak-filter__trigger > .icon:last-child {
+  width: 16px;
+  height: 16px;
+  color: #79847b;
+}
+
+.peak-menu {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 0;
+  width: min(310px, calc(100vw - var(--safe-left) - var(--safe-right)));
+  padding: 8px;
+  border: 1px solid rgb(38 50 44 / 9%);
+  border-radius: 18px;
+  background: rgb(255 255 255 / 97%);
+  box-shadow: 0 16px 40px rgb(38 50 44 / 16%), 0 2px 6px rgb(38 50 44 / 6%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.peak-menu__heading {
+  margin: 7px 10px 8px;
+  color: #7b857e;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-h1 {
-  margin: 0;
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
-  letter-spacing: -0.06em;
+.peak-menu__option {
+  display: flex;
+  width: 100%;
+  min-height: 45px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 11px;
+  background: transparent;
+  color: #39463e;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
 }
 
-.welcome-copy {
-  max-width: 28rem;
-  margin: 1rem 0 0;
-  color: #5d675f;
-  font-size: 1.1rem;
-  line-height: 1.6;
+.peak-menu__option[aria-checked='true'] {
+  background: #edf2ed;
+  color: #355a42;
+  font-weight: 700;
+}
+
+.peak-menu__option:hover {
+  background: #f3f5f2;
+}
+
+.peak-menu__option[aria-checked='true']:hover {
+  background: #e7eee7;
+}
+
+.peak-menu__check {
+  display: grid;
+  width: 21px;
+  height: 21px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #d6ddd6;
+  border-radius: 50%;
+  color: #42684d;
+  font-size: 12px;
+}
+
+.peak-menu__option[aria-checked='true'] .peak-menu__check {
+  border-color: #bfd0c1;
+  background: #dce8dd;
+}
+
+.peak-menu__note {
+  margin: 8px 10px 5px;
+  color: #89928b;
+  font-size: 11px;
+}
+
+@media (max-width: 560px) {
+  :root {
+    --safe-top: max(10px, env(safe-area-inset-top));
+    --safe-right: max(10px, env(safe-area-inset-right));
+    --safe-bottom: max(10px, env(safe-area-inset-bottom));
+    --safe-left: max(10px, env(safe-area-inset-left));
+  }
+
+  .top-controls {
+    gap: 8px;
+  }
+
+  .top-controls__right {
+    gap: 6px;
+  }
+
+  .gps-button,
+  .top-action {
+    min-height: 46px;
+    gap: 6px;
+    padding: 0 10px;
+    border-radius: 13px;
+    font-size: 12px;
+  }
+
+  .gps-button .provisional-tag {
+    padding: 3px 4px;
+    font-size: 8px;
+  }
+
+  .camera-button > span:first-of-type {
+    display: none;
+  }
+
+  .camera-button .provisional-tag {
+    padding: 4px 6px;
+    font-size: 9px;
+  }
+
+  .top-action .icon,
+  .gps-button .icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .zoom-controls {
+    gap: 6px;
+  }
+
+  .zoom-button {
+    width: 44px;
+    min-height: 44px;
+    border-radius: 13px;
+  }
+
+  .peak-filter__trigger {
+    min-height: 48px;
+    gap: 7px;
+    padding: 0 12px;
+    border-radius: 14px;
+  }
+
+  .peak-filter__current {
+    max-width: 30vw;
+    font-size: 11px;
+  }
+
+  .map-status {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 370px) {
+  .top-controls__right {
+    gap: 5px;
+  }
+
+  .gps-button,
+  .top-action {
+    min-height: 44px;
+    gap: 5px;
+    padding: 0 8px;
+    font-size: 11px;
+  }
+
+  .gps-button .provisional-tag,
+  .camera-button .provisional-tag {
+    padding: 3px 4px;
+    font-size: 8px;
+  }
+
+  .top-action .icon,
+  .gps-button .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .peak-filter__current {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
