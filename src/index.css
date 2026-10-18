@@ -153,14 +153,20 @@ button.control-button:disabled {
   background: #f1f1ee;
 }
 
-.zoom-controls {
+.map-navigation-controls {
   position: absolute;
   z-index: 2;
   top: 50%;
   right: var(--safe-right);
   display: grid;
-  gap: 8px;
+  justify-items: center;
+  gap: 10px;
   transform: translateY(-50%);
+}
+
+.zoom-controls {
+  display: grid;
+  gap: 8px;
 }
 
 .zoom-button {
@@ -169,6 +175,48 @@ button.control-button:disabled {
   padding: 0;
   border-radius: 14px;
   color: #6e7971;
+}
+
+.orientation-button {
+  width: 48px;
+  min-height: 48px;
+  padding: 0;
+  border-radius: 50%;
+  color: #53645a;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.orientation-button__compass {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.orientation-button__north {
+  fill: #ad6352;
+  stroke: #ad6352;
+}
+
+.orientation-button__south {
+  fill: #66816d;
+  stroke: #66816d;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
 }
 
 .peak-filter {
@@ -335,6 +383,11 @@ button.control-button:disabled {
     width: 44px;
     min-height: 44px;
     border-radius: 13px;
+  }
+
+  .orientation-button {
+    width: 44px;
+    min-height: 44px;
   }
 
   .peak-filter__trigger {

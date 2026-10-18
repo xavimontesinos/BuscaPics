@@ -11,12 +11,24 @@ export type MapZoomActions = {
   zoomOut: () => void;
 };
 
+export type MapOrientationActions = {
+  setBearing: (bearing: number) => void;
+  resetNorth: () => void;
+};
+
 type MapViewportProps = {
   children: ReactNode;
   onMapZoomActionsChange: (actions: MapZoomActions | null) => void;
+  onMapOrientationActionsChange: (actions: MapOrientationActions | null) => void;
+  onMapBearingChange: (bearing: number | null) => void;
 };
 
-export function MapViewport({ children, onMapZoomActionsChange }: MapViewportProps) {
+export function MapViewport({
+  children,
+  onMapZoomActionsChange,
+  onMapOrientationActionsChange,
+  onMapBearingChange,
+}: MapViewportProps) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
 
@@ -34,17 +46,31 @@ export function MapViewport({ children, onMapZoomActionsChange }: MapViewportPro
     map.touchZoomRotate.disableRotation();
     mapRef.current = map;
 
+    const handleRotate = () => onMapBearingChange(map.getBearing());
+    map.on('rotate', handleRotate);
+    onMapBearingChange(map.getBearing());
+
     onMapZoomActionsChange({
       zoomIn: () => mapRef.current?.zoomIn({ duration: 220 }),
       zoomOut: () => mapRef.current?.zoomOut({ duration: 220 }),
     });
+    onMapOrientationActionsChange({
+      setBearing: (bearing) => mapRef.current?.setBearing(bearing),
+      resetNorth: () => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        mapRef.current?.resetNorth({ duration: reduceMotion ? 0 : 450 });
+      },
+    });
 
     return () => {
+      map.off('rotate', handleRotate);
       map.remove();
       mapRef.current = null;
       onMapZoomActionsChange(null);
+      onMapOrientationActionsChange(null);
+      onMapBearingChange(null);
     };
-  }, [onMapZoomActionsChange]);
+  }, [onMapBearingChange, onMapOrientationActionsChange, onMapZoomActionsChange]);
 
   return (
     <main className="map-viewport" aria-label="Pantalla principal del mapa">

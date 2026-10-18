@@ -1,7 +1,7 @@
 import type { StyleSpecification } from 'maplibre-gl';
 
 const ICGC_TOPOGRAPHIC_TILES =
-  'https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wmts/topografic/MON3857NW/{z}/{x}/{y}.png';
+  'https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wmts/topografic-mut/MON3857NW/{z}/{x}/{y}.png';
 
 export const MAP_STYLE: StyleSpecification = {
   version: 8,

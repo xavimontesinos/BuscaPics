@@ -1,11 +1,21 @@
 import { Icon } from './icons';
+import { OrientationControl } from './OrientationControl';
 
 type MapControlsProps = {
   onZoomIn?: () => void;
   onZoomOut?: () => void;
+  bearing: number;
+  onSetBearing?: (bearing: number) => void;
+  onResetNorth?: () => void;
 };
 
-export function MapControls({ onZoomIn, onZoomOut }: MapControlsProps) {
+export function MapControls({
+  onZoomIn,
+  onZoomOut,
+  bearing,
+  onSetBearing,
+  onResetNorth,
+}: MapControlsProps) {
   return (
     <>
       <div className="top-controls" role="group" aria-label="Controles principales">
@@ -46,27 +56,34 @@ export function MapControls({ onZoomIn, onZoomOut }: MapControlsProps) {
         </div>
       </div>
 
-      <div className="zoom-controls" role="group" aria-label="Controles de zoom">
-        <button
-          className="control-button zoom-button"
-          type="button"
-          disabled={!onZoomIn}
-          onClick={onZoomIn}
-          aria-label="Acercar mapa"
-          title="Acercar"
-        >
-          <Icon name="plus" />
-        </button>
-        <button
-          className="control-button zoom-button"
-          type="button"
-          disabled={!onZoomOut}
-          onClick={onZoomOut}
-          aria-label="Alejar mapa"
-          title="Alejar"
-        >
-          <Icon name="minus" />
-        </button>
+      <div className="map-navigation-controls">
+        <div className="zoom-controls" role="group" aria-label="Controles de zoom">
+          <button
+            className="control-button zoom-button"
+            type="button"
+            disabled={!onZoomIn}
+            onClick={onZoomIn}
+            aria-label="Acercar mapa"
+            title="Acercar"
+          >
+            <Icon name="plus" />
+          </button>
+          <button
+            className="control-button zoom-button"
+            type="button"
+            disabled={!onZoomOut}
+            onClick={onZoomOut}
+            aria-label="Alejar mapa"
+            title="Alejar"
+          >
+            <Icon name="minus" />
+          </button>
+        </div>
+        <OrientationControl
+          bearing={bearing}
+          onSetBearing={onSetBearing}
+          onResetNorth={onResetNorth}
+        />
       </div>
     </>
   );
