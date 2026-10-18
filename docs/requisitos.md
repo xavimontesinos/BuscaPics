@@ -1,6 +1,6 @@
 # BuscaPics --- Documento de requisitos
 
-**Versión:** 0.3\
+**Versión:** 0.4\
 **Estado:** Borrador para revisión\
 **Tipo:** Requisitos funcionales y de interfaz\
 **Nombre del producto:** BuscaPics
@@ -16,6 +16,38 @@ La interfaz principal será un mapa. La aplicación no mostrará imágenes
 de la cámara ni utilizará realidad aumentada en esta fase.
 
 ## 2. Pantalla principal: mapa
+
+### DI-01. Mapa a pantalla completa
+
+El mapa ocupará toda la pantalla de la vista principal. No habrá barras
+inferiores, paneles laterales permanentes ni controles fuera del área del
+mapa. Todos los controles de esta pantalla se presentarán superpuestos
+sobre el mapa.
+
+### DI-02. Distribución de los controles
+
+- En la parte superior se situarán los botones para volver a la posición
+  GPS, abrir la gestión de mapas descargados y acceder al modo cámara.
+- Los controles de zoom serán botones flotantes agrupados en un lateral.
+- El selector de cimas será un botón flotante. Al activarlo, abrirá un
+  menú superpuesto con las cuatro opciones definidas en RF-14.
+- Los controles superpuestos deberán permitir seguir interactuando con el
+  mapa en las zonas que no ocupen.
+
+### DI-03. Adaptación del diseño
+
+La interfaz se adaptará a ventanas anchas y estrechas. La distribución y
+el tamaño de los controles evitarán solapamientos entre ellos y con la
+información necesaria del mapa. En pantallas móviles se respetarán los
+márgenes de seguridad del sistema para evitar que los controles queden
+bajo elementos del dispositivo o del navegador.
+
+### DI-04. Controles provisionales
+
+Los controles cuya funcionalidad aún no esté implementada se identificarán
+claramente como provisionales o pendientes. No deberán aparentar que
+realizan acciones reales ni cambiar falsamente el estado de la aplicación.
+El control de modo cámara seguirá además las restricciones de RF-20.
 
 ### RF-01. Pantalla de inicio
 
@@ -58,11 +90,21 @@ en la posición GPS actual.
 Al activarlo, el mapa volverá a la ubicación actual y, si procede,
 recuperará la orientación basada en el rumbo del dispositivo.
 
+El botón correspondiente se ubicará en la parte superior de la pantalla,
+superpuesto sobre el mapa, según DI-02. Mientras la función no esté
+implementada, el control deberá identificarse como provisional conforme
+a DI-04.
+
 ### RF-06. Control de zoom
 
 La interfaz incluirá controles de zoom estándar para acercar y alejar el
 mapa. También se podrá cambiar el zoom mediante los gestos habituales de
 la plataforma.
+
+Los controles de zoom serán botones flotantes agrupados en un lateral y
+superpuestos sobre el mapa, según DI-02. Mientras el zoom no esté
+implementado, los botones deberán identificarse como provisionales
+conforme a DI-04.
 
 ### RF-07. Desplazamiento del mapa
 
@@ -170,6 +212,11 @@ de montañas se desea mostrar. Las opciones serán:
 El control permitirá seleccionar una de estas opciones cada vez, salvo
 que en una revisión posterior se decida permitir combinaciones.
 
+El acceso al selector será un botón flotante sobre el mapa que abrirá un
+menú superpuesto con las cuatro opciones anteriores, según DI-02. Mientras
+la selección no esté conectada a datos de cimas, el botón y el menú
+deberán identificarse como provisionales conforme a DI-04.
+
 La aplicación deberá documentar la fuente y la versión del catálogo de
 cimas utilizado. Para la lista de los 100 Cims, se verificará la lista
 oficial de la FEEC y sus condiciones de uso.
@@ -181,7 +228,7 @@ etiquetadas según el filtro, sin obligar al usuario a volver a
 seleccionar la posición ni la orientación. La visibilidad de cada cima
 se volverá a calcular cuando sea necesario.
 
-### RF-17. Información de una cima
+### RF-16. Información de una cima
 
 El diseño deberá permitir seleccionar una etiqueta o una cima para
 consultar, como mínimo, su nombre y altitud. El detalle exacto de esta
