@@ -1,6 +1,11 @@
 import { Icon } from './icons';
 
-export function MapControls() {
+type MapControlsProps = {
+  onZoomIn?: () => void;
+  onZoomOut?: () => void;
+};
+
+export function MapControls({ onZoomIn, onZoomOut }: MapControlsProps) {
   return (
     <>
       <div className="top-controls" role="group" aria-label="Controles principales">
@@ -41,22 +46,24 @@ export function MapControls() {
         </div>
       </div>
 
-      <div className="zoom-controls" role="group" aria-label="Controles de zoom provisionales">
+      <div className="zoom-controls" role="group" aria-label="Controles de zoom">
         <button
           className="control-button zoom-button"
           type="button"
-          disabled
-          aria-label="Acercar, zoom pendiente de implementar"
-          title="Acercar · pendiente"
+          disabled={!onZoomIn}
+          onClick={onZoomIn}
+          aria-label="Acercar mapa"
+          title="Acercar"
         >
           <Icon name="plus" />
         </button>
         <button
           className="control-button zoom-button"
           type="button"
-          disabled
-          aria-label="Alejar, zoom pendiente de implementar"
-          title="Alejar · pendiente"
+          disabled={!onZoomOut}
+          onClick={onZoomOut}
+          aria-label="Alejar mapa"
+          title="Alejar"
         >
           <Icon name="minus" />
         </button>
