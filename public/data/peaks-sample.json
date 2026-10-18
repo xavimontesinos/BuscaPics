@@ -1,0 +1,77 @@
+{
+  "dataset": {
+    "name": "Referencial Topogràfic Territorial (RTT)",
+    "version": "topografia-territorial-v1r0-2021",
+    "serviceLayer": "200_relleu_n",
+    "serviceUrl": "https://maps.icgc.cat/vector03/rest/services/RTT/Referencial_Topogr%C3%A0fic_Territorial/MapServer/20",
+    "productUrl": "https://www.icgc.cat/ca/Geoinformacio-i-mapes/Dades-i-productes/Geoinformacio-cartografica/Referencial-Topografic-Territorial",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "Institut Cartogràfic i Geològic de Catalunya (ICGC), Referencial Topogràfic Territorial",
+    "horizontalCrs": "EPSG:25831",
+    "verticalReference": "Orthometric elevation in metres; vertical datum mean sea level at Alicante",
+    "notice": "Sample transcribed from the inspected ICGC REST service. The current GeoPackage has not been inspected; summit status and physical peak positions remain pending."
+  },
+  "peaks": [
+    {
+      "id": "peak-0001",
+      "name": "la Tosa",
+      "alternateNames": [],
+      "coordinates": {
+        "source": { "easting": 408754.38999999966, "northing": 4685965.51, "crs": "EPSG:25831" },
+        "wgs84": { "longitude": 1.8926653703265297, "latitude": 42.320588691949062, "crs": "EPSG:4326" }
+      },
+      "elevation": { "valueM": 2536.40991, "verticalReference": "Orthometric elevation in metres; vertical datum mean sea level at Alicante" },
+      "source": { "recordId": "3302972", "layer": "200_relleu_n", "dataset": "Referencial Topogràfic Territorial", "datasetVersion": "topografia-territorial-v1r0-2021", "recordType": "cot", "datasetUrl": "https://maps.icgc.cat/vector03/rest/services/RTT/Referencial_Topogr%C3%A0fic_Territorial/MapServer/20", "license": "CC BY 4.0", "attribution": "Institut Cartogràfic i Geològic de Catalunya (ICGC), Referencial Topogràfic Territorial", "sourceIdStability": "not-guaranteed" },
+      "validation": { "sourceRecord": "verified-in-source", "coordinates": "reprojected-by-source-service", "summitPosition": "pending" }
+    },
+    {
+      "id": "peak-0002",
+      "name": "Puigllançada",
+      "alternateNames": [],
+      "coordinates": {
+        "source": { "easting": 412256.7400000002, "northing": 4683688.109999999, "crs": "EPSG:25831" },
+        "wgs84": { "longitude": 1.9355074143787228, "latitude": 42.300484112072148, "crs": "EPSG:4326" }
+      },
+      "elevation": { "valueM": 2409.1499, "verticalReference": "Orthometric elevation in metres; vertical datum mean sea level at Alicante" },
+      "source": { "recordId": "3303488", "layer": "200_relleu_n", "dataset": "Referencial Topogràfic Territorial", "datasetVersion": "topografia-territorial-v1r0-2021", "recordType": "cot", "datasetUrl": "https://maps.icgc.cat/vector03/rest/services/RTT/Referencial_Topogr%C3%A0fic_Territorial/MapServer/20", "license": "CC BY 4.0", "attribution": "Institut Cartogràfic i Geològic de Catalunya (ICGC), Referencial Topogràfic Territorial", "sourceIdStability": "not-guaranteed" },
+      "validation": { "sourceRecord": "verified-in-source", "coordinates": "reprojected-by-source-service", "summitPosition": "pending" }
+    },
+    {
+      "id": "peak-0003",
+      "name": "el Vulturó",
+      "alternateNames": [],
+      "coordinates": {
+        "source": { "easting": 387577.5499999998, "northing": 4682406.720000001, "crs": "EPSG:25831" },
+        "wgs84": { "longitude": 1.6364240763340876, "latitude": 42.285777297644003, "crs": "EPSG:4326" }
+      },
+      "elevation": { "valueM": 2648.59009, "verticalReference": "Orthometric elevation in metres; vertical datum mean sea level at Alicante" },
+      "source": { "recordId": "3357808", "layer": "200_relleu_n", "dataset": "Referencial Topogràfic Territorial", "datasetVersion": "topografia-territorial-v1r0-2021", "recordType": "cot", "datasetUrl": "https://maps.icgc.cat/vector03/rest/services/RTT/Referencial_Topogr%C3%A0fic_Territorial/MapServer/20", "license": "CC BY 4.0", "attribution": "Institut Cartogràfic i Geològic de Catalunya (ICGC), Referencial Topogràfic Territorial", "sourceIdStability": "not-guaranteed" },
+      "validation": { "sourceRecord": "verified-in-source", "coordinates": "reprojected-by-source-service", "summitPosition": "pending" }
+    },
+    {
+      "id": "peak-0004",
+      "name": "Pollegó Superior",
+      "alternateNames": [],
+      "coordinates": {
+        "source": { "easting": 392983.4199999999, "northing": 4677231.800000001, "crs": "EPSG:25831" },
+        "wgs84": { "longitude": 1.7029309004412476, "latitude": 42.239943427983654, "crs": "EPSG:4326" }
+      },
+      "elevation": { "valueM": 2506.37012, "verticalReference": "Orthometric elevation in metres; vertical datum mean sea level at Alicante" },
+      "source": { "recordId": "3358293", "layer": "200_relleu_n", "dataset": "Referencial Topogràfic Territorial", "datasetVersion": "topografia-territorial-v1r0-2021", "recordType": "cot", "datasetUrl": "https://maps.icgc.cat/vector03/rest/services/RTT/Referencial_Topogr%C3%A0fic_Territorial/MapServer/20", "license": "CC BY 4.0", "attribution": "Institut Cartogràfic i Geològic de Catalunya (ICGC), Referencial Topogràfic Territorial", "sourceIdStability": "not-guaranteed" },
+      "validation": { "sourceRecord": "verified-in-source", "coordinates": "reprojected-by-source-service", "summitPosition": "pending" }
+    },
+    {
+      "id": "peak-0005",
+      "name": "Cap de la Boixassa",
+      "alternateNames": [],
+      "coordinates": {
+        "source": { "easting": 400953.8799999999, "northing": 4682514.039999999, "crs": "EPSG:25831" },
+        "wgs84": { "longitude": 1.7986107743713646, "latitude": 42.288557816303637, "crs": "EPSG:4326" }
+      },
+      "elevation": { "valueM": 1819.58997, "verticalReference": "Orthometric elevation in metres; vertical datum mean sea level at Alicante" },
+      "source": { "recordId": "3363748", "layer": "200_relleu_n", "dataset": "Referencial Topogràfic Territorial", "datasetVersion": "topografia-territorial-v1r0-2021", "recordType": "cot", "datasetUrl": "https://maps.icgc.cat/vector03/rest/services/RTT/Referencial_Topogr%C3%A0fic_Territorial/MapServer/20", "license": "CC BY 4.0", "attribution": "Institut Cartogràfic i Geològic de Catalunya (ICGC), Referencial Topogràfic Territorial", "sourceIdStability": "not-guaranteed" },
+      "validation": { "sourceRecord": "verified-in-source", "coordinates": "reprojected-by-source-service", "summitPosition": "pending" }
+    }
+  ]
+}

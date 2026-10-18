@@ -3,6 +3,7 @@ import type { StyleSpecification } from 'maplibre-gl';
 const ICGC_TOPOGRAPHIC_TILES =
   'https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wmts/topografic-mut/MON3857NW/{z}/{x}/{y}.png';
 const ICGC_POPULATION_LABELS = '/data/localitats-baga-10km.geojson';
+const EMPTY_PEAK_FEATURES = { type: 'FeatureCollection' as const, features: [] };
 
 export const MAP_STYLE: StyleSpecification = {
   version: 8,
@@ -19,6 +20,10 @@ export const MAP_STYLE: StyleSpecification = {
     'icgc-population-labels': {
       type: 'geojson',
       data: ICGC_POPULATION_LABELS,
+    },
+    'peak-candidates': {
+      type: 'geojson',
+      data: EMPTY_PEAK_FEATURES,
     },
   },
   layers: [
@@ -63,6 +68,41 @@ export const MAP_STYLE: StyleSpecification = {
       },
       paint: {
         'text-color': '#263238',
+        'text-halo-color': '#fffdf5',
+        'text-halo-width': 1.5,
+        'text-halo-blur': 0.25,
+      },
+    },
+    {
+      id: 'peak-candidate-markers',
+      type: 'circle',
+      source: 'peak-candidates',
+      minzoom: 9,
+      paint: {
+        'circle-radius': 4,
+        'circle-color': '#9b674e',
+        'circle-stroke-color': '#fffdf5',
+        'circle-stroke-width': 1.5,
+      },
+    },
+    {
+      id: 'peak-candidate-labels',
+      type: 'symbol',
+      source: 'peak-candidates',
+      minzoom: 9,
+      layout: {
+        'text-field': ['get', 'name'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 9, 11, 12, 12, 14, 13],
+        'text-offset': [0, 1.1],
+        'text-anchor': 'top',
+        'text-rotation-alignment': 'viewport',
+        'text-pitch-alignment': 'viewport',
+        'text-allow-overlap': false,
+        'text-ignore-placement': false,
+        'text-padding': 3,
+      },
+      paint: {
+        'text-color': '#573d31',
         'text-halo-color': '#fffdf5',
         'text-halo-width': 1.5,
         'text-halo-blur': 0.25,

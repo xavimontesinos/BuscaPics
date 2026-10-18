@@ -1,8 +1,14 @@
 import { useEffect, useRef, type ReactNode } from 'react';
-import { Map as MapLibreMap, setWorkerUrl, type ErrorEvent } from 'maplibre-gl';
+import {
+  Map as MapLibreMap,
+  setWorkerUrl,
+  type ErrorEvent,
+  type GeoJSONSource,
+} from 'maplibre-gl';
 import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { INITIAL_MAP_VIEW, MAP_STYLE } from '../map/mapConfig';
+import type { PeakFeatureCollection } from '../domain/peaks';
 
 setWorkerUrl(maplibreWorkerUrl);
 
@@ -18,6 +24,7 @@ export type MapOrientationActions = {
 
 type MapViewportProps = {
   children: ReactNode;
+  peakFeatures: PeakFeatureCollection;
   onMapZoomActionsChange: (actions: MapZoomActions | null) => void;
   onMapOrientationActionsChange: (actions: MapOrientationActions | null) => void;
   onMapBearingChange: (bearing: number | null) => void;
@@ -25,12 +32,15 @@ type MapViewportProps = {
 
 export function MapViewport({
   children,
+  peakFeatures,
   onMapZoomActionsChange,
   onMapOrientationActionsChange,
   onMapBearingChange,
 }: MapViewportProps) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
+  const peakFeaturesRef = useRef(peakFeatures);
+  peakFeaturesRef.current = peakFeatures;
 
   useEffect(() => {
     const container = mapContainerRef.current;
@@ -47,10 +57,15 @@ export function MapViewport({
     mapRef.current = map;
 
     const handleRotate = () => onMapBearingChange(map.getBearing());
+    const handleLoad = () => {
+      const source = map.getSource('peak-candidates') as GeoJSONSource | undefined;
+      source?.setData(peakFeaturesRef.current);
+    };
     const handleMapError = (event: ErrorEvent) => {
       console.warn('MapLibre resource error:', event.error.message);
     };
     map.on('rotate', handleRotate);
+    map.on('load', handleLoad);
     map.on('error', handleMapError);
     onMapBearingChange(map.getBearing());
 
@@ -68,6 +83,7 @@ export function MapViewport({
 
     return () => {
       map.off('rotate', handleRotate);
+      map.off('load', handleLoad);
       map.off('error', handleMapError);
       map.remove();
       mapRef.current = null;
@@ -76,6 +92,11 @@ export function MapViewport({
       onMapBearingChange(null);
     };
   }, [onMapBearingChange, onMapOrientationActionsChange, onMapZoomActionsChange]);
+
+  useEffect(() => {
+    const source = mapRef.current?.getSource('peak-candidates') as GeoJSONSource | undefined;
+    source?.setData(peakFeatures);
+  }, [peakFeatures]);
 
   return (
     <main className="map-viewport" aria-label="Pantalla principal del mapa">

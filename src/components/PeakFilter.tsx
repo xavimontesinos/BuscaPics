@@ -1,7 +1,8 @@
 import { useEffect, useId, useState } from 'react';
+import type { PeakFilterId } from '../domain/peaks';
 import { Icon } from './icons';
 
-export type PeakSet = '3000' | 'feec' | '2500' | '2000';
+export type PeakSet = PeakFilterId;
 
 type PeakOption = {
   value: PeakSet;
@@ -9,10 +10,10 @@ type PeakOption = {
 };
 
 const peakOptions: PeakOption[] = [
-  { value: '3000', label: 'Más de 3.000 m' },
-  { value: 'feec', label: 'Los 100 Cims de la FEEC' },
-  { value: '2500', label: 'Más de 2.500 m' },
-  { value: '2000', label: 'Más de 2.000 m' },
+  { value: 'over-3000m', label: 'Más de 3.000 m' },
+  { value: 'feec-100-cims', label: 'Los 100 Cims de la FEEC' },
+  { value: 'over-2500m', label: 'Más de 2.500 m' },
+  { value: 'over-2000m', label: 'Más de 2.000 m' },
 ];
 
 type PeakFilterProps = {
@@ -75,7 +76,9 @@ export function PeakFilter({ value, onChange }: PeakFilterProps) {
               </span>
             </button>
           ))}
-          <p className="peak-menu__note">Selector provisional · no filtra datos</p>
+          <p className="peak-menu__note">
+            Muestra RTT de prueba · posiciones de cima pendientes de validar
+          </p>
         </div>
       )}
     </div>

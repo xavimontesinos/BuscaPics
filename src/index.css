@@ -164,6 +164,24 @@ button.control-button:disabled {
   transform: translateY(-50%);
 }
 
+.peak-catalog-error {
+  position: absolute;
+  z-index: 2;
+  top: calc(var(--safe-top) + 62px);
+  left: 50%;
+  max-width: min(420px, calc(100vw - var(--safe-left) - var(--safe-right)));
+  margin: 0;
+  padding: 10px 14px;
+  transform: translateX(-50%);
+  border: 1px solid var(--control-border);
+  border-radius: 12px;
+  background: var(--control-surface);
+  box-shadow: var(--control-shadow);
+  color: #57483f;
+  font-size: 12px;
+  text-align: center;
+}
+
 .zoom-controls {
   display: grid;
   gap: 8px;
