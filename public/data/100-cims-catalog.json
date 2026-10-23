@@ -1,0 +1,5295 @@
+{
+  "metadata": {
+    "title": "BuscaPics 100 Cims development catalog",
+    "status": "generated development data; not verified as official FEEC data",
+    "sources": [
+      "100_cims_complet.gpx",
+      "100_cims_essencials.gpx"
+    ],
+    "provenance": "Both input GPX files declare creator=\"ChatGPT\"; underlying provenance is unconfirmed.",
+    "reuseConditions": "Pending confirmation. This generated catalog is not approved for public redistribution.",
+    "coordinateAndElevationValidation": "Not independently verified; values are copied from the input GPX."
+  },
+  "peaks": [
+    {
+      "id": "cim-puig-de-cervera-42.43523-3.17075",
+      "name": "Puig de Cervera",
+      "sourceName": "Puig de Cervera (162 m)",
+      "latitude": 42.435225,
+      "longitude": 3.170751,
+      "elevationMeters": 161.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-miranda-de-llaberia-41.09238-0.86284",
+      "name": "Miranda de Llaberia",
+      "sourceName": "Miranda de Llaberia (891 m)",
+      "latitude": 41.092384,
+      "longitude": 0.86284,
+      "elevationMeters": 891.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-cavall-bernat-de-llaberia-41.08408-0.87505",
+      "name": "Cavall Bernat de Llaberia",
+      "sourceName": "Cavall Bernat de Llaberia (748 m)",
+      "latitude": 41.084078,
+      "longitude": 0.87505,
+      "elevationMeters": 747.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-penya-aguda-42.21453-1.26726",
+      "name": "Penya Aguda",
+      "sourceName": "Penya Aguda (1320 m)",
+      "latitude": 42.214531,
+      "longitude": 1.267256,
+      "elevationMeters": 1320.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-l-oratori-42.20137-1.21832",
+      "name": "l'Oratori",
+      "sourceName": "l'Oratori (1684 m)",
+      "latitude": 42.201373,
+      "longitude": 1.218321,
+      "elevationMeters": 1683.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-balinyo-42.18840-1.34350",
+      "name": "Tossal de Balinyó",
+      "sourceName": "Tossal de Balinyó (1162 m)",
+      "latitude": 42.188403,
+      "longitude": 1.343498,
+      "elevationMeters": 1162.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-munt-de-montsonis-41.88589-1.01406",
+      "name": "Munt de Montsonís",
+      "sourceName": "Munt de Montsonís (567 m)",
+      "latitude": 41.885888,
+      "longitude": 1.014059,
+      "elevationMeters": 567.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-montero-41.86286-0.85300",
+      "name": "Tossal de Monteró",
+      "sourceName": "Tossal de Monteró (564 m)",
+      "latitude": 41.862861,
+      "longitude": 0.852997,
+      "elevationMeters": 563.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-lo-blau-o-roca-grossa-de-moletans-40.87096-0.26850",
+      "name": "Lo Blau o Roca Grossa de Moletans",
+      "sourceName": "Lo Blau o Roca Grossa de Moletans (765 m)",
+      "latitude": 40.870959,
+      "longitude": 0.268498,
+      "elevationMeters": 764.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-gros-d-almatret-41.33317-0.38188",
+      "name": "Tossal Gros d'Almatret",
+      "sourceName": "Tossal Gros d'Almatret (295 m)",
+      "latitude": 41.333165,
+      "longitude": 0.381876,
+      "elevationMeters": 295,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-punta-de-montaspre-40.87557-0.57094",
+      "name": "Punta de Montaspre",
+      "sourceName": "Punta de Montaspre (477 m)",
+      "latitude": 40.875572,
+      "longitude": 0.570942,
+      "elevationMeters": 477,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-punta-dels-pins-carrassers-41.30563-0.84203",
+      "name": "Punta dels Pins Carrassers",
+      "sourceName": "Punta dels Pins Carrassers (952 m)",
+      "latitude": 41.305632,
+      "longitude": 0.842026,
+      "elevationMeters": 951.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-clapi-vell-41.38832-1.54265",
+      "name": "Clapí Vell",
+      "sourceName": "Clapí Vell (670 m)",
+      "latitude": 41.388321,
+      "longitude": 1.542654,
+      "elevationMeters": 670.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-del-mas-de-nadal-41.82565-1.31735",
+      "name": "Tossal del Mas de Nadal",
+      "sourceName": "Tossal del Mas de Nadal (503 m)",
+      "latitude": 41.825654,
+      "longitude": 1.317348,
+      "elevationMeters": 502.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-bades-42.32387-1.62503",
+      "name": "Tossal de Badés",
+      "sourceName": "Tossal de Badés (1779 m)",
+      "latitude": 42.323872,
+      "longitude": 1.625029,
+      "elevationMeters": 1778.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sant-quiri-42.30560-1.30176",
+      "name": "Sant Quiri",
+      "sourceName": "Sant Quiri (1423 m)",
+      "latitude": 42.305599,
+      "longitude": 1.301764,
+      "elevationMeters": 1423.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-lo-morral-41.15630-0.85125",
+      "name": "lo Morral",
+      "sourceName": "lo Morral (617 m)",
+      "latitude": 41.156296,
+      "longitude": 0.851249,
+      "elevationMeters": 616.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-serret-del-cisa-41.19970-1.01749",
+      "name": "Serret del Cisa",
+      "sourceName": "Serret del Cisa (494 m)",
+      "latitude": 41.199699,
+      "longitude": 1.017487,
+      "elevationMeters": 493.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-d-espigol-41.71132-1.08998",
+      "name": "Tossal d'Espígol",
+      "sourceName": "Tossal d'Espígol (346 m)",
+      "latitude": 41.711322,
+      "longitude": 1.089983,
+      "elevationMeters": 346.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-francas-41.30139-1.45883",
+      "name": "Puig Francàs",
+      "sourceName": "Puig Francàs (502 m)",
+      "latitude": 41.301389,
+      "longitude": 1.458826,
+      "elevationMeters": 502.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-cogula-40.57724-0.48247",
+      "name": "Cogula",
+      "sourceName": "Cogula (370 m)",
+      "latitude": 40.57724,
+      "longitude": 0.482468,
+      "elevationMeters": 370.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-quatre-mollons-40.64304-0.56189",
+      "name": "Quatre Mollons",
+      "sourceName": "Quatre Mollons (364 m)",
+      "latitude": 40.643041,
+      "longitude": 0.561888,
+      "elevationMeters": 364.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roca-de-la-barca-40.96353-0.58438",
+      "name": "Roca de la Barca",
+      "sourceName": "Roca de la Barca (715 m)",
+      "latitude": 40.963531,
+      "longitude": 0.584378,
+      "elevationMeters": 715.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-el-bres-41.15403-0.97743",
+      "name": "el Bres",
+      "sourceName": "el Bres (474 m)",
+      "latitude": 41.154026,
+      "longitude": 0.977433,
+      "elevationMeters": 474.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-caramull-40.98715-0.54783",
+      "name": "Tossal de Caramull",
+      "sourceName": "Tossal de Caramull (372 m)",
+      "latitude": 40.987146,
+      "longitude": 0.547825,
+      "elevationMeters": 372,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-carcoles-41.03608-0.67955",
+      "name": "Tossal de Càrcoles",
+      "sourceName": "Tossal de Càrcoles (363 m)",
+      "latitude": 41.036084,
+      "longitude": 0.67955,
+      "elevationMeters": 362.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-forca-real-42.72692-2.70023",
+      "name": "Força Real",
+      "sourceName": "Força Real (461 m)",
+      "latitude": 42.72692,
+      "longitude": 2.700226,
+      "elevationMeters": 461.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-punta-de-l-aigua-40.92780-0.36849",
+      "name": "Punta de l'Aigua",
+      "sourceName": "Punta de l'Aigua (995 m)",
+      "latitude": 40.927801,
+      "longitude": 0.368492,
+      "elevationMeters": 994.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-moleta-de-les-canals-40.90878-0.36390",
+      "name": "Moleta de les Canals",
+      "sourceName": "Moleta de les Canals (1022 m)",
+      "latitude": 40.908779,
+      "longitude": 0.363901,
+      "elevationMeters": 1022.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-cabre-41.31518-1.19126",
+      "name": "Puig Cabré",
+      "sourceName": "Puig Cabré (484 m)",
+      "latitude": 41.315181,
+      "longitude": 1.191262,
+      "elevationMeters": 484.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-punta-del-general-41.34143-0.87815",
+      "name": "Punta del General",
+      "sourceName": "Punta del General (870 m)",
+      "latitude": 41.341427,
+      "longitude": 0.878149,
+      "elevationMeters": 869.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-l-aguila-41.13990-0.60219",
+      "name": "Pic de l'Águila",
+      "sourceName": "Pic de l'Águila (434 m)",
+      "latitude": 41.139903,
+      "longitude": 0.602189,
+      "elevationMeters": 433.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roc-del-migdia-la-valldan-42.10457-1.36240",
+      "name": "Roc del Migdia (la Valldan)",
+      "sourceName": "Roc del Migdia (la Valldan) (1118 m)",
+      "latitude": 42.104567,
+      "longitude": 1.362402,
+      "elevationMeters": 1118.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sant-simplici-41.14510-1.33706",
+      "name": "Sant Simplici",
+      "sourceName": "Sant Simplici (82 m)",
+      "latitude": 41.145097,
+      "longitude": 1.337057,
+      "elevationMeters": 81.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-lo-peladet-42.02636-0.91240",
+      "name": "lo Peladet",
+      "sourceName": "lo Peladet (1443 m)",
+      "latitude": 42.026357,
+      "longitude": 0.912398,
+      "elevationMeters": 1443.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-mirapallars-i-urgell-42.02107-0.95882",
+      "name": "Tossal de Mirapallars i Urgell",
+      "sourceName": "Tossal de Mirapallars i Urgell (1644 m)",
+      "latitude": 42.021069,
+      "longitude": 0.958816,
+      "elevationMeters": 1643.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-mont-roig-cim-de-les-altures-41.90306-0.87865",
+      "name": "Mont-roig (Cim de les Altures)",
+      "sourceName": "Mont-roig (Cim de les Altures) (620 m)",
+      "latitude": 41.903061,
+      "longitude": 0.878651,
+      "elevationMeters": 620.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tossal-de-sant-jordi-41.89913-0.89256",
+      "name": "Tossal de Sant Jordi",
+      "sourceName": "Tossal de Sant Jordi (638 m)",
+      "latitude": 41.899128,
+      "longitude": 0.892559,
+      "elevationMeters": 637.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roca-del-migdia-rocamala-40.99286-0.39773",
+      "name": "Roca del Migdia/Rocamala",
+      "sourceName": "Roca del Migdia/Rocamala (546 m)",
+      "latitude": 40.992862,
+      "longitude": 0.397732,
+      "elevationMeters": 545.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roca-gelera-42.68502-2.43744",
+      "name": "Roca Gelera",
+      "sourceName": "Roca Gelera (1062 m)",
+      "latitude": 42.685018,
+      "longitude": 2.437444,
+      "elevationMeters": 1061.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-la-grava-42.60477-1.93355",
+      "name": "Puig de la Grava",
+      "sourceName": "Puig de la Grava (2604 m)",
+      "latitude": 42.604775,
+      "longitude": 1.933546,
+      "elevationMeters": 2603.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-carlit-42.57079-1.93216",
+      "name": "Carlit",
+      "sourceName": "Carlit (2830 m)",
+      "latitude": 42.570794,
+      "longitude": 1.932164,
+      "elevationMeters": 2829.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-torre-del-far-42.80540-2.76188",
+      "name": "Torre del Far",
+      "sourceName": "Torre del Far (450 m)",
+      "latitude": 42.805404,
+      "longitude": 2.761879,
+      "elevationMeters": 449.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-dormidor-42.70935-2.26477",
+      "name": "Tuc Dormidor",
+      "sourceName": "Tuc Dormidor (1820 m)",
+      "latitude": 42.709348,
+      "longitude": 2.264772,
+      "elevationMeters": 1819.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roca-colom-42.42528-2.31900",
+      "name": "Roca Colom",
+      "sourceName": "Roca Colom (2479 m)",
+      "latitude": 42.425277,
+      "longitude": 2.318999,
+      "elevationMeters": 2479.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-costabona-42.41682-2.34362",
+      "name": "Costabona",
+      "sourceName": "Costabona (2412 m)",
+      "latitude": 42.416823,
+      "longitude": 2.343617,
+      "elevationMeters": 2411.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-de-les-tres-esteles-o-pic-de-les-tres-estelles-42.50874-2.32328",
+      "name": "Puig de les Tres Esteles o Pic de les Tres Estelles",
+      "sourceName": "Puig de les Tres Esteles o Pic de les Tres Estelles (2061 m)",
+      "latitude": 42.508742,
+      "longitude": 2.323276,
+      "elevationMeters": 2061.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-punta-del-pallars-41.01243-0.87426",
+      "name": "Punta del Pallars",
+      "sourceName": "Punta del Pallars (461 m)",
+      "latitude": 41.012426,
+      "longitude": 0.874264,
+      "elevationMeters": 460.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-l-aliga-41.02781-0.55794",
+      "name": "L'Aliga",
+      "sourceName": "L'Aliga (360 m)",
+      "latitude": 41.027813,
+      "longitude": 0.557937,
+      "elevationMeters": 359.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossa-de-l-alsina-40.96809-0.80955",
+      "name": "Tossa de l'Alsina",
+      "sourceName": "Tossa de l'Alsina (665 m)",
+      "latitude": 40.968088,
+      "longitude": 0.809551,
+      "elevationMeters": 665,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-mollo-puntaire-40.99069-0.84783",
+      "name": "Molló Puntaire",
+      "sourceName": "Molló Puntaire (633 m)",
+      "latitude": 40.990687,
+      "longitude": 0.847833,
+      "elevationMeters": 632.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-santa-barbara-escornalbou-41.12717-0.91502",
+      "name": "Santa Bàrbara (Escornalbou)",
+      "sourceName": "Santa Bàrbara (Escornalbou) (556 m)",
+      "latitude": 41.127166,
+      "longitude": 0.915015,
+      "elevationMeters": 556,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-de-la-cabrafiga-41.05340-0.89509",
+      "name": "Puig de la Cabrafiga",
+      "sourceName": "Puig de la Cabrafiga (573 m)",
+      "latitude": 41.053403,
+      "longitude": 0.89509,
+      "elevationMeters": 572.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-el-torn-40.96575-0.88334",
+      "name": "El Torn",
+      "sourceName": "El Torn (137 m)",
+      "latitude": 40.965746,
+      "longitude": 0.883343,
+      "elevationMeters": 137.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-sant-miquel-41.63725-1.58100",
+      "name": "Puig de Sant Miquel",
+      "sourceName": "Puig de Sant Miquel (686 m)",
+      "latitude": 41.637246,
+      "longitude": 1.580999,
+      "elevationMeters": 685.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-turo-de-l-escletxa-41.62912-1.88674",
+      "name": "Turó de l'Escletxa",
+      "sourceName": "Turó de l'Escletxa (410 m)",
+      "latitude": 41.629117,
+      "longitude": 1.886736,
+      "elevationMeters": 409.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roc-de-sant-aventi-42.30722-0.97427",
+      "name": "Roc de Sant Aventí",
+      "sourceName": "Roc de Sant Aventí (1469 m)",
+      "latitude": 42.307223,
+      "longitude": 0.974272,
+      "elevationMeters": 1469.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-mola-de-genessies-41.01624-0.78541",
+      "name": "Mola de Genessies",
+      "sourceName": "Mola de Genessies (648 m)",
+      "latitude": 41.016238,
+      "longitude": 0.785413,
+      "elevationMeters": 647.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-de-la-mola-41.31927-1.84778",
+      "name": "Puig de la Mola",
+      "sourceName": "Puig de la Mola (520 m)",
+      "latitude": 41.319274,
+      "longitude": 1.84778,
+      "elevationMeters": 519.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montau-41.34585-1.88500",
+      "name": "Montau",
+      "sourceName": "Montau (638 m)",
+      "latitude": 41.345846,
+      "longitude": 1.885001,
+      "elevationMeters": 638.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-bellmunt-42.10152-2.29373",
+      "name": "Bellmunt",
+      "sourceName": "Bellmunt (1188 m)",
+      "latitude": 42.101517,
+      "longitude": 2.293726,
+      "elevationMeters": 1188.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-la-mola-o-moleta-d-alfara-40.89896-0.41840",
+      "name": "La Mola o Moleta d'Alfara",
+      "sourceName": "La Mola o Moleta d'Alfara (770 m)",
+      "latitude": 40.898962,
+      "longitude": 0.418395,
+      "elevationMeters": 770.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-la-coscollosa-40.90236-0.41361",
+      "name": "La Coscollosa",
+      "sourceName": "La Coscollosa (827 m)",
+      "latitude": 40.902361,
+      "longitude": 0.413607,
+      "elevationMeters": 827.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puigsacalm-42.12511-2.38792",
+      "name": "Puigsacalm",
+      "sourceName": "Puigsacalm (1485 m)",
+      "latitude": 42.125106,
+      "longitude": 2.387916,
+      "elevationMeters": 1485.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-la-morella-41.29651-1.91552",
+      "name": "La Morella",
+      "sourceName": "La Morella (572 m)",
+      "latitude": 41.296514,
+      "longitude": 1.915518,
+      "elevationMeters": 572.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-la-cogulla-41.27753-0.80573",
+      "name": "La Cogulla",
+      "sourceName": "La Cogulla (1024 m)",
+      "latitude": 41.277526,
+      "longitude": 0.805725,
+      "elevationMeters": 1023.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-los-picons-41.92586-0.64156",
+      "name": "Los Picons",
+      "sourceName": "Los Picons (850 m)",
+      "latitude": 41.925857,
+      "longitude": 0.641563,
+      "elevationMeters": 849.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-torre-de-madeloc-o-tour-du-madeloc-42.49055-3.07481",
+      "name": "Torre de Madeloc o Tour du Madeloc",
+      "sourceName": "Torre de Madeloc o Tour du Madeloc (615 m)",
+      "latitude": 42.490547,
+      "longitude": 3.074805,
+      "elevationMeters": 615,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pic-de-sallafor-42.47346-3.03805",
+      "name": "Pic de Sallafor",
+      "sourceName": "Pic de Sallafor (969 m)",
+      "latitude": 42.473461,
+      "longitude": 3.038054,
+      "elevationMeters": 968.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-querroig-42.43815-3.12092",
+      "name": "Querroig",
+      "sourceName": "Querroig (622 m)",
+      "latitude": 42.438152,
+      "longitude": 3.120922,
+      "elevationMeters": 621.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-sant-cristau-42.49200-2.89066",
+      "name": "Puig Sant Cristau",
+      "sourceName": "Puig Sant Cristau (961 m)",
+      "latitude": 42.492004,
+      "longitude": 2.890662,
+      "elevationMeters": 961.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-neulos-42.48214-2.94708",
+      "name": "Puig Neulós",
+      "sourceName": "Puig Neulós (1224 m)",
+      "latitude": 42.482138,
+      "longitude": 2.947081,
+      "elevationMeters": 1224.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-roc-mele-42.58776-1.74019",
+      "name": "Roc Melé",
+      "sourceName": "Roc Melé (2745 m)",
+      "latitude": 42.587759,
+      "longitude": 1.740193,
+      "elevationMeters": 2744.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-picorandan-41.28789-1.01736",
+      "name": "Picorandan",
+      "sourceName": "Picorandan (904 m)",
+      "latitude": 41.287886,
+      "longitude": 1.017359,
+      "elevationMeters": 904.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-grony-de-miralles-41.51669-1.49218",
+      "name": "Grony de Miralles",
+      "sourceName": "Grony de Miralles (830 m)",
+      "latitude": 41.516694,
+      "longitude": 1.492184,
+      "elevationMeters": 830.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-el-castellot-41.33761-1.57855",
+      "name": "El Castellot",
+      "sourceName": "El Castellot (395 m)",
+      "latitude": 41.337611,
+      "longitude": 1.578555,
+      "elevationMeters": 394.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tossal-dels-tres-reis-40.73224-0.16937",
+      "name": "Tossal dels Tres Reis",
+      "sourceName": "Tossal dels Tres Reis (1326 m)",
+      "latitude": 40.732236,
+      "longitude": 0.169367,
+      "elevationMeters": 1325.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-el-negrell-40.73411-0.22731",
+      "name": "El Negrell",
+      "sourceName": "El Negrell (1317 m)",
+      "latitude": 40.734111,
+      "longitude": 0.227307,
+      "elevationMeters": 1317.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-lo-tormo-41.17902-0.64351",
+      "name": "Lo Tormo",
+      "sourceName": "Lo Tormo (451 m)",
+      "latitude": 41.179024,
+      "longitude": 0.643513,
+      "elevationMeters": 451.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-montalt-punta-nord-41.06835-0.80324",
+      "name": "Montalt Punta Nord",
+      "sourceName": "Montalt Punta Nord (728 m)",
+      "latitude": 41.068345,
+      "longitude": 0.803235,
+      "elevationMeters": 728.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-el-montsianell-40.68221-0.55444",
+      "name": "El Montsianell",
+      "sourceName": "El Montsianell (242 m)",
+      "latitude": 40.682206,
+      "longitude": 0.554435,
+      "elevationMeters": 242.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-milla-42.00170-0.67217",
+      "name": "Puig de Millà",
+      "sourceName": "Puig de Millà (1011 m)",
+      "latitude": 42.001702,
+      "longitude": 0.672172,
+      "elevationMeters": 1010.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-mola-de-colldejou-41.10891-0.87400",
+      "name": "Mola de Colldejou",
+      "sourceName": "Mola de Colldejou (880 m)",
+      "latitude": 41.108907,
+      "longitude": 0.873998,
+      "elevationMeters": 880,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tossa-de-braibal-42.50265-1.59935",
+      "name": "Tossa de Braibal",
+      "sourceName": "Tossa de Braibal (2617 m)",
+      "latitude": 42.502652,
+      "longitude": 1.599352,
+      "elevationMeters": 2617.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-font-blanca-42.64971-1.53424",
+      "name": "Font Blanca",
+      "sourceName": "Font Blanca (2799 m)",
+      "latitude": 42.649708,
+      "longitude": 1.534243,
+      "elevationMeters": 2798.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-casamanya-nord-42.58768-1.57032",
+      "name": "Casamanya Nord",
+      "sourceName": "Casamanya Nord (2651 m)",
+      "latitude": 42.587683,
+      "longitude": 1.570325,
+      "elevationMeters": 2650.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pica-d-estats-42.66714-1.39789",
+      "name": "Pica d'Estats",
+      "sourceName": "Pica d'Estats (3075 m)",
+      "latitude": 42.667142,
+      "longitude": 1.397888,
+      "elevationMeters": 3074.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pic-de-certascan-42.71197-1.27773",
+      "name": "Pic de Certascan",
+      "sourceName": "Pic de Certascan (2798 m)",
+      "latitude": 42.711967,
+      "longitude": 1.277727,
+      "elevationMeters": 2798.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-pelat-41.26629-1.05455",
+      "name": "Puig Pelat",
+      "sourceName": "Puig Pelat (1062 m)",
+      "latitude": 41.266294,
+      "longitude": 1.054552,
+      "elevationMeters": 1062.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-d-engrillo-40.94303-0.37085",
+      "name": "Tossal d'Engrilló",
+      "sourceName": "Tossal d'Engrilló (979 m)",
+      "latitude": 40.943033,
+      "longitude": 0.370849,
+      "elevationMeters": 979.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-el-cogullo-de-cabra-41.42708-1.30302",
+      "name": "El Cogulló de Cabra",
+      "sourceName": "El Cogulló de Cabra (857 m)",
+      "latitude": 41.427077,
+      "longitude": 1.303021,
+      "elevationMeters": 856.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-la-tossa-tivissa-41.02893-0.73628",
+      "name": "La Tossa (Tivissa)",
+      "sourceName": "La Tossa (Tivissa) (636 m)",
+      "latitude": 41.028929,
+      "longitude": 0.73628,
+      "elevationMeters": 635.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tossal-de-la-moradilla-41.61952-0.70974",
+      "name": "Tossal de la Moradilla",
+      "sourceName": "Tossal de la Moradilla (213 m)",
+      "latitude": 41.61952,
+      "longitude": 0.709736,
+      "elevationMeters": 213.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-la-baltasana-41.32599-1.00416",
+      "name": "Tossal de la Baltasana",
+      "sourceName": "Tossal de la Baltasana (1144 m)",
+      "latitude": 41.325985,
+      "longitude": 1.004158,
+      "elevationMeters": 1144.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-turo-del-bell-lloc-42.47928-1.92633",
+      "name": "Turó del Bell-Lloc",
+      "sourceName": "Turó del Bell-Lloc (1670 m)",
+      "latitude": 42.479282,
+      "longitude": 1.926329,
+      "elevationMeters": 1669.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-comapedrosa-42.59181-1.44367",
+      "name": "Comapedrosa",
+      "sourceName": "Comapedrosa (2868 m)",
+      "latitude": 42.591806,
+      "longitude": 1.443667,
+      "elevationMeters": 2868.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-montmalus-42.50893-1.68653",
+      "name": "Montmalús",
+      "sourceName": "Montmalús (2723 m)",
+      "latitude": 42.508926,
+      "longitude": 1.686533,
+      "elevationMeters": 2722.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-canigo-42.51888-2.45664",
+      "name": "Canigó",
+      "sourceName": "Canigó (2725 m)",
+      "latitude": 42.518875,
+      "longitude": 2.456645,
+      "elevationMeters": 2725.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-turo-de-l-home-41.77251-2.43750",
+      "name": "Turó de l'Home",
+      "sourceName": "Turó de l'Home (1647 m)",
+      "latitude": 41.772513,
+      "longitude": 2.437495,
+      "elevationMeters": 1646.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-les-agudes-41.78944-2.44391",
+      "name": "Les Agudes",
+      "sourceName": "Les Agudes (1638 m)",
+      "latitude": 41.789441,
+      "longitude": 2.443906,
+      "elevationMeters": 1637.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-matagalls-41.80878-2.38273",
+      "name": "Matagalls",
+      "sourceName": "Matagalls (1638 m)",
+      "latitude": 41.808782,
+      "longitude": 2.382726,
+      "elevationMeters": 1637.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-de-l-estella-42.51472-2.55357",
+      "name": "Puig de l'Estella",
+      "sourceName": "Puig de l'Estella (1736 m)",
+      "latitude": 42.514719,
+      "longitude": 2.553568,
+      "elevationMeters": 1735.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tristaina-42.65320-1.49371",
+      "name": "Tristaina",
+      "sourceName": "Tristaina (2830 m)",
+      "latitude": 42.653198,
+      "longitude": 1.493706,
+      "elevationMeters": 2829.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pic-de-cataperdis-42.61504-1.47721",
+      "name": "Pic de Cataperdís",
+      "sourceName": "Pic de Cataperdís (2696 m)",
+      "latitude": 42.615041,
+      "longitude": 1.477215,
+      "elevationMeters": 2695.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sant-mamet-41.97767-0.94135",
+      "name": "Sant Mamet",
+      "sourceName": "Sant Mamet (1382 m)",
+      "latitude": 41.977672,
+      "longitude": 0.94135,
+      "elevationMeters": 1382.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tossa-plana-de-lles-42.46810-1.65721",
+      "name": "Tossa Plana de Lles",
+      "sourceName": "Tossa Plana de Lles (2881 m)",
+      "latitude": 42.468096,
+      "longitude": 1.657208,
+      "elevationMeters": 2881.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-la-muga-42.47470-1.67763",
+      "name": "La Muga",
+      "sourceName": "La Muga (2793 m)",
+      "latitude": 42.474701,
+      "longitude": 1.677626,
+      "elevationMeters": 2792.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-vulturo-42.28585-1.63614",
+      "name": "Vulturó",
+      "sourceName": "Vulturó (2622 m)",
+      "latitude": 42.285848,
+      "longitude": 1.636137,
+      "elevationMeters": 2622.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-torreta-de-cadi-42.28700-1.58436",
+      "name": "Torreta de Cadí",
+      "sourceName": "Torreta de Cadí (2484 m)",
+      "latitude": 42.287004,
+      "longitude": 1.584357,
+      "elevationMeters": 2484.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-torreta-de-montsia-40.61359-0.53029",
+      "name": "Torreta de Montsià",
+      "sourceName": "Torreta de Montsià (728 m)",
+      "latitude": 40.613595,
+      "longitude": 0.530286,
+      "elevationMeters": 728.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-morral-de-cabrafeixet-40.89865-0.62474",
+      "name": "Morral de Cabrafeixet",
+      "sourceName": "Morral de Cabrafeixet (620 m)",
+      "latitude": 40.898646,
+      "longitude": 0.62474,
+      "elevationMeters": 619.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-coll-de-pins-40.98741-0.59356",
+      "name": "Coll de Pins",
+      "sourceName": "Coll de Pins (450 m)",
+      "latitude": 40.987405,
+      "longitude": 0.593563,
+      "elevationMeters": 449.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-cavaller-41.02777-0.43759",
+      "name": "Puig Cavaller",
+      "sourceName": "Puig Cavaller (639 m)",
+      "latitude": 41.02777,
+      "longitude": 0.437592,
+      "elevationMeters": 639.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roques-de-benet-40.90127-0.32672",
+      "name": "Roques de Benet",
+      "sourceName": "Roques de Benet (794 m)",
+      "latitude": 40.90127,
+      "longitude": 0.326719,
+      "elevationMeters": 794.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-sant-jeroni-41.60535-1.81150",
+      "name": "Sant Jeroni",
+      "sourceName": "Sant Jeroni (1096 m)",
+      "latitude": 41.605348,
+      "longitude": 1.811505,
+      "elevationMeters": 1096.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-montgros-41.60008-1.80511",
+      "name": "Montgros",
+      "sourceName": "Montgros (1095 m)",
+      "latitude": 41.600084,
+      "longitude": 1.80511,
+      "elevationMeters": 1095.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-miranda-de-santa-magdalena-41.58846-1.82669",
+      "name": "Miranda de Santa Magdalena",
+      "sourceName": "Miranda de Santa Magdalena (1105 m)",
+      "latitude": 41.588462,
+      "longitude": 1.826692,
+      "elevationMeters": 1104.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-torre-alta-castell-ferran-41.61120-1.76331",
+      "name": "Torre Alta (Castell Ferran)",
+      "sourceName": "Torre Alta (Castell Ferran) (805 m)",
+      "latitude": 41.611198,
+      "longitude": 1.763307,
+      "elevationMeters": 805.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sant-salvador-de-les-espases-41.57912-1.88469",
+      "name": "Sant Salvador de les Espases",
+      "sourceName": "Sant Salvador de les Espases (336 m)",
+      "latitude": 41.579123,
+      "longitude": 1.884692,
+      "elevationMeters": 336,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-cendros-41.57555-1.89271",
+      "name": "Puig Cendrós",
+      "sourceName": "Puig Cendrós (421 m)",
+      "latitude": 41.575552,
+      "longitude": 1.892706,
+      "elevationMeters": 421.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-serrat-del-cogul-42.11008-1.63951",
+      "name": "Serrat del Cogul",
+      "sourceName": "Serrat del Cogul (1322 m)",
+      "latitude": 42.11008,
+      "longitude": 1.639513,
+      "elevationMeters": 1321.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-cap-del-verd-42.20133-1.61428",
+      "name": "Cap del Verd",
+      "sourceName": "Cap del Verd (2275 m)",
+      "latitude": 42.201329,
+      "longitude": 1.614277,
+      "elevationMeters": 2274.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-santa-fe-42.20897-1.30131",
+      "name": "Santa Fé",
+      "sourceName": "Santa Fé (1090 m)",
+      "latitude": 42.208969,
+      "longitude": 1.301313,
+      "elevationMeters": 1090.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-cogullo-de-turp-42.15116-1.34721",
+      "name": "Cogulló de Turp",
+      "sourceName": "Cogulló de Turp (1560 m)",
+      "latitude": 42.151155,
+      "longitude": 1.347206,
+      "elevationMeters": 1559.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-sant-honorat-42.08447-1.27077",
+      "name": "Sant Honorat",
+      "sourceName": "Sant Honorat (872 m)",
+      "latitude": 42.084475,
+      "longitude": 1.270766,
+      "elevationMeters": 872.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-punta-curull-41.35524-0.96443",
+      "name": "Punta Curull",
+      "sourceName": "Punta Curull (995 m)",
+      "latitude": 41.355238,
+      "longitude": 0.964427,
+      "elevationMeters": 994.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-el-far-42.02084-2.53679",
+      "name": "El Far",
+      "sourceName": "El Far (1079 m)",
+      "latitude": 42.020844,
+      "longitude": 2.536787,
+      "elevationMeters": 1078.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-rocallarga-42.00978-2.44560",
+      "name": "Rocallarga",
+      "sourceName": "Rocallarga (1173 m)",
+      "latitude": 42.009782,
+      "longitude": 2.445602,
+      "elevationMeters": 1173.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-de-la-forca-41.98101-2.38889",
+      "name": "Puig de la Força",
+      "sourceName": "Puig de la Força (610 m)",
+      "latitude": 41.981007,
+      "longitude": 2.388888,
+      "elevationMeters": 609.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montagut-d-ancosa-41.40687-1.42227",
+      "name": "Montagut d'Ancosa",
+      "sourceName": "Montagut d'Ancosa (933 m)",
+      "latitude": 41.406869,
+      "longitude": 1.422274,
+      "elevationMeters": 932.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-punta-redona-41.05884-0.50089",
+      "name": "Punta Redona",
+      "sourceName": "Punta Redona (600 m)",
+      "latitude": 41.058839,
+      "longitude": 0.500893,
+      "elevationMeters": 600.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-la-picossa-41.10940-0.57642",
+      "name": "La Picossa",
+      "sourceName": "La Picossa (448 m)",
+      "latitude": 41.109397,
+      "longitude": 0.576417,
+      "elevationMeters": 447.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tossa-grossa-de-montferri-41.25345-1.37015",
+      "name": "Tossa Grossa de Montferri",
+      "sourceName": "Tossa Grossa de Montferri (340 m)",
+      "latitude": 41.253447,
+      "longitude": 1.370152,
+      "elevationMeters": 340,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-l-espina-40.87936-0.36091",
+      "name": "L'Espina",
+      "sourceName": "L'Espina (1154 m)",
+      "latitude": 40.87936,
+      "longitude": 0.360912,
+      "elevationMeters": 1154.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-santa-barbara-40.95684-0.33827",
+      "name": "Santa Bàrbara",
+      "sourceName": "Santa Bàrbara (676 m)",
+      "latitude": 40.95684,
+      "longitude": 0.33827,
+      "elevationMeters": 675.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-subira-42.13240-1.49308",
+      "name": "Puig Subirà",
+      "sourceName": "Puig Subirà (1914 m)",
+      "latitude": 42.132396,
+      "longitude": 1.49308,
+      "elevationMeters": 1913.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-les-viudes-42.11463-1.65887",
+      "name": "Tossal de les Viudes",
+      "sourceName": "Tossal de les Viudes (1299 m)",
+      "latitude": 42.114631,
+      "longitude": 1.658866,
+      "elevationMeters": 1299.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-miranda-de-puigcerver-41.19362-0.93156",
+      "name": "Miranda de Puigcerver",
+      "sourceName": "Miranda de Puigcerver (802 m)",
+      "latitude": 41.193623,
+      "longitude": 0.93156,
+      "elevationMeters": 801.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-d-en-cama-41.22026-1.09405",
+      "name": "Puig d'en Cama",
+      "sourceName": "Puig d'en Cama (665 m)",
+      "latitude": 41.220262,
+      "longitude": 1.094055,
+      "elevationMeters": 665.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pedro-dels-quatre-batlles-42.18471-1.52089",
+      "name": "Pedró dels Quatre Batlles",
+      "sourceName": "Pedró dels Quatre Batlles (2375 m)",
+      "latitude": 42.184714,
+      "longitude": 1.520888,
+      "elevationMeters": 2374.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-la-mola-41.21161-1.41728",
+      "name": "La Mola",
+      "sourceName": "La Mola (309 m)",
+      "latitude": 41.211612,
+      "longitude": 1.417278,
+      "elevationMeters": 308.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tossal-gros-de-vallbona-41.46884-1.11284",
+      "name": "Tossal Gros de Vallbona",
+      "sourceName": "Tossal Gros de Vallbona (791 m)",
+      "latitude": 41.468842,
+      "longitude": 1.112836,
+      "elevationMeters": 791.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tossal-gros-41.37534-1.23938",
+      "name": "Tossal Gros",
+      "sourceName": "Tossal Gros (825 m)",
+      "latitude": 41.375338,
+      "longitude": 1.239376,
+      "elevationMeters": 825.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-xaquera-o-creu-de-santos-40.94052-0.58604",
+      "name": "Xàquera o Creu de Santos",
+      "sourceName": "Xàquera o Creu de Santos (869 m)",
+      "latitude": 40.940518,
+      "longitude": 0.586037,
+      "elevationMeters": 868.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-la-cogulla-41.34884-1.22480",
+      "name": "La Cogulla",
+      "sourceName": "La Cogulla (743 m)",
+      "latitude": 41.34884,
+      "longitude": 1.224802,
+      "elevationMeters": 742.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-cap-de-la-gallina-pelada-42.18942-1.73811",
+      "name": "Cap de la Gallina Pelada",
+      "sourceName": "Cap de la Gallina Pelada (2277 m)",
+      "latitude": 42.189417,
+      "longitude": 1.738111,
+      "elevationMeters": 2276.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-castell-de-saverdera-42.31992-3.16799",
+      "name": "Castell de Saverdera",
+      "sourceName": "Castell de Saverdera (625 m)",
+      "latitude": 42.319918,
+      "longitude": 3.167989,
+      "elevationMeters": 624.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-roc-beneidor-42.37120-1.56051",
+      "name": "Roc Beneïdor",
+      "sourceName": "Roc Beneïdor (1664 m)",
+      "latitude": 42.371196,
+      "longitude": 1.560512,
+      "elevationMeters": 1663.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-punta-de-montmeneu-41.38867-0.40135",
+      "name": "Punta de Montmeneu",
+      "sourceName": "Punta de Montmeneu (433 m)",
+      "latitude": 41.388675,
+      "longitude": 0.401351,
+      "elevationMeters": 432.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pui-de-lleras-42.26921-0.85268",
+      "name": "Pui de Lleras",
+      "sourceName": "Pui de Lleras (1648 m)",
+      "latitude": 42.269209,
+      "longitude": 0.852677,
+      "elevationMeters": 1648,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-roc-de-mallorca-42.61597-2.70531",
+      "name": "Roc de Mallorca",
+      "sourceName": "Roc de Mallorca (387 m)",
+      "latitude": 42.615965,
+      "longitude": 2.705307,
+      "elevationMeters": 387.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pala-de-teller-42.32030-0.80080",
+      "name": "Pala de Teller",
+      "sourceName": "Pala de Teller (1820 m)",
+      "latitude": 42.320304,
+      "longitude": 0.8008,
+      "elevationMeters": 1820.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-turo-de-montsoriu-41.78309-2.54094",
+      "name": "Turó de Montsoriu",
+      "sourceName": "Turó de Montsoriu (607 m)",
+      "latitude": 41.783087,
+      "longitude": 2.54094,
+      "elevationMeters": 607.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tossal-de-suro-41.57280-1.30496",
+      "name": "Tossal de Suró",
+      "sourceName": "Tossal de Suró (805 m)",
+      "latitude": 41.572799,
+      "longitude": 1.304962,
+      "elevationMeters": 805.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-fita-alta-41.61299-0.84320",
+      "name": "Fita Alta",
+      "sourceName": "Fita Alta (270 m)",
+      "latitude": 41.612992,
+      "longitude": 0.843195,
+      "elevationMeters": 269.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-de-l-aliga-41.28434-1.69774",
+      "name": "Puig de l'Aliga",
+      "sourceName": "Puig de l'Aliga (438 m)",
+      "latitude": 41.284339,
+      "longitude": 1.697744,
+      "elevationMeters": 438.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-penya-del-papiol-41.32295-1.74385",
+      "name": "Penya del Papiol",
+      "sourceName": "Penya del Papiol (367 m)",
+      "latitude": 41.322947,
+      "longitude": 1.743853,
+      "elevationMeters": 366.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-de-sant-antoni-41.24372-1.47439",
+      "name": "Puig de Sant Antoni",
+      "sourceName": "Puig de Sant Antoni (402 m)",
+      "latitude": 41.243716,
+      "longitude": 1.474389,
+      "elevationMeters": 402.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-la-creu-41.84658-1.40207",
+      "name": "Tossal de la Creu",
+      "sourceName": "Tossal de la Creu (618 m)",
+      "latitude": 41.846585,
+      "longitude": 1.402071,
+      "elevationMeters": 618,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-castellsapera-41.64453-1.97087",
+      "name": "Castellsapera",
+      "sourceName": "Castellsapera (884 m)",
+      "latitude": 41.644525,
+      "longitude": 1.970874,
+      "elevationMeters": 883.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pala-alta-41.89624-0.83636",
+      "name": "Pala Alta",
+      "sourceName": "Pala Alta (904 m)",
+      "latitude": 41.896244,
+      "longitude": 0.836364,
+      "elevationMeters": 904.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-els-bessons-41.46648-0.84722",
+      "name": "Els Bessons",
+      "sourceName": "Els Bessons (557 m)",
+      "latitude": 41.466481,
+      "longitude": 0.847219,
+      "elevationMeters": 557.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-roca-corbatera-41.28856-0.89122",
+      "name": "Roca Corbatera",
+      "sourceName": "Roca Corbatera (1122 m)",
+      "latitude": 41.288565,
+      "longitude": 0.891221,
+      "elevationMeters": 1122.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pilar-d-almenara-41.75338-1.06696",
+      "name": "Pilar d'Almenara",
+      "sourceName": "Pilar d'Almenara (451 m)",
+      "latitude": 41.753384,
+      "longitude": 1.066959,
+      "elevationMeters": 451.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-sant-miquel-de-montclar-41.46574-1.34566",
+      "name": "Sant Miquel de Montclar",
+      "sourceName": "Sant Miquel de Montclar (918 m)",
+      "latitude": 41.465735,
+      "longitude": 1.345659,
+      "elevationMeters": 918.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tuc-deth-port-de-vielha-42.64187-0.76551",
+      "name": "Tuc deth Port de Vielha",
+      "sourceName": "Tuc deth Port de Vielha (2556 m)",
+      "latitude": 42.641872,
+      "longitude": 0.765506,
+      "elevationMeters": 2556,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tuc-de-molieres-42.62945-0.69856",
+      "name": "Tuc de Molières",
+      "sourceName": "Tuc de Molières (2963 m)",
+      "latitude": 42.629452,
+      "longitude": 0.698562,
+      "elevationMeters": 2963,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-volca-del-croscat-42.15404-2.53601",
+      "name": "Volcà del Croscat",
+      "sourceName": "Volcà del Croscat (746 m)",
+      "latitude": 42.154035,
+      "longitude": 2.536007,
+      "elevationMeters": 746.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-balandrau-42.36996-2.21964",
+      "name": "Balandrau",
+      "sourceName": "Balandrau (2552 m)",
+      "latitude": 42.369963,
+      "longitude": 2.219641,
+      "elevationMeters": 2551.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puigmal-42.38331-2.11671",
+      "name": "Puigmal",
+      "sourceName": "Puigmal (2886 m)",
+      "latitude": 42.38331,
+      "longitude": 2.116705,
+      "elevationMeters": 2886.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-noufonts-42.42490-2.16765",
+      "name": "Noufonts",
+      "sourceName": "Noufonts (2819 m)",
+      "latitude": 42.424897,
+      "longitude": 2.167654,
+      "elevationMeters": 2819.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-caro-40.80308-0.34446",
+      "name": "Caro",
+      "sourceName": "Caro (1413 m)",
+      "latitude": 40.803084,
+      "longitude": 0.34446,
+      "elevationMeters": 1413.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-talaia-de-montmell-41.33580-1.46673",
+      "name": "Talaia de Montmell",
+      "sourceName": "Talaia de Montmell (809 m)",
+      "latitude": 41.335799,
+      "longitude": 1.466726,
+      "elevationMeters": 808.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-de-la-cova-41.31511-1.47517",
+      "name": "Puig de la Cova",
+      "sourceName": "Puig de la Cova (648 m)",
+      "latitude": 41.315111,
+      "longitude": 1.475167,
+      "elevationMeters": 648.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-la-serrera-42.62555-1.60250",
+      "name": "Pic de la Serrera",
+      "sourceName": "Pic de la Serrera (2832 m)",
+      "latitude": 42.625553,
+      "longitude": 1.602502,
+      "elevationMeters": 2832.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-penyes-altes-de-moixero-42.30627-1.84246",
+      "name": "Penyes Altes de Moixeró",
+      "sourceName": "Penyes Altes de Moixeró (2228 m)",
+      "latitude": 42.306273,
+      "longitude": 1.842463,
+      "elevationMeters": 2227.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pollego-superior-pedraforca-42.24004-1.70275",
+      "name": "Pollegó Superior (Pedraforca)",
+      "sourceName": "Pollegó Superior (Pedraforca) (2364 m)",
+      "latitude": 42.240043,
+      "longitude": 1.702752,
+      "elevationMeters": 2363.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pic-de-medacorba-42.60376-1.44191",
+      "name": "Pic de Medacorba",
+      "sourceName": "Pic de Medacorba (2788 m)",
+      "latitude": 42.603759,
+      "longitude": 1.441906,
+      "elevationMeters": 2788.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-monteixo-42.60173-1.36154",
+      "name": "Monteixo",
+      "sourceName": "Monteixo (2843 m)",
+      "latitude": 42.601728,
+      "longitude": 1.361541,
+      "elevationMeters": 2843.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-turo-del-ros-41.57639-1.93401",
+      "name": "Turó del Ros",
+      "sourceName": "Turó del Ros (607 m)",
+      "latitude": 41.576386,
+      "longitude": 1.934012,
+      "elevationMeters": 606.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-de-l-enclusa-41.87074-2.32098",
+      "name": "Turó de l'Enclusa",
+      "sourceName": "Turó de l'Enclusa (844 m)",
+      "latitude": 41.87074,
+      "longitude": 2.320982,
+      "elevationMeters": 844.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-de-la-torre-41.85093-1.83017",
+      "name": "Turó de la Torre",
+      "sourceName": "Turó de la Torre (583 m)",
+      "latitude": 41.850933,
+      "longitude": 1.830173,
+      "elevationMeters": 583,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-de-la-creu-de-gurb-41.95216-2.21050",
+      "name": "Turó de la Creu de Gurb",
+      "sourceName": "Turó de la Creu de Gurb (797 m)",
+      "latitude": 41.952158,
+      "longitude": 2.210505,
+      "elevationMeters": 797.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tuc-de-la-cometa-42.42349-1.03306",
+      "name": "Tuc de la Cometa",
+      "sourceName": "Tuc de la Cometa (2433 m)",
+      "latitude": 42.42349,
+      "longitude": 1.033064,
+      "elevationMeters": 2433.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-turo-de-bellver-41.84714-2.17152",
+      "name": "Turó de Bellver",
+      "sourceName": "Turó de Bellver (1026 m)",
+      "latitude": 41.847137,
+      "longitude": 2.171524,
+      "elevationMeters": 1026.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-les-roies-de-cardet-42.51858-0.76541",
+      "name": "Tuc de les Roies de Cardet",
+      "sourceName": "Tuc de les Roies de Cardet (2396 m)",
+      "latitude": 42.518576,
+      "longitude": 0.765408,
+      "elevationMeters": 2396.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-sant-corneli-42.18280-1.00282",
+      "name": "Sant Corneli",
+      "sourceName": "Sant Corneli (1325 m)",
+      "latitude": 42.182804,
+      "longitude": 1.002815,
+      "elevationMeters": 1324.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-gallinova-42.18472-1.07808",
+      "name": "Gallinova",
+      "sourceName": "Gallinova (1646 m)",
+      "latitude": 42.184723,
+      "longitude": 1.078076,
+      "elevationMeters": 1646.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossa-de-montbui-41.55697-1.58147",
+      "name": "Tossa de Montbui",
+      "sourceName": "Tossa de Montbui (557 m)",
+      "latitude": 41.556974,
+      "longitude": 1.581471,
+      "elevationMeters": 556.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tagamanent-41.74744-2.29598",
+      "name": "Tagamanent",
+      "sourceName": "Tagamanent (1016 m)",
+      "latitude": 41.747441,
+      "longitude": 2.295985,
+      "elevationMeters": 1015.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-cabrera-42.07348-2.40788",
+      "name": "Cabrera",
+      "sourceName": "Cabrera (1256 m)",
+      "latitude": 42.073482,
+      "longitude": 2.407875,
+      "elevationMeters": 1255.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-sant-sadurni-de-gallifa-41.70295-2.12279",
+      "name": "Sant Sadurní de Gallifa",
+      "sourceName": "Sant Sadurní de Gallifa (913 m)",
+      "latitude": 41.702949,
+      "longitude": 2.122786,
+      "elevationMeters": 913.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-sant-miquel-de-solterra-41.92311-2.53301",
+      "name": "Sant Miquel de Solterra",
+      "sourceName": "Sant Miquel de Solterra (1158 m)",
+      "latitude": 41.923113,
+      "longitude": 2.533005,
+      "elevationMeters": 1157.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-sant-benet-41.94867-2.51351",
+      "name": "Sant Benet",
+      "sourceName": "Sant Benet (1135 m)",
+      "latitude": 41.948674,
+      "longitude": 2.513513,
+      "elevationMeters": 1134.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sant-alis-42.03984-0.76651",
+      "name": "Sant Alis",
+      "sourceName": "Sant Alis (1664 m)",
+      "latitude": 42.039841,
+      "longitude": 0.766507,
+      "elevationMeters": 1663.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-salga-aguda-42.11925-1.95146",
+      "name": "Salga Aguda",
+      "sourceName": "Salga Aguda (1112 m)",
+      "latitude": 42.119249,
+      "longitude": 1.951457,
+      "elevationMeters": 1112,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roca-roia-42.07220-1.10018",
+      "name": "Roca Roia",
+      "sourceName": "Roca Roia (1170 m)",
+      "latitude": 42.072199,
+      "longitude": 1.10018,
+      "elevationMeters": 1170.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roc-de-galliner-42.19806-1.41099",
+      "name": "Roc de Galliner",
+      "sourceName": "Roc de Galliner (1556 m)",
+      "latitude": 42.198065,
+      "longitude": 1.410987,
+      "elevationMeters": 1555.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puiggracios-41.70297-2.24128",
+      "name": "Puiggraciós",
+      "sourceName": "Puiggraciós (772 m)",
+      "latitude": 41.702968,
+      "longitude": 2.24128,
+      "elevationMeters": 772.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-la-creu-41.62938-2.10127",
+      "name": "Puig de la Creu",
+      "sourceName": "Puig de la Creu (649 m)",
+      "latitude": 41.62938,
+      "longitude": 2.101275,
+      "elevationMeters": 648.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-de-la-caritat-41.87583-2.10885",
+      "name": "Puig de la Caritat",
+      "sourceName": "Puig de la Caritat (979 m)",
+      "latitude": 41.875828,
+      "longitude": 2.108853,
+      "elevationMeters": 979.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-de-grialo-41.90174-1.10881",
+      "name": "Puig de Grialó",
+      "sourceName": "Puig de Grialó (630 m)",
+      "latitude": 41.901741,
+      "longitude": 1.108808,
+      "elevationMeters": 630.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-castellar-serra-d-ancosa-41.44833-1.51649",
+      "name": "Puig Castellar (Serra d'Ancosa)",
+      "sourceName": "Puig Castellar (Serra d'Ancosa) (908 m)",
+      "latitude": 41.448326,
+      "longitude": 1.516485,
+      "elevationMeters": 908.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-serra-pinos-o-pinos-41.83358-1.52899",
+      "name": "Serra Pinós o Pinós",
+      "sourceName": "Serra Pinós o Pinós (904 m)",
+      "latitude": 41.833577,
+      "longitude": 1.528985,
+      "elevationMeters": 903.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-del-vent-o-el-farell-41.65532-2.12827",
+      "name": "Pic del Vent o El Farell",
+      "sourceName": "Pic del Vent o El Farell (785 m)",
+      "latitude": 41.65532,
+      "longitude": 2.128273,
+      "elevationMeters": 784.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-el-pedro-de-tubau-42.22023-2.04978",
+      "name": "El Pedró de Tubau",
+      "sourceName": "El Pedró de Tubau (1480 m)",
+      "latitude": 42.220229,
+      "longitude": 2.04978,
+      "elevationMeters": 1480.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montsent-de-pallars-42.49005-1.02438",
+      "name": "Montsent de Pallars",
+      "sourceName": "Montsent de Pallars (2854 m)",
+      "latitude": 42.490048,
+      "longitude": 1.024375,
+      "elevationMeters": 2853.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-montmagastre-41.97654-1.12865",
+      "name": "Montmagastre",
+      "sourceName": "Montmagastre (692 m)",
+      "latitude": 41.976544,
+      "longitude": 1.128649,
+      "elevationMeters": 692.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montllobar-42.14660-0.79786",
+      "name": "Montllobar",
+      "sourceName": "Montllobar (1056 m)",
+      "latitude": 42.146601,
+      "longitude": 0.79786,
+      "elevationMeters": 1056,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roca-sereny-41.69450-2.01794",
+      "name": "Roca Sereny",
+      "sourceName": "Roca Sereny (763 m)",
+      "latitude": 41.6945,
+      "longitude": 2.017936,
+      "elevationMeters": 762.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pujol-de-la-mata-41.68213-1.98452",
+      "name": "Pujol de la Mata",
+      "sourceName": "Pujol de la Mata (710 m)",
+      "latitude": 41.68213,
+      "longitude": 1.984521,
+      "elevationMeters": 710.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montcau-41.67512-2.00469",
+      "name": "Montcau",
+      "sourceName": "Montcau (1016 m)",
+      "latitude": 41.675118,
+      "longitude": 2.004691,
+      "elevationMeters": 1015.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-les-piques-42.32096-1.17596",
+      "name": "Les Piques",
+      "sourceName": "Les Piques (1938 m)",
+      "latitude": 42.320963,
+      "longitude": 1.175964,
+      "elevationMeters": 1937.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-la-mola-sant-llorens-del-munt-41.64128-2.01790",
+      "name": "La Mola - Sant Llorens del Munt",
+      "sourceName": "La Mola - Sant Llorens del Munt (1072 m)",
+      "latitude": 41.64128,
+      "longitude": 2.017898,
+      "elevationMeters": 1072.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-la-faiada-de-malpas-42.37503-0.77516",
+      "name": "La Faiada de Malpàs",
+      "sourceName": "La Faiada de Malpàs (1673 m)",
+      "latitude": 42.375034,
+      "longitude": 0.775161,
+      "elevationMeters": 1672.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-gallicant-41.24951-0.96079",
+      "name": "Puig de Gallicant",
+      "sourceName": "Puig de Gallicant (984 m)",
+      "latitude": 41.249506,
+      "longitude": 0.960789,
+      "elevationMeters": 983.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-els-munts-42.07873-2.15328",
+      "name": "Els Munts",
+      "sourceName": "Els Munts (995 m)",
+      "latitude": 42.078726,
+      "longitude": 2.153281,
+      "elevationMeters": 995,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-el-cadinell-42.26439-1.59774",
+      "name": "El Cadinell",
+      "sourceName": "El Cadinell (2044 m)",
+      "latitude": 42.264392,
+      "longitude": 1.597738,
+      "elevationMeters": 2044.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-el-coscollet-42.11409-1.26754",
+      "name": "El Coscollet",
+      "sourceName": "El Coscollet (1502 m)",
+      "latitude": 42.11409,
+      "longitude": 1.267538,
+      "elevationMeters": 1502.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-comabona-42.28364-1.72644",
+      "name": "Comabona",
+      "sourceName": "Comabona (2470 m)",
+      "latitude": 42.283645,
+      "longitude": 1.726444,
+      "elevationMeters": 2470.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-collbaix-41.74087-1.78095",
+      "name": "Collbaix",
+      "sourceName": "Collbaix (526 m)",
+      "latitude": 41.74087,
+      "longitude": 1.780953,
+      "elevationMeters": 525.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-santa-magdalena-de-cambrils-42.16902-2.34028",
+      "name": "Santa Magdalena de Cambrils",
+      "sourceName": "Santa Magdalena de Cambrils (1508 m)",
+      "latitude": 42.169018,
+      "longitude": 2.340278,
+      "elevationMeters": 1507.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-castell-de-boixadors-41.77064-1.57476",
+      "name": "Castell de Boixadors",
+      "sourceName": "Castell de Boixadors (830 m)",
+      "latitude": 41.770642,
+      "longitude": 1.574764,
+      "elevationMeters": 830,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-mola-d-estat-41.32629-1.06412",
+      "name": "Mola d'Estat",
+      "sourceName": "Mola d'Estat (1105 m)",
+      "latitude": 41.326289,
+      "longitude": 1.064119,
+      "elevationMeters": 1105.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-cap-de-boumort-42.23499-1.13467",
+      "name": "Cap de Boumort",
+      "sourceName": "Cap de Boumort (2064 m)",
+      "latitude": 42.234992,
+      "longitude": 1.134672,
+      "elevationMeters": 2063.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puigpedros-42.48759-1.76181",
+      "name": "Puigpedrós",
+      "sourceName": "Puigpedrós (2899 m)",
+      "latitude": 42.487586,
+      "longitude": 1.761811,
+      "elevationMeters": 2899.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-de-les-morreres-42.15085-1.54008",
+      "name": "Puig de les Morreres",
+      "sourceName": "Puig de les Morreres (2192 m)",
+      "latitude": 42.150851,
+      "longitude": 1.540078,
+      "elevationMeters": 2191.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-sobrepuny-42.16781-1.91077",
+      "name": "Sobrepuny",
+      "sourceName": "Sobrepuny (1616 m)",
+      "latitude": 42.167805,
+      "longitude": 1.910774,
+      "elevationMeters": 1615.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-la-tosa-42.32086-1.89264",
+      "name": "La Tosa",
+      "sourceName": "La Tosa (2507 m)",
+      "latitude": 42.320861,
+      "longitude": 1.892637,
+      "elevationMeters": 2507.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-cogullo-d-estela-42.12152-1.78712",
+      "name": "Cogulló d'Estela",
+      "sourceName": "Cogulló d'Estela (1786 m)",
+      "latitude": 42.121517,
+      "longitude": 1.787123,
+      "elevationMeters": 1786.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tossal-de-montagut-40.94130-0.71471",
+      "name": "Tossal de Montagut",
+      "sourceName": "Tossal de Montagut (341 m)",
+      "latitude": 40.941305,
+      "longitude": 0.714712,
+      "elevationMeters": 341.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-cogullo-de-can-torra-41.68746-1.68643",
+      "name": "Cogulló de Can Torra",
+      "sourceName": "Cogulló de Can Torra (827 m)",
+      "latitude": 41.687463,
+      "longitude": 1.686425,
+      "elevationMeters": 827,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-castell-de-llivia-42.46784-1.98591",
+      "name": "Castell de Llivia",
+      "sourceName": "Castell de Llivia (1311 m)",
+      "latitude": 42.467845,
+      "longitude": 1.985909,
+      "elevationMeters": 1311.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-cornador-42.13996-2.10760",
+      "name": "Puig Cornador",
+      "sourceName": "Puig Cornador (1205 m)",
+      "latitude": 42.139955,
+      "longitude": 2.107597,
+      "elevationMeters": 1205.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-d-en-galzeran-o-d-en-mates-41.50468-2.26662",
+      "name": "Turó d’en Galzeran o d’en Mates",
+      "sourceName": "Turó d’en Galzeran o d’en Mates (463 m)",
+      "latitude": 41.504682,
+      "longitude": 2.266616,
+      "elevationMeters": 463.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-del-samon-41.74266-2.36555",
+      "name": "Turó del Samon",
+      "sourceName": "Turó del Samon (1244 m)",
+      "latitude": 41.742659,
+      "longitude": 2.365545,
+      "elevationMeters": 1244.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-de-montgat-41.46641-2.27889",
+      "name": "Turó de Montgat",
+      "sourceName": "Turó de Montgat (30 m)",
+      "latitude": 41.466413,
+      "longitude": 2.278892,
+      "elevationMeters": 29.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-de-magarola-o-turo-del-maltall-de-magarola-41.44217-2.12974",
+      "name": "Turó de Magarola o Turó del Maltall de Magarola",
+      "sourceName": "Turó de Magarola o Turó del Maltall de Magarola (414 m)",
+      "latitude": 41.44217,
+      "longitude": 2.129737,
+      "elevationMeters": 414.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-turo-de-cellecs-41.55693-2.33851",
+      "name": "Turó de Céllecs",
+      "sourceName": "Turó de Céllecs (512 m)",
+      "latitude": 41.556932,
+      "longitude": 2.338505,
+      "elevationMeters": 512.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-d-onofre-arnau-41.55456-2.46898",
+      "name": "Turó d'Onofre Arnau",
+      "sourceName": "Turó d'Onofre Arnau (104 m)",
+      "latitude": 41.554558,
+      "longitude": 2.468976,
+      "elevationMeters": 103.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-grande-la-sendrosa-42.62396-0.94694",
+      "name": "Tuc Grande la Sendrosa",
+      "sourceName": "Tuc Grande la Sendrosa (2630 m)",
+      "latitude": 42.623957,
+      "longitude": 0.94694,
+      "elevationMeters": 2629.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-deth-plan-deth-ome-vacanera-42.84610-0.67525",
+      "name": "Tuc deth Plan deth Ome (Vacanera)",
+      "sourceName": "Tuc deth Plan deth Ome (Vacanera) (2166 m)",
+      "latitude": 42.846098,
+      "longitude": 0.675252,
+      "elevationMeters": 2165.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-dera-entecada-42.71807-0.69690",
+      "name": "Tuc dera Entecada",
+      "sourceName": "Tuc dera Entecada (2193 m)",
+      "latitude": 42.71807,
+      "longitude": 0.696905,
+      "elevationMeters": 2192.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-ratera-42.60135-0.95336",
+      "name": "Tuc de Ratèra",
+      "sourceName": "Tuc de Ratèra (2803 m)",
+      "latitude": 42.601353,
+      "longitude": 0.953356,
+      "elevationMeters": 2802.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tuc-de-pincela-42.74292-0.87570",
+      "name": "Tuc de Pincela",
+      "sourceName": "Tuc de Pincela (2478 m)",
+      "latitude": 42.742925,
+      "longitude": 0.875698,
+      "elevationMeters": 2478.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-marimanya-42.70922-1.01232",
+      "name": "Tuc de Marimanya",
+      "sourceName": "Tuc de Marimanya (2604 m)",
+      "latitude": 42.709215,
+      "longitude": 1.012321,
+      "elevationMeters": 2604.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-lluca-42.61029-0.90121",
+      "name": "Tuc de Lluçà",
+      "sourceName": "Tuc de Lluçà (2705 m)",
+      "latitude": 42.610287,
+      "longitude": 0.901206,
+      "elevationMeters": 2704.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-llanca-42.68406-0.99054",
+      "name": "Tuc de Llançà",
+      "sourceName": "Tuc de Llançà (2558 m)",
+      "latitude": 42.684056,
+      "longitude": 0.990542,
+      "elevationMeters": 2558.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-tuc-de-comamarja-42.52643-0.87836",
+      "name": "Tuc de Comamarja",
+      "sourceName": "Tuc de Comamarja (2501 m)",
+      "latitude": 42.526428,
+      "longitude": 0.878359,
+      "elevationMeters": 2501,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-barlonguera-42.78858-1.00986",
+      "name": "Tuc de Barlonguèra",
+      "sourceName": "Tuc de Barlonguèra (2704 m)",
+      "latitude": 42.788575,
+      "longitude": 1.00986,
+      "elevationMeters": 2704.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossau-de-mar-42.62983-0.82788",
+      "name": "Tossau de Mar",
+      "sourceName": "Tossau de Mar (2644 m)",
+      "latitude": 42.629827,
+      "longitude": 0.827877,
+      "elevationMeters": 2644.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-tresserra-42.08925-1.72743",
+      "name": "Tossal de Tresserra",
+      "sourceName": "Tossal de Tresserra (1496 m)",
+      "latitude": 42.089249,
+      "longitude": 1.727427,
+      "elevationMeters": 1495.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-torreta-de-l-orri-42.40866-1.21488",
+      "name": "Torreta de l'Orri",
+      "sourceName": "Torreta de l'Orri (2427 m)",
+      "latitude": 42.408661,
+      "longitude": 1.214885,
+      "elevationMeters": 2426.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-torres-de-cabrenc-42.36569-2.54161",
+      "name": "Torres de Cabrenç",
+      "sourceName": "Torres de Cabrenç (1289 m)",
+      "latitude": 42.365689,
+      "longitude": 2.541608,
+      "elevationMeters": 1288.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-torreneules-42.39084-2.19642",
+      "name": "Torreneules",
+      "sourceName": "Torreneules (2665 m)",
+      "latitude": 42.390842,
+      "longitude": 2.196415,
+      "elevationMeters": 2664.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-torre-d-eina-42.43448-2.14724",
+      "name": "Torre d'Eina",
+      "sourceName": "Torre d'Eina (2743 m)",
+      "latitude": 42.434484,
+      "longitude": 2.147237,
+      "elevationMeters": 2743.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-sant-roc-42.01752-2.66196",
+      "name": "Sant Roc",
+      "sourceName": "Sant Roc (545 m)",
+      "latitude": 42.017517,
+      "longitude": 2.661956,
+      "elevationMeters": 544.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sant-ramon-41.33775-2.01097",
+      "name": "Sant Ramon",
+      "sourceName": "Sant Ramon (269 m)",
+      "latitude": 41.337754,
+      "longitude": 2.010972,
+      "elevationMeters": 269.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-sant-pere-martir-41.39386-2.09795",
+      "name": "Sant Pere Màrtir",
+      "sourceName": "Sant Pere Màrtir (352 m)",
+      "latitude": 41.393858,
+      "longitude": 2.097945,
+      "elevationMeters": 351.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-sant-patllari-42.11208-2.71174",
+      "name": "Sant Patllari",
+      "sourceName": "Sant Patllari (612 m)",
+      "latitude": 42.112076,
+      "longitude": 2.711739,
+      "elevationMeters": 612.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-sant-mateu-41.51555-2.32665",
+      "name": "Sant Mateu",
+      "sourceName": "Sant Mateu (485 m)",
+      "latitude": 41.515546,
+      "longitude": 2.326654,
+      "elevationMeters": 484.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sant-marc-de-broca-42.26464-1.89915",
+      "name": "Sant Marc de Brocà",
+      "sourceName": "Sant Marc de Brocà (1583 m)",
+      "latitude": 42.26464,
+      "longitude": 1.899146,
+      "elevationMeters": 1582.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-saloria-42.51444-1.38513",
+      "name": "Salòria",
+      "sourceName": "Salòria (2728 m)",
+      "latitude": 42.51444,
+      "longitude": 1.385126,
+      "elevationMeters": 2728.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-roc-del-boc-42.44593-2.15502",
+      "name": "Roc del Boc",
+      "sourceName": "Roc del Boc (2720 m)",
+      "latitude": 42.445927,
+      "longitude": 2.155024,
+      "elevationMeters": 2720.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roc-de-madres-42.65188-2.19237",
+      "name": "Roc de Madres",
+      "sourceName": "Roc de Madres (2446 m)",
+      "latitude": 42.651882,
+      "longitude": 2.192373,
+      "elevationMeters": 2446.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-roc-de-comptador-42.42278-2.72745",
+      "name": "Roc de Comptador",
+      "sourceName": "Roc de Comptador (1387 m)",
+      "latitude": 42.422779,
+      "longitude": 2.727447,
+      "elevationMeters": 1387.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-quermany-gros-41.96019-3.17015",
+      "name": "Quermany Gros",
+      "sourceName": "Quermany Gros (188 m)",
+      "latitude": 41.96019,
+      "longitude": 3.170147,
+      "elevationMeters": 188.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-punta-d-harle-42.61039-0.84264",
+      "name": "Punta d'Harlé",
+      "sourceName": "Punta d'Harlé (2754 m)",
+      "latitude": 42.610393,
+      "longitude": 0.842637,
+      "elevationMeters": 2754.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-punta-alta-42.58568-0.88029",
+      "name": "Punta Alta",
+      "sourceName": "Punta Alta (2914 m)",
+      "latitude": 42.585683,
+      "longitude": 0.880287,
+      "elevationMeters": 2914.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pujol-de-41.66783-1.89281",
+      "name": "pujol  de",
+      "sourceName": "pujol  de (470 m)",
+      "latitude": 41.667835,
+      "longitude": 1.892812,
+      "elevationMeters": 470.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-vicens-41.36781-1.95409",
+      "name": "Puig Vicens",
+      "sourceName": "Puig Vicens (422 m)",
+      "latitude": 41.367807,
+      "longitude": 1.954094,
+      "elevationMeters": 422.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-peric-42.61376-1.98454",
+      "name": "Puig Peric",
+      "sourceName": "Puig Peric (2744 m)",
+      "latitude": 42.613764,
+      "longitude": 1.984544,
+      "elevationMeters": 2744.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-pedros-de-lanos-42.58997-1.87383",
+      "name": "Puig Pedrós de Lanós",
+      "sourceName": "Puig Pedrós de Lanós (2751 m)",
+      "latitude": 42.589966,
+      "longitude": 1.873826,
+      "elevationMeters": 2751.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-ou-42.28411-2.42775",
+      "name": "Puig Ou",
+      "sourceName": "Puig Ou (1277 m)",
+      "latitude": 42.284108,
+      "longitude": 2.427748,
+      "elevationMeters": 1277.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-madrona-41.45135-2.02420",
+      "name": "Puig Madrona",
+      "sourceName": "Puig Madrona (314 m)",
+      "latitude": 41.451353,
+      "longitude": 2.024196,
+      "elevationMeters": 314.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-gros-41.77504-2.99789",
+      "name": "Puig Gros",
+      "sourceName": "Puig Gros (286 m)",
+      "latitude": 41.775036,
+      "longitude": 2.997888,
+      "elevationMeters": 286.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-estela-42.28450-2.25264",
+      "name": "Puig Estela",
+      "sourceName": "Puig Estela (1939 m)",
+      "latitude": 42.284496,
+      "longitude": 2.252642,
+      "elevationMeters": 1939.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-dels-tretzevents-42.49173-2.46908",
+      "name": "Puig dels TretzeVents",
+      "sourceName": "Puig dels TretzeVents (2677 m)",
+      "latitude": 42.491728,
+      "longitude": 2.469081,
+      "elevationMeters": 2676.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-puig-de-ses-cadiretes-41.75729-2.92826",
+      "name": "Puig de ses Cadiretes",
+      "sourceName": "Puig de ses Cadiretes (494 m)",
+      "latitude": 41.757286,
+      "longitude": 2.928258,
+      "elevationMeters": 494.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-sant-martiria-42.15401-2.86240",
+      "name": "Puig de Sant Martirià",
+      "sourceName": "Puig de Sant Martirià (184 m)",
+      "latitude": 42.154008,
+      "longitude": 2.862402,
+      "elevationMeters": 184.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-les-aligues-42.10899-2.34936",
+      "name": "Puig de les Àligues",
+      "sourceName": "Puig de les Àligues (1273 m)",
+      "latitude": 42.108991,
+      "longitude": 2.349363,
+      "elevationMeters": 1272.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-les-bruixes-42.32446-2.55557",
+      "name": "Puig de les Bruixes",
+      "sourceName": "Puig de les Bruixes (1354 m)",
+      "latitude": 42.324463,
+      "longitude": 2.555568,
+      "elevationMeters": 1353.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-les-agudes-42.36291-2.31790",
+      "name": "Puig de les Agudes",
+      "sourceName": "Puig de les Agudes (1951 m)",
+      "latitude": 42.362908,
+      "longitude": 2.317903,
+      "elevationMeters": 1951.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-gallinas-42.47815-2.21531",
+      "name": "Puig de Gallinas",
+      "sourceName": "Puig de Gallinas (2558 m)",
+      "latitude": 42.47815,
+      "longitude": 2.215311,
+      "elevationMeters": 2558.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-d-olorda-41.41219-2.05527",
+      "name": "Puig d'Olorda",
+      "sourceName": "Puig d'Olorda (406 m)",
+      "latitude": 41.41219,
+      "longitude": 2.05527,
+      "elevationMeters": 406.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-d-esquers-42.39263-3.09651",
+      "name": "Puig d'Esquers",
+      "sourceName": "Puig d'Esquers (582 m)",
+      "latitude": 42.392627,
+      "longitude": 3.096511,
+      "elevationMeters": 581.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-d-arques-41.88912-2.99729",
+      "name": "Puig d'Arques",
+      "sourceName": "Puig d'Arques (486 m)",
+      "latitude": 41.889116,
+      "longitude": 2.997288,
+      "elevationMeters": 486.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-d-agulles-41.40807-1.88499",
+      "name": "Puig d'Agulles",
+      "sourceName": "Puig d'Agulles (604 m)",
+      "latitude": 41.408073,
+      "longitude": 1.88499,
+      "elevationMeters": 604.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-castellar-41.47029-2.20664",
+      "name": "Puig Castellar",
+      "sourceName": "Puig Castellar (246 m)",
+      "latitude": 41.47029,
+      "longitude": 2.206645,
+      "elevationMeters": 246.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-bestreca-42.29432-2.51541",
+      "name": "Puig Bestrecà",
+      "sourceName": "Puig Bestrecà (970 m)",
+      "latitude": 42.294317,
+      "longitude": 2.515412,
+      "elevationMeters": 969.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-aguilera-41.60482-1.67078",
+      "name": "Puig Aguilera",
+      "sourceName": "Puig Aguilera (610 m)",
+      "latitude": 41.604824,
+      "longitude": 1.67078,
+      "elevationMeters": 610,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pui-tabaca-42.58858-1.22316",
+      "name": "Pui Tabaca",
+      "sourceName": "Pui Tabaca (1626 m)",
+      "latitude": 42.58858,
+      "longitude": 1.223163,
+      "elevationMeters": 1626.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pui-de-la-bonaigua-42.62747-1.01875",
+      "name": "Pui de la Bonaigua",
+      "sourceName": "Pui de la Bonaigua (2662 m)",
+      "latitude": 42.627475,
+      "longitude": 1.018748,
+      "elevationMeters": 2662.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-portella-del-pinell-40.71280-0.30640",
+      "name": "Portella del Pinell",
+      "sourceName": "Portella del Pinell (1025 m)",
+      "latitude": 40.712799,
+      "longitude": 0.306401,
+      "elevationMeters": 1024.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pollego-inferior-del-pedraforca-42.23616-1.70695",
+      "name": "Pollegó Inferior del Pedraforca",
+      "sourceName": "Pollegó Inferior del Pedraforca (2273 m)",
+      "latitude": 42.236159,
+      "longitude": 1.706953,
+      "elevationMeters": 2272.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pics-de-bassiero-42.60587-0.99521",
+      "name": "Pics de Bassiero",
+      "sourceName": "Pics de Bassiero (2799 m)",
+      "latitude": 42.605871,
+      "longitude": 0.995212,
+      "elevationMeters": 2798.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pica-roja-42.62495-1.42047",
+      "name": "Pica Roja",
+      "sourceName": "Pica Roja (2854 m)",
+      "latitude": 42.624946,
+      "longitude": 1.420474,
+      "elevationMeters": 2853.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-tort-42.53394-0.98881",
+      "name": "Pic Tort",
+      "sourceName": "Pic Tort (2744 m)",
+      "latitude": 42.533936,
+      "longitude": 0.988812,
+      "elevationMeters": 2744.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-roi-42.56520-0.79819",
+      "name": "Pic Roi",
+      "sourceName": "Pic Roi (2529 m)",
+      "latitude": 42.565195,
+      "longitude": 0.798188,
+      "elevationMeters": 2529.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-negre-d-envalira-42.51727-1.72150",
+      "name": "Pic Negre d'Envalira",
+      "sourceName": "Pic Negre d'Envalira (2738 m)",
+      "latitude": 42.517266,
+      "longitude": 1.721503,
+      "elevationMeters": 2738,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pic-dels-moros-42.51316-1.98946",
+      "name": "Pic dels Moros",
+      "sourceName": "Pic dels Moros (2122 m)",
+      "latitude": 42.513159,
+      "longitude": 1.989456,
+      "elevationMeters": 2121.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-del-raco-gros-42.43207-2.18714",
+      "name": "Pic del Raco Gros",
+      "sourceName": "Pic del Raco Gros (2713 m)",
+      "latitude": 42.432071,
+      "longitude": 2.187138,
+      "elevationMeters": 2713,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-del-portarro-42.58374-0.97015",
+      "name": "Pic del Portarró",
+      "sourceName": "Pic del Portarró (2627 m)",
+      "latitude": 42.583737,
+      "longitude": 0.970147,
+      "elevationMeters": 2626.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-subenuix-42.55505-0.97950",
+      "name": "Pic de Subenuix",
+      "sourceName": "Pic de Subenuix (2848 m)",
+      "latitude": 42.555052,
+      "longitude": 0.979502,
+      "elevationMeters": 2847.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-saboredo-42.60788-0.98105",
+      "name": "Pic de Saboredo",
+      "sourceName": "Pic de Saboredo (2754 m)",
+      "latitude": 42.607884,
+      "longitude": 0.981053,
+      "elevationMeters": 2753.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-quenca-42.69941-1.05444",
+      "name": "Pic de Qüenca",
+      "sourceName": "Pic de Qüenca (2609 m)",
+      "latitude": 42.699408,
+      "longitude": 1.05444,
+      "elevationMeters": 2608.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-pilas-42.68281-1.13155",
+      "name": "Pic de Pilàs",
+      "sourceName": "Pic de Pilàs (2603 m)",
+      "latitude": 42.682812,
+      "longitude": 1.131552,
+      "elevationMeters": 2603.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-peguera-42.54029-1.01207",
+      "name": "Pic de Peguera",
+      "sourceName": "Pic de Peguera (2831 m)",
+      "latitude": 42.540288,
+      "longitude": 1.012074,
+      "elevationMeters": 2831.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pic-de-maniga-42.50577-1.32875",
+      "name": "Pic de Màniga",
+      "sourceName": "Pic de Màniga (2474 m)",
+      "latitude": 42.505772,
+      "longitude": 1.328745,
+      "elevationMeters": 2474,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-moredo-42.71893-1.04996",
+      "name": "Pic de Moredo",
+      "sourceName": "Pic de Moredo (2691 m)",
+      "latitude": 42.718932,
+      "longitude": 1.049959,
+      "elevationMeters": 2691,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pic-de-mariolo-pic-de-neriolo-42.53073-0.95763",
+      "name": "Pic de Mariolo (Pic de Neriolo)",
+      "sourceName": "Pic de Mariolo (Pic de Neriolo) (2775 m)",
+      "latitude": 42.53073,
+      "longitude": 0.957631,
+      "elevationMeters": 2775,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-la-plana-42.66158-1.03668",
+      "name": "Pic de la Plana",
+      "sourceName": "Pic de la Plana (2452 m)",
+      "latitude": 42.661582,
+      "longitude": 1.036675,
+      "elevationMeters": 2452.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-la-pala-alta-de-serrade-42.57466-0.89094",
+      "name": "Pic de la Pala Alta de Serrade",
+      "sourceName": "Pic de la Pala Alta de Serrade (2907 m)",
+      "latitude": 42.574661,
+      "longitude": 0.890944,
+      "elevationMeters": 2907.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-l-infern-42.42399-2.21389",
+      "name": "Pic de l'Infern",
+      "sourceName": "Pic de l'Infern (2764 m)",
+      "latitude": 42.423991,
+      "longitude": 2.213892,
+      "elevationMeters": 2764.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-fontfreda-42.53600-1.79488",
+      "name": "Pic de Fontfreda",
+      "sourceName": "Pic de Fontfreda (2696 m)",
+      "latitude": 42.535999,
+      "longitude": 1.794881,
+      "elevationMeters": 2695.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-filia-o-tossal-de-paiasso-42.47287-0.93025",
+      "name": "Pic de Filià o Tossal de Paiasso",
+      "sourceName": "Pic de Filià o Tossal de Paiasso (2730 m)",
+      "latitude": 42.472872,
+      "longitude": 0.930246,
+      "elevationMeters": 2729.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-contraix-42.58520-0.90681",
+      "name": "Pic de Contraix",
+      "sourceName": "Pic de Contraix (2889 m)",
+      "latitude": 42.585204,
+      "longitude": 0.906808,
+      "elevationMeters": 2889.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-comaloforno-42.59130-0.82782",
+      "name": "Pic de Comaloforno",
+      "sourceName": "Pic de Comaloforno (2940 m)",
+      "latitude": 42.591304,
+      "longitude": 0.827819,
+      "elevationMeters": 2940.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pic-de-clavera-42.78779-1.07677",
+      "name": "Pic de Clavera",
+      "sourceName": "Pic de Clavera (2607 m)",
+      "latitude": 42.787787,
+      "longitude": 1.07677,
+      "elevationMeters": 2606.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-cervi-42.45296-0.87887",
+      "name": "Pic de Cerví",
+      "sourceName": "Pic de Cerví (2668 m)",
+      "latitude": 42.452955,
+      "longitude": 0.878871,
+      "elevationMeters": 2668.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-pic-de-canalbona-42.65667-1.40593",
+      "name": "Pic de Canalbona",
+      "sourceName": "Pic de Canalbona (2870 m)",
+      "latitude": 42.656675,
+      "longitude": 1.40593,
+      "elevationMeters": 2870.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-baixollada-42.66166-1.99865",
+      "name": "Pic de Baixollada",
+      "sourceName": "Pic de Baixollada (2484 m)",
+      "latitude": 42.661656,
+      "longitude": 1.998651,
+      "elevationMeters": 2483.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-d-escobes-42.60913-1.73586",
+      "name": "Pic d'Escobes",
+      "sourceName": "Pic d'Escobes (2703 m)",
+      "latitude": 42.60913,
+      "longitude": 1.735859,
+      "elevationMeters": 2702.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pedracastell-41.61109-2.57575",
+      "name": "Pedracastell",
+      "sourceName": "Pedracastell (283 m)",
+      "latitude": 41.611095,
+      "longitude": 2.575752,
+      "elevationMeters": 283.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-muntanya-dels-angels-41.98141-2.90559",
+      "name": "Muntanya dels Àngels",
+      "sourceName": "Muntanya dels Àngels (438 m)",
+      "latitude": 41.981405,
+      "longitude": 2.905591,
+      "elevationMeters": 438.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-monturull-42.44903-1.57874",
+      "name": "Monturull",
+      "sourceName": "Monturull (2712 m)",
+      "latitude": 42.449032,
+      "longitude": 1.578738,
+      "elevationMeters": 2712,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-montsaliente-42.60302-1.00857",
+      "name": "Montsaliente",
+      "sourceName": "Montsaliente (2760 m)",
+      "latitude": 42.603018,
+      "longitude": 1.008575,
+      "elevationMeters": 2759.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montolier-de-perellos-42.91849-2.86519",
+      "name": "Montolier de Perellós",
+      "sourceName": "Montolier de Perellós (696 m)",
+      "latitude": 42.918491,
+      "longitude": 2.865187,
+      "elevationMeters": 696,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montmajor-42.26874-2.48265",
+      "name": "Montmajor",
+      "sourceName": "Montmajor (1026 m)",
+      "latitude": 42.268742,
+      "longitude": 2.482651,
+      "elevationMeters": 1025.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montlude-42.78522-0.75870",
+      "name": "Montlude",
+      "sourceName": "Montlude (2452 m)",
+      "latitude": 42.785219,
+      "longitude": 0.758703,
+      "elevationMeters": 2452.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-montigalar-41.96303-2.92469",
+      "name": "Montigalar",
+      "sourceName": "Montigalar (427 m)",
+      "latitude": 41.963027,
+      "longitude": 2.924688,
+      "elevationMeters": 426.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montfalgars-42.36302-2.45605",
+      "name": "Montfalgars",
+      "sourceName": "Montfalgars (1592 m)",
+      "latitude": 42.363016,
+      "longitude": 2.456047,
+      "elevationMeters": 1591.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montcorbison-42.70844-0.75899",
+      "name": "Montcorbison",
+      "sourceName": "Montcorbison (2121 m)",
+      "latitude": 42.708439,
+      "longitude": 0.758993,
+      "elevationMeters": 2120.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-montclar-41.78865-2.95624",
+      "name": "Montclar",
+      "sourceName": "Montclar (360 m)",
+      "latitude": 41.788645,
+      "longitude": 2.956242,
+      "elevationMeters": 359.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montcaubo-lo-calbo-42.59834-1.17932",
+      "name": "Montcaubo - Lo Calbo",
+      "sourceName": "Montcaubo - Lo Calbo (2282 m)",
+      "latitude": 42.598344,
+      "longitude": 1.179324,
+      "elevationMeters": 2282.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montbarbat-41.73553-2.77674",
+      "name": "Montbarbat",
+      "sourceName": "Montbarbat (303 m)",
+      "latitude": 41.735526,
+      "longitude": 2.776741,
+      "elevationMeters": 302.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montardo-42.63333-0.87533",
+      "name": "Montardo",
+      "sourceName": "Montardo (2703 m)",
+      "latitude": 42.633328,
+      "longitude": 0.875329,
+      "elevationMeters": 2703.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-montanha-d-uishera-42.76561-0.73279",
+      "name": "Montanha d'Uishèra",
+      "sourceName": "Montanha d'Uishèra (2285 m)",
+      "latitude": 42.765611,
+      "longitude": 0.732791,
+      "elevationMeters": 2285.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montalt-41.60413-2.49636",
+      "name": "Montalt",
+      "sourceName": "Montalt (555 m)",
+      "latitude": 41.604133,
+      "longitude": 2.496362,
+      "elevationMeters": 555.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-mont-roig-42.70802-1.17103",
+      "name": "Mont-Roig",
+      "sourceName": "Mont-Roig (2746 m)",
+      "latitude": 42.708021,
+      "longitude": 1.171032,
+      "elevationMeters": 2746.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-mola-d-irto-o-cerro-de-sant-marc-41.04119-0.47592",
+      "name": "Mola d'Irto o Cerro de Sant Marc",
+      "sourceName": "Mola d'Irto o Cerro de Sant Marc (484 m)",
+      "latitude": 41.041191,
+      "longitude": 0.475922,
+      "elevationMeters": 483.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-mola-castellona-40.79982-0.37002",
+      "name": "Mola Castellona",
+      "sourceName": "Mola Castellona (949 m)",
+      "latitude": 40.79982,
+      "longitude": 0.370016,
+      "elevationMeters": 948.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-miranda-dels-ecos-41.60435-1.80625",
+      "name": "Miranda dels Ecos",
+      "sourceName": "Miranda dels Ecos (1161 m)",
+      "latitude": 41.60435,
+      "longitude": 1.806253,
+      "elevationMeters": 1160.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-miranda-del-princep-41.60491-1.79279",
+      "name": "Miranda del Princep",
+      "sourceName": "Miranda del Princep (950 m)",
+      "latitude": 41.604911,
+      "longitude": 1.792789,
+      "elevationMeters": 950.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-miranda-de-terranyes-40.83300-0.28270",
+      "name": "Miranda de Terranyes",
+      "sourceName": "Miranda de Terranyes (1169 m)",
+      "latitude": 40.832998,
+      "longitude": 0.282704,
+      "elevationMeters": 1169,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-mirador-del-pla-de-llet-42.40456-1.63299",
+      "name": "Mirador del Pla de Llet",
+      "sourceName": "Mirador del Pla de Llet (2120 m)",
+      "latitude": 42.404565,
+      "longitude": 1.632993,
+      "elevationMeters": 2119.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-mauberme-42.79374-0.91716",
+      "name": "Maubèrme",
+      "sourceName": "Maubèrme (2812 m)",
+      "latitude": 42.793739,
+      "longitude": 0.917161,
+      "elevationMeters": 2812.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-malh-des-pois-la-forcanada-42.64312-0.70573",
+      "name": "Malh des Pois (la Forcanada)",
+      "sourceName": "Malh des Pois (la Forcanada) (2735 m)",
+      "latitude": 42.643122,
+      "longitude": 0.705726,
+      "elevationMeters": 2735.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-malh-dera-artiga-42.65874-0.69561",
+      "name": "Malh dera Artiga",
+      "sourceName": "Malh dera Artiga (2639 m)",
+      "latitude": 42.658736,
+      "longitude": 0.695611,
+      "elevationMeters": 2638.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-malh-de-bolard-42.80581-0.96045",
+      "name": "Malh de Bolard",
+      "sourceName": "Malh de Bolard (2689 m)",
+      "latitude": 42.805808,
+      "longitude": 0.96045,
+      "elevationMeters": 2688.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-lo-tesol-teso-de-son-42.60837-1.03931",
+      "name": "Lo Tésol (Tesó de Son)",
+      "sourceName": "Lo Tésol (Tesó de Son) (2656 m)",
+      "latitude": 42.608368,
+      "longitude": 1.039308,
+      "elevationMeters": 2656.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-lo-corronco-42.46209-0.82869",
+      "name": "Lo Corronco",
+      "sourceName": "Lo Corronco (2492 m)",
+      "latitude": 42.462093,
+      "longitude": 0.828695,
+      "elevationMeters": 2491.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-les-solius-41.30873-1.88680",
+      "name": "Les Solius",
+      "sourceName": "Les Solius (486 m)",
+      "latitude": 41.308731,
+      "longitude": 1.886802,
+      "elevationMeters": 486.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-les-borregues-42.39634-2.24777",
+      "name": "Les Borregues",
+      "sourceName": "Les Borregues (2625 m)",
+      "latitude": 42.396335,
+      "longitude": 2.247772,
+      "elevationMeters": 2625.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-la-creueta-42.30603-2.00222",
+      "name": "la Creueta",
+      "sourceName": "la Creueta (2035 m)",
+      "latitude": 42.306032,
+      "longitude": 2.002215,
+      "elevationMeters": 2034.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-la-carabassa-42.45284-1.72705",
+      "name": "La Carabassa",
+      "sourceName": "La Carabassa (2726 m)",
+      "latitude": 42.452844,
+      "longitude": 1.72705,
+      "elevationMeters": 2725.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-l-elefant-41.59588-1.82998",
+      "name": "l'Elefant",
+      "sourceName": "l'Elefant (1066 m)",
+      "latitude": 41.595877,
+      "longitude": 1.829977,
+      "elevationMeters": 1066.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-l-aut-42.54142-0.80882",
+      "name": "l'Aüt",
+      "sourceName": "l'Aüt (2435 m)",
+      "latitude": 42.541425,
+      "longitude": 0.80882,
+      "elevationMeters": 2434.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-l-argimon-41.83066-2.63597",
+      "name": "L'Argimon",
+      "sourceName": "L'Argimon (422 m)",
+      "latitude": 41.830661,
+      "longitude": 2.635969,
+      "elevationMeters": 422,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-l-alabarda-castellana-41.60104-1.81343",
+      "name": "L'Alabarda Castellana",
+      "sourceName": "L'Alabarda Castellana (1131 m)",
+      "latitude": 41.601044,
+      "longitude": 1.813427,
+      "elevationMeters": 1131.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-gran-tuc-de-colomers-42.58934-0.93780",
+      "name": "Gran Tuc de Colomèrs",
+      "sourceName": "Gran Tuc de Colomèrs (2825 m)",
+      "latitude": 42.589344,
+      "longitude": 0.937796,
+      "elevationMeters": 2824.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-gran-pic-del-pesso-42.50949-0.92409",
+      "name": "Gran Pic del Pesso",
+      "sourceName": "Gran Pic del Pesso (2848 m)",
+      "latitude": 42.50949,
+      "longitude": 0.92409,
+      "elevationMeters": 2847.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-gran-encantat-42.56846-1.01488",
+      "name": "Gran Encantat",
+      "sourceName": "Gran Encantat (2581 m)",
+      "latitude": 42.568464,
+      "longitude": 1.014884,
+      "elevationMeters": 2580.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-gra-de-fajol-42.41542-2.24780",
+      "name": "Gra de Fajol",
+      "sourceName": "Gra de Fajol (2638 m)",
+      "latitude": 42.415424,
+      "longitude": 2.247797,
+      "elevationMeters": 2638.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-el-taga-42.28071-2.20988",
+      "name": "El Taga",
+      "sourceName": "El Taga (2017 m)",
+      "latitude": 42.280709,
+      "longitude": 2.209876,
+      "elevationMeters": 2017.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-costa-pubilla-o-pla-de-pujalts-42.28572-2.08066",
+      "name": "Costa Pubilla o Pla de Pujalts",
+      "sourceName": "Costa Pubilla o Pla de Pujalts (2002 m)",
+      "latitude": 42.285717,
+      "longitude": 2.080664,
+      "elevationMeters": 2002.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-costa-cabirolera-42.28145-1.67054",
+      "name": "Costa Cabirolera",
+      "sourceName": "Costa Cabirolera (2501 m)",
+      "latitude": 42.281448,
+      "longitude": 1.670535,
+      "elevationMeters": 2501.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-comanegra-42.33331-2.52785",
+      "name": "Comanegra",
+      "sourceName": "Comanegra (1499 m)",
+      "latitude": 42.333312,
+      "longitude": 2.527849,
+      "elevationMeters": 1499.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-catinell-40.75874-0.28966",
+      "name": "Catinell",
+      "sourceName": "Catinell (1284 m)",
+      "latitude": 40.758742,
+      "longitude": 0.28966,
+      "elevationMeters": 1284.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-castell-de-sant-miquel-42.00690-2.86207",
+      "name": "Castell de Sant Miquel",
+      "sourceName": "Castell de Sant Miquel (354 m)",
+      "latitude": 42.006895,
+      "longitude": 2.862068,
+      "elevationMeters": 354.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-castell-de-montgri-42.05217-3.13166",
+      "name": "Castell de Montgrí",
+      "sourceName": "Castell de Montgrí (288 m)",
+      "latitude": 42.05217,
+      "longitude": 3.131662,
+      "elevationMeters": 288,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-castell-de-burriac-41.53746-2.38734",
+      "name": "Castell de Burriac",
+      "sourceName": "Castell de Burriac (350 m)",
+      "latitude": 41.537458,
+      "longitude": 2.387339,
+      "elevationMeters": 349.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-cap-de-gelada-42.52166-0.76508",
+      "name": "Cap de Gelada",
+      "sourceName": "Cap de Gelada (2275 m)",
+      "latitude": 42.521665,
+      "longitude": 0.765078,
+      "elevationMeters": 2274.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-campirme-42.65952-1.19361",
+      "name": "Campirme",
+      "sourceName": "Campirme (2621 m)",
+      "latitude": 42.659521,
+      "longitude": 1.193613,
+      "elevationMeters": 2621.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-cambradasa-42.45170-2.13203",
+      "name": "Cambradasa",
+      "sourceName": "Cambradasa (2706 m)",
+      "latitude": 42.451695,
+      "longitude": 2.13203,
+      "elevationMeters": 2706.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-bony-de-la-pica-o-pica-d-os-42.50448-1.46034",
+      "name": "Bony de la Pica o Pica d’Os",
+      "sourceName": "Bony de la Pica o Pica d’Os (2365 m)",
+      "latitude": 42.50448,
+      "longitude": 1.460343,
+      "elevationMeters": 2365.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-biseberri-sud-42.59395-0.82614",
+      "name": "Biseberri Sud",
+      "sourceName": "Biseberri Sud (2956 m)",
+      "latitude": 42.593947,
+      "longitude": 0.82614,
+      "elevationMeters": 2955.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-besiberri-nord-42.60527-0.82629",
+      "name": "Besiberri Nord",
+      "sourceName": "Besiberri Nord (2824 m)",
+      "latitude": 42.605275,
+      "longitude": 0.826291,
+      "elevationMeters": 2824.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-bastiments-42.42681-2.23070",
+      "name": "Bastiments",
+      "sourceName": "Bastiments (2824 m)",
+      "latitude": 42.426811,
+      "longitude": 2.230703,
+      "elevationMeters": 2824,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-bassegoda-42.31280-2.63073",
+      "name": "Bassegoda",
+      "sourceName": "Bassegoda (1288 m)",
+      "latitude": 42.3128,
+      "longitude": 2.630728,
+      "elevationMeters": 1288.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-alt-del-griu-42.52547-1.65113",
+      "name": "Alt del Griu",
+      "sourceName": "Alt del Griu (2816 m)",
+      "latitude": 42.525472,
+      "longitude": 1.651134,
+      "elevationMeters": 2815.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-alt-de-juclar-42.61010-1.70418",
+      "name": "Alt de Juclar",
+      "sourceName": "Alt de Juclar (2448 m)",
+      "latitude": 42.610097,
+      "longitude": 1.704184,
+      "elevationMeters": 2447.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-punco-42.42465-1.60104",
+      "name": "Turó Punçó",
+      "sourceName": "Turó Punçó (2451 m)",
+      "latitude": 42.424653,
+      "longitude": 1.601043,
+      "elevationMeters": 2451.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-del-vent-41.86118-2.63098",
+      "name": "Turó del Vent",
+      "sourceName": "Turó del Vent (377 m)",
+      "latitude": 41.861182,
+      "longitude": 2.630976,
+      "elevationMeters": 376.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-del-pou-d-en-sala-41.83259-2.34741",
+      "name": "Turó del Pou d'en Sala",
+      "sourceName": "Turó del Pou d'en Sala (1215 m)",
+      "latitude": 41.832591,
+      "longitude": 2.347413,
+      "elevationMeters": 1215.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-del-mal-pas-41.67152-1.95503",
+      "name": "Turó del Mal Pas",
+      "sourceName": "Turó del Mal Pas (691 m)",
+      "latitude": 41.67152,
+      "longitude": 1.955028,
+      "elevationMeters": 690.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-de-puigmari-41.75511-2.73038",
+      "name": "Turó de Puigmarí",
+      "sourceName": "Turó de Puigmarí (198 m)",
+      "latitude": 41.755112,
+      "longitude": 2.730379,
+      "elevationMeters": 198.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-de-montcada-41.47731-2.17647",
+      "name": "Turó de Montcada",
+      "sourceName": "Turó de Montcada (211 m)",
+      "latitude": 41.477307,
+      "longitude": 2.176474,
+      "elevationMeters": 210.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-de-la-pola-o-de-les-tres-creus-41.64995-1.96967",
+      "name": "Turó de la Pola (o de les Tres Creus)",
+      "sourceName": "Turó de la Pola (o de les Tres Creus) (906 m)",
+      "latitude": 41.649952,
+      "longitude": 1.969668,
+      "elevationMeters": 905.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-de-l-ermita-41.62029-1.81501",
+      "name": "Turó de l'Ermità",
+      "sourceName": "Turó de l'Ermità (562 m)",
+      "latitude": 41.62029,
+      "longitude": 1.81501,
+      "elevationMeters": 562.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-de-can-dolcet-41.55542-1.81580",
+      "name": "Turó de Can Dolcet",
+      "sourceName": "Turó de Can Dolcet (402 m)",
+      "latitude": 41.555424,
+      "longitude": 1.815797,
+      "elevationMeters": 401.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-turo-d-en-mora-turo-del-carmel-41.41943-2.15318",
+      "name": "Turó d'en Mora (Turó del Carmel)",
+      "sourceName": "Turó d'en Mora (Turó del Carmel) (226 m)",
+      "latitude": 41.419432,
+      "longitude": 2.15318,
+      "elevationMeters": 226.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-des-monges-42.62239-0.86602",
+      "name": "Tuc des Monges",
+      "sourceName": "Tuc des Monges (2602 m)",
+      "latitude": 42.622386,
+      "longitude": 0.866017,
+      "elevationMeters": 2602.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-des-carants-42.51405-0.90333",
+      "name": "Tuc des Carants",
+      "sourceName": "Tuc des Carants (2729 m)",
+      "latitude": 42.514046,
+      "longitude": 0.903326,
+      "elevationMeters": 2729,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-des-armeros-42.78125-0.87691",
+      "name": "Tuc des Armèros",
+      "sourceName": "Tuc des Armèros (2462 m)",
+      "latitude": 42.781246,
+      "longitude": 0.876909,
+      "elevationMeters": 2462.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-somont-42.75128-0.85190",
+      "name": "Tuc de Somont",
+      "sourceName": "Tuc de Somont (2475 m)",
+      "latitude": 42.751276,
+      "longitude": 0.851899,
+      "elevationMeters": 2475.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-sarrahera-42.64425-0.79636",
+      "name": "Tuc de Sarrahèra",
+      "sourceName": "Tuc de Sarrahèra (2591 m)",
+      "latitude": 42.644251,
+      "longitude": 0.796356,
+      "elevationMeters": 2590.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-salana-42.64688-0.90844",
+      "name": "Tuc de Salana",
+      "sourceName": "Tuc de Salana (2414 m)",
+      "latitude": 42.646875,
+      "longitude": 0.908438,
+      "elevationMeters": 2413.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-ribereta-42.62615-0.89524",
+      "name": "Tuc de Ribereta",
+      "sourceName": "Tuc de Ribereta (2568 m)",
+      "latitude": 42.626145,
+      "longitude": 0.89524,
+      "elevationMeters": 2567.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-parros-42.76778-0.93305",
+      "name": "Tuc de Parros",
+      "sourceName": "Tuc de Parros (2654 m)",
+      "latitude": 42.767776,
+      "longitude": 0.933047,
+      "elevationMeters": 2653.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-la-tallada-42.61677-0.72370",
+      "name": "Tuc de la Tallada",
+      "sourceName": "Tuc de la Tallada (2848 m)",
+      "latitude": 42.616766,
+      "longitude": 0.723704,
+      "elevationMeters": 2847.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-la-contesa-42.61552-0.78859",
+      "name": "Tuc de la Contesa",
+      "sourceName": "Tuc de la Contesa (2702 m)",
+      "latitude": 42.615515,
+      "longitude": 0.788591,
+      "elevationMeters": 2701.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-crabera-42.82571-0.85821",
+      "name": "Tuc de Crabèra",
+      "sourceName": "Tuc de Crabèra (2524 m)",
+      "latitude": 42.825707,
+      "longitude": 0.858212,
+      "elevationMeters": 2523.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-de-baciver-42.70968-0.99608",
+      "name": "Tuc de Baciver",
+      "sourceName": "Tuc de Baciver (2544 m)",
+      "latitude": 42.709683,
+      "longitude": 0.99608,
+      "elevationMeters": 2543.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tuc-d-arres-42.74371-0.66335",
+      "name": "Tuc d'Arres",
+      "sourceName": "Tuc d'Arres (2125 m)",
+      "latitude": 42.743713,
+      "longitude": 0.663349,
+      "elevationMeters": 2124.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tour-de-la-massane-42.49821-3.02609",
+      "name": "Tour de la Massane",
+      "sourceName": "Tour de la Massane (756 m)",
+      "latitude": 42.498206,
+      "longitude": 3.026092,
+      "elevationMeters": 755.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tosseta-rasa-40.84504-0.32747",
+      "name": "Tosseta Rasa",
+      "sourceName": "Tosseta Rasa (1190 m)",
+      "latitude": 40.845036,
+      "longitude": 0.327472,
+      "elevationMeters": 1189.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tosseta-de-l-esquella-pic-de-calm-colomer-42.49248-1.73007",
+      "name": "Tosseta de l'Esquella (Pic de Calm Colomer)",
+      "sourceName": "Tosseta de l'Esquella (Pic de Calm Colomer) (2820 m)",
+      "latitude": 42.49248,
+      "longitude": 1.730066,
+      "elevationMeters": 2820.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-llisoi-42.20115-1.84353",
+      "name": "Tossal Llisoi",
+      "sourceName": "Tossal Llisoi (1298 m)",
+      "latitude": 42.201154,
+      "longitude": 1.84353,
+      "elevationMeters": 1297.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-gros-serra-de-sant-gervas-42.33310-0.77110",
+      "name": "Tossal Gros (Serra de Sant Gervàs)",
+      "sourceName": "Tossal Gros (Serra de Sant Gervàs) (1429 m)",
+      "latitude": 42.333101,
+      "longitude": 0.771097,
+      "elevationMeters": 1428.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-del-puial-42.34185-1.13304",
+      "name": "Tossal del Puial",
+      "sourceName": "Tossal del Puial (1885 m)",
+      "latitude": 42.341851,
+      "longitude": 1.133038,
+      "elevationMeters": 1884.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-mormur-41.78004-0.74979",
+      "name": "Tossal de Mormur",
+      "sourceName": "Tossal de Mormur (291 m)",
+      "latitude": 41.780044,
+      "longitude": 0.749788,
+      "elevationMeters": 290.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-lleto-42.31177-1.54300",
+      "name": "Tossal de Lletó",
+      "sourceName": "Tossal de Lletó (1601 m)",
+      "latitude": 42.311767,
+      "longitude": 1.542997,
+      "elevationMeters": 1600.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-la-truita-pic-de-perafita-42.45922-1.58550",
+      "name": "Tossal de la Truita (Pic de Perafita)",
+      "sourceName": "Tossal de la Truita (Pic de Perafita) (2730 m)",
+      "latitude": 42.459223,
+      "longitude": 1.585498,
+      "elevationMeters": 2729.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-l-aliga-la-geganta-adormida-42.29893-1.01884",
+      "name": "Tossal de l'Àliga (la Geganta Adormida)",
+      "sourceName": "Tossal de l'Àliga (la Geganta Adormida) (1168 m)",
+      "latitude": 42.298927,
+      "longitude": 1.018841,
+      "elevationMeters": 1168.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-de-codonyac-42.22800-0.81431",
+      "name": "Tossal de Codonyac",
+      "sourceName": "Tossal de Codonyac (1336 m)",
+      "latitude": 42.228001,
+      "longitude": 0.81431,
+      "elevationMeters": 1336.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossal-bovinar-42.46275-1.63167",
+      "name": "Tossal Bovinar",
+      "sourceName": "Tossal Bovinar (2796 m)",
+      "latitude": 42.462752,
+      "longitude": 1.631675,
+      "elevationMeters": 2796.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-tossa-d-espinau-42.27349-2.69279",
+      "name": "Tossa d'Espinau",
+      "sourceName": "Tossa d'Espinau (1040 m)",
+      "latitude": 42.273495,
+      "longitude": 2.69279,
+      "elevationMeters": 1040.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-torre-maura-42.05552-3.19077",
+      "name": "Torre Maura",
+      "sourceName": "Torre Maura (175 m)",
+      "latitude": 42.055516,
+      "longitude": 3.190772,
+      "elevationMeters": 174.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-torre-de-les-conclues-42.01613-0.65874",
+      "name": "Torre de les Conclues",
+      "sourceName": "Torre de les Conclues (624 m)",
+      "latitude": 42.016131,
+      "longitude": 0.658739,
+      "elevationMeters": 623.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-torre-de-goa-42.52330-2.37715",
+      "name": "Torre de Goà",
+      "sourceName": "Torre de Goà (1187 m)",
+      "latitude": 42.523299,
+      "longitude": 2.377145,
+      "elevationMeters": 1187.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sotllo-42.66869-1.38747",
+      "name": "Sotllo",
+      "sourceName": "Sotllo (3033 m)",
+      "latitude": 42.668691,
+      "longitude": 1.387471,
+      "elevationMeters": 3033,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-serrat-voltor-42.18824-1.77700",
+      "name": "Serrat Voltor",
+      "sourceName": "Serrat Voltor (2217 m)",
+      "latitude": 42.188239,
+      "longitude": 1.776996,
+      "elevationMeters": 2217.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-serrat-de-sant-isidre-42.09063-1.96240",
+      "name": "Serrat de Sant Isidre",
+      "sourceName": "Serrat de Sant Isidre (1054 m)",
+      "latitude": 42.09063,
+      "longitude": 1.962398,
+      "elevationMeters": 1054.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-serrat-de-migdia-serrat-de-picancel-42.11820-1.93171",
+      "name": "Serrat de Migdia (Serrat de Picancel",
+      "sourceName": "Serrat de Migdia (Serrat de Picancel (984 m)",
+      "latitude": 42.1182,
+      "longitude": 1.931709,
+      "elevationMeters": 983.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-serrat-de-la-madrona-41.99034-1.84346",
+      "name": "Serrat de la Madrona",
+      "sourceName": "Serrat de la Madrona (672 m)",
+      "latitude": 41.990336,
+      "longitude": 1.843458,
+      "elevationMeters": 672.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-serrat-de-carrasquers-42.13255-1.19270",
+      "name": "Serrat de Carrasquers",
+      "sourceName": "Serrat de Carrasquers (1408 m)",
+      "latitude": 42.132545,
+      "longitude": 1.192696,
+      "elevationMeters": 1408,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-serrat-alt-42.08038-2.25945",
+      "name": "Serrat Alt",
+      "sourceName": "Serrat Alt (782 m)",
+      "latitude": 42.08038,
+      "longitude": 2.259451,
+      "elevationMeters": 782.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-santa-magdalena-42.32462-2.82592",
+      "name": "Santa Magdalena",
+      "sourceName": "Santa Magdalena (428 m)",
+      "latitude": 42.324622,
+      "longitude": 2.825922,
+      "elevationMeters": 428.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-santa-barbara-vall-fosca-42.38080-0.92342",
+      "name": "Santa Bàrbara (Vall Fosca)",
+      "sourceName": "Santa Bàrbara (Vall Fosca) (1586 m)",
+      "latitude": 42.380797,
+      "longitude": 0.923423,
+      "elevationMeters": 1585.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-santa-anna-dels-quatre-termes-42.56598-2.56111",
+      "name": "Santa Anna dels Quatre Termes",
+      "sourceName": "Santa Anna dels Quatre Termes (1324 m)",
+      "latitude": 42.565978,
+      "longitude": 2.56111,
+      "elevationMeters": 1324.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sant-salvador-42.06180-1.78181",
+      "name": "Sant Salvador",
+      "sourceName": "Sant Salvador (1139 m)",
+      "latitude": 42.061802,
+      "longitude": 1.781812,
+      "elevationMeters": 1138.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sant-miquel-del-mont-42.19817-2.44653",
+      "name": "Sant Miquel del Mont",
+      "sourceName": "Sant Miquel del Mont (756 m)",
+      "latitude": 42.198175,
+      "longitude": 2.446528,
+      "elevationMeters": 756.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sant-marti-xic-castell-de-voltrega-42.01012-2.20646",
+      "name": "Sant Martí Xic (Castell de Voltregà)",
+      "sourceName": "Sant Martí Xic (Castell de Voltregà) (816 m)",
+      "latitude": 42.010119,
+      "longitude": 2.206456,
+      "elevationMeters": 815.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sant-marti-de-la-roca-42.62482-2.68093",
+      "name": "Sant Marti de la Roca",
+      "sourceName": "Sant Marti de la Roca (454 m)",
+      "latitude": 42.624824,
+      "longitude": 2.68093,
+      "elevationMeters": 453.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sant-grau-41.99247-2.71502",
+      "name": "Sant Grau",
+      "sourceName": "Sant Grau (456 m)",
+      "latitude": 41.992474,
+      "longitude": 2.715017,
+      "elevationMeters": 455.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-sant-antoni-42.30222-2.37939",
+      "name": "Sant Antoni",
+      "sourceName": "Sant Antoni (1269 m)",
+      "latitude": 42.302224,
+      "longitude": 2.379391,
+      "elevationMeters": 1269.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roques-del-rei-41.88544-2.56559",
+      "name": "Roques del Rei",
+      "sourceName": "Roques del Rei (792 m)",
+      "latitude": 41.88544,
+      "longitude": 2.565589,
+      "elevationMeters": 791.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-rocalta-42.21166-1.04450",
+      "name": "Rocalta",
+      "sourceName": "Rocalta (1311 m)",
+      "latitude": 42.211658,
+      "longitude": 1.044502,
+      "elevationMeters": 1310.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roca-lladre-42.13652-2.49813",
+      "name": "Roca Lladre",
+      "sourceName": "Roca Lladre (781 m)",
+      "latitude": 42.136518,
+      "longitude": 2.49813,
+      "elevationMeters": 780.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roca-gran-42.31680-1.71152",
+      "name": "Roca Gran",
+      "sourceName": "Roca Gran (2065 m)",
+      "latitude": 42.3168,
+      "longitude": 1.711524,
+      "elevationMeters": 2065.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roca-entravessada-42.59808-1.44233",
+      "name": "Roca Entravessada",
+      "sourceName": "Roca Entravessada (2862 m)",
+      "latitude": 42.59808,
+      "longitude": 1.44233,
+      "elevationMeters": 2862.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roca-del-joc-roca-de-la-devesa-jussana-42.21522-1.96373",
+      "name": "Roca del Joc (Roca de la Devesa Jussana)",
+      "sourceName": "Roca del Joc (Roca de la Devesa Jussana) (1510 m)",
+      "latitude": 42.21522,
+      "longitude": 1.963729,
+      "elevationMeters": 1510.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roca-del-coscollo-42.12786-1.35435",
+      "name": "Roca del Coscolló",
+      "sourceName": "Roca del Coscolló (1238 m)",
+      "latitude": 42.127862,
+      "longitude": 1.354354,
+      "elevationMeters": 1237.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roca-de-migdia-serra-del-verd-42.20793-1.56814",
+      "name": "Roca de Migdia (Serra del Verd)",
+      "sourceName": "Roca de Migdia (Serra del Verd) (1808 m)",
+      "latitude": 42.207929,
+      "longitude": 1.568135,
+      "elevationMeters": 1807.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roc-roi-42.43543-1.33831",
+      "name": "Roc Roi",
+      "sourceName": "Roc Roi (1984 m)",
+      "latitude": 42.435432,
+      "longitude": 1.338306,
+      "elevationMeters": 1984.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roc-de-sant-salvador-42.42741-2.69458",
+      "name": "Roc de Sant Salvador",
+      "sourceName": "Roc de Sant Salvador (1117 m)",
+      "latitude": 42.427407,
+      "longitude": 2.69458,
+      "elevationMeters": 1116.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-roc-de-les-tres-creus-42.09128-1.30949",
+      "name": "Roc de les Tres Creus",
+      "sourceName": "Roc de les Tres Creus (781 m)",
+      "latitude": 42.091279,
+      "longitude": 1.309485,
+      "elevationMeters": 780.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roc-de-les-monges-serrat-de-la-questio-42.09669-1.71725",
+      "name": "Roc de les Monges (Serrat de la Qüestió)",
+      "sourceName": "Roc de les Monges (Serrat de la Qüestió) (1294 m)",
+      "latitude": 42.096686,
+      "longitude": 1.71725,
+      "elevationMeters": 1294.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-roc-de-cogul-42.06534-1.26543",
+      "name": "Roc de Cogul",
+      "sourceName": "Roc de Cogul (842 m)",
+      "latitude": 42.065338,
+      "longitude": 1.265426,
+      "elevationMeters": 841.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-punta-de-comalesbienes-42.59114-0.80832",
+      "name": "Punta de Comalesbienes",
+      "sourceName": "Punta de Comalesbienes (2900 m)",
+      "latitude": 42.591143,
+      "longitude": 0.808325,
+      "elevationMeters": 2900.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-punta-d-ossos-41.94985-0.63240",
+      "name": "Punta d'Ossos",
+      "sourceName": "Punta d'Ossos (996 m)",
+      "latitude": 41.949855,
+      "longitude": 0.632402,
+      "elevationMeters": 996.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pujoalbo-42.65453-0.84008",
+      "name": "Pujoalbo",
+      "sourceName": "Pujoalbo (2485 m)",
+      "latitude": 42.654527,
+      "longitude": 0.840085,
+      "elevationMeters": 2485.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puigsallanca-42.11503-2.58151",
+      "name": "Puigsallança",
+      "sourceName": "Puigsallança (947 m)",
+      "latitude": 42.115032,
+      "longitude": 2.581509,
+      "elevationMeters": 946.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puigllancada-42.30031-1.93549",
+      "name": "Puigllançada",
+      "sourceName": "Puigllançada (2394 m)",
+      "latitude": 42.300309,
+      "longitude": 1.935486,
+      "elevationMeters": 2393.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puigdefrou-41.96362-2.59250",
+      "name": "Puigdefrou",
+      "sourceName": "Puigdefrou (776 m)",
+      "latitude": 41.963623,
+      "longitude": 2.592501,
+      "elevationMeters": 776.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-alter-41.81419-1.78551",
+      "name": "Puig-alter",
+      "sourceName": "Puig-alter (477 m)",
+      "latitude": 41.814194,
+      "longitude": 1.785507,
+      "elevationMeters": 476.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-segalar-42.11272-3.04991",
+      "name": "Puig Segalar",
+      "sourceName": "Puig Segalar (158 m)",
+      "latitude": 42.112719,
+      "longitude": 3.049913,
+      "elevationMeters": 157.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-occidental-de-coll-roig-42.54935-1.91678",
+      "name": "Puig Occidental de Coll Roig",
+      "sourceName": "Puig Occidental de Coll Roig (2769 m)",
+      "latitude": 42.549348,
+      "longitude": 1.916784,
+      "elevationMeters": 2768.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-gavarres-41.88887-2.99443",
+      "name": "Puig Gavarres",
+      "sourceName": "Puig Gavarres (497 m)",
+      "latitude": 41.88887,
+      "longitude": 2.994427,
+      "elevationMeters": 497,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-falco-42.37540-2.66710",
+      "name": "Puig Falcó",
+      "sourceName": "Puig Falcó (1007 m)",
+      "latitude": 42.375401,
+      "longitude": 2.667105,
+      "elevationMeters": 1006.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-dels-pruners-42.42813-2.80293",
+      "name": "Puig dels Pruners",
+      "sourceName": "Puig dels Pruners (800 m)",
+      "latitude": 42.428132,
+      "longitude": 2.802927,
+      "elevationMeters": 800,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-dels-bufadors-42.30132-3.24875",
+      "name": "Puig dels Bufadors",
+      "sourceName": "Puig dels Bufadors (395 m)",
+      "latitude": 42.301321,
+      "longitude": 3.248749,
+      "elevationMeters": 395.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-del-pam-42.60440-2.03045",
+      "name": "Puig del Pam",
+      "sourceName": "Puig del Pam (2456 m)",
+      "latitude": 42.604401,
+      "longitude": 2.030454,
+      "elevationMeters": 2456.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-del-far-41.95965-2.37616",
+      "name": "Puig del Far",
+      "sourceName": "Puig del Far (800 m)",
+      "latitude": 41.959648,
+      "longitude": 2.37616,
+      "elevationMeters": 799.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-les-cols-41.78046-2.97579",
+      "name": "Puig de les Cols",
+      "sourceName": "Puig de les Cols (370 m)",
+      "latitude": 41.780455,
+      "longitude": 2.975788,
+      "elevationMeters": 370.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-la-pelada-42.62162-2.19476",
+      "name": "Puig de la Pelada",
+      "sourceName": "Puig de la Pelada (2325 m)",
+      "latitude": 42.621619,
+      "longitude": 2.194762,
+      "elevationMeters": 2325.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-la-gavarra-42.36085-2.69683",
+      "name": "Puig de la Gavarra",
+      "sourceName": "Puig de la Gavarra (973 m)",
+      "latitude": 42.36085,
+      "longitude": 2.696828,
+      "elevationMeters": 973.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-la-cometa-42.61718-1.95926",
+      "name": "Puig de la Cometa",
+      "sourceName": "Puig de la Cometa (2686 m)",
+      "latitude": 42.617182,
+      "longitude": 1.959259,
+      "elevationMeters": 2685.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-la-collada-verda-42.45422-2.39669",
+      "name": "Puig de la Collada Verda",
+      "sourceName": "Puig de la Collada Verda (2382 m)",
+      "latitude": 42.45422,
+      "longitude": 2.396685,
+      "elevationMeters": 2381.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-l-aliga-cap-de-creus-42.28056-3.20485",
+      "name": "Puig de l'Àliga (Cap de Creus)",
+      "sourceName": "Puig de l'Àliga (Cap de Creus) (400 m)",
+      "latitude": 42.280561,
+      "longitude": 3.204848,
+      "elevationMeters": 400,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-font-viva-42.56896-1.87928",
+      "name": "Puig de Font Viva",
+      "sourceName": "Puig de Font Viva (2606 m)",
+      "latitude": 42.56896,
+      "longitude": 1.879282,
+      "elevationMeters": 2606.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-dorria-42.36177-2.08466",
+      "name": "Puig de Dòrria",
+      "sourceName": "Puig de Dòrria (2537 m)",
+      "latitude": 42.361767,
+      "longitude": 2.084664,
+      "elevationMeters": 2536.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-de-coma-d-or-42.58356-1.87362",
+      "name": "Puig de Coma d'Or",
+      "sourceName": "Puig de Coma d'Or (2712 m)",
+      "latitude": 42.583556,
+      "longitude": 1.873621,
+      "elevationMeters": 2712.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-d-en-jorda-42.42782-3.08203",
+      "name": "Puig d'en Jordà",
+      "sourceName": "Puig d'en Jordà (709 m)",
+      "latitude": 42.427815,
+      "longitude": 3.08203,
+      "elevationMeters": 709.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-cubell-42.13766-2.35073",
+      "name": "Puig Cubell",
+      "sourceName": "Puig Cubell (1434 m)",
+      "latitude": 42.137664,
+      "longitude": 2.350732,
+      "elevationMeters": 1433.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-puig-clara-42.13293-2.73835",
+      "name": "Puig Clarà",
+      "sourceName": "Puig Clarà (286 m)",
+      "latitude": 42.132931,
+      "longitude": 2.73835,
+      "elevationMeters": 286.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pui-de-linya-42.56598-1.04325",
+      "name": "Pui de Linya",
+      "sourceName": "Pui de Linya (2792 m)",
+      "latitude": 42.565985,
+      "longitude": 1.043251,
+      "elevationMeters": 2791.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pui-de-cassibros-42.56070-1.26486",
+      "name": "Pui de Cassibrós",
+      "sourceName": "Pui de Cassibrós (2054 m)",
+      "latitude": 42.560695,
+      "longitude": 1.264857,
+      "elevationMeters": 2053.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pui-d-urdosa-42.47118-1.24831",
+      "name": "Pui d'Urdosa",
+      "sourceName": "Pui d'Urdosa (2179 m)",
+      "latitude": 42.471185,
+      "longitude": 1.248309,
+      "elevationMeters": 2179.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pilo-de-bellmaig-42.43214-2.65074",
+      "name": "Piló de Bellmaig",
+      "sourceName": "Piló de Bellmaig (1246 m)",
+      "latitude": 42.432142,
+      "longitude": 2.650744,
+      "elevationMeters": 1245.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-dels-pessons-o-gargantillar-42.50812-1.66467",
+      "name": "Pic dels Pessons o Gargantillar",
+      "sourceName": "Pic dels Pessons o Gargantillar (2753 m)",
+      "latitude": 42.508121,
+      "longitude": 1.664673,
+      "elevationMeters": 2752.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-dels-pedrons-42.42038-1.73452",
+      "name": "Pic dels Pedrons",
+      "sourceName": "Pic dels Pedrons (2216 m)",
+      "latitude": 42.420382,
+      "longitude": 1.734521,
+      "elevationMeters": 2215.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-dels-pedrons-42.53180-1.75157",
+      "name": "Pic dels Pedrons",
+      "sourceName": "Pic dels Pedrons (2672 m)",
+      "latitude": 42.531802,
+      "longitude": 1.751566,
+      "elevationMeters": 2672.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-del-pla-de-l-estany-42.60680-1.46403",
+      "name": "Pic del Pla de l'Estany",
+      "sourceName": "Pic del Pla de l'Estany (2795 m)",
+      "latitude": 42.606802,
+      "longitude": 1.46403,
+      "elevationMeters": 2794.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-ventolau-42.69080-1.19029",
+      "name": "Pic de Ventolau",
+      "sourceName": "Pic de Ventolau (2771 m)",
+      "latitude": 42.690805,
+      "longitude": 1.190288,
+      "elevationMeters": 2770.9,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-sanfonts-42.58781-1.43010",
+      "name": "Pic de Sanfonts",
+      "sourceName": "Pic de Sanfonts (2815 m)",
+      "latitude": 42.587813,
+      "longitude": 1.430097,
+      "elevationMeters": 2815.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-montalt-42.75033-1.13276",
+      "name": "Pic de Montalt",
+      "sourceName": "Pic de Montalt (2405 m)",
+      "latitude": 42.750331,
+      "longitude": 1.132761,
+      "elevationMeters": 2405.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-mariola-42.72013-1.21668",
+      "name": "Pic de Mariola",
+      "sourceName": "Pic de Mariola (2590 m)",
+      "latitude": 42.72013,
+      "longitude": 1.216676,
+      "elevationMeters": 2590.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-llena-42.44680-0.91789",
+      "name": "Pic de Llena",
+      "sourceName": "Pic de Llena (2662 m)",
+      "latitude": 42.446799,
+      "longitude": 0.91789,
+      "elevationMeters": 2661.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-la-mainera-42.52448-1.02716",
+      "name": "Pic de la Mainera",
+      "sourceName": "Pic de la Mainera (2819 m)",
+      "latitude": 42.52448,
+      "longitude": 1.027159,
+      "elevationMeters": 2818.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-la-coma-de-varilles-42.61879-1.66339",
+      "name": "Pic de la Coma de Varilles",
+      "sourceName": "Pic de la Coma de Varilles (2692 m)",
+      "latitude": 42.618794,
+      "longitude": 1.663386,
+      "elevationMeters": 2691.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-l-estanyo-42.60914-1.59259",
+      "name": "Pic de l'Estanyó",
+      "sourceName": "Pic de l'Estanyó (2863 m)",
+      "latitude": 42.609142,
+      "longitude": 1.592588,
+      "elevationMeters": 2863.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-l-espada-42.49918-0.97188",
+      "name": "Pic de l'Espada",
+      "sourceName": "Pic de l'Espada (2515 m)",
+      "latitude": 42.499185,
+      "longitude": 0.971881,
+      "elevationMeters": 2515.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-gerri-42.59760-1.39426",
+      "name": "Pic de Gerri",
+      "sourceName": "Pic de Gerri (2770 m)",
+      "latitude": 42.597596,
+      "longitude": 1.394255,
+      "elevationMeters": 2770.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-gallinassa-42.50275-2.50605",
+      "name": "Pic de Gallinassa",
+      "sourceName": "Pic de Gallinassa (2402 m)",
+      "latitude": 42.502749,
+      "longitude": 2.506054,
+      "elevationMeters": 2401.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-flamisella-42.71260-1.26172",
+      "name": "Pic de Flamisella",
+      "sourceName": "Pic de Flamisella (2736 m)",
+      "latitude": 42.712603,
+      "longitude": 1.261725,
+      "elevationMeters": 2735.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-coma-mitjan-42.44197-2.20959",
+      "name": "Pic de Coma Mitjan",
+      "sourceName": "Pic de Coma Mitjan (2672 m)",
+      "latitude": 42.441967,
+      "longitude": 2.209587,
+      "elevationMeters": 2672.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-colatx-42.72433-1.32529",
+      "name": "Pic de Colatx",
+      "sourceName": "Pic de Colatx (2454 m)",
+      "latitude": 42.724333,
+      "longitude": 1.325292,
+      "elevationMeters": 2454,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-cabanyo-42.63097-1.46802",
+      "name": "Pic de Cabanyó",
+      "sourceName": "Pic de Cabanyó (2670 m)",
+      "latitude": 42.630971,
+      "longitude": 1.468015,
+      "elevationMeters": 2669.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-de-baborte-42.65753-1.36707",
+      "name": "Pic de Baborte",
+      "sourceName": "Pic de Baborte (2888 m)",
+      "latitude": 42.657526,
+      "longitude": 1.367071,
+      "elevationMeters": 2888.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-pic-alt-del-cubil-42.52774-1.66935",
+      "name": "Pic Alt del Cubil",
+      "sourceName": "Pic Alt del Cubil (2770 m)",
+      "latitude": 42.527744,
+      "longitude": 1.669351,
+      "elevationMeters": 2770.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montsent-serrat-de-picancel-42.09591-1.90826",
+      "name": "Montsent (Serrat de Picancel)",
+      "sourceName": "Montsent (Serrat de Picancel) (911 m)",
+      "latitude": 42.09591,
+      "longitude": 1.908259,
+      "elevationMeters": 911.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montpalau-41.64232-2.67033",
+      "name": "Montpalau",
+      "sourceName": "Montpalau (208 m)",
+      "latitude": 41.642322,
+      "longitude": 2.670334,
+      "elevationMeters": 207.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-montarenyo-de-boldis-42.63799-1.30749",
+      "name": "Montarenyo de Boldís",
+      "sourceName": "Montarenyo de Boldís (2536 m)",
+      "latitude": 42.637993,
+      "longitude": 1.307491,
+      "elevationMeters": 2536.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-malera-41.92998-0.72044",
+      "name": "Malera",
+      "sourceName": "Malera (859 m)",
+      "latitude": 41.929977,
+      "longitude": 0.720435,
+      "elevationMeters": 859.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-les-picardes-42.52723-1.05270",
+      "name": "les Picardes",
+      "sourceName": "les Picardes (2752 m)",
+      "latitude": 42.527226,
+      "longitude": 1.052697,
+      "elevationMeters": 2752.3,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-la-soca-42.46043-2.53714",
+      "name": "la Soca",
+      "sourceName": "la Soca (1589 m)",
+      "latitude": 42.460429,
+      "longitude": 2.537143,
+      "elevationMeters": 1589.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-la-serra-vingrau-42.86614-2.79393",
+      "name": "la Serra (Vingrau)",
+      "sourceName": "la Serra (Vingrau) (542 m)",
+      "latitude": 42.866138,
+      "longitude": 2.793934,
+      "elevationMeters": 541.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-la-guardia-serra-de-busa-42.09327-1.62420",
+      "name": "la Guàrdia (Serra de Busa)",
+      "sourceName": "la Guàrdia (Serra de Busa) (1417 m)",
+      "latitude": 42.093275,
+      "longitude": 1.624197,
+      "elevationMeters": 1416.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-la-guardia-serra-de-busa-42.11667-1.58183",
+      "name": "la Guàrdia (Serra de Busa)",
+      "sourceName": "la Guàrdia (Serra de Busa) (1088 m)",
+      "latitude": 42.116674,
+      "longitude": 1.581828,
+      "elevationMeters": 1088.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-l-avedoga-d-adons-42.31422-0.83821",
+      "name": "l'Avedoga d'Adons",
+      "sourceName": "l'Avedoga d'Adons (1792 m)",
+      "latitude": 42.314223,
+      "longitude": 0.838211,
+      "elevationMeters": 1792.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-el-sui-41.75015-2.34562",
+      "name": "el Sui",
+      "sourceName": "el Sui (1282 m)",
+      "latitude": 41.750151,
+      "longitude": 2.345624,
+      "elevationMeters": 1281.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-el-punxo-42.53079-1.85446",
+      "name": "el Punxó",
+      "sourceName": "el Punxó (2560 m)",
+      "latitude": 42.530785,
+      "longitude": 1.854456,
+      "elevationMeters": 2560,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-el-mont-42.25881-2.70590",
+      "name": "El Mont",
+      "sourceName": "El Mont (1078 m)",
+      "latitude": 42.258809,
+      "longitude": 2.705897,
+      "elevationMeters": 1077.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-el-garrofi-41.86136-1.93872",
+      "name": "el Garrofí",
+      "sourceName": "el Garrofí (588 m)",
+      "latitude": 41.861355,
+      "longitude": 1.93872,
+      "elevationMeters": 588.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-el-cogullo-41.99831-1.03914",
+      "name": "el Cogulló",
+      "sourceName": "el Cogulló (987 m)",
+      "latitude": 41.998311,
+      "longitude": 1.039139,
+      "elevationMeters": 986.8,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-el-codo-42.30152-0.91460",
+      "name": "el Codó",
+      "sourceName": "el Codó (1293 m)",
+      "latitude": 42.301519,
+      "longitude": 0.914596,
+      "elevationMeters": 1293.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-codol-del-castellar-41.74115-2.05949",
+      "name": "Còdol del Castellar",
+      "sourceName": "Còdol del Castellar (795 m)",
+      "latitude": 41.741154,
+      "longitude": 2.059491,
+      "elevationMeters": 795.4,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-castell-de-milany-42.16568-2.28972",
+      "name": "Castell de Milany",
+      "sourceName": "Castell de Milany (1482 m)",
+      "latitude": 42.165683,
+      "longitude": 2.289718,
+      "elevationMeters": 1482.5,
+      "elevationSource": "gpx-ele",
+      "isEssential": true
+    },
+    {
+      "id": "cim-castell-de-lluca-42.05493-2.04016",
+      "name": "Castell de Lluçà",
+      "sourceName": "Castell de Lluçà (844 m)",
+      "latitude": 42.054931,
+      "longitude": 2.040158,
+      "elevationMeters": 843.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-castell-de-bocs-41.64242-1.94186",
+      "name": "Castell de Bocs",
+      "sourceName": "Castell de Bocs (601 m)",
+      "latitude": 41.642419,
+      "longitude": 1.941864,
+      "elevationMeters": 601,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-castell-de-besora-42.12378-2.25052",
+      "name": "Castell de Besora",
+      "sourceName": "Castell de Besora (974 m)",
+      "latitude": 42.123775,
+      "longitude": 2.250522,
+      "elevationMeters": 974.1,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-cap-de-pla-redon-42.27553-1.26702",
+      "name": "Cap de Pla Redon",
+      "sourceName": "Cap de Pla Redon (1823 m)",
+      "latitude": 42.275525,
+      "longitude": 1.26702,
+      "elevationMeters": 1822.7,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-cap-de-la-boixassa-42.28861-1.79858",
+      "name": "Cap de la Boixassa",
+      "sourceName": "Cap de la Boixassa (1738 m)",
+      "latitude": 42.288613,
+      "longitude": 1.798577,
+      "elevationMeters": 1738,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-cap-de-carreu-42.19381-1.12365",
+      "name": "Cap de Carreu",
+      "sourceName": "Cap de Carreu (1659 m)",
+      "latitude": 42.193809,
+      "longitude": 1.123647,
+      "elevationMeters": 1658.6,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-cap-de-broate-42.69240-1.36452",
+      "name": "Cap de Broate",
+      "sourceName": "Cap de Broate (2672 m)",
+      "latitude": 42.692404,
+      "longitude": 1.364522,
+      "elevationMeters": 2672.2,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    },
+    {
+      "id": "cim-alt-de-la-capa-42.56303-1.45421",
+      "name": "Alt de la Capa",
+      "sourceName": "Alt de la Capa (2506 m)",
+      "latitude": 42.563028,
+      "longitude": 1.454209,
+      "elevationMeters": 2506,
+      "elevationSource": "gpx-ele",
+      "isEssential": false
+    }
+  ]
+}

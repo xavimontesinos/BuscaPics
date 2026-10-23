@@ -1,0 +1,752 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="ChatGPT" version="1.1"><wpt lat="41.084078" lon="0.875050">
+    <ele>747.7</ele>
+    <name>Cavall Bernat de Llaberia (748 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.021069" lon="0.958816">
+    <ele>1643.5</ele>
+    <name>Tossal de Mirapallars i Urgell (1644 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.903061" lon="0.878651">
+    <ele>620.3</ele>
+    <name>Mont-roig (Cim de les Altures) (620 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.570794" lon="1.932164">
+    <ele>2829.7</ele>
+    <name>Carlit (2830 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.416823" lon="2.343617">
+    <ele>2411.6</ele>
+    <name>Costabona (2412 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="40.990687" lon="0.847833">
+    <ele>632.8</ele>
+    <name>Molló Puntaire (633 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.127166" lon="0.915015">
+    <ele>556.0</ele>
+    <name>Santa Bàrbara (Escornalbou) (556 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.053403" lon="0.895090">
+    <ele>572.8</ele>
+    <name>Puig de la Cabrafiga (573 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.637246" lon="1.580999">
+    <ele>685.5</ele>
+    <name>Puig de Sant Miquel (686 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.016238" lon="0.785413">
+    <ele>647.7</ele>
+    <name>Mola de Genessies (648 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.101517" lon="2.293726">
+    <ele>1188.3</ele>
+    <name>Bellmunt (1188 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.125106" lon="2.387916">
+    <ele>1485.1</ele>
+    <name>Puigsacalm (1485 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.296514" lon="1.915518">
+    <ele>572.5</ele>
+    <name>La Morella (572 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.490547" lon="3.074805">
+    <ele>615.0</ele>
+    <name>Torre de Madeloc o Tour du Madeloc (615 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.482138" lon="2.947081">
+    <ele>1224.3</ele>
+    <name>Puig Neulós (1224 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.337611" lon="1.578555">
+    <ele>394.9</ele>
+    <name>El Castellot (395 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="40.732236" lon="0.169367">
+    <ele>1325.8</ele>
+    <name>Tossal dels Tres Reis (1326 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.179024" lon="0.643513">
+    <ele>451.4</ele>
+    <name>Lo Tormo (451 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.108907" lon="0.873998">
+    <ele>880.0</ele>
+    <name>Mola de Colldejou (880 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.587683" lon="1.570325">
+    <ele>2650.7</ele>
+    <name>Casamanya Nord (2651 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.667142" lon="1.397888">
+    <ele>3074.6</ele>
+    <name>Pica d'Estats (3075 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.711967" lon="1.277727">
+    <ele>2798.1</ele>
+    <name>Pic de Certascan (2798 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="40.943033" lon="0.370849">
+    <ele>979.3</ele>
+    <name>Tossal d'Engrilló (979 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.427077" lon="1.303021">
+    <ele>856.6</ele>
+    <name>El Cogulló de Cabra (857 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.028929" lon="0.736280">
+    <ele>635.6</ele>
+    <name>La Tossa (Tivissa) (636 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.325985" lon="1.004158">
+    <ele>1144.2</ele>
+    <name>Tossal de la Baltasana (1144 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.591806" lon="1.443667">
+    <ele>2868.1</ele>
+    <name>Comapedrosa (2868 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.518875" lon="2.456645">
+    <ele>2725.4</ele>
+    <name>Canigó (2725 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.789441" lon="2.443906">
+    <ele>1637.5</ele>
+    <name>Les Agudes (1638 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.808782" lon="2.382726">
+    <ele>1637.8</ele>
+    <name>Matagalls (1638 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.653198" lon="1.493706">
+    <ele>2829.8</ele>
+    <name>Tristaina (2830 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.977672" lon="0.941350">
+    <ele>1382.5</ele>
+    <name>Sant Mamet (1382 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.468096" lon="1.657208">
+    <ele>2881.1</ele>
+    <name>Tossa Plana de Lles (2881 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.474701" lon="1.677626">
+    <ele>2792.9</ele>
+    <name>La Muga (2793 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.285848" lon="1.636137">
+    <ele>2622.5</ele>
+    <name>Vulturó (2622 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="40.613595" lon="0.530286">
+    <ele>728.1</ele>
+    <name>Torreta de Montsià (728 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="40.901270" lon="0.326719">
+    <ele>794.1</ele>
+    <name>Roques de Benet (794 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.605348" lon="1.811505">
+    <ele>1096.3</ele>
+    <name>Sant Jeroni (1096 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.600084" lon="1.805110">
+    <ele>1095.1</ele>
+    <name>Montgros (1095 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.579123" lon="1.884692">
+    <ele>336.0</ele>
+    <name>Sant Salvador de les Espases (336 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.110080" lon="1.639513">
+    <ele>1321.5</ele>
+    <name>Serrat del Cogul (1322 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.201329" lon="1.614277">
+    <ele>2274.8</ele>
+    <name>Cap del Verd (2275 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.208969" lon="1.301313">
+    <ele>1090.4</ele>
+    <name>Santa Fé (1090 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.151155" lon="1.347206">
+    <ele>1559.5</ele>
+    <name>Cogulló de Turp (1560 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.084475" lon="1.270766">
+    <ele>872.2</ele>
+    <name>Sant Honorat (872 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.355238" lon="0.964427">
+    <ele>994.9</ele>
+    <name>Punta Curull (995 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.009782" lon="2.445602">
+    <ele>1173.4</ele>
+    <name>Rocallarga (1173 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.109397" lon="0.576417">
+    <ele>447.5</ele>
+    <name>La Picossa (448 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.253447" lon="1.370152">
+    <ele>340.0</ele>
+    <name>Tossa Grossa de Montferri (340 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.211612" lon="1.417278">
+    <ele>308.8</ele>
+    <name>La Mola (309 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.468842" lon="1.112836">
+    <ele>791.3</ele>
+    <name>Tossal Gros de Vallbona (791 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.375338" lon="1.239376">
+    <ele>825.2</ele>
+    <name>Tossal Gros (825 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="40.940518" lon="0.586037">
+    <ele>868.8</ele>
+    <name>Xàquera o Creu de Santos (869 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.189417" lon="1.738111">
+    <ele>2276.9</ele>
+    <name>Cap de la Gallina Pelada (2277 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.319918" lon="3.167989">
+    <ele>624.9</ele>
+    <name>Castell de Saverdera (625 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.388675" lon="0.401351">
+    <ele>432.7</ele>
+    <name>Punta de Montmeneu (433 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.269209" lon="0.852677">
+    <ele>1648.0</ele>
+    <name>Pui de Lleras (1648 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.320304" lon="0.800800">
+    <ele>1820.1</ele>
+    <name>Pala de Teller (1820 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.783087" lon="2.540940">
+    <ele>607.2</ele>
+    <name>Turó de Montsoriu (607 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.612992" lon="0.843195">
+    <ele>269.8</ele>
+    <name>Fita Alta (270 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.284339" lon="1.697744">
+    <ele>438.1</ele>
+    <name>Puig de l'Aliga (438 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.322947" lon="1.743853">
+    <ele>366.7</ele>
+    <name>Penya del Papiol (367 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.846585" lon="1.402071">
+    <ele>618.0</ele>
+    <name>Tossal de la Creu (618 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.644525" lon="1.970874">
+    <ele>883.5</ele>
+    <name>Castellsapera (884 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.896244" lon="0.836364">
+    <ele>904.5</ele>
+    <name>Pala Alta (904 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.466481" lon="0.847219">
+    <ele>557.1</ele>
+    <name>Els Bessons (557 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.288565" lon="0.891221">
+    <ele>1122.5</ele>
+    <name>Roca Corbatera (1122 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.753384" lon="1.066959">
+    <ele>451.1</ele>
+    <name>Pilar d'Almenara (451 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.465735" lon="1.345659">
+    <ele>918.3</ele>
+    <name>Sant Miquel de Montclar (918 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.641872" lon="0.765506">
+    <ele>2556.0</ele>
+    <name>Tuc deth Port de Vielha (2556 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.629452" lon="0.698562">
+    <ele>2963.0</ele>
+    <name>Tuc de Molières (2963 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.369963" lon="2.219641">
+    <ele>2551.8</ele>
+    <name>Balandrau (2552 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.383310" lon="2.116705">
+    <ele>2886.5</ele>
+    <name>Puigmal (2886 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="40.803084" lon="0.344460">
+    <ele>1413.3</ele>
+    <name>Caro (1413 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.335799" lon="1.466726">
+    <ele>808.8</ele>
+    <name>Talaia de Montmell (809 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.625553" lon="1.602502">
+    <ele>2832.2</ele>
+    <name>Pic de la Serrera (2832 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.306273" lon="1.842463">
+    <ele>2227.9</ele>
+    <name>Penyes Altes de Moixeró (2228 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.240043" lon="1.702752">
+    <ele>2363.8</ele>
+    <name>Pollegó Superior (Pedraforca) (2364 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.601728" lon="1.361541">
+    <ele>2843.3</ele>
+    <name>Monteixo (2843 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.952158" lon="2.210505">
+    <ele>797.4</ele>
+    <name>Turó de la Creu de Gurb (797 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.423490" lon="1.033064">
+    <ele>2433.2</ele>
+    <name>Tuc de la Cometa (2433 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.518576" lon="0.765408">
+    <ele>2396.3</ele>
+    <name>Tuc de les Roies de Cardet (2396 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.182804" lon="1.002815">
+    <ele>1324.9</ele>
+    <name>Sant Corneli (1325 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.747441" lon="2.295985">
+    <ele>1015.7</ele>
+    <name>Tagamanent (1016 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.073482" lon="2.407875">
+    <ele>1255.9</ele>
+    <name>Cabrera (1256 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.702949" lon="2.122786">
+    <ele>913.3</ele>
+    <name>Sant Sadurní de Gallifa (913 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.923113" lon="2.533005">
+    <ele>1157.5</ele>
+    <name>Sant Miquel de Solterra (1158 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.039841" lon="0.766507">
+    <ele>1663.5</ele>
+    <name>Sant Alis (1664 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.629380" lon="2.101275">
+    <ele>648.9</ele>
+    <name>Puig de la Creu (649 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.875828" lon="2.108853">
+    <ele>979.3</ele>
+    <name>Puig de la Caritat (979 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.448326" lon="1.516485">
+    <ele>908.4</ele>
+    <name>Puig Castellar (Serra d'Ancosa) (908 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.655320" lon="2.128273">
+    <ele>784.9</ele>
+    <name>Pic del Vent o El Farell (785 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.490048" lon="1.024375">
+    <ele>2853.9</ele>
+    <name>Montsent de Pallars (2854 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.675118" lon="2.004691">
+    <ele>1015.5</ele>
+    <name>Montcau (1016 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.641280" lon="2.017898">
+    <ele>1072.5</ele>
+    <name>La Mola - Sant Llorens del Munt (1072 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.114090" lon="1.267538">
+    <ele>1502.2</ele>
+    <name>El Coscollet (1502 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.283645" lon="1.726444">
+    <ele>2470.2</ele>
+    <name>Comabona (2470 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.740870" lon="1.780953">
+    <ele>525.9</ele>
+    <name>Collbaix (526 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.326289" lon="1.064119">
+    <ele>1105.4</ele>
+    <name>Mola d'Estat (1105 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.234992" lon="1.134672">
+    <ele>2063.8</ele>
+    <name>Cap de Boumort (2064 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.487586" lon="1.761811">
+    <ele>2899.3</ele>
+    <name>Puigpedrós (2899 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.150851" lon="1.540078">
+    <ele>2191.8</ele>
+    <name>Puig de les Morreres (2192 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.320861" lon="1.892637">
+    <ele>2507.3</ele>
+    <name>La Tosa (2507 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.121517" lon="1.787123">
+    <ele>1786.2</ele>
+    <name>Cogulló d'Estela (1786 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.442170" lon="2.129737">
+    <ele>414.1</ele>
+    <name>Turó de Magarola o Turó del Maltall de Magarola (414 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.601353" lon="0.953356">
+    <ele>2802.8</ele>
+    <name>Tuc de Ratèra (2803 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.684056" lon="0.990542">
+    <ele>2558.5</ele>
+    <name>Tuc de Llançà (2558 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.408661" lon="1.214885">
+    <ele>2426.6</ele>
+    <name>Torreta de l'Orri (2427 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.434484" lon="2.147237">
+    <ele>2743.4</ele>
+    <name>Torre d'Eina (2743 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.337754" lon="2.010972">
+    <ele>269.1</ele>
+    <name>Sant Ramon (269 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.393858" lon="2.097945">
+    <ele>351.6</ele>
+    <name>Sant Pere Màrtir (352 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.112076" lon="2.711739">
+    <ele>612.4</ele>
+    <name>Sant Patllari (612 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.514440" lon="1.385126">
+    <ele>2728.2</ele>
+    <name>Salòria (2728 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.651882" lon="2.192373">
+    <ele>2446.4</ele>
+    <name>Roc de Madres (2446 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.422779" lon="2.727447">
+    <ele>1387.2</ele>
+    <name>Roc de Comptador (1387 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.585683" lon="0.880287">
+    <ele>2914.1</ele>
+    <name>Punta Alta (2914 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.613764" lon="1.984544">
+    <ele>2744.3</ele>
+    <name>Puig Peric (2744 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.284108" lon="2.427748">
+    <ele>1277.4</ele>
+    <name>Puig Ou (1277 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.491728" lon="2.469081">
+    <ele>2676.7</ele>
+    <name>Puig dels TretzeVents (2677 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.517266" lon="1.721503">
+    <ele>2738.0</ele>
+    <name>Pic Negre d'Envalira (2738 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.540288" lon="1.012074">
+    <ele>2831.3</ele>
+    <name>Pic de Peguera (2831 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.718932" lon="1.049959">
+    <ele>2691.0</ele>
+    <name>Pic de Moredo (2691 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.591304" lon="0.827819">
+    <ele>2940.1</ele>
+    <name>Pic de Comaloforno (2940 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.452955" lon="0.878871">
+    <ele>2668.4</ele>
+    <name>Pic de Cerví (2668 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.981405" lon="2.905591">
+    <ele>438.3</ele>
+    <name>Muntanya dels Àngels (438 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.449032" lon="1.578738">
+    <ele>2712.0</ele>
+    <name>Monturull (2712 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.785219" lon="0.758703">
+    <ele>2452.1</ele>
+    <name>Montlude (2452 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.708439" lon="0.758993">
+    <ele>2120.7</ele>
+    <name>Montcorbison (2121 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.633328" lon="0.875329">
+    <ele>2703.2</ele>
+    <name>Montardo (2703 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.604133" lon="2.496362">
+    <ele>555.1</ele>
+    <name>Montalt (555 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.793739" lon="0.917161">
+    <ele>2812.2</ele>
+    <name>Maubèrme (2812 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.608368" lon="1.039308">
+    <ele>2656.5</ele>
+    <name>Lo Tésol (Tesó de Son) (2656 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.462093" lon="0.828695">
+    <ele>2491.5</ele>
+    <name>Lo Corronco (2492 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.452844" lon="1.727050">
+    <ele>2725.7</ele>
+    <name>La Carabassa (2726 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.589344" lon="0.937796">
+    <ele>2824.7</ele>
+    <name>Gran Tuc de Colomèrs (2825 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.280709" lon="2.209876">
+    <ele>2017.4</ele>
+    <name>El Taga (2017 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.285717" lon="2.080664">
+    <ele>2002.5</ele>
+    <name>Costa Pubilla o Pla de Pujalts (2002 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.333312" lon="2.527849">
+    <ele>1499.3</ele>
+    <name>Comanegra (1499 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.006895" lon="2.862068">
+    <ele>354.1</ele>
+    <name>Castell de Sant Miquel (354 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.052170" lon="3.131662">
+    <ele>288.0</ele>
+    <name>Castell de Montgrí (288 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="41.537458" lon="2.387339">
+    <ele>349.6</ele>
+    <name>Castell de Burriac (350 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.659521" lon="1.193613">
+    <ele>2621.3</ele>
+    <name>Campirme (2621 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.451695" lon="2.132030">
+    <ele>2706.4</ele>
+    <name>Cambradasa (2706 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.504480" lon="1.460343">
+    <ele>2365.2</ele>
+    <name>Bony de la Pica o Pica d’Os (2365 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.426811" lon="2.230703">
+    <ele>2824.0</ele>
+    <name>Bastiments (2824 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.312800" lon="2.630728">
+    <ele>1288.4</ele>
+    <name>Bassegoda (1288 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.668691" lon="1.387471">
+    <ele>3033.0</ele>
+    <name>Sotllo (3033 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.427407" lon="2.694580">
+    <ele>1116.9</ele>
+    <name>Roc de Sant Salvador (1117 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.258809" lon="2.705897">
+    <ele>1077.8</ele>
+    <name>El Mont (1078 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  <wpt lat="42.165683" lon="2.289718">
+    <ele>1482.5</ele>
+    <name>Castell de Milany (1482 m)</name>
+    <sym>Flag_orange</sym>
+  </wpt>
+  </gpx>

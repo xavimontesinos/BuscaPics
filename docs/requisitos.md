@@ -203,23 +203,19 @@ etiquetas de todas las cimas que cumplan el filtro.
 La interfaz incluirá un control estándar para seleccionar qué conjunto
 de montañas se desea mostrar. Las opciones serán:
 
-1.  **Más de 3.000 m:** cimas cuya altitud sea superior a 3.000 metros.
-2.  **Lista de los 100 Cims de la FEEC:** cimas incluidas en la lista de
-    referencia de la FEEC.
-3.  **Más de 2.500 m:** cimas cuya altitud sea superior a 2.500 metros.
-4.  **Más de 2.000 m:** cimas cuya altitud sea superior a 2.000 metros.
-
-El control permitirá seleccionar una de estas opciones cada vez, salvo
-que en una revisión posterior se decida permitir combinaciones.
+1. **100 CIMS:** todas las cimas del catálogo completo.
+2. **100 CIMS essencials:** solo las cimas esenciales emparejadas con seguridad.
 
 El acceso al selector será un botón flotante sobre el mapa que abrirá un
-menú superpuesto con las cuatro opciones anteriores, según DI-02. Mientras
-la selección no esté conectada a datos de cimas, el botón y el menú
-deberán identificarse como provisionales conforme a DI-04.
+menú superpuesto con las dos opciones anteriores, según DI-02. El
+catálogo de desarrollo actual no se considera una fuente oficial ni apta
+para redistribución pública hasta confirmar su procedencia y licencia.
 
 La aplicación deberá documentar la fuente y la versión del catálogo de
-cimas utilizado. Para la lista de los 100 Cims, se verificará la lista
-oficial de la FEEC y sus condiciones de uso.
+cimas utilizado. La procedencia y las condiciones de reutilización de
+los GPX de desarrollo actuales están pendientes de confirmar; antes de
+redistribuir datos se verificará la lista oficial de la FEEC y sus
+condiciones de uso.
 
 ### RF-15. Actualización del conjunto de cimas
 
@@ -339,7 +335,7 @@ ocultas por el relieve.
 
 ### RC-08. Filtros de cimas
 
-El usuario puede elegir cualquiera de los cuatro conjuntos definidos y
+El usuario puede elegir cualquiera de los dos conjuntos definidos y
 las etiquetas se actualizan según la selección.
 
 ### RC-09. Gestión de mapas

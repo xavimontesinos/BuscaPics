@@ -8,12 +8,8 @@ import {
 import { PeakFilter, type PeakSet } from './components/PeakFilter';
 import { toPeakFeatureCollection, type Peak } from './domain/peaks';
 
-type PeakCatalog = {
-  peaks: Peak[];
-};
-
 function App() {
-  const [selectedPeakSet, setSelectedPeakSet] = useState<PeakSet>('over-3000m');
+  const [selectedPeakSet, setSelectedPeakSet] = useState<PeakSet>('100-cims');
   const [peakCatalog, setPeakCatalog] = useState<Peak[]>([]);
   const [catalogError, setCatalogError] = useState(false);
   const [mapZoomActions, setMapZoomActions] = useState<MapZoomActions | null>(null);
@@ -42,13 +38,13 @@ function App() {
 
     async function loadPeakCatalog() {
       try {
-        const response = await fetch('/data/peaks-sample.json');
+        const response = await fetch('/data/100-cims-catalog.json');
         if (!response.ok) throw new Error(`Catalog request failed: ${response.status}`);
-        const catalog = (await response.json()) as PeakCatalog;
+        const catalog = (await response.json()) as { peaks: Peak[] };
         if (!Array.isArray(catalog.peaks)) throw new Error('Catalog has no peaks array');
         if (isCurrent) setPeakCatalog(catalog.peaks);
       } catch (error) {
-        console.warn('Could not load the peak sample catalog:', error);
+        console.warn('Could not load the 100 Cims development catalog:', error);
         if (isCurrent) setCatalogError(true);
       }
     }
@@ -68,7 +64,7 @@ function App() {
     >
       {catalogError && (
         <p className="peak-catalog-error" role="status">
-          No se pudo cargar la muestra de cimas. El mapa sigue disponible.
+          No se pudo cargar el catálogo de cimas. El mapa sigue disponible.
         </p>
       )}
       <MapControls

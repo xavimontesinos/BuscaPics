@@ -10,10 +10,8 @@ type PeakOption = {
 };
 
 const peakOptions: PeakOption[] = [
-  { value: 'over-3000m', label: 'Más de 3.000 m' },
-  { value: 'feec-100-cims', label: 'Los 100 Cims de la FEEC' },
-  { value: 'over-2500m', label: 'Más de 2.500 m' },
-  { value: 'over-2000m', label: 'Más de 2.000 m' },
+  { value: '100-cims', label: '100 CIMS' },
+  { value: '100-cims-essentials', label: '100 CIMS essencials' },
 ];
 
 type PeakFilterProps = {
@@ -77,7 +75,7 @@ export function PeakFilter({ value, onChange }: PeakFilterProps) {
             </button>
           ))}
           <p className="peak-menu__note">
-            Muestra RTT de prueba · posiciones de cima pendientes de validar
+            Catàleg de desenvolupament · dades pendents de validar
           </p>
         </div>
       )}
