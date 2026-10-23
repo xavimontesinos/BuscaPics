@@ -4,7 +4,6 @@ export interface RasterDimensions {
   width: number;
   height: number;
 }
-
 /** Pixel coordinates use integer indices at pixel centers; (0, 0) is the first center. */
 export interface RasterPixelPosition {
   column: number;
@@ -79,12 +78,4 @@ export class RasterGeoreferencing {
       pixel: { column: cornerColumn - 0.5, row: cornerRow - 0.5 },
     };
   }
-}
-
-/**
- * Integration point for a future horizontal CRS library. Implementations must transform
- * coordinates only; vertical datum conversion is a separate operation and is not implied.
- */
-export interface HorizontalCoordinateTransformer {
-  transform(position: { x: number; y: number }, sourceCrs: string, targetCrs: string): { x: number; y: number };
 }
