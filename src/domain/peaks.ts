@@ -1,3 +1,5 @@
+import type { SummitTarget } from "./visibility/types";
+
 /** A summit imported from the local development GPX catalog. */
 export interface Peak {
   id: string;
@@ -34,6 +36,18 @@ export function filterPeaks(peaks: readonly Peak[], filter: PeakFilter): Peak[] 
 /** GeoJSON positions use longitude first, then latitude. */
 export function toGeoJsonCoordinates(peak: Peak): [number, number] {
   return [peak.longitude, peak.latitude];
+}
+
+/** Creates a terrain-relative visibility target without using the catalog altitude. */
+export function toSummitTarget(peak: Peak): SummitTarget {
+  return {
+    id: peak.id,
+    position: {
+      latitudeDegrees: peak.latitude,
+      longitudeDegrees: peak.longitude,
+    },
+    heightAboveTerrainMeters: 0,
+  };
 }
 
 export function toPeakFeatureCollection(

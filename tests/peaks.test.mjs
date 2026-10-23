@@ -29,6 +29,26 @@ test('imports every complete-list waypoint exactly once and records are valid', 
   }
 });
 
+test('converts a peak to a zero-height terrain-relative target without using catalog elevation', () => {
+  const peak = {
+    id: 'synthetic-peak',
+    name: 'Synthetic Peak',
+    sourceName: 'Synthetic Peak (1234 m)',
+    latitude: 42.25,
+    longitude: 1.85,
+    elevationMeters: 1234,
+    elevationSource: 'gpx-ele',
+    isEssential: false,
+  };
+  const target = domain.toSummitTarget(peak);
+  assert.deepEqual(target, {
+    id: 'synthetic-peak',
+    position: { latitudeDegrees: 42.25, longitudeDegrees: 1.85 },
+    heightAboveTerrainMeters: 0,
+  });
+  assert.deepEqual(domain.toSummitTarget({ ...peak, elevationMeters: 9999 }), target);
+});
+
 test('detects duplicate normalized names without silently merging them', () => {
   const point = { sourceName: 'Same Peak (100 m)', name: 'Same Peak', latitude: 42, longitude: 1, elevationMeters: 100, elevationSource: 'gpx-ele' };
   const result = buildCatalog([{ ...point, sourceIndex: 1 }, { ...point, sourceName: 'same peak (100 m)', sourceIndex: 2 }], []);

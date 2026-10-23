@@ -13,6 +13,7 @@ import {
   PEAK_MOUNTAIN_ICON,
 } from '../map/mapConfig';
 import type { PeakFeatureCollection } from '../domain/peaks';
+import type { GeographicPosition } from '../domain/visibility/types';
 
 setWorkerUrl(maplibreWorkerUrl);
 
@@ -29,6 +30,7 @@ export type MapOrientationActions = {
 type MapViewportProps = {
   children: ReactNode;
   peakFeatures: PeakFeatureCollection;
+  onObserverPositionChange: (position: GeographicPosition) => void;
   onMapZoomActionsChange: (actions: MapZoomActions | null) => void;
   onMapOrientationActionsChange: (actions: MapOrientationActions | null) => void;
   onMapBearingChange: (bearing: number | null) => void;
@@ -37,6 +39,7 @@ type MapViewportProps = {
 export function MapViewport({
   children,
   peakFeatures,
+  onObserverPositionChange,
   onMapZoomActionsChange,
   onMapOrientationActionsChange,
   onMapBearingChange,
@@ -62,6 +65,60 @@ export function MapViewport({
     let isActive = true;
     let peakImagesStarted = false;
     const peakImages: HTMLImageElement[] = [];
+    const canvas = map.getCanvas();
+    const activePointers = new Set<number>();
+    let longPressTimer: number | null = null;
+    let longPressPointerId: number | null = null;
+    let longPressStart: { x: number; y: number } | null = null;
+
+    const cancelLongPress = () => {
+      if (longPressTimer !== null) window.clearTimeout(longPressTimer);
+      longPressTimer = null;
+      longPressPointerId = null;
+      longPressStart = null;
+    };
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!canvas.contains(event.target as Node)) {
+        cancelLongPress();
+        return;
+      }
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+
+      activePointers.add(event.pointerId);
+      cancelLongPress();
+      if (activePointers.size !== 1) return;
+
+      const pointerId = event.pointerId;
+      const start = { x: event.clientX, y: event.clientY };
+      longPressPointerId = pointerId;
+      longPressStart = start;
+      longPressTimer = window.setTimeout(() => {
+        if (!isActive || longPressPointerId !== pointerId || !activePointers.has(pointerId)) return;
+        const bounds = canvas.getBoundingClientRect();
+        const location = map.unproject([start.x - bounds.left, start.y - bounds.top]);
+        const longitude = ((location.lng + 180) % 360 + 360) % 360 - 180;
+        onObserverPositionChange({
+          latitudeDegrees: location.lat,
+          longitudeDegrees: longitude,
+        });
+        cancelLongPress();
+      }, 650);
+    };
+    const handlePointerMove = (event: PointerEvent) => {
+      if (longPressPointerId !== event.pointerId || !longPressStart) return;
+      if (Math.hypot(event.clientX - longPressStart.x, event.clientY - longPressStart.y) > 10) {
+        cancelLongPress();
+      }
+    };
+    const handlePointerEnd = (event: PointerEvent) => {
+      activePointers.delete(event.pointerId);
+      if (longPressPointerId === event.pointerId) cancelLongPress();
+    };
+
+    window.addEventListener('pointerdown', handlePointerDown, true);
+    window.addEventListener('pointermove', handlePointerMove, true);
+    window.addEventListener('pointerup', handlePointerEnd, true);
+    window.addEventListener('pointercancel', handlePointerEnd, true);
 
     const handleRotate = () => onMapBearingChange(map.getBearing());
     const handleLoad = () => {
@@ -84,6 +141,7 @@ export function MapViewport({
     const handleMapError = (event: ErrorEvent) => {
       console.warn('MapLibre resource error:', event.error.message);
     };
+    map.on('movestart', cancelLongPress);
     map.on('rotate', handleRotate);
     map.on('load', handleLoad);
     map.on('error', handleMapError);
@@ -103,10 +161,17 @@ export function MapViewport({
 
     return () => {
       isActive = false;
+      cancelLongPress();
+      activePointers.clear();
+      window.removeEventListener('pointerdown', handlePointerDown, true);
+      window.removeEventListener('pointermove', handlePointerMove, true);
+      window.removeEventListener('pointerup', handlePointerEnd, true);
+      window.removeEventListener('pointercancel', handlePointerEnd, true);
       for (const image of peakImages) {
         image.onload = null;
         image.onerror = null;
       }
+      map.off('movestart', cancelLongPress);
       map.off('rotate', handleRotate);
       map.off('load', handleLoad);
       map.off('error', handleMapError);
@@ -116,7 +181,7 @@ export function MapViewport({
       onMapOrientationActionsChange(null);
       onMapBearingChange(null);
     };
-  }, [onMapBearingChange, onMapOrientationActionsChange, onMapZoomActionsChange]);
+  }, [onMapBearingChange, onMapOrientationActionsChange, onMapZoomActionsChange, onObserverPositionChange]);
 
   useEffect(() => {
     const source = mapRef.current?.getSource('peak-candidates') as GeoJSONSource | undefined;

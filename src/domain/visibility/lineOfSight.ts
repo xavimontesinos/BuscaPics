@@ -58,12 +58,20 @@ function lookupTerrain(
   position: GeographicPosition,
   distance: number,
 ): { sample: TerrainElevationSample } | { result: VisibilityStatus } {
-  const lookup = provider.getElevationAt(position);
+  let lookup: TerrainElevationLookup;
+  try {
+    lookup = provider.getElevationAt(position);
+  } catch {
+    return { result: indeterminate("terrain-provider-error", distance) };
+  }
   if (!lookup || lookup.state === "missing") {
     return { result: indeterminate("missing-terrain-data", distance) };
   }
   if (lookup.state === "outside-coverage") {
     return { result: indeterminate("outside-terrain-coverage", distance) };
+  }
+  if (lookup.state === "incompatible-vertical-reference") {
+    return { result: indeterminate("incompatible-vertical-reference", distance) };
   }
 
   try {
@@ -104,7 +112,12 @@ export function calculateLineOfSight(
   ) {
     return indeterminate("invalid-observer-height", distance);
   }
-  if (!Number.isFinite(target.heightAboveTerrainMeters) || target.heightAboveTerrainMeters < 0) {
+  if (target.absoluteElevation !== undefined) {
+    const targetElevationProblem = validateElevation(target.absoluteElevation);
+    if (targetElevationProblem) return indeterminate(targetElevationProblem, distance);
+  } else if (
+    !Number.isFinite(target.heightAboveTerrainMeters) || target.heightAboveTerrainMeters < 0
+  ) {
     return indeterminate("invalid-target-height", distance);
   }
   if (
@@ -130,8 +143,18 @@ export function calculateLineOfSight(
   if (!sameVerticalReference(observerReference, targetReference)) {
     return indeterminate("incompatible-vertical-reference", distance);
   }
-  const targetAbsoluteHeight =
-    targetGroundLookup.sample.elevation.meters + target.heightAboveTerrainMeters;
+  let targetAbsoluteHeight: number;
+  if (target.absoluteElevation !== undefined) {
+    const absoluteReference = target.absoluteElevation.verticalReference;
+    if (!absoluteReference) return indeterminate("missing-vertical-reference", distance);
+    if (!sameVerticalReference(observerReference, absoluteReference)) {
+      return indeterminate("incompatible-vertical-reference", distance);
+    }
+    targetAbsoluteHeight = target.absoluteElevation.meters;
+  } else {
+    targetAbsoluteHeight =
+      targetGroundLookup.sample.elevation.meters + target.heightAboveTerrainMeters;
+  }
 
   // Always include at least one interior check for distinct endpoints, even
   // when they are closer than the requested maximum spacing.

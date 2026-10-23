@@ -7,6 +7,7 @@ import {
 } from './components/MapViewport';
 import { PeakFilter, type PeakSet } from './components/PeakFilter';
 import { toPeakFeatureCollection, type Peak } from './domain/peaks';
+import type { GeographicPosition } from './domain/visibility/types';
 
 function App() {
   const [selectedPeakSet, setSelectedPeakSet] = useState<PeakSet>('100-cims');
@@ -16,6 +17,10 @@ function App() {
   const [mapOrientationActions, setMapOrientationActions] =
     useState<MapOrientationActions | null>(null);
   const [mapBearing, setMapBearing] = useState(0);
+  const [, setObserverPosition] = useState<GeographicPosition | null>(null);
+  const handleObserverPositionChange = useCallback((position: GeographicPosition) => {
+    setObserverPosition(position);
+  }, []);
   const handleMapZoomActionsChange = useCallback((actions: MapZoomActions | null) => {
     setMapZoomActions(actions);
   }, []);
@@ -58,6 +63,7 @@ function App() {
   return (
     <MapViewport
       peakFeatures={peakFeatures}
+      onObserverPositionChange={handleObserverPositionChange}
       onMapZoomActionsChange={handleMapZoomActionsChange}
       onMapOrientationActionsChange={handleMapOrientationActionsChange}
       onMapBearingChange={handleMapBearingChange}

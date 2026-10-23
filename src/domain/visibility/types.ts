@@ -26,13 +26,22 @@ export interface ObserverPosition {
   eyeHeightAboveGroundMeters: number;
 }
 
-/** Target summit position and explicit height above the terrain at that position. */
-export interface SummitTarget {
+/** Summit target height is either terrain-relative or an explicitly referenced absolute elevation. */
+export type SummitTarget = {
   id: string;
   position: GeographicPosition;
-  /** Metres above the terrain surface (AGL); must not be inferred from waypoint altitude. */
-  heightAboveTerrainMeters: number;
-}
+} & (
+  | {
+      /** Metres above local terrain; must not be populated from a catalog altitude. */
+      heightAboveTerrainMeters: number;
+      absoluteElevation?: never;
+    }
+  | {
+      /** Absolute elevation whose vertical reference must match the observer and terrain. */
+      absoluteElevation: Elevation;
+      heightAboveTerrainMeters?: never;
+    }
+);
 
 /** One terrain elevation sample returned by a future DEM provider. */
 export interface TerrainElevationSample {
@@ -44,7 +53,8 @@ export interface TerrainElevationSample {
 export type TerrainElevationLookup =
   | { state: "available"; sample: TerrainElevationSample }
   | { state: "missing" }
-  | { state: "outside-coverage" };
+  | { state: "outside-coverage" }
+  | { state: "incompatible-vertical-reference" };
 
 export type IndeterminateVisibilityReason =
   | "missing-terrain-data"
@@ -57,7 +67,8 @@ export type IndeterminateVisibilityReason =
   | "invalid-target-height"
   | "invalid-configuration"
   | "coincident-endpoints"
-  | "insufficient-terrain-samples";
+  | "insufficient-terrain-samples"
+  | "terrain-provider-error";
 
 /** Line-of-sight classification, including reasons when the result is unknown. */
 export type VisibilityStatus =
