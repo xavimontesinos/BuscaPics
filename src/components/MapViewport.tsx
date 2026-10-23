@@ -1,6 +1,7 @@
 import { useEffect, useRef, type ReactNode } from 'react';
 import {
   Map as MapLibreMap,
+  Marker,
   setWorkerUrl,
   type ErrorEvent,
   type GeoJSONSource,
@@ -30,6 +31,7 @@ export type MapOrientationActions = {
 type MapViewportProps = {
   children: ReactNode;
   peakFeatures: PeakFeatureCollection;
+  observerPosition: GeographicPosition | null;
   onObserverPositionChange: (position: GeographicPosition) => void;
   onMapZoomActionsChange: (actions: MapZoomActions | null) => void;
   onMapOrientationActionsChange: (actions: MapOrientationActions | null) => void;
@@ -39,6 +41,7 @@ type MapViewportProps = {
 export function MapViewport({
   children,
   peakFeatures,
+  observerPosition,
   onObserverPositionChange,
   onMapZoomActionsChange,
   onMapOrientationActionsChange,
@@ -46,6 +49,7 @@ export function MapViewport({
 }: MapViewportProps) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
+  const observerMarkerRef = useRef<Marker | null>(null);
   const peakFeaturesRef = useRef(peakFeatures);
   peakFeaturesRef.current = peakFeatures;
 
@@ -177,11 +181,26 @@ export function MapViewport({
       map.off('error', handleMapError);
       map.remove();
       mapRef.current = null;
+      observerMarkerRef.current = null;
       onMapZoomActionsChange(null);
       onMapOrientationActionsChange(null);
       onMapBearingChange(null);
     };
   }, [onMapBearingChange, onMapOrientationActionsChange, onMapZoomActionsChange, onObserverPositionChange]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !observerPosition) return;
+
+    const marker = new Marker({ color: '#d1495b' })
+      .setLngLat([observerPosition.longitudeDegrees, observerPosition.latitudeDegrees])
+      .addTo(map);
+    observerMarkerRef.current = marker;
+    return () => {
+      marker.remove();
+      if (observerMarkerRef.current === marker) observerMarkerRef.current = null;
+    };
+  }, [observerPosition]);
 
   useEffect(() => {
     const source = mapRef.current?.getSource('peak-candidates') as GeoJSONSource | undefined;

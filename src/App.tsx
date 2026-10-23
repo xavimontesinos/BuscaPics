@@ -17,7 +17,7 @@ function App() {
   const [mapOrientationActions, setMapOrientationActions] =
     useState<MapOrientationActions | null>(null);
   const [mapBearing, setMapBearing] = useState(0);
-  const [, setObserverPosition] = useState<GeographicPosition | null>(null);
+  const [observerPosition, setObserverPosition] = useState<GeographicPosition | null>(null);
   const handleObserverPositionChange = useCallback((position: GeographicPosition) => {
     setObserverPosition(position);
   }, []);
@@ -63,6 +63,7 @@ function App() {
   return (
     <MapViewport
       peakFeatures={peakFeatures}
+      observerPosition={observerPosition}
       onObserverPositionChange={handleObserverPositionChange}
       onMapZoomActionsChange={handleMapZoomActionsChange}
       onMapOrientationActionsChange={handleMapOrientationActionsChange}
