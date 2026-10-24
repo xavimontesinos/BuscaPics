@@ -1,4 +1,4 @@
-import type { SummitTarget } from "./visibility/types";
+import type { Elevation, SummitTarget, VisibilityStatus } from "./visibility/types";
 
 /** A summit imported from the local development GPX catalog. */
 export interface Peak {
@@ -10,6 +10,8 @@ export interface Peak {
   elevationMeters: number;
   elevationSource: "gpx-ele" | "name-suffix";
   isEssential: boolean;
+  /** Set only when an independently verified absolute summit elevation and datum exist. */
+  absoluteElevation?: Elevation;
 }
 
 export type PeakFilterId = "100-cims" | "100-cims-essentials";
@@ -24,7 +26,7 @@ export interface PeakFeatureCollection {
     type: "Feature";
     id: string;
     geometry: { type: "Point"; coordinates: [number, number] };
-    properties: { peakId: string; name: string; elevationM: number; elevationLabel: string; latitude: number; longitude: number };
+    properties: { peakId: string; name: string; elevationM: number; elevationLabel: string; latitude: number; longitude: number; visibility: VisibilityStatus["state"] };
   }>;
 }
 
@@ -38,21 +40,23 @@ export function toGeoJsonCoordinates(peak: Peak): [number, number] {
   return [peak.longitude, peak.latitude];
 }
 
-/** Creates a terrain-relative visibility target without using the catalog altitude. */
-export function toSummitTarget(peak: Peak): SummitTarget {
+/** Creates a target only when an independently verified absolute elevation is supplied. */
+export function toSummitTarget(peak: Peak): SummitTarget | null {
+  if (!peak.absoluteElevation) return null;
   return {
     id: peak.id,
     position: {
       latitudeDegrees: peak.latitude,
       longitudeDegrees: peak.longitude,
     },
-    heightAboveTerrainMeters: 0,
+    absoluteElevation: peak.absoluteElevation,
   };
 }
 
 export function toPeakFeatureCollection(
   peaks: readonly Peak[],
   filter: PeakFilter,
+  visibility: ReadonlyMap<string, VisibilityStatus["state"]> = new Map(),
 ): PeakFeatureCollection {
   return {
     type: "FeatureCollection",
@@ -67,6 +71,7 @@ export function toPeakFeatureCollection(
         elevationLabel: `${new Intl.NumberFormat("ca-ES", { maximumFractionDigits: 0 }).format(Math.round(peak.elevationMeters))} m`,
           latitude: peak.latitude,
           longitude: peak.longitude,
+          visibility: visibility.get(peak.id) ?? "indeterminate",
       },
     })),
   };

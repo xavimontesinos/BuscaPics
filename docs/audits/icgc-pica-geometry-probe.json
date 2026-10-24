@@ -1,0 +1,443 @@
+{
+  "schemaVersion": 1,
+  "queriedAt": "2026-10-24T09:10:15.151Z",
+  "target": {
+    "officialId": "271064006",
+    "fid": "62",
+    "name": "Pica d'Estats"
+  },
+  "metadataRequestUrl": "https://maps.icgc.cat/vector02/rest/services/icc_100cims_v_r/MapServer/0?f=pjson",
+  "layerMetadata": {
+    "name": "100_CIMS",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPoint",
+    "spatialReference": null,
+    "extent": {
+      "xmin": 261040.38,
+      "ymin": 4498797.74,
+      "xmax": 520052.86,
+      "ymax": 4740015.57,
+      "spatialReference": {
+        "wkid": 25831,
+        "latestWkid": 25831,
+        "xyTolerance": 0.001,
+        "zTolerance": 0.001,
+        "mTolerance": 0.001,
+        "falseX": -5120900,
+        "falseY": -9998100,
+        "xyUnits": 450445547.3910538,
+        "falseZ": -100000,
+        "zUnits": 10000,
+        "falseM": -100000,
+        "mUnits": 10000
+      }
+    },
+    "fields": [
+      {
+        "name": "FID",
+        "type": "esriFieldTypeOID",
+        "alias": "FID",
+        "domain": null
+      },
+      {
+        "name": "Nom",
+        "type": "esriFieldTypeString",
+        "alias": "Nom",
+        "length": 254,
+        "domain": null
+      },
+      {
+        "name": "Codi_cim",
+        "type": "esriFieldTypeDouble",
+        "alias": "Codi",
+        "domain": null
+      }
+    ],
+    "capabilities": "Map,Query,Data",
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "maxRecordCount": 2000
+  },
+  "wmsCapabilities": {
+    "requestUrl": "https://geoserveis.icgc.cat/icc_100cims/wms/service?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
+    "httpStatus": 200,
+    "supportedGetFeatureInfoFormats": [
+      "application/vnd.esri.wms_raw_xml",
+      "application/vnd.esri.wms_featureinfo_xml",
+      "application/vnd.ogc.wms_xml",
+      "text/xml",
+      "text/html",
+      "text/plain"
+    ],
+    "rawResponse": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\r\n<WMS_Capabilities xmlns=\"http://www.opengis.net/wms\" xmlns:esri_wms=\"http://www.esri.com/wms\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" version=\"1.3.0\" xsi:schemaLocation=\"http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.esri.com/wms https://geoserveis.icgc.cat/serveis/catalunya/icc_100cims/wms?version=1.3.0%26service=WMS%26request=GetSchemaExtension\">\r\n\t<Service>\r\n\t\t<Name>icc_100cims</Name>\r\n\t\t<Title>100 cims més emblemàtics de Catalunya</Title>\r\n\t\t<Abstract>WMS</Abstract>\r\n\t\t<KeywordList><Keyword/></KeywordList>\r\n\t\t<OnlineResource xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:type=\"simple\" xlink:href=\"https://geoserveis.icgc.cat/serveis/catalunya/icc_100cims/wms?\"/>\r\n\t\t<ContactInformation>\r\n\t\t\t<ContactPersonPrimary>\r\n\t\t\t\t<ContactPerson>Webmaster</ContactPerson>\r\n\t\t\t\t<ContactOrganization>Institut Cartogràfic i Geològic de Catalunya</ContactOrganization>\r\n\t\t\t</ContactPersonPrimary>\r\n\t\t\t<ContactPosition>pointOfContact</ContactPosition>\r\n\t\t\t<ContactAddress>\r\n\t\t\t\t<AddressType>postal</AddressType>\r\n\t\t\t\t<Address>Parc de Montjuïc s/n</Address>\r\n\t\t\t\t<City>Barcelona</City>\r\n\t\t\t\t<StateOrProvince>Barcelona</StateOrProvince>\r\n\t\t\t\t<PostCode>08038</PostCode>\r\n\t\t\t\t<Country>Spain</Country>\r\n\t\t\t</ContactAddress>\r\n\t\t\t<ContactVoiceTelephone>+34 935671500</ContactVoiceTelephone>\r\n\t\t\t<ContactFacsimileTelephone>+34 935671567</ContactFacsimileTelephone>\r\n\t\t\t<ContactElectronicMailAddress>webmaster@icgc.cat</ContactElectronicMailAddress>\r\n\t\t</ContactInformation>\r\n\t\t<Fees>http://www.icgc.cat/condicions</Fees>\r\n\t\t<AccessConstraints>Copyright</AccessConstraints>\r\n\t\t<MaxWidth>2048</MaxWidth>\r\n\t\t<MaxHeight>2048</MaxHeight>\r\n\t</Service>\r\n\t<Capability>\r\n\t\t<Request>\r\n\t\t\t<GetCapabilities>\r\n\t\t\t\t<Format>application/vnd.ogc.wms_xml</Format>\r\n\t\t\t\t<Format>text/xml</Format>\r\n\t\t\t\t<DCPType>\r\n\t\t\t\t\t<HTTP><Get><OnlineResource xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:type=\"simple\" xlink:href=\"https://geoserveis.icgc.cat/serveis/catalunya/icc_100cims/wms?\"/></Get></HTTP>\r\n\t\t\t\t</DCPType>\r\n\t\t\t</GetCapabilities>\r\n\t\t\t<GetMap>\r\n\t\t\t\t<Format>image/bmp</Format>\r\n\t\t\t\t<Format>image/jpeg</Format>\r\n\t\t\t\t<Format>image/tiff</Format>\r\n\t\t\t\t<Format>image/png</Format>\r\n\t\t\t\t<Format>image/png8</Format>\r\n\t\t\t\t<Format>image/png24</Format>\r\n\t\t\t\t<Format>image/png32</Format>\r\n\t\t\t\t<Format>image/gif</Format>\r\n\t\t\t\t<Format>image/svg+xml</Format>\r\n\t\t\t\t<DCPType>\r\n\t\t\t\t\t<HTTP><Get><OnlineResource xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:type=\"simple\" xlink:href=\"https://geoserveis.icgc.cat/serveis/catalunya/icc_100cims/wms?\"/></Get></HTTP>\r\n\t\t\t\t</DCPType>\r\n\t\t\t</GetMap>\r\n\t\t\t<GetFeatureInfo>\r\n\t\t\t\t<Format>application/vnd.esri.wms_raw_xml</Format>\r\n\t\t\t\t<Format>application/vnd.esri.wms_featureinfo_xml</Format>\r\n\t\t\t\t<Format>application/vnd.ogc.wms_xml</Format>\r\n\t\t\t\t<Format>text/xml</Format>\r\n\t\t\t\t<Format>text/html</Format>\r\n\t\t\t\t<Format>text/plain</Format>\r\n\t\t\t\t<DCPType>\r\n\t\t\t\t\t<HTTP><Get><OnlineResource xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:type=\"simple\" xlink:href=\"https://geoserveis.icgc.cat/serveis/catalunya/icc_100cims/wms?\"/></Get></HTTP>\r\n\t\t\t\t</DCPType>\r\n\t\t\t</GetFeatureInfo>\r\n\t\t\t<esri_wms:GetStyles>\r\n\t\t\t\t<Format>application/vnd.ogc.sld+xml</Format>\r\n\t\t\t\t<DCPType>\r\n\t\t\t\t\t<HTTP><Get><OnlineResource xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:type=\"simple\" xlink:href=\"https://geoserveis.icgc.cat/serveis/catalunya/icc_100cims/wms?\"/></Get></HTTP>\r\n\t\t\t\t</DCPType>\r\n\t\t\t</esri_wms:GetStyles>\r\n\t\t</Request>\r\n\t\t<Exception>\r\n\t\t\t<Format>application/vnd.ogc.se_xml</Format>\r\n\t\t\t<Format>application/vnd.ogc.se_inimage</Format>\r\n\t\t\t<Format>application/vnd.ogc.se_blank</Format>\r\n\t\t\t<Format>text/xml</Format>\r\n\t\t\t<Format>XML</Format>\r\n\t\t</Exception>\r\n\t\t<Layer>\r\n\t\t\t<Title>Layers</Title>\r\n\t\t\t<CRS>EPSG:25831</CRS>\r\n\t\t\t<CRS>CRS:84</CRS>\r\n\t\t\t<CRS>EPSG:4326</CRS>\r\n\t\t\t<CRS>EPSG:3857</CRS>\r\n\t\t\t<CRS>EPSG:4230</CRS>\r\n\t\t\t<CRS>EPSG:4258</CRS>\r\n\t\t\t<CRS>EPSG:32631</CRS>\r\n\t\t\t<CRS>EPSG:23031</CRS>\r\n\t\t\t<BoundingBox CRS=\"EPSG:25831\" minx=\"254904.96\" miny=\"4484796.89\" maxx=\"530907.30\" maxy=\"4749795.10\"/>\r\n\t\t\t<EX_GeographicBoundingBox>\r\n\t\t\t\t<westBoundLongitude>0.108624</westBoundLongitude>\r\n\t\t\t\t<eastBoundLongitude>3.378579</eastBoundLongitude>\r\n\t\t\t\t<southBoundLatitude>40.477710</southBoundLatitude>\r\n\t\t\t\t<northBoundLatitude>42.900140</northBoundLatitude>\r\n\t\t\t</EX_GeographicBoundingBox>\r\n\t\t\t<BoundingBox CRS=\"CRS:84\" minx=\"0.108624\" miny=\"40.477710\" maxx=\"3.378579\" maxy=\"42.900140\"/>\r\n\t\t\t<BoundingBox CRS=\"EPSG:4326\" miny=\"0.108624\" minx=\"40.477710\" maxy=\"3.378579\" maxx=\"42.900140\"/>\r\n\t\t\t<BoundingBox CRS=\"EPSG:3857\" maxx=\"387921.651632\" maxy=\"5302989.995799\" minx=\"4554.402748\" miny=\"4936725.023919\"/>\r\n\t\t\t<BoundingBox CRS=\"EPSG:4230\" miny=\"0.109826\" minx=\"40.478870\" maxy=\"3.379704\" maxx=\"42.901212\"/>\r\n\t\t\t<BoundingBox CRS=\"EPSG:4258\" miny=\"0.108624\" minx=\"40.477710\" maxy=\"3.378579\" maxx=\"42.900140\"/>\r\n\t\t\t<BoundingBox CRS=\"EPSG:32631\" minx=\"254904.96\" miny=\"4484796.89\" maxx=\"530907.30\" maxy=\"4749795.10\"/>\r\n\t\t\t<BoundingBox CRS=\"EPSG:23031\" minx=\"257000\" miny=\"4485000\" maxx=\"540000\" maxy=\"4756000\"/>\r\n\t\t\t<Layer queryable=\"1\">\r\n\t\t\t\t<Name>0</Name>\r\n\t\t\t\t<Title>100 cims més emblemàtics de Catalunya</Title>\r\n\t\t\t\t<Abstract></Abstract>\r\n\t\t\t\t<CRS>EPSG:25831</CRS>\r\n\t\t\t\t<CRS>CRS:84</CRS>\r\n\t\t\t\t<CRS>EPSG:4326</CRS>\r\n\t\t\t\t<CRS>EPSG:3857</CRS>\r\n\t\t\t\t<CRS>EPSG:4230</CRS>\r\n\t\t\t\t<CRS>EPSG:4258</CRS>\r\n\t\t\t\t<CRS>EPSG:32631</CRS>\r\n\t\t\t\t<CRS>EPSG:23031</CRS>\r\n\t\t\t\t<BoundingBox CRS=\"EPSG:25831\" minx=\"254904.96\" miny=\"4484796.89\" maxx=\"530907.30\" maxy=\"4749795.10\"/>\r\n\t\t\t\t<EX_GeographicBoundingBox>\r\n\t\t\t\t\t<westBoundLongitude>0.108624</westBoundLongitude>\r\n\t\t\t\t\t<eastBoundLongitude>3.378579</eastBoundLongitude>\r\n\t\t\t\t\t<southBoundLatitude>40.477710</southBoundLatitude>\r\n\t\t\t\t\t<northBoundLatitude>42.900140</northBoundLatitude>\r\n\t\t\t\t</EX_GeographicBoundingBox>\r\n\t\t\t\t<BoundingBox CRS=\"CRS:84\" minx=\"0.108624\" miny=\"40.477710\" maxx=\"3.378579\" maxy=\"42.900140\"/>\r\n\t\t\t\t<BoundingBox CRS=\"EPSG:4326\" miny=\"0.108624\" minx=\"40.477710\" maxy=\"3.378579\" maxx=\"42.900140\"/>\r\n\t\t\t\t<BoundingBox CRS=\"EPSG:3857\" maxx=\"387921.651632\" maxy=\"5302989.995799\" minx=\"4554.402748\" miny=\"4936725.023919\"/>\r\n\t\t\t\t<BoundingBox CRS=\"EPSG:4230\" miny=\"0.109826\" minx=\"40.478870\" maxy=\"3.379704\" maxx=\"42.901212\"/>\r\n\t\t\t\t<BoundingBox CRS=\"EPSG:4258\" miny=\"0.108624\" minx=\"40.477710\" maxy=\"3.378579\" maxx=\"42.900140\"/>\r\n\t\t\t\t<BoundingBox CRS=\"EPSG:32631\" minx=\"254904.96\" miny=\"4484796.89\" maxx=\"530907.30\" maxy=\"4749795.10\"/>\r\n\t\t\t\t<BoundingBox CRS=\"EPSG:23031\" minx=\"257000\" miny=\"4485000\" maxx=\"540000\" maxy=\"4756000\"/>\r\n\t\t\t\t<Style>\r\n\t\t\t\t\t<Name>default</Name>\r\n\t\t\t\t\t<Title>0</Title>\r\n\t\t\t\t\t<LegendURL width=\"22\" height=\"22\">\r\n\t\t\t\t\t\t<Format>image/png</Format>\r\n\t\t\t\t\t\t<OnlineResource xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"https://geoserveis.icgc.cat/serveis/catalunya/icc_100cims/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=0\" xlink:type=\"simple\"/>\r\n\t\t\t\t\t</LegendURL>\r\n\t\t\t\t</Style>\r\n\t\t\t</Layer>\r\n\t\t</Layer>\r\n\t</Capability>\r\n</WMS_Capabilities>\r\n"
+  },
+  "alternateGeoserveisMetadata": {
+    "requestUrl": "https://geoserveis.icgc.cat/vector02/rest/services/icc_100cims_v_r/MapServer/0?f=pjson",
+    "name": "100_CIMS",
+    "geometryType": "esriGeometryPoint",
+    "spatialReference": {
+      "wkid": 25831,
+      "latestWkid": 25831,
+      "xyTolerance": 0.001,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -5120900,
+      "falseY": -9998100,
+      "xyUnits": 450445547.3910538,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    },
+    "fields": [
+      {
+        "name": "FID",
+        "type": "esriFieldTypeOID",
+        "alias": "FID",
+        "domain": null
+      },
+      {
+        "name": "Nom",
+        "type": "esriFieldTypeString",
+        "alias": "Nom",
+        "length": 254,
+        "domain": null
+      },
+      {
+        "name": "Codi_cim",
+        "type": "esriFieldTypeDouble",
+        "alias": "Codi",
+        "domain": null
+      }
+    ],
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data"
+  },
+  "officialWmsIdentify": {
+    "requestedUrl": "https://geoserveis.icgc.cat/icc_100cims/wms/service?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&LAYERS=0&QUERY_LAYERS=0&STYLES=&CRS=EPSG%3A25831&BBOX=368685.43%2C4725050.33%2C368735.43%2C4725100.33&WIDTH=101&HEIGHT=101&I=50&J=50&INFO_FORMAT=text%2Fxml&FEATURE_COUNT=5",
+    "httpStatus": 200,
+    "responseContentType": "text/xml",
+    "infoFormat": "text/xml",
+    "rawResponse": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\r\n<FeatureInfoResponse xmlns:esri_wms=\"http://www.esri.com/wms\" xmlns=\"http://www.esri.com/wms\">\r\n<FIELDS FID=\"62\" Nom=\"Pica d'Estats\" Codi=\"271064006\"></FIELDS>\r\n</FeatureInfoResponse>\r\n",
+    "featureInfoAttributes": {
+      "FID": "62",
+      "Nom": "Pica d'Estats",
+      "Codi": "271064006"
+    },
+    "officialCodeMatchedAtSummitQueryPoint": true,
+    "queryPoint": {
+      "x": 368710.43,
+      "y": 4725075.33,
+      "crs": "EPSG:25831",
+      "meaning": "official highest summit coordinate from the ICGC measurement sheet"
+    },
+    "rawGeometry": null,
+    "parsedPoint": null,
+    "responseCrs": null,
+    "comparison": null,
+    "purpose": "Official spatial identify at the measurement-sheet summit coordinate; GetFeatureInfo does not supply a feature geometry."
+  },
+  "officialReference": {
+    "officialId": "271064006",
+    "officialName": "Pica d'Estats",
+    "identityMethod": "Manually matched ICGC summit code and name against the official ICGC list and measurement sheet.",
+    "consultedAt": "2026-10-24",
+    "officialSummit": {
+      "coordinate": {
+        "x": 368710.43,
+        "y": 4725075.33
+      },
+      "crs": "EPSG:25831",
+      "elevationMeters": 3143.45,
+      "pointType": "highest natural summit point"
+    },
+    "benchmark": {
+      "officialId": "271064005",
+      "coordinate": {
+        "x": 368712,
+        "y": 4725071.85
+      },
+      "crs": "EPSG:25831",
+      "elevationMeters": 3143.09,
+      "pointType": "stainless steel geodetic nail fixed in rock"
+    },
+    "verticalReference": "Orthometric height, ETRS89/00-EGM08D595, referred to Alicante (Alacant) tide-gauge datum.",
+    "method": "Post-processed GNSS measurement of the benchmark; geoid undulation 53.63 m applied to ellipsoidal height 3196.72 m; geometric levelling measured +0.37 m from benchmark to highest summit point. The official sheet also records the 2010 summit measurement and the 2015 joint GNSS campaign.",
+    "sources": [
+      {
+        "title": "ICGC Pica d'Estats measurement sheet (code 271064006)",
+        "url": "https://icgc-web-pro.s3.eu-central-1.amazonaws.com/produccio/s3fs-public/271064006_66559.pdf"
+      },
+      {
+        "title": "ICGC list of 100 emblematic peaks",
+        "url": "https://www.icgc.cat/ca/Eines-i-visors/Visors/100-cims-mes-emblematics-de-Catalunya/Llista-dels-100-cims-mes-emblematics-de-Catalunya"
+      }
+    ],
+    "thresholds": {
+      "horizontalMeters": 5,
+      "verticalMeters": 1
+    },
+    "reviewNote": "Thresholds are audit flags, not claims about source accuracy. The official summit coordinate and catalog coordinate do not identify the same point within the configured horizontal tolerance; review the plotted positions before accepting a correction."
+  },
+  "probes": [
+    {
+      "name": "query-by-codi-cim-json",
+      "requestedUrl": "https://maps.icgc.cat/vector02/rest/services/icc_100cims_v_r/MapServer/0/query?where=Codi_cim%3D271064006&outFields=*&returnGeometry=true&outSR=25831&f=json",
+      "httpStatus": 200,
+      "responseContentType": "application/json;charset=UTF-8",
+      "error": null,
+      "responseFeatureCount": 1,
+      "matchingPicaFeatureCount": 1,
+      "rawFeature": {
+        "attributes": {
+          "FID": 62,
+          "Nom": "Pica d'Estats",
+          "Codi_cim": 271064006
+        }
+      },
+      "rawGeometry": null,
+      "parsedPoint": null,
+      "responseCrs": null,
+      "coordinateInterpretation": null,
+      "comparison": null,
+      "rawResponse": {
+        "displayFieldName": "Nom",
+        "fieldAliases": {
+          "FID": "FID",
+          "Nom": "Nom",
+          "Codi_cim": "Codi"
+        },
+        "fields": [
+          {
+            "name": "FID",
+            "type": "esriFieldTypeOID",
+            "alias": "FID"
+          },
+          {
+            "name": "Nom",
+            "type": "esriFieldTypeString",
+            "alias": "Nom",
+            "length": 254
+          },
+          {
+            "name": "Codi_cim",
+            "type": "esriFieldTypeDouble",
+            "alias": "Codi"
+          }
+        ],
+        "features": [
+          {
+            "attributes": {
+              "FID": 62,
+              "Nom": "Pica d'Estats",
+              "Codi_cim": 271064006
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "query-by-fid-json",
+      "requestedUrl": "https://maps.icgc.cat/vector02/rest/services/icc_100cims_v_r/MapServer/0/query?objectIds=62&outFields=*&returnGeometry=true&outSR=25831&f=json",
+      "httpStatus": 200,
+      "responseContentType": "application/json;charset=UTF-8",
+      "error": null,
+      "responseFeatureCount": 1,
+      "matchingPicaFeatureCount": 1,
+      "rawFeature": {
+        "attributes": {
+          "FID": 62,
+          "Nom": "Pica d'Estats",
+          "Codi_cim": 271064006
+        }
+      },
+      "rawGeometry": null,
+      "parsedPoint": null,
+      "responseCrs": null,
+      "coordinateInterpretation": null,
+      "comparison": null,
+      "rawResponse": {
+        "displayFieldName": "Nom",
+        "fieldAliases": {
+          "FID": "FID",
+          "Nom": "Nom",
+          "Codi_cim": "Codi"
+        },
+        "fields": [
+          {
+            "name": "FID",
+            "type": "esriFieldTypeOID",
+            "alias": "FID"
+          },
+          {
+            "name": "Nom",
+            "type": "esriFieldTypeString",
+            "alias": "Nom",
+            "length": 254
+          },
+          {
+            "name": "Codi_cim",
+            "type": "esriFieldTypeDouble",
+            "alias": "Codi"
+          }
+        ],
+        "features": [
+          {
+            "attributes": {
+              "FID": 62,
+              "Nom": "Pica d'Estats",
+              "Codi_cim": 271064006
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "query-by-codi-cim-geojson",
+      "requestedUrl": "https://maps.icgc.cat/vector02/rest/services/icc_100cims_v_r/MapServer/0/query?where=Codi_cim%3D271064006&outFields=*&returnGeometry=true&outSR=25831&f=geojson",
+      "httpStatus": 200,
+      "responseContentType": "application/geo+json;charset=UTF-8",
+      "error": null,
+      "responseFeatureCount": 1,
+      "matchingPicaFeatureCount": 1,
+      "rawFeature": {
+        "type": "Feature",
+        "id": 62,
+        "geometry": null,
+        "properties": {
+          "FID": 62,
+          "Nom": "Pica d'Estats",
+          "Codi_cim": 271064006
+        }
+      },
+      "rawGeometry": null,
+      "parsedPoint": null,
+      "responseCrs": "EPSG:25831",
+      "coordinateInterpretation": null,
+      "comparison": null,
+      "rawResponse": {
+        "type": "FeatureCollection",
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:25831"
+          }
+        },
+        "features": [
+          {
+            "type": "Feature",
+            "id": 62,
+            "geometry": null,
+            "properties": {
+              "FID": 62,
+              "Nom": "Pica d'Estats",
+              "Codi_cim": 271064006
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "geoserveis-query-by-codi-cim-json",
+      "requestedUrl": "https://geoserveis.icgc.cat/vector02/rest/services/icc_100cims_v_r/MapServer/0/query?where=Codi_cim%3D271064006&outFields=*&returnGeometry=true&outSR=25831&f=json",
+      "httpStatus": 200,
+      "responseContentType": "application/json;charset=UTF-8",
+      "error": null,
+      "responseFeatureCount": 1,
+      "matchingPicaFeatureCount": 1,
+      "rawFeature": {
+        "attributes": {
+          "FID": 62,
+          "Nom": "Pica d'Estats",
+          "Codi_cim": 271064006
+        }
+      },
+      "rawGeometry": null,
+      "parsedPoint": null,
+      "responseCrs": null,
+      "coordinateInterpretation": null,
+      "comparison": null,
+      "rawResponse": {
+        "displayFieldName": "Nom",
+        "fieldAliases": {
+          "FID": "FID",
+          "Nom": "Nom",
+          "Codi_cim": "Codi"
+        },
+        "fields": [
+          {
+            "name": "FID",
+            "type": "esriFieldTypeOID",
+            "alias": "FID"
+          },
+          {
+            "name": "Nom",
+            "type": "esriFieldTypeString",
+            "alias": "Nom",
+            "length": 254
+          },
+          {
+            "name": "Codi_cim",
+            "type": "esriFieldTypeDouble",
+            "alias": "Codi"
+          }
+        ],
+        "features": [
+          {
+            "attributes": {
+              "FID": 62,
+              "Nom": "Pica d'Estats",
+              "Codi_cim": 271064006
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "geoserveis-query-by-codi-cim-geojson",
+      "requestedUrl": "https://geoserveis.icgc.cat/vector02/rest/services/icc_100cims_v_r/MapServer/0/query?where=Codi_cim%3D271064006&outFields=*&returnGeometry=true&outSR=25831&f=geojson",
+      "httpStatus": 200,
+      "responseContentType": "application/geo+json;charset=UTF-8",
+      "error": null,
+      "responseFeatureCount": 1,
+      "matchingPicaFeatureCount": 1,
+      "rawFeature": {
+        "type": "Feature",
+        "id": 62,
+        "geometry": null,
+        "properties": {
+          "FID": 62,
+          "Nom": "Pica d'Estats",
+          "Codi_cim": 271064006
+        }
+      },
+      "rawGeometry": null,
+      "parsedPoint": null,
+      "responseCrs": "EPSG:25831",
+      "coordinateInterpretation": null,
+      "comparison": null,
+      "rawResponse": {
+        "type": "FeatureCollection",
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:25831"
+          }
+        },
+        "features": [
+          {
+            "type": "Feature",
+            "id": 62,
+            "geometry": null,
+            "properties": {
+              "FID": 62,
+              "Nom": "Pica d'Estats",
+              "Codi_cim": 271064006
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "conclusion": "wms_identifies_pica_at_official_summit_query_coordinate_but_no_feature_geometry_was_returned",
+  "acceptance": "This probe is not accepted catalog evidence; verify point semantics against the official measurement sheet before any coordinate update."
+}

@@ -29,7 +29,7 @@ test('imports every complete-list waypoint exactly once and records are valid', 
   }
 });
 
-test('converts a peak to a zero-height terrain-relative target without using catalog elevation', () => {
+test('does not use an unreferenced catalog altitude as a visibility target', () => {
   const peak = {
     id: 'synthetic-peak',
     name: 'Synthetic Peak',
@@ -40,13 +40,17 @@ test('converts a peak to a zero-height terrain-relative target without using cat
     elevationSource: 'gpx-ele',
     isEssential: false,
   };
-  const target = domain.toSummitTarget(peak);
+  assert.equal(domain.toSummitTarget(peak), null);
+  assert.equal(domain.toSummitTarget({ ...peak, elevationMeters: 9999 }), null);
+  const target = domain.toSummitTarget({
+    ...peak,
+    absoluteElevation: { meters: 1234, verticalReference: { kind: 'orthometric', datum: 'EGM08D595' } },
+  });
   assert.deepEqual(target, {
     id: 'synthetic-peak',
     position: { latitudeDegrees: 42.25, longitudeDegrees: 1.85 },
-    heightAboveTerrainMeters: 0,
+    absoluteElevation: { meters: 1234, verticalReference: { kind: 'orthometric', datum: 'EGM08D595' } },
   });
-  assert.deepEqual(domain.toSummitTarget({ ...peak, elevationMeters: 9999 }), target);
 });
 
 test('detects duplicate normalized names without silently merging them', () => {
@@ -106,6 +110,10 @@ test('all essential waypoints match one catalog peak; selection returns exact se
   assert.deepEqual(feature.geometry.coordinates, [catalog.peaks[0].longitude, catalog.peaks[0].latitude]);
   assert.equal(feature.properties.latitude, catalog.peaks[0].latitude);
   assert.equal(feature.properties.longitude, catalog.peaks[0].longitude);
+  assert.equal(feature.properties.visibility, 'indeterminate');
+  const states = new Map([[catalog.peaks[0].id, 'visible']]);
+  const styledFeature = domain.toPeakFeatureCollection([catalog.peaks[0]], { id: '100-cims' }, states).features[0];
+  assert.equal(styledFeature.properties.visibility, 'visible');
 });
 
 test('coordinate fallback leaves multiple nearby candidates ambiguous', () => {

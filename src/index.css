@@ -488,3 +488,17 @@ button.control-button:disabled {
     transition-duration: 0.01ms !important;
   }
 }
+.observer-elevation {
+  position: absolute;
+  z-index: 2;
+  left: calc(16px + var(--safe-left, 0px));
+  bottom: calc(16px + var(--safe-bottom, 0px));
+  margin: 0;
+  padding: 7px 10px;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 10px;
+  background: rgb(24 31 28 / 88%);
+  color: #f3f5f1;
+  font-size: 12px;
+  pointer-events: none;
+}

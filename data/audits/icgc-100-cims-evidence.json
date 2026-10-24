@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "description": "Manually curated official evidence keyed by stable BuscaPics peak ID. Never populate by name-only matching.",
+  "records": {
+    "cim-pica-d-estats-42.66714-1.39789": {
+      "officialId": "271064006",
+      "officialName": "Pica d'Estats",
+      "identityMethod": "Manually matched ICGC summit code and name against the official ICGC list and measurement sheet.",
+      "consultedAt": "2026-10-24",
+      "officialSummit": {
+        "coordinate": { "x": 368710.43, "y": 4725075.33 },
+        "crs": "EPSG:25831",
+        "elevationMeters": 3143.45,
+        "pointType": "highest natural summit point"
+      },
+      "benchmark": {
+        "officialId": "271064005",
+        "coordinate": { "x": 368712.0, "y": 4725071.85 },
+        "crs": "EPSG:25831",
+        "elevationMeters": 3143.09,
+        "pointType": "stainless steel geodetic nail fixed in rock"
+      },
+      "verticalReference": "Orthometric height, ETRS89/00-EGM08D595, referred to Alicante (Alacant) tide-gauge datum.",
+      "method": "Post-processed GNSS measurement of the benchmark; geoid undulation 53.63 m applied to ellipsoidal height 3196.72 m; geometric levelling measured +0.37 m from benchmark to highest summit point. The official sheet also records the 2010 summit measurement and the 2015 joint GNSS campaign.",
+      "sources": [
+        {
+          "title": "ICGC Pica d'Estats measurement sheet (code 271064006)",
+          "url": "https://icgc-web-pro.s3.eu-central-1.amazonaws.com/produccio/s3fs-public/271064006_66559.pdf"
+        },
+        {
+          "title": "ICGC list of 100 emblematic peaks",
+          "url": "https://www.icgc.cat/ca/Eines-i-visors/Visors/100-cims-mes-emblematics-de-Catalunya/Llista-dels-100-cims-mes-emblematics-de-Catalunya"
+        }
+      ],
+      "thresholds": {
+        "horizontalMeters": 5,
+        "verticalMeters": 1
+      },
+      "reviewNote": "Thresholds are audit flags, not claims about source accuracy. The official summit coordinate and catalog coordinate do not identify the same point within the configured horizontal tolerance; review the plotted positions before accepting a correction."
+    }
+  }
+}

@@ -1,0 +1,2477 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-24T09:02:52.042Z",
+  "catalogSource": {
+    "title": "BuscaPics 100 Cims development catalog",
+    "status": "generated development data; not verified as official FEEC data",
+    "sources": [
+      "100_cims_complet.gpx",
+      "100_cims_essencials.gpx"
+    ],
+    "provenance": "Both input GPX files declare creator=\"ChatGPT\"; underlying provenance is unconfirmed.",
+    "reuseConditions": "Pending confirmation. This generated catalog is not approved for public redistribution.",
+    "coordinateAndElevationValidation": "Not independently verified; values are copied from the input GPX."
+  },
+  "scope": "essential peaks only",
+  "comparisonRules": {
+    "catalogCoordinatesInterpretedAs": "WGS84 longitude/latitude per GPX coordinate convention; original GPX provenance remains unconfirmed.",
+    "officialCoordinatesComparedIn": "EPSG:25831 using proj4.",
+    "altitudeComparison": "Only classified as comparable when the catalog explicitly declares orthometric EGM08D595; otherwise only a clearly marked numeric delta is emitted.",
+    "matching": "Evidence is linked by stable catalog ID; no automatic name-similarity matching."
+  },
+  "counts": {
+    "confirmado": 0,
+    "discrepante": 1,
+    "no_verificable": 149
+  },
+  "records": [
+    {
+      "catalogId": "cim-cavall-bernat-de-llaberia-41.08408-0.87505",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Cavall Bernat de Llaberia",
+        "sourceName": "Cavall Bernat de Llaberia (748 m)",
+        "latitude": 41.084078,
+        "longitude": 0.87505,
+        "elevationMeters": 747.7,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tossal-de-mirapallars-i-urgell-42.02107-0.95882",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tossal de Mirapallars i Urgell",
+        "sourceName": "Tossal de Mirapallars i Urgell (1644 m)",
+        "latitude": 42.021069,
+        "longitude": 0.958816,
+        "elevationMeters": 1643.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-mont-roig-cim-de-les-altures-41.90306-0.87865",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Mont-roig (Cim de les Altures)",
+        "sourceName": "Mont-roig (Cim de les Altures) (620 m)",
+        "latitude": 41.903061,
+        "longitude": 0.878651,
+        "elevationMeters": 620.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-carlit-42.57079-1.93216",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Carlit",
+        "sourceName": "Carlit (2830 m)",
+        "latitude": 42.570794,
+        "longitude": 1.932164,
+        "elevationMeters": 2829.7,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-costabona-42.41682-2.34362",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Costabona",
+        "sourceName": "Costabona (2412 m)",
+        "latitude": 42.416823,
+        "longitude": 2.343617,
+        "elevationMeters": 2411.6,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-mollo-puntaire-40.99069-0.84783",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Molló Puntaire",
+        "sourceName": "Molló Puntaire (633 m)",
+        "latitude": 40.990687,
+        "longitude": 0.847833,
+        "elevationMeters": 632.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-santa-barbara-escornalbou-41.12717-0.91502",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Santa Bàrbara (Escornalbou)",
+        "sourceName": "Santa Bàrbara (Escornalbou) (556 m)",
+        "latitude": 41.127166,
+        "longitude": 0.915015,
+        "elevationMeters": 556,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puig-de-la-cabrafiga-41.05340-0.89509",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puig de la Cabrafiga",
+        "sourceName": "Puig de la Cabrafiga (573 m)",
+        "latitude": 41.053403,
+        "longitude": 0.89509,
+        "elevationMeters": 572.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puig-de-sant-miquel-41.63725-1.58100",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puig de Sant Miquel",
+        "sourceName": "Puig de Sant Miquel (686 m)",
+        "latitude": 41.637246,
+        "longitude": 1.580999,
+        "elevationMeters": 685.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-mola-de-genessies-41.01624-0.78541",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Mola de Genessies",
+        "sourceName": "Mola de Genessies (648 m)",
+        "latitude": 41.016238,
+        "longitude": 0.785413,
+        "elevationMeters": 647.7,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-bellmunt-42.10152-2.29373",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Bellmunt",
+        "sourceName": "Bellmunt (1188 m)",
+        "latitude": 42.101517,
+        "longitude": 2.293726,
+        "elevationMeters": 1188.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puigsacalm-42.12511-2.38792",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puigsacalm",
+        "sourceName": "Puigsacalm (1485 m)",
+        "latitude": 42.125106,
+        "longitude": 2.387916,
+        "elevationMeters": 1485.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-la-morella-41.29651-1.91552",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "La Morella",
+        "sourceName": "La Morella (572 m)",
+        "latitude": 41.296514,
+        "longitude": 1.915518,
+        "elevationMeters": 572.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-torre-de-madeloc-o-tour-du-madeloc-42.49055-3.07481",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Torre de Madeloc o Tour du Madeloc",
+        "sourceName": "Torre de Madeloc o Tour du Madeloc (615 m)",
+        "latitude": 42.490547,
+        "longitude": 3.074805,
+        "elevationMeters": 615,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puig-neulos-42.48214-2.94708",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puig Neulós",
+        "sourceName": "Puig Neulós (1224 m)",
+        "latitude": 42.482138,
+        "longitude": 2.947081,
+        "elevationMeters": 1224.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-el-castellot-41.33761-1.57855",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "El Castellot",
+        "sourceName": "El Castellot (395 m)",
+        "latitude": 41.337611,
+        "longitude": 1.578555,
+        "elevationMeters": 394.9,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tossal-dels-tres-reis-40.73224-0.16937",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tossal dels Tres Reis",
+        "sourceName": "Tossal dels Tres Reis (1326 m)",
+        "latitude": 40.732236,
+        "longitude": 0.169367,
+        "elevationMeters": 1325.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-lo-tormo-41.17902-0.64351",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Lo Tormo",
+        "sourceName": "Lo Tormo (451 m)",
+        "latitude": 41.179024,
+        "longitude": 0.643513,
+        "elevationMeters": 451.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-mola-de-colldejou-41.10891-0.87400",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Mola de Colldejou",
+        "sourceName": "Mola de Colldejou (880 m)",
+        "latitude": 41.108907,
+        "longitude": 0.873998,
+        "elevationMeters": 880,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-casamanya-nord-42.58768-1.57032",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Casamanya Nord",
+        "sourceName": "Casamanya Nord (2651 m)",
+        "latitude": 42.587683,
+        "longitude": 1.570325,
+        "elevationMeters": 2650.7,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-pica-d-estats-42.66714-1.39789",
+      "status": "discrepante",
+      "reason": "Catalog position is 21.43 m from the official summit point. Catalog elevation has no confirmed EGM08D595 vertical reference; its numeric difference is indicative only and cannot validate altitude.",
+      "original": {
+        "name": "Pica d'Estats",
+        "sourceName": "Pica d'Estats (3075 m)",
+        "latitude": 42.667142,
+        "longitude": 1.397888,
+        "elevationMeters": 3074.6,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": {
+        "officialId": "271064006",
+        "officialName": "Pica d'Estats",
+        "identityMethod": "Manually matched ICGC summit code and name against the official ICGC list and measurement sheet.",
+        "consultedAt": "2026-10-24",
+        "officialSummit": {
+          "coordinate": {
+            "x": 368710.43,
+            "y": 4725075.33
+          },
+          "crs": "EPSG:25831",
+          "elevationMeters": 3143.45,
+          "pointType": "highest natural summit point"
+        },
+        "benchmark": {
+          "officialId": "271064005",
+          "coordinate": {
+            "x": 368712,
+            "y": 4725071.85
+          },
+          "crs": "EPSG:25831",
+          "elevationMeters": 3143.09,
+          "pointType": "stainless steel geodetic nail fixed in rock"
+        },
+        "verticalReference": "Orthometric height, ETRS89/00-EGM08D595, referred to Alicante (Alacant) tide-gauge datum.",
+        "method": "Post-processed GNSS measurement of the benchmark; geoid undulation 53.63 m applied to ellipsoidal height 3196.72 m; geometric levelling measured +0.37 m from benchmark to highest summit point. The official sheet also records the 2010 summit measurement and the 2015 joint GNSS campaign.",
+        "sources": [
+          {
+            "title": "ICGC Pica d'Estats measurement sheet (code 271064006)",
+            "url": "https://icgc-web-pro.s3.eu-central-1.amazonaws.com/produccio/s3fs-public/271064006_66559.pdf"
+          },
+          {
+            "title": "ICGC list of 100 emblematic peaks",
+            "url": "https://www.icgc.cat/ca/Eines-i-visors/Visors/100-cims-mes-emblematics-de-Catalunya/Llista-dels-100-cims-mes-emblematics-de-Catalunya"
+          }
+        ],
+        "thresholds": {
+          "horizontalMeters": 5,
+          "verticalMeters": 1
+        },
+        "reviewNote": "Thresholds are audit flags, not claims about source accuracy. The official summit coordinate and catalog coordinate do not identify the same point within the configured horizontal tolerance; review the plotted positions before accepting a correction."
+      },
+      "differences": {
+        "coordinateMeters": 21.434344166654967,
+        "coordinateStatus": "discrepante",
+        "elevationStatus": "no_verificable",
+        "unreferencedNumericElevationDeltaMeters": -68.84999999999991,
+        "identityStatus": "confirmado",
+        "verticalCompatibility": "compatible_con_MDT_ICGC_EGM08D595"
+      }
+    },
+    {
+      "catalogId": "cim-pic-de-certascan-42.71197-1.27773",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Pic de Certascan",
+        "sourceName": "Pic de Certascan (2798 m)",
+        "latitude": 42.711967,
+        "longitude": 1.277727,
+        "elevationMeters": 2798.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tossal-d-engrillo-40.94303-0.37085",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tossal d'Engrilló",
+        "sourceName": "Tossal d'Engrilló (979 m)",
+        "latitude": 40.943033,
+        "longitude": 0.370849,
+        "elevationMeters": 979.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-el-cogullo-de-cabra-41.42708-1.30302",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "El Cogulló de Cabra",
+        "sourceName": "El Cogulló de Cabra (857 m)",
+        "latitude": 41.427077,
+        "longitude": 1.303021,
+        "elevationMeters": 856.6,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-la-tossa-tivissa-41.02893-0.73628",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "La Tossa (Tivissa)",
+        "sourceName": "La Tossa (Tivissa) (636 m)",
+        "latitude": 41.028929,
+        "longitude": 0.73628,
+        "elevationMeters": 635.6,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tossal-de-la-baltasana-41.32599-1.00416",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tossal de la Baltasana",
+        "sourceName": "Tossal de la Baltasana (1144 m)",
+        "latitude": 41.325985,
+        "longitude": 1.004158,
+        "elevationMeters": 1144.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-comapedrosa-42.59181-1.44367",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Comapedrosa",
+        "sourceName": "Comapedrosa (2868 m)",
+        "latitude": 42.591806,
+        "longitude": 1.443667,
+        "elevationMeters": 2868.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-canigo-42.51888-2.45664",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Canigó",
+        "sourceName": "Canigó (2725 m)",
+        "latitude": 42.518875,
+        "longitude": 2.456645,
+        "elevationMeters": 2725.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-les-agudes-41.78944-2.44391",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Les Agudes",
+        "sourceName": "Les Agudes (1638 m)",
+        "latitude": 41.789441,
+        "longitude": 2.443906,
+        "elevationMeters": 1637.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-matagalls-41.80878-2.38273",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Matagalls",
+        "sourceName": "Matagalls (1638 m)",
+        "latitude": 41.808782,
+        "longitude": 2.382726,
+        "elevationMeters": 1637.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tristaina-42.65320-1.49371",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tristaina",
+        "sourceName": "Tristaina (2830 m)",
+        "latitude": 42.653198,
+        "longitude": 1.493706,
+        "elevationMeters": 2829.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-sant-mamet-41.97767-0.94135",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Sant Mamet",
+        "sourceName": "Sant Mamet (1382 m)",
+        "latitude": 41.977672,
+        "longitude": 0.94135,
+        "elevationMeters": 1382.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tossa-plana-de-lles-42.46810-1.65721",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tossa Plana de Lles",
+        "sourceName": "Tossa Plana de Lles (2881 m)",
+        "latitude": 42.468096,
+        "longitude": 1.657208,
+        "elevationMeters": 2881.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-la-muga-42.47470-1.67763",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "La Muga",
+        "sourceName": "La Muga (2793 m)",
+        "latitude": 42.474701,
+        "longitude": 1.677626,
+        "elevationMeters": 2792.9,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-vulturo-42.28585-1.63614",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Vulturó",
+        "sourceName": "Vulturó (2622 m)",
+        "latitude": 42.285848,
+        "longitude": 1.636137,
+        "elevationMeters": 2622.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-torreta-de-montsia-40.61359-0.53029",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Torreta de Montsià",
+        "sourceName": "Torreta de Montsià (728 m)",
+        "latitude": 40.613595,
+        "longitude": 0.530286,
+        "elevationMeters": 728.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-roques-de-benet-40.90127-0.32672",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Roques de Benet",
+        "sourceName": "Roques de Benet (794 m)",
+        "latitude": 40.90127,
+        "longitude": 0.326719,
+        "elevationMeters": 794.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-sant-jeroni-41.60535-1.81150",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Sant Jeroni",
+        "sourceName": "Sant Jeroni (1096 m)",
+        "latitude": 41.605348,
+        "longitude": 1.811505,
+        "elevationMeters": 1096.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-montgros-41.60008-1.80511",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Montgros",
+        "sourceName": "Montgros (1095 m)",
+        "latitude": 41.600084,
+        "longitude": 1.80511,
+        "elevationMeters": 1095.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-sant-salvador-de-les-espases-41.57912-1.88469",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Sant Salvador de les Espases",
+        "sourceName": "Sant Salvador de les Espases (336 m)",
+        "latitude": 41.579123,
+        "longitude": 1.884692,
+        "elevationMeters": 336,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-serrat-del-cogul-42.11008-1.63951",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Serrat del Cogul",
+        "sourceName": "Serrat del Cogul (1322 m)",
+        "latitude": 42.11008,
+        "longitude": 1.639513,
+        "elevationMeters": 1321.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-cap-del-verd-42.20133-1.61428",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Cap del Verd",
+        "sourceName": "Cap del Verd (2275 m)",
+        "latitude": 42.201329,
+        "longitude": 1.614277,
+        "elevationMeters": 2274.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-santa-fe-42.20897-1.30131",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Santa Fé",
+        "sourceName": "Santa Fé (1090 m)",
+        "latitude": 42.208969,
+        "longitude": 1.301313,
+        "elevationMeters": 1090.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-cogullo-de-turp-42.15116-1.34721",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Cogulló de Turp",
+        "sourceName": "Cogulló de Turp (1560 m)",
+        "latitude": 42.151155,
+        "longitude": 1.347206,
+        "elevationMeters": 1559.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-sant-honorat-42.08447-1.27077",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Sant Honorat",
+        "sourceName": "Sant Honorat (872 m)",
+        "latitude": 42.084475,
+        "longitude": 1.270766,
+        "elevationMeters": 872.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-punta-curull-41.35524-0.96443",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Punta Curull",
+        "sourceName": "Punta Curull (995 m)",
+        "latitude": 41.355238,
+        "longitude": 0.964427,
+        "elevationMeters": 994.9,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-rocallarga-42.00978-2.44560",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Rocallarga",
+        "sourceName": "Rocallarga (1173 m)",
+        "latitude": 42.009782,
+        "longitude": 2.445602,
+        "elevationMeters": 1173.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-la-picossa-41.10940-0.57642",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "La Picossa",
+        "sourceName": "La Picossa (448 m)",
+        "latitude": 41.109397,
+        "longitude": 0.576417,
+        "elevationMeters": 447.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tossa-grossa-de-montferri-41.25345-1.37015",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tossa Grossa de Montferri",
+        "sourceName": "Tossa Grossa de Montferri (340 m)",
+        "latitude": 41.253447,
+        "longitude": 1.370152,
+        "elevationMeters": 340,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-la-mola-41.21161-1.41728",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "La Mola",
+        "sourceName": "La Mola (309 m)",
+        "latitude": 41.211612,
+        "longitude": 1.417278,
+        "elevationMeters": 308.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tossal-gros-de-vallbona-41.46884-1.11284",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tossal Gros de Vallbona",
+        "sourceName": "Tossal Gros de Vallbona (791 m)",
+        "latitude": 41.468842,
+        "longitude": 1.112836,
+        "elevationMeters": 791.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tossal-gros-41.37534-1.23938",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tossal Gros",
+        "sourceName": "Tossal Gros (825 m)",
+        "latitude": 41.375338,
+        "longitude": 1.239376,
+        "elevationMeters": 825.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-xaquera-o-creu-de-santos-40.94052-0.58604",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Xàquera o Creu de Santos",
+        "sourceName": "Xàquera o Creu de Santos (869 m)",
+        "latitude": 40.940518,
+        "longitude": 0.586037,
+        "elevationMeters": 868.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-cap-de-la-gallina-pelada-42.18942-1.73811",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Cap de la Gallina Pelada",
+        "sourceName": "Cap de la Gallina Pelada (2277 m)",
+        "latitude": 42.189417,
+        "longitude": 1.738111,
+        "elevationMeters": 2276.9,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-castell-de-saverdera-42.31992-3.16799",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Castell de Saverdera",
+        "sourceName": "Castell de Saverdera (625 m)",
+        "latitude": 42.319918,
+        "longitude": 3.167989,
+        "elevationMeters": 624.9,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-punta-de-montmeneu-41.38867-0.40135",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Punta de Montmeneu",
+        "sourceName": "Punta de Montmeneu (433 m)",
+        "latitude": 41.388675,
+        "longitude": 0.401351,
+        "elevationMeters": 432.7,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-pui-de-lleras-42.26921-0.85268",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Pui de Lleras",
+        "sourceName": "Pui de Lleras (1648 m)",
+        "latitude": 42.269209,
+        "longitude": 0.852677,
+        "elevationMeters": 1648,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-pala-de-teller-42.32030-0.80080",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Pala de Teller",
+        "sourceName": "Pala de Teller (1820 m)",
+        "latitude": 42.320304,
+        "longitude": 0.8008,
+        "elevationMeters": 1820.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-turo-de-montsoriu-41.78309-2.54094",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Turó de Montsoriu",
+        "sourceName": "Turó de Montsoriu (607 m)",
+        "latitude": 41.783087,
+        "longitude": 2.54094,
+        "elevationMeters": 607.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-fita-alta-41.61299-0.84320",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Fita Alta",
+        "sourceName": "Fita Alta (270 m)",
+        "latitude": 41.612992,
+        "longitude": 0.843195,
+        "elevationMeters": 269.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puig-de-l-aliga-41.28434-1.69774",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puig de l'Aliga",
+        "sourceName": "Puig de l'Aliga (438 m)",
+        "latitude": 41.284339,
+        "longitude": 1.697744,
+        "elevationMeters": 438.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-penya-del-papiol-41.32295-1.74385",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Penya del Papiol",
+        "sourceName": "Penya del Papiol (367 m)",
+        "latitude": 41.322947,
+        "longitude": 1.743853,
+        "elevationMeters": 366.7,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tossal-de-la-creu-41.84658-1.40207",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tossal de la Creu",
+        "sourceName": "Tossal de la Creu (618 m)",
+        "latitude": 41.846585,
+        "longitude": 1.402071,
+        "elevationMeters": 618,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-castellsapera-41.64453-1.97087",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Castellsapera",
+        "sourceName": "Castellsapera (884 m)",
+        "latitude": 41.644525,
+        "longitude": 1.970874,
+        "elevationMeters": 883.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-pala-alta-41.89624-0.83636",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Pala Alta",
+        "sourceName": "Pala Alta (904 m)",
+        "latitude": 41.896244,
+        "longitude": 0.836364,
+        "elevationMeters": 904.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-els-bessons-41.46648-0.84722",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Els Bessons",
+        "sourceName": "Els Bessons (557 m)",
+        "latitude": 41.466481,
+        "longitude": 0.847219,
+        "elevationMeters": 557.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-roca-corbatera-41.28856-0.89122",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Roca Corbatera",
+        "sourceName": "Roca Corbatera (1122 m)",
+        "latitude": 41.288565,
+        "longitude": 0.891221,
+        "elevationMeters": 1122.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-pilar-d-almenara-41.75338-1.06696",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Pilar d'Almenara",
+        "sourceName": "Pilar d'Almenara (451 m)",
+        "latitude": 41.753384,
+        "longitude": 1.066959,
+        "elevationMeters": 451.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-sant-miquel-de-montclar-41.46574-1.34566",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Sant Miquel de Montclar",
+        "sourceName": "Sant Miquel de Montclar (918 m)",
+        "latitude": 41.465735,
+        "longitude": 1.345659,
+        "elevationMeters": 918.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tuc-deth-port-de-vielha-42.64187-0.76551",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tuc deth Port de Vielha",
+        "sourceName": "Tuc deth Port de Vielha (2556 m)",
+        "latitude": 42.641872,
+        "longitude": 0.765506,
+        "elevationMeters": 2556,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tuc-de-molieres-42.62945-0.69856",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tuc de Molières",
+        "sourceName": "Tuc de Molières (2963 m)",
+        "latitude": 42.629452,
+        "longitude": 0.698562,
+        "elevationMeters": 2963,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-balandrau-42.36996-2.21964",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Balandrau",
+        "sourceName": "Balandrau (2552 m)",
+        "latitude": 42.369963,
+        "longitude": 2.219641,
+        "elevationMeters": 2551.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puigmal-42.38331-2.11671",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puigmal",
+        "sourceName": "Puigmal (2886 m)",
+        "latitude": 42.38331,
+        "longitude": 2.116705,
+        "elevationMeters": 2886.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-caro-40.80308-0.34446",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Caro",
+        "sourceName": "Caro (1413 m)",
+        "latitude": 40.803084,
+        "longitude": 0.34446,
+        "elevationMeters": 1413.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-talaia-de-montmell-41.33580-1.46673",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Talaia de Montmell",
+        "sourceName": "Talaia de Montmell (809 m)",
+        "latitude": 41.335799,
+        "longitude": 1.466726,
+        "elevationMeters": 808.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-pic-de-la-serrera-42.62555-1.60250",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Pic de la Serrera",
+        "sourceName": "Pic de la Serrera (2832 m)",
+        "latitude": 42.625553,
+        "longitude": 1.602502,
+        "elevationMeters": 2832.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-penyes-altes-de-moixero-42.30627-1.84246",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Penyes Altes de Moixeró",
+        "sourceName": "Penyes Altes de Moixeró (2228 m)",
+        "latitude": 42.306273,
+        "longitude": 1.842463,
+        "elevationMeters": 2227.9,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-pollego-superior-pedraforca-42.24004-1.70275",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Pollegó Superior (Pedraforca)",
+        "sourceName": "Pollegó Superior (Pedraforca) (2364 m)",
+        "latitude": 42.240043,
+        "longitude": 1.702752,
+        "elevationMeters": 2363.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-monteixo-42.60173-1.36154",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Monteixo",
+        "sourceName": "Monteixo (2843 m)",
+        "latitude": 42.601728,
+        "longitude": 1.361541,
+        "elevationMeters": 2843.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-turo-de-la-creu-de-gurb-41.95216-2.21050",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Turó de la Creu de Gurb",
+        "sourceName": "Turó de la Creu de Gurb (797 m)",
+        "latitude": 41.952158,
+        "longitude": 2.210505,
+        "elevationMeters": 797.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tuc-de-la-cometa-42.42349-1.03306",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tuc de la Cometa",
+        "sourceName": "Tuc de la Cometa (2433 m)",
+        "latitude": 42.42349,
+        "longitude": 1.033064,
+        "elevationMeters": 2433.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tuc-de-les-roies-de-cardet-42.51858-0.76541",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tuc de les Roies de Cardet",
+        "sourceName": "Tuc de les Roies de Cardet (2396 m)",
+        "latitude": 42.518576,
+        "longitude": 0.765408,
+        "elevationMeters": 2396.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-sant-corneli-42.18280-1.00282",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Sant Corneli",
+        "sourceName": "Sant Corneli (1325 m)",
+        "latitude": 42.182804,
+        "longitude": 1.002815,
+        "elevationMeters": 1324.9,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tagamanent-41.74744-2.29598",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tagamanent",
+        "sourceName": "Tagamanent (1016 m)",
+        "latitude": 41.747441,
+        "longitude": 2.295985,
+        "elevationMeters": 1015.7,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-cabrera-42.07348-2.40788",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Cabrera",
+        "sourceName": "Cabrera (1256 m)",
+        "latitude": 42.073482,
+        "longitude": 2.407875,
+        "elevationMeters": 1255.9,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-sant-sadurni-de-gallifa-41.70295-2.12279",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Sant Sadurní de Gallifa",
+        "sourceName": "Sant Sadurní de Gallifa (913 m)",
+        "latitude": 41.702949,
+        "longitude": 2.122786,
+        "elevationMeters": 913.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-sant-miquel-de-solterra-41.92311-2.53301",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Sant Miquel de Solterra",
+        "sourceName": "Sant Miquel de Solterra (1158 m)",
+        "latitude": 41.923113,
+        "longitude": 2.533005,
+        "elevationMeters": 1157.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-sant-alis-42.03984-0.76651",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Sant Alis",
+        "sourceName": "Sant Alis (1664 m)",
+        "latitude": 42.039841,
+        "longitude": 0.766507,
+        "elevationMeters": 1663.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puig-de-la-creu-41.62938-2.10127",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puig de la Creu",
+        "sourceName": "Puig de la Creu (649 m)",
+        "latitude": 41.62938,
+        "longitude": 2.101275,
+        "elevationMeters": 648.9,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puig-de-la-caritat-41.87583-2.10885",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puig de la Caritat",
+        "sourceName": "Puig de la Caritat (979 m)",
+        "latitude": 41.875828,
+        "longitude": 2.108853,
+        "elevationMeters": 979.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puig-castellar-serra-d-ancosa-41.44833-1.51649",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puig Castellar (Serra d'Ancosa)",
+        "sourceName": "Puig Castellar (Serra d'Ancosa) (908 m)",
+        "latitude": 41.448326,
+        "longitude": 1.516485,
+        "elevationMeters": 908.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-pic-del-vent-o-el-farell-41.65532-2.12827",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Pic del Vent o El Farell",
+        "sourceName": "Pic del Vent o El Farell (785 m)",
+        "latitude": 41.65532,
+        "longitude": 2.128273,
+        "elevationMeters": 784.9,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-montsent-de-pallars-42.49005-1.02438",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Montsent de Pallars",
+        "sourceName": "Montsent de Pallars (2854 m)",
+        "latitude": 42.490048,
+        "longitude": 1.024375,
+        "elevationMeters": 2853.9,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-montcau-41.67512-2.00469",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Montcau",
+        "sourceName": "Montcau (1016 m)",
+        "latitude": 41.675118,
+        "longitude": 2.004691,
+        "elevationMeters": 1015.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-la-mola-sant-llorens-del-munt-41.64128-2.01790",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "La Mola - Sant Llorens del Munt",
+        "sourceName": "La Mola - Sant Llorens del Munt (1072 m)",
+        "latitude": 41.64128,
+        "longitude": 2.017898,
+        "elevationMeters": 1072.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-el-coscollet-42.11409-1.26754",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "El Coscollet",
+        "sourceName": "El Coscollet (1502 m)",
+        "latitude": 42.11409,
+        "longitude": 1.267538,
+        "elevationMeters": 1502.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-comabona-42.28364-1.72644",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Comabona",
+        "sourceName": "Comabona (2470 m)",
+        "latitude": 42.283645,
+        "longitude": 1.726444,
+        "elevationMeters": 2470.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-collbaix-41.74087-1.78095",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Collbaix",
+        "sourceName": "Collbaix (526 m)",
+        "latitude": 41.74087,
+        "longitude": 1.780953,
+        "elevationMeters": 525.9,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-mola-d-estat-41.32629-1.06412",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Mola d'Estat",
+        "sourceName": "Mola d'Estat (1105 m)",
+        "latitude": 41.326289,
+        "longitude": 1.064119,
+        "elevationMeters": 1105.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-cap-de-boumort-42.23499-1.13467",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Cap de Boumort",
+        "sourceName": "Cap de Boumort (2064 m)",
+        "latitude": 42.234992,
+        "longitude": 1.134672,
+        "elevationMeters": 2063.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puigpedros-42.48759-1.76181",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puigpedrós",
+        "sourceName": "Puigpedrós (2899 m)",
+        "latitude": 42.487586,
+        "longitude": 1.761811,
+        "elevationMeters": 2899.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puig-de-les-morreres-42.15085-1.54008",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puig de les Morreres",
+        "sourceName": "Puig de les Morreres (2192 m)",
+        "latitude": 42.150851,
+        "longitude": 1.540078,
+        "elevationMeters": 2191.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-la-tosa-42.32086-1.89264",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "La Tosa",
+        "sourceName": "La Tosa (2507 m)",
+        "latitude": 42.320861,
+        "longitude": 1.892637,
+        "elevationMeters": 2507.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-cogullo-d-estela-42.12152-1.78712",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Cogulló d'Estela",
+        "sourceName": "Cogulló d'Estela (1786 m)",
+        "latitude": 42.121517,
+        "longitude": 1.787123,
+        "elevationMeters": 1786.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-turo-de-magarola-o-turo-del-maltall-de-magarola-41.44217-2.12974",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Turó de Magarola o Turó del Maltall de Magarola",
+        "sourceName": "Turó de Magarola o Turó del Maltall de Magarola (414 m)",
+        "latitude": 41.44217,
+        "longitude": 2.129737,
+        "elevationMeters": 414.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tuc-de-ratera-42.60135-0.95336",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tuc de Ratèra",
+        "sourceName": "Tuc de Ratèra (2803 m)",
+        "latitude": 42.601353,
+        "longitude": 0.953356,
+        "elevationMeters": 2802.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-tuc-de-llanca-42.68406-0.99054",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Tuc de Llançà",
+        "sourceName": "Tuc de Llançà (2558 m)",
+        "latitude": 42.684056,
+        "longitude": 0.990542,
+        "elevationMeters": 2558.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-torreta-de-l-orri-42.40866-1.21488",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Torreta de l'Orri",
+        "sourceName": "Torreta de l'Orri (2427 m)",
+        "latitude": 42.408661,
+        "longitude": 1.214885,
+        "elevationMeters": 2426.6,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-torre-d-eina-42.43448-2.14724",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Torre d'Eina",
+        "sourceName": "Torre d'Eina (2743 m)",
+        "latitude": 42.434484,
+        "longitude": 2.147237,
+        "elevationMeters": 2743.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-sant-ramon-41.33775-2.01097",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Sant Ramon",
+        "sourceName": "Sant Ramon (269 m)",
+        "latitude": 41.337754,
+        "longitude": 2.010972,
+        "elevationMeters": 269.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-sant-pere-martir-41.39386-2.09795",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Sant Pere Màrtir",
+        "sourceName": "Sant Pere Màrtir (352 m)",
+        "latitude": 41.393858,
+        "longitude": 2.097945,
+        "elevationMeters": 351.6,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-sant-patllari-42.11208-2.71174",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Sant Patllari",
+        "sourceName": "Sant Patllari (612 m)",
+        "latitude": 42.112076,
+        "longitude": 2.711739,
+        "elevationMeters": 612.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-saloria-42.51444-1.38513",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Salòria",
+        "sourceName": "Salòria (2728 m)",
+        "latitude": 42.51444,
+        "longitude": 1.385126,
+        "elevationMeters": 2728.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-roc-de-madres-42.65188-2.19237",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Roc de Madres",
+        "sourceName": "Roc de Madres (2446 m)",
+        "latitude": 42.651882,
+        "longitude": 2.192373,
+        "elevationMeters": 2446.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-roc-de-comptador-42.42278-2.72745",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Roc de Comptador",
+        "sourceName": "Roc de Comptador (1387 m)",
+        "latitude": 42.422779,
+        "longitude": 2.727447,
+        "elevationMeters": 1387.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-punta-alta-42.58568-0.88029",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Punta Alta",
+        "sourceName": "Punta Alta (2914 m)",
+        "latitude": 42.585683,
+        "longitude": 0.880287,
+        "elevationMeters": 2914.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puig-peric-42.61376-1.98454",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puig Peric",
+        "sourceName": "Puig Peric (2744 m)",
+        "latitude": 42.613764,
+        "longitude": 1.984544,
+        "elevationMeters": 2744.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puig-ou-42.28411-2.42775",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puig Ou",
+        "sourceName": "Puig Ou (1277 m)",
+        "latitude": 42.284108,
+        "longitude": 2.427748,
+        "elevationMeters": 1277.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-puig-dels-tretzevents-42.49173-2.46908",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Puig dels TretzeVents",
+        "sourceName": "Puig dels TretzeVents (2677 m)",
+        "latitude": 42.491728,
+        "longitude": 2.469081,
+        "elevationMeters": 2676.7,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-pic-negre-d-envalira-42.51727-1.72150",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Pic Negre d'Envalira",
+        "sourceName": "Pic Negre d'Envalira (2738 m)",
+        "latitude": 42.517266,
+        "longitude": 1.721503,
+        "elevationMeters": 2738,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-pic-de-peguera-42.54029-1.01207",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Pic de Peguera",
+        "sourceName": "Pic de Peguera (2831 m)",
+        "latitude": 42.540288,
+        "longitude": 1.012074,
+        "elevationMeters": 2831.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-pic-de-moredo-42.71893-1.04996",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Pic de Moredo",
+        "sourceName": "Pic de Moredo (2691 m)",
+        "latitude": 42.718932,
+        "longitude": 1.049959,
+        "elevationMeters": 2691,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-pic-de-comaloforno-42.59130-0.82782",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Pic de Comaloforno",
+        "sourceName": "Pic de Comaloforno (2940 m)",
+        "latitude": 42.591304,
+        "longitude": 0.827819,
+        "elevationMeters": 2940.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-pic-de-cervi-42.45296-0.87887",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Pic de Cerví",
+        "sourceName": "Pic de Cerví (2668 m)",
+        "latitude": 42.452955,
+        "longitude": 0.878871,
+        "elevationMeters": 2668.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-muntanya-dels-angels-41.98141-2.90559",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Muntanya dels Àngels",
+        "sourceName": "Muntanya dels Àngels (438 m)",
+        "latitude": 41.981405,
+        "longitude": 2.905591,
+        "elevationMeters": 438.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-monturull-42.44903-1.57874",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Monturull",
+        "sourceName": "Monturull (2712 m)",
+        "latitude": 42.449032,
+        "longitude": 1.578738,
+        "elevationMeters": 2712,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-montlude-42.78522-0.75870",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Montlude",
+        "sourceName": "Montlude (2452 m)",
+        "latitude": 42.785219,
+        "longitude": 0.758703,
+        "elevationMeters": 2452.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-montcorbison-42.70844-0.75899",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Montcorbison",
+        "sourceName": "Montcorbison (2121 m)",
+        "latitude": 42.708439,
+        "longitude": 0.758993,
+        "elevationMeters": 2120.7,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-montardo-42.63333-0.87533",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Montardo",
+        "sourceName": "Montardo (2703 m)",
+        "latitude": 42.633328,
+        "longitude": 0.875329,
+        "elevationMeters": 2703.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-montalt-41.60413-2.49636",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Montalt",
+        "sourceName": "Montalt (555 m)",
+        "latitude": 41.604133,
+        "longitude": 2.496362,
+        "elevationMeters": 555.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-mauberme-42.79374-0.91716",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Maubèrme",
+        "sourceName": "Maubèrme (2812 m)",
+        "latitude": 42.793739,
+        "longitude": 0.917161,
+        "elevationMeters": 2812.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-lo-tesol-teso-de-son-42.60837-1.03931",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Lo Tésol (Tesó de Son)",
+        "sourceName": "Lo Tésol (Tesó de Son) (2656 m)",
+        "latitude": 42.608368,
+        "longitude": 1.039308,
+        "elevationMeters": 2656.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-lo-corronco-42.46209-0.82869",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Lo Corronco",
+        "sourceName": "Lo Corronco (2492 m)",
+        "latitude": 42.462093,
+        "longitude": 0.828695,
+        "elevationMeters": 2491.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-la-carabassa-42.45284-1.72705",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "La Carabassa",
+        "sourceName": "La Carabassa (2726 m)",
+        "latitude": 42.452844,
+        "longitude": 1.72705,
+        "elevationMeters": 2725.7,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-gran-tuc-de-colomers-42.58934-0.93780",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Gran Tuc de Colomèrs",
+        "sourceName": "Gran Tuc de Colomèrs (2825 m)",
+        "latitude": 42.589344,
+        "longitude": 0.937796,
+        "elevationMeters": 2824.7,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-el-taga-42.28071-2.20988",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "El Taga",
+        "sourceName": "El Taga (2017 m)",
+        "latitude": 42.280709,
+        "longitude": 2.209876,
+        "elevationMeters": 2017.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-costa-pubilla-o-pla-de-pujalts-42.28572-2.08066",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Costa Pubilla o Pla de Pujalts",
+        "sourceName": "Costa Pubilla o Pla de Pujalts (2002 m)",
+        "latitude": 42.285717,
+        "longitude": 2.080664,
+        "elevationMeters": 2002.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-comanegra-42.33331-2.52785",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Comanegra",
+        "sourceName": "Comanegra (1499 m)",
+        "latitude": 42.333312,
+        "longitude": 2.527849,
+        "elevationMeters": 1499.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-castell-de-sant-miquel-42.00690-2.86207",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Castell de Sant Miquel",
+        "sourceName": "Castell de Sant Miquel (354 m)",
+        "latitude": 42.006895,
+        "longitude": 2.862068,
+        "elevationMeters": 354.1,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-castell-de-montgri-42.05217-3.13166",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Castell de Montgrí",
+        "sourceName": "Castell de Montgrí (288 m)",
+        "latitude": 42.05217,
+        "longitude": 3.131662,
+        "elevationMeters": 288,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-castell-de-burriac-41.53746-2.38734",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Castell de Burriac",
+        "sourceName": "Castell de Burriac (350 m)",
+        "latitude": 41.537458,
+        "longitude": 2.387339,
+        "elevationMeters": 349.6,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-campirme-42.65952-1.19361",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Campirme",
+        "sourceName": "Campirme (2621 m)",
+        "latitude": 42.659521,
+        "longitude": 1.193613,
+        "elevationMeters": 2621.3,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-cambradasa-42.45170-2.13203",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Cambradasa",
+        "sourceName": "Cambradasa (2706 m)",
+        "latitude": 42.451695,
+        "longitude": 2.13203,
+        "elevationMeters": 2706.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-bony-de-la-pica-o-pica-d-os-42.50448-1.46034",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Bony de la Pica o Pica d’Os",
+        "sourceName": "Bony de la Pica o Pica d’Os (2365 m)",
+        "latitude": 42.50448,
+        "longitude": 1.460343,
+        "elevationMeters": 2365.2,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-bastiments-42.42681-2.23070",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Bastiments",
+        "sourceName": "Bastiments (2824 m)",
+        "latitude": 42.426811,
+        "longitude": 2.230703,
+        "elevationMeters": 2824,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-bassegoda-42.31280-2.63073",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Bassegoda",
+        "sourceName": "Bassegoda (1288 m)",
+        "latitude": 42.3128,
+        "longitude": 2.630728,
+        "elevationMeters": 1288.4,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-sotllo-42.66869-1.38747",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Sotllo",
+        "sourceName": "Sotllo (3033 m)",
+        "latitude": 42.668691,
+        "longitude": 1.387471,
+        "elevationMeters": 3033,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-roc-de-sant-salvador-42.42741-2.69458",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Roc de Sant Salvador",
+        "sourceName": "Roc de Sant Salvador (1117 m)",
+        "latitude": 42.427407,
+        "longitude": 2.69458,
+        "elevationMeters": 1116.9,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-el-mont-42.25881-2.70590",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "El Mont",
+        "sourceName": "El Mont (1078 m)",
+        "latitude": 42.258809,
+        "longitude": 2.705897,
+        "elevationMeters": 1077.8,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    },
+    {
+      "catalogId": "cim-castell-de-milany-42.16568-2.28972",
+      "status": "no_verificable",
+      "reason": "No explicit official evidence is linked to this stable catalog ID.",
+      "original": {
+        "name": "Castell de Milany",
+        "sourceName": "Castell de Milany (1482 m)",
+        "latitude": 42.165683,
+        "longitude": 2.289718,
+        "elevationMeters": 1482.5,
+        "elevationSource": "gpx-ele",
+        "verticalReference": null
+      },
+      "official": null,
+      "differences": null
+    }
+  ]
+}

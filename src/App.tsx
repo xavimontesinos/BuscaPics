@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { MapControls } from './components/MapControls';
 import {
   MapViewport,
@@ -8,6 +8,10 @@ import {
 import { PeakFilter, type PeakSet } from './components/PeakFilter';
 import { toPeakFeatureCollection, type Peak } from './domain/peaks';
 import type { GeographicPosition } from './domain/visibility/types';
+import type { TerrainElevationLookup } from './domain/visibility/types';
+import { getIgcObserverGroundElevation } from './domain/visibility/icgcObserverElevation';
+import { calculatePeakVisibilities } from './domain/visibility/peakVisibility';
+import type { VisibilityStatus } from './domain/visibility/types';
 
 function App() {
   const [selectedPeakSet, setSelectedPeakSet] = useState<PeakSet>('100-cims');
@@ -18,9 +22,18 @@ function App() {
     useState<MapOrientationActions | null>(null);
   const [mapBearing, setMapBearing] = useState(0);
   const [observerPosition, setObserverPosition] = useState<GeographicPosition | null>(null);
+  const [observerElevation, setObserverElevation] = useState<TerrainElevationLookup | null>(null);
+  const elevationRequestId = useRef(0);
+  const [visibilityByPeak, setVisibilityByPeak] = useState<Map<string, VisibilityStatus>>(new Map());
   const [selectedPeakId, setSelectedPeakId] = useState<string | null>(null);
   const handleObserverPositionChange = useCallback((position: GeographicPosition) => {
+    elevationRequestId.current += 1;
+    const requestId = elevationRequestId.current;
     setObserverPosition(position);
+    setObserverElevation({ state: 'missing' });
+    void getIgcObserverGroundElevation(position).then((result) => {
+      if (requestId === elevationRequestId.current) setObserverElevation(result);
+    });
   }, []);
   const handlePeakSelect = useCallback((peakId: string) => {
     setSelectedPeakId(peakId);
@@ -38,8 +51,12 @@ function App() {
     if (bearing !== null) setMapBearing(bearing);
   }, []);
   const peakFeatures = useMemo(
-    () => toPeakFeatureCollection(peakCatalog, { id: selectedPeakSet }),
-    [peakCatalog, selectedPeakSet],
+    () => toPeakFeatureCollection(
+      peakCatalog,
+      { id: selectedPeakSet },
+      new Map([...visibilityByPeak].map(([id, status]) => [id, status.state])),
+    ),
+    [peakCatalog, selectedPeakSet, visibilityByPeak],
   );
   const selectedPeak = peakCatalog.find((peak) => peak.id === selectedPeakId) ?? null;
 
@@ -54,6 +71,17 @@ function App() {
       setSelectedPeakId(null);
     }
   }, [peakFeatures, selectedPeakId]);
+
+  useEffect(() => {
+    const requestId = elevationRequestId.current;
+    if (!observerPosition || !observerElevation || observerElevation.state !== 'available') {
+      setVisibilityByPeak(new Map());
+      return;
+    }
+    void calculatePeakVisibilities(observerPosition, observerElevation, peakCatalog).then((results) => {
+      if (requestId === elevationRequestId.current) setVisibilityByPeak(results);
+    });
+  }, [observerPosition, observerElevation, peakCatalog]);
 
   useEffect(() => {
     let isCurrent = true;
@@ -101,6 +129,13 @@ function App() {
         onResetNorth={mapOrientationActions?.resetNorth}
       />
       <PeakFilter value={selectedPeakSet} onChange={setSelectedPeakSet} />
+      {observerPosition && (
+        <p className="observer-elevation" role="status" aria-live="polite">
+          Terreny: {observerElevation?.state === 'available'
+            ? `${new Intl.NumberFormat('ca-ES', { maximumFractionDigits: 0 }).format(Math.round(observerElevation.sample.elevation.meters))} m`
+            : 'desconegut'}
+        </p>
+      )}
       {selectedPeak && (
         <aside className="selected-peak-card" aria-label="Cima seleccionada" aria-live="polite">
           <h2>{selectedPeak.name}</h2>

@@ -66,6 +66,18 @@ export const MAP_STYLE: StyleSpecification = {
       },
     },
     {
+      id: 'peak-visibility-markers',
+      type: 'circle',
+      source: 'peak-candidates',
+      minzoom: 9,
+      paint: {
+        'circle-radius': 5,
+        'circle-color': ['match', ['get', 'visibility'], 'visible', '#16834a', 'occluded', '#b53b36', '#788078'],
+        'circle-stroke-color': '#fffdf5',
+        'circle-stroke-width': 1.5,
+      },
+    },
+    {
       id: 'peak-candidate-markers',
       type: 'symbol',
       source: 'peak-candidates',
@@ -107,8 +119,8 @@ export const MAP_STYLE: StyleSpecification = {
         'text-padding': 3,
       },
       paint: {
-        'icon-opacity': ['case', ['boolean', ['feature-state', 'selected'], false], 1, 0.65],
-        'text-color': ['case', ['boolean', ['feature-state', 'selected'], false], '#9a3f26', '#183c2b'],
+        'icon-opacity': ['case', ['boolean', ['feature-state', 'selected'], false], 1, ['==', ['get', 'visibility'], 'indeterminate'], 0.55, 0.65],
+        'text-color': ['case', ['boolean', ['feature-state', 'selected'], false], '#9a3f26', ['match', ['get', 'visibility'], 'visible', '#126b3d', 'occluded', '#a4312d', '#555d57']],
         'text-halo-color': '#fffdf5',
         'text-halo-width': ['case', ['boolean', ['feature-state', 'selected'], false], 2, 1.15],
         'text-halo-blur': 0.2,

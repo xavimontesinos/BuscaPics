@@ -1,0 +1,2701 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "url": "https://maps.icgc.cat/vector02/rest/services/icc_100cims_v_r/MapServer/0/query?where=1%3D1&outFields=FID%2CNom%2CCodi_cim&returnGeometry=true&outSR=25831&f=json",
+    "layerUrl": "https://maps.icgc.cat/vector02/rest/services/icc_100cims_v_r/MapServer/0",
+    "queriedAt": "2026-10-24T09:02:21.691Z",
+    "queryFields": [
+      "FID",
+      "Nom",
+      "Codi_cim"
+    ],
+    "returnedFields": [
+      {
+        "name": "FID",
+        "type": "esriFieldTypeOID",
+        "alias": "FID"
+      },
+      {
+        "name": "Nom",
+        "type": "esriFieldTypeString",
+        "alias": "Nom",
+        "length": 254
+      },
+      {
+        "name": "Codi_cim",
+        "type": "esriFieldTypeDouble",
+        "alias": "Codi"
+      }
+    ],
+    "spatialReference": null,
+    "requestedSpatialReference": "EPSG:25831",
+    "limitation": "The service exposes name, code and point geometry only; it does not provide elevation, vertical datum, or a summit-versus-benchmark point type."
+  },
+  "features": [
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-bastiments-42.42681-2.23070"
+      ],
+      "officialId": "291076006",
+      "rawAttributes": {
+        "FID": 0,
+        "Nom": "Bastiments",
+        "Codi_cim": 291076006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 0,
+          "Nom": "Bastiments",
+          "Codi_cim": 291076006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-bellmunt-42.10152-2.29373"
+      ],
+      "officialId": "292092006",
+      "rawAttributes": {
+        "FID": 1,
+        "Nom": "Bellmunt",
+        "Codi_cim": 292092006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 1,
+          "Nom": "Bellmunt",
+          "Codi_cim": 292092006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "257067006",
+      "rawAttributes": {
+        "FID": 2,
+        "Nom": "Besiberri Nord",
+        "Codi_cim": 257067006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 2,
+          "Nom": "Besiberri Nord",
+          "Codi_cim": 257067006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-cabrera-42.07348-2.40788"
+      ],
+      "officialId": "295093006",
+      "rawAttributes": {
+        "FID": 3,
+        "Nom": "Cabrera",
+        "Codi_cim": 295093006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 3,
+          "Nom": "Cabrera",
+          "Codi_cim": 295093006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-cap-de-boumort-42.23499-1.13467"
+      ],
+      "officialId": "264085006",
+      "rawAttributes": {
+        "FID": 4,
+        "Nom": "Cap de Boumort",
+        "Codi_cim": 264085006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 4,
+          "Nom": "Cap de Boumort",
+          "Codi_cim": 264085006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-cap-de-la-gallina-pelada-42.18942-1.73811"
+      ],
+      "officialId": "279087006",
+      "rawAttributes": {
+        "FID": 5,
+        "Nom": "Cap de la Gallina Pelada",
+        "Codi_cim": 279087006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 5,
+          "Nom": "Cap de la Gallina Pelada",
+          "Codi_cim": 279087006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "276087006",
+      "rawAttributes": {
+        "FID": 6,
+        "Nom": "Cap d'Urdet",
+        "Codi_cim": 276087006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 6,
+          "Nom": "Cap d'Urdet",
+          "Codi_cim": 276087006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-caro-40.80308-0.34446"
+      ],
+      "officialId": "245154006",
+      "rawAttributes": {
+        "FID": 7,
+        "Nom": "Caro",
+        "Codi_cim": 245154006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 7,
+          "Nom": "Caro",
+          "Codi_cim": 245154006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-cogullo-d-estela-42.12152-1.78712"
+      ],
+      "officialId": "280091006",
+      "rawAttributes": {
+        "FID": 8,
+        "Nom": "Cogulló d'Estela",
+        "Codi_cim": 280091006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 8,
+          "Nom": "Cogulló d'Estela",
+          "Codi_cim": 280091006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-comabona-42.28364-1.72644"
+      ],
+      "officialId": "278083006",
+      "rawAttributes": {
+        "FID": 9,
+        "Nom": "Comabona",
+        "Codi_cim": 278083006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 9,
+          "Nom": "Comabona",
+          "Codi_cim": 278083006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-comanegra-42.33331-2.52785"
+      ],
+      "officialId": "298081006",
+      "rawAttributes": {
+        "FID": 10,
+        "Nom": "Comanegra",
+        "Codi_cim": 298081006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 10,
+          "Nom": "Comanegra",
+          "Codi_cim": 298081006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-costabona-42.41682-2.34362"
+      ],
+      "officialId": "293076006",
+      "rawAttributes": {
+        "FID": 11,
+        "Nom": "Costabona",
+        "Codi_cim": 293076006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 11,
+          "Nom": "Costabona",
+          "Codi_cim": 293076006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "290079006",
+      "rawAttributes": {
+        "FID": 12,
+        "Nom": "el Balandrau",
+        "Codi_cim": 290079006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 12,
+          "Nom": "el Balandrau",
+          "Codi_cim": 290079006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "298095006",
+      "rawAttributes": {
+        "FID": 13,
+        "Nom": "el Far",
+        "Codi_cim": 298095006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 13,
+          "Nom": "el Far",
+          "Codi_cim": 298095006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "288113006",
+      "rawAttributes": {
+        "FID": 14,
+        "Nom": "el Farell",
+        "Codi_cim": 288113006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 14,
+          "Nom": "el Farell",
+          "Codi_cim": 288113006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "303076006",
+      "rawAttributes": {
+        "FID": 15,
+        "Nom": "Roc del Comptador",
+        "Codi_cim": 303076006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 15,
+          "Nom": "Roc del Comptador",
+          "Codi_cim": 303076006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-el-mont-42.25881-2.70590"
+      ],
+      "officialId": "302084006",
+      "rawAttributes": {
+        "FID": 16,
+        "Nom": "el Mont",
+        "Codi_cim": 302084006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 16,
+          "Nom": "el Mont",
+          "Codi_cim": 302084006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "242157006",
+      "rawAttributes": {
+        "FID": 17,
+        "Nom": "el Negrell",
+        "Codi_cim": 242157006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 17,
+          "Nom": "el Negrell",
+          "Codi_cim": 242157006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "284087006",
+      "rawAttributes": {
+        "FID": 18,
+        "Nom": "el Pedró",
+        "Codi_cim": 284087006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 18,
+          "Nom": "el Pedró",
+          "Codi_cim": 284087006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "315083006",
+      "rawAttributes": {
+        "FID": 19,
+        "Nom": "el Pení",
+        "Codi_cim": 315083006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 19,
+          "Nom": "el Pení",
+          "Codi_cim": 315083006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-el-taga-42.28071-2.20988"
+      ],
+      "officialId": "290083006",
+      "rawAttributes": {
+        "FID": 20,
+        "Nom": "el Taga",
+        "Codi_cim": 290083006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 20,
+          "Nom": "el Taga",
+          "Codi_cim": 290083006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "261069006",
+      "rawAttributes": {
+        "FID": 21,
+        "Nom": "els Encantats",
+        "Codi_cim": 261069006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 21,
+          "Nom": "els Encantats",
+          "Codi_cim": 261069006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "254066006",
+      "rawAttributes": {
+        "FID": 22,
+        "Nom": "Era Forcanada",
+        "Codi_cim": 254066006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 22,
+          "Nom": "Era Forcanada",
+          "Codi_cim": 254066006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "291077006",
+      "rawAttributes": {
+        "FID": 23,
+        "Nom": "Gra de Fajol",
+        "Codi_cim": 291077006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 23,
+          "Nom": "Gra de Fajol",
+          "Codi_cim": 291077006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-gran-tuc-de-colomers-42.58934-0.93780"
+      ],
+      "officialId": "260068006",
+      "rawAttributes": {
+        "FID": 24,
+        "Nom": "Gran Tuc de Colomèrs",
+        "Codi_cim": 260068006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 24,
+          "Nom": "Gran Tuc de Colomèrs",
+          "Codi_cim": 260068006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "251147006",
+      "rawAttributes": {
+        "FID": 25,
+        "Nom": "la Creu de Santos",
+        "Codi_cim": 251147006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 25,
+          "Nom": "la Creu de Santos",
+          "Codi_cim": 251147006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "258140006",
+      "rawAttributes": {
+        "FID": 26,
+        "Nom": "la Miranda",
+        "Codi_cim": 258140006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 26,
+          "Nom": "la Miranda",
+          "Codi_cim": 258140006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-la-mola-41.21161-1.41728"
+      ],
+      "officialId": "285114006",
+      "rawAttributes": {
+        "FID": 27,
+        "Nom": "la Mola",
+        "Codi_cim": 285114006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 27,
+          "Nom": "la Mola",
+          "Codi_cim": 285114006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "262132006",
+      "rawAttributes": {
+        "FID": 28,
+        "Nom": "la Mussara",
+        "Codi_cim": 262132006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 28,
+          "Nom": "la Mussara",
+          "Codi_cim": 262132006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-la-tosa-42.32086-1.89264"
+      ],
+      "officialId": "282081006",
+      "rawAttributes": {
+        "FID": 29,
+        "Nom": "la Tosa",
+        "Codi_cim": 282081006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 29,
+          "Nom": "la Tosa",
+          "Codi_cim": 282081006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-les-agudes-41.78944-2.44391"
+      ],
+      "officialId": "296107006",
+      "rawAttributes": {
+        "FID": 30,
+        "Nom": "les Agudes",
+        "Codi_cim": 296107006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 30,
+          "Nom": "les Agudes",
+          "Codi_cim": 296107006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "267091006",
+      "rawAttributes": {
+        "FID": 31,
+        "Nom": "lo Coscollet",
+        "Codi_cim": 267091006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 31,
+          "Nom": "lo Coscollet",
+          "Codi_cim": 267091006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "263108006",
+      "rawAttributes": {
+        "FID": 32,
+        "Nom": "lo Pilar d'Almenara",
+        "Codi_cim": 263108006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 32,
+          "Nom": "lo Pilar d'Almenara",
+          "Codi_cim": 263108006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-matagalls-41.80878-2.38273"
+      ],
+      "officialId": "294106006",
+      "rawAttributes": {
+        "FID": 33,
+        "Nom": "Matagalls",
+        "Codi_cim": 294106006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 33,
+          "Nom": "Matagalls",
+          "Codi_cim": 294106006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "292089006",
+      "rawAttributes": {
+        "FID": 34,
+        "Nom": "Milany",
+        "Codi_cim": 292089006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 34,
+          "Nom": "Milany",
+          "Codi_cim": 292089006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-mola-de-colldejou-41.10891-0.87400"
+      ],
+      "officialId": "258139006",
+      "rawAttributes": {
+        "FID": 35,
+        "Nom": "Mola de Colldejou",
+        "Codi_cim": 258139006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 35,
+          "Nom": "Mola de Colldejou",
+          "Codi_cim": 258139006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-mola-de-genessies-41.01624-0.78541"
+      ],
+      "officialId": "256144006",
+      "rawAttributes": {
+        "FID": 36,
+        "Nom": "Mola de Genessies",
+        "Codi_cim": 256144006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 36,
+          "Nom": "Mola de Genessies",
+          "Codi_cim": 256144006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "275091006",
+      "rawAttributes": {
+        "FID": 37,
+        "Nom": "Mola de Lord",
+        "Codi_cim": 275091006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 37,
+          "Nom": "Mola de Lord",
+          "Codi_cim": 275091006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-montardo-42.63333-0.87533"
+      ],
+      "officialId": "258066006",
+      "rawAttributes": {
+        "FID": 38,
+        "Nom": "Montardo",
+        "Codi_cim": 258066006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 38,
+          "Nom": "Montardo",
+          "Codi_cim": 258066006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "282128006",
+      "rawAttributes": {
+        "FID": 39,
+        "Nom": "Montau",
+        "Codi_cim": 282128006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 39,
+          "Nom": "Montau",
+          "Codi_cim": 282128006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-montcorbison-42.70844-0.75899"
+      ],
+      "officialId": "255063006",
+      "rawAttributes": {
+        "FID": 40,
+        "Nom": "Montcorbison",
+        "Codi_cim": 255063006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 40,
+          "Nom": "Montcorbison",
+          "Codi_cim": 255063006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-monteixo-42.60173-1.36154"
+      ],
+      "officialId": "270068006",
+      "rawAttributes": {
+        "FID": 41,
+        "Nom": "Monteixo",
+        "Codi_cim": 270068006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 41,
+          "Nom": "Monteixo",
+          "Codi_cim": 270068006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "296079006",
+      "rawAttributes": {
+        "FID": 42,
+        "Nom": "Montfalgars",
+        "Codi_cim": 296079006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 42,
+          "Nom": "Montfalgars",
+          "Codi_cim": 296079006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "291122006",
+      "rawAttributes": {
+        "FID": 43,
+        "Nom": "Montigalar",
+        "Codi_cim": 291122006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 43,
+          "Nom": "Montigalar",
+          "Codi_cim": 291122006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "289127006",
+      "rawAttributes": {
+        "FID": 44,
+        "Nom": "Montjuïc",
+        "Codi_cim": 289127006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 44,
+          "Nom": "Montjuïc",
+          "Codi_cim": 289127006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-montlude-42.78522-0.75870"
+      ],
+      "officialId": "255059006",
+      "rawAttributes": {
+        "FID": 45,
+        "Nom": "Montlude",
+        "Codi_cim": 255059006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 45,
+          "Nom": "Montlude",
+          "Codi_cim": 255059006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "265062006",
+      "rawAttributes": {
+        "FID": 46,
+        "Nom": "Mont-roig",
+        "Codi_cim": 265062006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 46,
+          "Nom": "Mont-roig",
+          "Codi_cim": 265062006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-montsent-de-pallars-42.49005-1.02438"
+      ],
+      "officialId": "262073006",
+      "rawAttributes": {
+        "FID": 47,
+        "Nom": "Montsent de Pallars",
+        "Codi_cim": 262073006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 47,
+          "Nom": "Montsent de Pallars",
+          "Codi_cim": 262073006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "250160006",
+      "rawAttributes": {
+        "FID": 48,
+        "Nom": "Montsianell",
+        "Codi_cim": 250160006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 48,
+          "Nom": "Montsianell",
+          "Codi_cim": 250160006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "245147006",
+      "rawAttributes": {
+        "FID": 49,
+        "Nom": "Muntanya de Santa Bàrbara",
+        "Codi_cim": 245147006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 49,
+          "Nom": "Muntanya de Santa Bàrbara",
+          "Codi_cim": 245147006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "312094006",
+      "rawAttributes": {
+        "FID": 50,
+        "Nom": "Puig Rodó (Muntanya del Montgrí)",
+        "Codi_cim": 312094006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 50,
+          "Nom": "Puig Rodó (Muntanya del Montgrí)",
+          "Codi_cim": 312094006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-muntanya-dels-angels-41.98141-2.90559"
+      ],
+      "officialId": "307097006",
+      "rawAttributes": {
+        "FID": 51,
+        "Nom": "Muntanya dels Àngels",
+        "Codi_cim": 307097006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 51,
+          "Nom": "Muntanya dels Àngels",
+          "Codi_cim": 307097006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "278085006",
+      "rawAttributes": {
+        "FID": 52,
+        "Nom": "Pedraforca",
+        "Codi_cim": 278085006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 52,
+          "Nom": "Pedraforca",
+          "Codi_cim": 278085006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "286086006",
+      "rawAttributes": {
+        "FID": 53,
+        "Nom": "Pedró de Tubau",
+        "Codi_cim": 286086006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 53,
+          "Nom": "Pedró de Tubau",
+          "Codi_cim": 286086006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "274087006",
+      "rawAttributes": {
+        "FID": 54,
+        "Nom": "Pedró dels Quatre Batlles",
+        "Codi_cim": 274087006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 54,
+          "Nom": "Pedró dels Quatre Batlles",
+          "Codi_cim": 274087006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-penyes-altes-de-moixero-42.30627-1.84246"
+      ],
+      "officialId": "281082006",
+      "rawAttributes": {
+        "FID": 55,
+        "Nom": "Penyes Altes de Moixeró",
+        "Codi_cim": 281082006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 55,
+          "Nom": "Penyes Altes de Moixeró",
+          "Codi_cim": 281082006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-pic-de-comaloforno-42.59130-0.82782"
+      ],
+      "officialId": "257068006",
+      "rawAttributes": {
+        "FID": 56,
+        "Nom": "Pic de Comaloforno",
+        "Codi_cim": 257068006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 56,
+          "Nom": "Pic de Comaloforno",
+          "Codi_cim": 257068006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "290076006",
+      "rawAttributes": {
+        "FID": 57,
+        "Nom": "Pic de l'Infern",
+        "Codi_cim": 290076006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 57,
+          "Nom": "Pic de l'Infern",
+          "Codi_cim": 290076006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-pic-de-peguera-42.54029-1.01207"
+      ],
+      "officialId": "261071006",
+      "rawAttributes": {
+        "FID": 58,
+        "Nom": "Pic de Peguera",
+        "Codi_cim": 261071006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 58,
+          "Nom": "Pic de Peguera",
+          "Codi_cim": 261071006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "270072006",
+      "rawAttributes": {
+        "FID": 59,
+        "Nom": "Pic de Salòria",
+        "Codi_cim": 270072006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 59,
+          "Nom": "Pic de Salòria",
+          "Codi_cim": 270072006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "270064006",
+      "rawAttributes": {
+        "FID": 60,
+        "Nom": "Pic de Sotllo",
+        "Codi_cim": 270064006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 60,
+          "Nom": "Pic de Sotllo",
+          "Codi_cim": 270064006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "261070006",
+      "rawAttributes": {
+        "FID": 61,
+        "Nom": "Pic de Subenuix",
+        "Codi_cim": 261070006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 61,
+          "Nom": "Pic de Subenuix",
+          "Codi_cim": 261070006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "explicit_code_link_geometry_missing",
+      "manualReviewRequired": true,
+      "catalogId": "cim-pica-d-estats-42.66714-1.39789",
+      "nameCandidateCatalogIds": [
+        "cim-pica-d-estats-42.66714-1.39789"
+      ],
+      "officialId": "271064006",
+      "rawAttributes": {
+        "FID": 62,
+        "Nom": "Pica d'Estats",
+        "Codi_cim": 271064006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 62,
+          "Nom": "Pica d'Estats",
+          "Codi_cim": 271064006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Stable official code links this row to the catalog record, but the service response omitted geometry; point location and point type remain unknown."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "309102006",
+      "rawAttributes": {
+        "FID": 63,
+        "Nom": "Puig d'Arques",
+        "Codi_cim": 309102006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 63,
+          "Nom": "Puig d'Arques",
+          "Codi_cim": 309102006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "300081006",
+      "rawAttributes": {
+        "FID": 64,
+        "Nom": "Puig de Bassegoda",
+        "Codi_cim": 300081006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 64,
+          "Nom": "Puig de Bassegoda",
+          "Codi_cim": 300081006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "272128006",
+      "rawAttributes": {
+        "FID": 65,
+        "Nom": "Puig de la Talaia",
+        "Codi_cim": 272128006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 65,
+          "Nom": "Puig de la Talaia",
+          "Codi_cim": 272128006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "304090006",
+      "rawAttributes": {
+        "FID": 66,
+        "Nom": "Puig de Sant Martirià",
+        "Codi_cim": 304090006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 66,
+          "Nom": "Puig de Sant Martirià",
+          "Codi_cim": 304090006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "307108006",
+      "rawAttributes": {
+        "FID": 67,
+        "Nom": "Puig de ses Cadiretes",
+        "Codi_cim": 307108006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 67,
+          "Nom": "Puig de ses Cadiretes",
+          "Codi_cim": 307108006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-puig-neulos-42.48214-2.94708"
+      ],
+      "officialId": "308073006",
+      "rawAttributes": {
+        "FID": 68,
+        "Nom": "Puig Neulós",
+        "Codi_cim": 308073006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 68,
+          "Nom": "Puig Neulós",
+          "Codi_cim": 308073006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "291111006",
+      "rawAttributes": {
+        "FID": 69,
+        "Nom": "Puiggraciós",
+        "Codi_cim": 291111006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 69,
+          "Nom": "Puiggraciós",
+          "Codi_cim": 291111006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "283082006",
+      "rawAttributes": {
+        "FID": 70,
+        "Nom": "Puigllançada",
+        "Codi_cim": 283082006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 70,
+          "Nom": "Puigllançada",
+          "Codi_cim": 283082006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-puigmal-42.38331-2.11671"
+      ],
+      "officialId": "288078006",
+      "rawAttributes": {
+        "FID": 71,
+        "Nom": "Puigmal",
+        "Codi_cim": 288078006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 71,
+          "Nom": "Puigmal",
+          "Codi_cim": 288078006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-puigpedros-42.48759-1.76181"
+      ],
+      "officialId": "279073006",
+      "rawAttributes": {
+        "FID": 72,
+        "Nom": "Puigpedrós",
+        "Codi_cim": 279073006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 72,
+          "Nom": "Puigpedrós",
+          "Codi_cim": 279073006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-puigsacalm-42.12511-2.38792"
+      ],
+      "officialId": "294090006",
+      "rawAttributes": {
+        "FID": 73,
+        "Nom": "Puigsacalm",
+        "Codi_cim": 294090006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 73,
+          "Nom": "Puigsacalm",
+          "Codi_cim": 294090006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "299091006",
+      "rawAttributes": {
+        "FID": 74,
+        "Nom": "Puigsallança",
+        "Codi_cim": 299091006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 74,
+          "Nom": "Puigsallança",
+          "Codi_cim": 299091006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "258068006",
+      "rawAttributes": {
+        "FID": 75,
+        "Nom": "Punta Alta de Comalesbienes",
+        "Codi_cim": 258068006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 75,
+          "Nom": "Punta Alta de Comalesbienes",
+          "Codi_cim": 258068006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "247126006",
+      "rawAttributes": {
+        "FID": 76,
+        "Nom": "Punta de Montmaneu",
+        "Codi_cim": 247126006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 76,
+          "Nom": "Punta de Montmaneu",
+          "Codi_cim": 247126006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "258128006",
+      "rawAttributes": {
+        "FID": 77,
+        "Nom": "Punta del General",
+        "Codi_cim": 258128006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 77,
+          "Nom": "Punta del General",
+          "Codi_cim": 258128006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "261095006",
+      "rawAttributes": {
+        "FID": 78,
+        "Nom": "Roca Alta",
+        "Codi_cim": 261095006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 78,
+          "Nom": "Roca Alta",
+          "Codi_cim": 261095006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-roca-corbatera-41.28856-0.89122"
+      ],
+      "officialId": "258131006",
+      "rawAttributes": {
+        "FID": 79,
+        "Nom": "Roca Corbatera",
+        "Codi_cim": 258131006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 79,
+          "Nom": "Roca Corbatera",
+          "Codi_cim": 258131006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-roques-de-benet-40.90127-0.32672"
+      ],
+      "officialId": "245149006",
+      "rawAttributes": {
+        "FID": 80,
+        "Nom": "Roques de Benet",
+        "Codi_cim": 245149006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 80,
+          "Nom": "Roques de Benet",
+          "Codi_cim": 245149006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-sant-alis-42.03984-0.76651"
+      ],
+      "officialId": "255095006",
+      "rawAttributes": {
+        "FID": 81,
+        "Nom": "Sant Alís",
+        "Codi_cim": 255095006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 81,
+          "Nom": "Sant Alís",
+          "Codi_cim": 255095006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-sant-corneli-42.18280-1.00282"
+      ],
+      "officialId": "261088006",
+      "rawAttributes": {
+        "FID": 82,
+        "Nom": "Sant Corneli",
+        "Codi_cim": 261088006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 82,
+          "Nom": "Sant Corneli",
+          "Codi_cim": 261088006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-sant-jeroni-41.60535-1.81150"
+      ],
+      "officialId": "280115006",
+      "rawAttributes": {
+        "FID": 83,
+        "Nom": "Sant Jeroni",
+        "Codi_cim": 280115006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 83,
+          "Nom": "Sant Jeroni",
+          "Codi_cim": 280115006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "293120006",
+      "rawAttributes": {
+        "FID": 84,
+        "Nom": "Sant Mateu",
+        "Codi_cim": 293120006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 84,
+          "Nom": "Sant Mateu",
+          "Codi_cim": 293120006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-sant-miquel-de-solterra-41.92311-2.53301"
+      ],
+      "officialId": "298100006",
+      "rawAttributes": {
+        "FID": 85,
+        "Nom": "Sant Miquel de Solterra",
+        "Codi_cim": 298100006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 85,
+          "Nom": "Sant Miquel de Solterra",
+          "Codi_cim": 298100006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "313081006",
+      "rawAttributes": {
+        "FID": 86,
+        "Nom": "Sant Salvador",
+        "Codi_cim": 313081006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 86,
+          "Nom": "Sant Salvador",
+          "Codi_cim": 313081006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-tagamanent-41.74744-2.29598"
+      ],
+      "officialId": "292109006",
+      "rawAttributes": {
+        "FID": 87,
+        "Nom": "Tagamanent",
+        "Codi_cim": 292109006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 87,
+          "Nom": "Tagamanent",
+          "Codi_cim": 292109006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "275083006",
+      "rawAttributes": {
+        "FID": 88,
+        "Nom": "Torreta de Cadí",
+        "Codi_cim": 275083006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 88,
+          "Nom": "Torreta de Cadí",
+          "Codi_cim": 275083006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-torreta-de-montsia-40.61359-0.53029"
+      ],
+      "officialId": "250163006",
+      "rawAttributes": {
+        "FID": 89,
+        "Nom": "Torreta de Montsià",
+        "Codi_cim": 250163006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 89,
+          "Nom": "Torreta de Montsià",
+          "Codi_cim": 250163006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "275118006",
+      "rawAttributes": {
+        "FID": 90,
+        "Nom": "Tossa de Montbui",
+        "Codi_cim": 275118006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 90,
+          "Nom": "Tossa de Montbui",
+          "Codi_cim": 275118006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-tossa-plana-de-lles-42.46810-1.65721"
+      ],
+      "officialId": "277074006",
+      "rawAttributes": {
+        "FID": 91,
+        "Nom": "Tossa Plana de Lles",
+        "Codi_cim": 277074006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 91,
+          "Nom": "Tossa Plana de Lles",
+          "Codi_cim": 277074006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-tossal-de-la-baltasana-41.32599-1.00416"
+      ],
+      "officialId": "261129006",
+      "rawAttributes": {
+        "FID": 92,
+        "Nom": "Tossal de la Baltasana",
+        "Codi_cim": 261129006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 92,
+          "Nom": "Tossal de la Baltasana",
+          "Codi_cim": 261129006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "241157006",
+      "rawAttributes": {
+        "FID": 93,
+        "Nom": "Tossal del Rei",
+        "Codi_cim": 241157006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 93,
+          "Nom": "Tossal del Rei",
+          "Codi_cim": 241157006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-tossal-gros-de-vallbona-41.46884-1.11284"
+      ],
+      "officialId": "264122006",
+      "rawAttributes": {
+        "FID": 94,
+        "Nom": "Tossal Gros de Vallbona",
+        "Codi_cim": 264122006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 94,
+          "Nom": "Tossal Gros de Vallbona",
+          "Codi_cim": 264122006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "261062006",
+      "rawAttributes": {
+        "FID": 95,
+        "Nom": "Tuc de Marimanha",
+        "Codi_cim": 261062006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 95,
+          "Nom": "Tuc de Marimanha",
+          "Codi_cim": 261062006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "259058006",
+      "rawAttributes": {
+        "FID": 96,
+        "Nom": "Tuc de Maubèrme",
+        "Codi_cim": 259058006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 96,
+          "Nom": "Tuc de Maubèrme",
+          "Codi_cim": 259058006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [
+        "cim-tuc-de-molieres-42.62945-0.69856"
+      ],
+      "officialId": "254066008",
+      "rawAttributes": {
+        "FID": 97,
+        "Nom": "Tuc de Molières",
+        "Codi_cim": 254066008
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 97,
+          "Nom": "Tuc de Molières",
+          "Codi_cim": 254066008
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "293118006",
+      "rawAttributes": {
+        "FID": 98,
+        "Nom": "Turó de Céllecs",
+        "Codi_cim": 293118006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 98,
+          "Nom": "Turó de Céllecs",
+          "Codi_cim": 293118006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "295107006",
+      "rawAttributes": {
+        "FID": 99,
+        "Nom": "Turó de l'Home",
+        "Codi_cim": 295107006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 99,
+          "Nom": "Turó de l'Home",
+          "Codi_cim": 295107006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "299113006",
+      "rawAttributes": {
+        "FID": 100,
+        "Nom": "Turó Gros",
+        "Codi_cim": 299113006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 100,
+          "Nom": "Turó Gros",
+          "Codi_cim": 299113006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "298090006",
+      "rawAttributes": {
+        "FID": 101,
+        "Nom": "Volcà de Santa Margarida",
+        "Codi_cim": 298090006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 101,
+          "Nom": "Volcà de Santa Margarida",
+          "Codi_cim": 298090006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    },
+    {
+      "status": "incomplete_service_record",
+      "manualReviewRequired": true,
+      "catalogId": null,
+      "nameCandidateCatalogIds": [],
+      "officialId": "297088006",
+      "rawAttributes": {
+        "FID": 102,
+        "Nom": "Volcà del Montsacopa",
+        "Codi_cim": 297088006
+      },
+      "rawGeometry": null,
+      "rawFeature": {
+        "attributes": {
+          "FID": 102,
+          "Nom": "Volcà del Montsacopa",
+          "Codi_cim": 297088006
+        }
+      },
+      "geometryCrs": null,
+      "elevationMeters": null,
+      "verticalReference": null,
+      "pointType": "not supplied by this service",
+      "reviewReason": "Official code or projected point geometry is missing or malformed."
+    }
+  ]
+}
