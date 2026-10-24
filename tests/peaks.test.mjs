@@ -101,6 +101,11 @@ test('all essential waypoints match one catalog peak; selection returns exact se
   assert.equal(essentialSet.length, essentials.length);
   assert.equal(domain.toPeakFeatureCollection(catalog.peaks, { id: '100-cims' }).features.length, catalog.peaks.length);
   assert.equal(domain.toPeakFeatureCollection(catalog.peaks, { id: '100-cims-essentials' }).features.length, essentials.length);
+  const [feature] = domain.toPeakFeatureCollection([catalog.peaks[0]], { id: '100-cims' }).features;
+  assert.equal(feature.id, catalog.peaks[0].id);
+  assert.deepEqual(feature.geometry.coordinates, [catalog.peaks[0].longitude, catalog.peaks[0].latitude]);
+  assert.equal(feature.properties.latitude, catalog.peaks[0].latitude);
+  assert.equal(feature.properties.longitude, catalog.peaks[0].longitude);
 });
 
 test('coordinate fallback leaves multiple nearby candidates ambiguous', () => {

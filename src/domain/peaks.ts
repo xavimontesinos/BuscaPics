@@ -24,7 +24,7 @@ export interface PeakFeatureCollection {
     type: "Feature";
     id: string;
     geometry: { type: "Point"; coordinates: [number, number] };
-    properties: { peakId: string; name: string; elevationM: number; elevationLabel: string };
+    properties: { peakId: string; name: string; elevationM: number; elevationLabel: string; latitude: number; longitude: number };
   }>;
 }
 
@@ -65,6 +65,8 @@ export function toPeakFeatureCollection(
         name: peak.name,
         elevationM: peak.elevationMeters,
         elevationLabel: `${new Intl.NumberFormat("ca-ES", { maximumFractionDigits: 0 }).format(Math.round(peak.elevationMeters))} m`,
+          latitude: peak.latitude,
+          longitude: peak.longitude,
       },
     })),
   };

@@ -107,9 +107,10 @@ export const MAP_STYLE: StyleSpecification = {
         'text-padding': 3,
       },
       paint: {
-        'text-color': '#183c2b',
+        'icon-opacity': ['case', ['boolean', ['feature-state', 'selected'], false], 1, 0.65],
+        'text-color': ['case', ['boolean', ['feature-state', 'selected'], false], '#9a3f26', '#183c2b'],
         'text-halo-color': '#fffdf5',
-        'text-halo-width': 1.15,
+        'text-halo-width': ['case', ['boolean', ['feature-state', 'selected'], false], 2, 1.15],
         'text-halo-blur': 0.2,
       },
     },

@@ -18,8 +18,12 @@ function App() {
     useState<MapOrientationActions | null>(null);
   const [mapBearing, setMapBearing] = useState(0);
   const [observerPosition, setObserverPosition] = useState<GeographicPosition | null>(null);
+  const [selectedPeakId, setSelectedPeakId] = useState<string | null>(null);
   const handleObserverPositionChange = useCallback((position: GeographicPosition) => {
     setObserverPosition(position);
+  }, []);
+  const handlePeakSelect = useCallback((peakId: string) => {
+    setSelectedPeakId(peakId);
   }, []);
   const handleMapZoomActionsChange = useCallback((actions: MapZoomActions | null) => {
     setMapZoomActions(actions);
@@ -37,6 +41,19 @@ function App() {
     () => toPeakFeatureCollection(peakCatalog, { id: selectedPeakSet }),
     [peakCatalog, selectedPeakSet],
   );
+  const selectedPeak = peakCatalog.find((peak) => peak.id === selectedPeakId) ?? null;
+
+  useEffect(() => {
+    if (selectedPeak) {
+      mapOrientationActions?.centerAt([selectedPeak.longitude, selectedPeak.latitude]);
+    }
+  }, [selectedPeak, mapOrientationActions]);
+
+  useEffect(() => {
+    if (selectedPeakId && !peakFeatures.features.some((feature) => feature.properties.peakId === selectedPeakId)) {
+      setSelectedPeakId(null);
+    }
+  }, [peakFeatures, selectedPeakId]);
 
   useEffect(() => {
     let isCurrent = true;
@@ -64,6 +81,8 @@ function App() {
     <MapViewport
       peakFeatures={peakFeatures}
       observerPosition={observerPosition}
+      selectedPeakId={selectedPeakId}
+      onPeakSelect={handlePeakSelect}
       onObserverPositionChange={handleObserverPositionChange}
       onMapZoomActionsChange={handleMapZoomActionsChange}
       onMapOrientationActionsChange={handleMapOrientationActionsChange}
@@ -82,6 +101,14 @@ function App() {
         onResetNorth={mapOrientationActions?.resetNorth}
       />
       <PeakFilter value={selectedPeakSet} onChange={setSelectedPeakSet} />
+      {selectedPeak && (
+        <aside className="selected-peak-card" aria-label="Cima seleccionada" aria-live="polite">
+          <h2>{selectedPeak.name}</h2>
+          <p>Altitud: {new Intl.NumberFormat('ca-ES', { maximumFractionDigits: 0 }).format(Math.round(selectedPeak.elevationMeters))} m</p>
+          <p>Latitud: {selectedPeak.latitude.toFixed(6)}°</p>
+          <p>Longitud: {selectedPeak.longitude.toFixed(6)}°</p>
+        </aside>
+      )}
     </MapViewport>
   );
 }
