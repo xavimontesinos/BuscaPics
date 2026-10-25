@@ -10,6 +10,12 @@ type MapControlsProps = {
   onResetNorth?: () => void;
   orientationMode?: ObservationOrientationMode;
   compassAvailable?: boolean;
+  gpsTracking?: boolean;
+  gpsStatus?: string;
+  gpsMessage?: string | null;
+  onGpsToggle?: () => void;
+  onManualObserver?: () => void;
+  compassStatus?: string | null;
 };
 
 export function MapControls({
@@ -20,6 +26,12 @@ export function MapControls({
   onResetNorth,
   orientationMode,
   compassAvailable,
+  gpsTracking = false,
+  gpsStatus = 'idle',
+  gpsMessage = null,
+  onGpsToggle,
+  onManualObserver,
+  compassStatus = null,
 }: MapControlsProps) {
   return (
     <>
@@ -27,13 +39,14 @@ export function MapControls({
         <button
           className="control-button gps-button"
           type="button"
-          disabled
-          aria-label="Volver a la posición GPS, provisional"
-          title="GPS · provisional"
+          disabled={!onGpsToggle}
+          onClick={onGpsToggle}
+          aria-label={gpsTracking ? 'Detener seguimiento GPS' : 'Activar seguimiento GPS'}
+          title={gpsTracking ? 'Detener GPS' : 'Seguir posición GPS'}
         >
           <Icon name="location" />
-          <span>GPS</span>
-          <span className="provisional-tag">Pendiente</span>
+          <span>{gpsTracking ? 'Detener GPS' : 'GPS'}</span>
+          {gpsStatus !== 'idle' && <span className="gps-state-tag">{gpsStatus}</span>}
         </button>
 
         <div className="top-controls__right">
@@ -60,6 +73,18 @@ export function MapControls({
           </button>
         </div>
       </div>
+
+      {(gpsMessage || compassStatus) && (
+        <div className="sensor-status" role="status" aria-live="polite">
+          {gpsMessage && <p>{gpsMessage}</p>}
+          {compassStatus && <p>{compassStatus}</p>}
+          {gpsStatus !== 'idle' && onManualObserver && (
+            <button className="sensor-status__manual" type="button" onClick={onManualObserver}>
+              Detener GPS y elegir posición manual
+            </button>
+          )}
+        </div>
+      )}
 
       <div className="map-navigation-controls">
         <div className="zoom-controls" role="group" aria-label="Controles de zoom">

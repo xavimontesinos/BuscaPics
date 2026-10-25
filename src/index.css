@@ -140,6 +140,52 @@ button.control-button:disabled {
   color: #3a5c47;
 }
 
+.gps-state-tag {
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: #e8efe8;
+  color: #46614d;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.sensor-status {
+  position: absolute;
+  z-index: 2;
+  top: calc(var(--safe-top) + 58px);
+  left: var(--safe-left);
+  max-width: min(440px, calc(100vw - var(--safe-left) - var(--safe-right)));
+  padding: 7px 10px;
+  border: 1px solid var(--control-border);
+  border-radius: 11px;
+  background: var(--control-surface);
+  color: #46544b;
+  box-shadow: var(--control-shadow);
+  font-size: 11px;
+  line-height: 1.35;
+  pointer-events: auto;
+}
+
+.sensor-status p {
+  margin: 0;
+}
+
+.sensor-status p + p {
+  margin-top: 3px;
+}
+
+.sensor-status__manual {
+  margin-top: 6px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #3a6548;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
 .provisional-tag {
   padding: 4px 7px;
   border-radius: 999px;
@@ -406,6 +452,11 @@ button.control-button:disabled {
     font-size: 8px;
   }
 
+  .gps-state-tag {
+    padding: 3px 4px;
+    font-size: 8px;
+  }
+
   .camera-button > span:first-of-type {
     display: none;
   }
@@ -464,6 +515,7 @@ button.control-button:disabled {
   }
 
   .gps-button .provisional-tag,
+  .gps-state-tag,
   .camera-button .provisional-tag {
     padding: 3px 4px;
     font-size: 8px;
