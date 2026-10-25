@@ -20,7 +20,7 @@ export const PEAK_CANDIDATE_MARKER_LAYER = {
     'icon-ignore-placement': true,
   },
   paint: {
-    'icon-color': ['match', ['get', 'visibility'], 'visible', '#16834a', 'occluded', '#b53b36', 'outsideRadius', '#c1c7c3', 'outsideFov', '#aebbc2', '#788078'],
+    'icon-color': ['match', ['get', 'visibility'], 'visible', '#16834a', 'partiallyVisible', '#d48b13', 'occluded', '#b53b36', 'outsideRadius', '#c1c7c3', 'outsideFov', '#aebbc2', '#788078'],
     'icon-opacity': ['case', ['boolean', ['feature-state', 'selected'], false], 1, ['match', ['get', 'visibility'], 'outsideRadius', 0.35, 'outsideFov', 0.25, 'indeterminate', 0.55, 0.85]],
   },
 } as const satisfies SymbolLayerSpecification;
@@ -91,7 +91,7 @@ export const MAP_STYLE: StyleSpecification = {
       minzoom: 9,
       paint: {
         'circle-radius': 5,
-        'circle-color': ['match', ['get', 'visibility'], 'visible', '#16834a', 'occluded', '#b53b36', 'outsideRadius', '#c1c7c3', 'outsideFov', '#aebbc2', '#788078'],
+        'circle-color': ['match', ['get', 'visibility'], 'visible', '#16834a', 'partiallyVisible', '#d48b13', 'occluded', '#b53b36', 'outsideRadius', '#c1c7c3', 'outsideFov', '#aebbc2', '#788078'],
         'circle-stroke-color': '#fffdf5',
         'circle-stroke-width': 1.5,
       },
@@ -125,7 +125,7 @@ export const MAP_STYLE: StyleSpecification = {
         'text-padding': 3,
       },
       paint: {
-        'text-color': ['case', ['boolean', ['feature-state', 'selected'], false], '#9a3f26', ['match', ['get', 'visibility'], 'visible', '#126b3d', 'occluded', '#a4312d', 'outsideRadius', '#929994', 'outsideFov', '#74858d', '#555d57']],
+        'text-color': ['case', ['boolean', ['feature-state', 'selected'], false], '#9a3f26', ['match', ['get', 'visibility'], 'visible', '#126b3d', 'partiallyVisible', '#9b6500', 'occluded', '#a4312d', 'outsideRadius', '#929994', 'outsideFov', '#74858d', '#555d57']],
         'text-halo-color': '#fffdf5',
         'text-halo-width': ['case', ['boolean', ['feature-state', 'selected'], false], 2, 1.15],
         'text-halo-blur': 0.2,

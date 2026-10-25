@@ -126,6 +126,12 @@ test('all essential waypoints match one catalog peak; selection returns exact se
     new Map([[catalog.peaks[0].id, 'outsideFov']]),
   ).features[0];
   assert.equal(outsideFov.properties.visibility, 'outsideFov');
+  const partiallyVisible = domain.toPeakFeatureCollection(
+    [catalog.peaks[0]],
+    { id: '100-cims' },
+    new Map([[catalog.peaks[0].id, 'partiallyVisible']]),
+  ).features[0];
+  assert.equal(partiallyVisible.properties.visibility, 'partiallyVisible');
 });
 
 test('coordinate fallback leaves multiple nearby candidates ambiguous', () => {

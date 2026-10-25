@@ -28,6 +28,11 @@ export interface RasterBlockReader {
   readBlock(blockColumn: number, blockRow: number): Promise<RasterBlock | null>;
 }
 
+export interface RasterBlockCacheStats {
+  cachedBlocks: number;
+  blockReadRequests: number;
+}
+
 export interface RasterBlockCoordinate {
   blockColumn: number;
   blockRow: number;
@@ -97,6 +102,7 @@ export class PreparedRasterElevationProvider {
   private readonly blockHeight: number;
   private readonly blocks = new Map<string, RasterBlock | null>();
   private readonly verticalReference: VerticalReference;
+  private blockReadRequests = 0;
 
   constructor(
     private readonly metadata: TerrainDatasetMetadata,
@@ -152,11 +158,17 @@ export class PreparedRasterElevationProvider {
         this.touch(key);
         continue;
       }
+      this.blockReadRequests += 1;
       const block = await this.reader.readBlock(coordinate.blockColumn, coordinate.blockRow);
       if (block !== null) this.validateBlock(block, coordinate);
       this.blocks.set(key, block);
       this.evictExcessBlocks();
     }
+  }
+
+  /** Reports native raster-block reads, which correspond to the provider's MDT cache misses. */
+  getCacheStats(): RasterBlockCacheStats {
+    return { cachedBlocks: this.blocks.size, blockReadRequests: this.blockReadRequests };
   }
 
   /** Synchronous lookup. A missing/unprepared cell never becomes a zero elevation. */

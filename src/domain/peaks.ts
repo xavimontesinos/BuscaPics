@@ -1,6 +1,6 @@
 import type { Elevation, SummitTarget, VisibilityStatus } from "./visibility/types";
 
-export type PeakVisibilityState = VisibilityStatus["state"] | "outsideRadius" | "outsideFov";
+export type PeakVisibilityState = VisibilityStatus["state"] | "partiallyVisible" | "outsideRadius" | "outsideFov";
 
 /** A summit imported from the local development GPX catalog. */
 export interface Peak {

@@ -312,7 +312,7 @@ export function MapViewport({
         selected: feature.id === selectedPeakId,
       });
     }
-    const counts = { visible: 0, occluded: 0, indeterminate: 0, outsideRadius: 0, outsideFov: 0 };
+    const counts = { visible: 0, partiallyVisible: 0, occluded: 0, indeterminate: 0, outsideRadius: 0, outsideFov: 0 };
     for (const feature of peakFeatures.features) counts[feature.properties.visibility] += 1;
     const sample = peakFeatures.features.find((feature) => feature.properties.peakId === selectedPeakId) ??
       peakFeatures.features.find((feature) => feature.properties.visibility !== 'indeterminate') ??

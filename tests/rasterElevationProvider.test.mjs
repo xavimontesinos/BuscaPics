@@ -131,6 +131,9 @@ test('a cell center returns its stored value after asynchronous block preparatio
   assert.deepEqual(lookup.sample.elevation.verticalReference, {
     kind: 'orthometric', datum: 'Synthetic vertical reference',
   });
+  assert.deepEqual(provider.getCacheStats(), { cachedBlocks: 1, blockReadRequests: 1 });
+  await provider.prepareForPositions([position]);
+  assert.deepEqual(provider.getCacheStats(), { cachedBlocks: 1, blockReadRequests: 1 }, 'a cached MDT block is not read again');
 });
 
 test('bilinear interpolation returns the known value on a synthetic plane', async () => {

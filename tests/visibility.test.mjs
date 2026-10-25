@@ -8,7 +8,7 @@ const javascript = ts.transpileModule(source, {
   compilerOptions: { module: ts.ModuleKind.ES2022, target: ts.ScriptTarget.ES2022 },
 }).outputText;
 const geometry = await import(`data:text/javascript;base64,${Buffer.from(javascript).toString('base64')}`);
-const { distanceMeters, generateIntermediateSamplePoints, initialAzimuthDegrees } = geometry;
+const { destinationPosition, distanceMeters, generateIntermediateSamplePoints, initialAzimuthDegrees } = geometry;
 const lineOfSightSource = await readFile(new URL('../src/domain/visibility/lineOfSight.ts', import.meta.url), 'utf8');
 const lineOfSightJavascript = ts.transpileModule(lineOfSightSource, {
   compilerOptions: { module: ts.ModuleKind.ES2022, target: ts.ScriptTarget.ES2022 },
@@ -67,6 +67,21 @@ test('initial azimuth is clockwise from true north', () => {
   assert.equal(initialAzimuthDegrees(origin, { latitudeDegrees: -1, longitudeDegrees: 0 }), 180);
   assert.equal(initialAzimuthDegrees(origin, { latitudeDegrees: 0, longitudeDegrees: -1 }), 270);
   assert.equal(initialAzimuthDegrees(origin, origin), null);
+});
+
+test('summit-area sample offsets use geodesic cardinal bearings and preserve the requested distance', () => {
+  const summit = { latitudeDegrees: 42, longitudeDegrees: 1 };
+  const north = destinationPosition(summit, 0, 20);
+  const east = destinationPosition(summit, 90, 20);
+  const south = destinationPosition(summit, 180, 20);
+  const west = destinationPosition(summit, 270, 20);
+  for (const position of [north, east, south, west]) assert.ok(Math.abs(distanceMeters(summit, position) - 20) < 1e-5);
+  assert.ok(north.latitudeDegrees > summit.latitudeDegrees);
+  assert.ok(east.longitudeDegrees > summit.longitudeDegrees);
+  assert.ok(south.latitudeDegrees < summit.latitudeDegrees);
+  assert.ok(west.longitudeDegrees < summit.longitudeDegrees);
+  const acrossDateLine = destinationPosition({ latitudeDegrees: 0, longitudeDegrees: 179.99999 }, 90, 20);
+  assert.ok(acrossDateLine.longitudeDegrees < -179.9);
 });
 
 test('antimeridian crossing follows the short arc', () => {
@@ -128,9 +143,9 @@ test('flat synthetic terrain leaves an elevated target visible', () => {
   assert.ok(result.distanceMeters > 0);
 });
 
-test('the observer eye endpoint uses terrain elevation plus exactly 1.8 metres', () => {
-  const result = resultFor((fraction) => (fraction > 0.49 && fraction < 0.51 ? 107.3 : 100), {
-    observer: { eyeHeightAboveGroundMeters: 1.8 },
+test('the observer eye endpoint uses terrain elevation plus exactly 5 metres', () => {
+  const result = resultFor((fraction) => (fraction > 0.49 && fraction < 0.51 ? 109 : 100), {
+    observer: { eyeHeightAboveGroundMeters: 5 },
   });
   assert.equal(result.state, 'occluded');
   assert.equal(observer.terrainElevation.meters, 100);

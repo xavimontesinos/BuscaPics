@@ -50,6 +50,33 @@ export function distanceMeters(from: GeographicPosition, to: GeographicPosition)
   return MEAN_EARTH_RADIUS_METERS * centralAngleRadians(from, to);
 }
 
+/** Calculates a geodesic destination at a distance and clockwise bearing from a position. */
+export function destinationPosition(
+  from: GeographicPosition,
+  bearingDegrees: number,
+  distanceMetersFromOrigin: number,
+): GeographicPosition {
+  validateGeographicPosition(from);
+  if (!Number.isFinite(bearingDegrees) || !Number.isFinite(distanceMetersFromOrigin) || distanceMetersFromOrigin < 0) {
+    throw new RangeError("Bearing must be finite and distance must be a finite non-negative number");
+  }
+  const [latitude, longitude] = toRadians(from);
+  const bearing = bearingDegrees * DEGREES_TO_RADIANS;
+  const angularDistance = distanceMetersFromOrigin / MEAN_EARTH_RADIUS_METERS;
+  const destinationLatitude = Math.asin(
+    Math.sin(latitude) * Math.cos(angularDistance) +
+    Math.cos(latitude) * Math.sin(angularDistance) * Math.cos(bearing),
+  );
+  const destinationLongitude = longitude + Math.atan2(
+    Math.sin(bearing) * Math.sin(angularDistance) * Math.cos(latitude),
+    Math.cos(angularDistance) - Math.sin(latitude) * Math.sin(destinationLatitude),
+  );
+  return {
+    latitudeDegrees: destinationLatitude * RADIANS_TO_DEGREES,
+    longitudeDegrees: normalizeLongitude(destinationLongitude * RADIANS_TO_DEGREES),
+  };
+}
+
 /**
  * Initial great-circle azimuth clockwise from true north, in degrees [0, 360).
  * Returns null when the positions coincide or are antipodal, where a unique

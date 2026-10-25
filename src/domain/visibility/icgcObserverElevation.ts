@@ -15,6 +15,8 @@ const transformer = new Proj4HorizontalCoordinateTransformer([
 ]);
 let providerPromise: Promise<PreparedRasterElevationProvider> | null = null;
 
+export const ICGC_MDT_CACHE_REVISION = `${ICGC_MDT_SOURCE_URL}:2021-2023:EGM08D595`;
+
 function getProvider(): Promise<PreparedRasterElevationProvider> {
   if (!providerPromise) {
     providerPromise = GeoTiffRasterBlockReader.open(ICGC_MDT_URL, {
@@ -61,4 +63,10 @@ export async function prepareIgcTerrain(positions: readonly GeographicPosition[]
   const provider = await getProvider();
   await provider.prepareForPositions(positions);
   return provider;
+}
+
+/** Returns actual raster block-cache reads for diagnostics; these are not HTTP request counts. */
+export async function getIgcTerrainCacheStats(): Promise<{ cachedBlocks: number; blockReadRequests: number }> {
+  const provider = await getProvider();
+  return provider.getCacheStats();
 }

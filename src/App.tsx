@@ -9,13 +9,44 @@ import { PeakFilter, type PeakSet } from './components/PeakFilter';
 import { toPeakFeatureCollection, type Peak } from './domain/peaks';
 import type { GeographicPosition } from './domain/visibility/types';
 import type { TerrainElevationLookup } from './domain/visibility/types';
-import { getIgcObserverGroundElevation } from './domain/visibility/icgcObserverElevation';
-import { calculatePeakVisibilities, type PeakVisibilityResult } from './domain/visibility/peakVisibility';
+import { getIgcObserverGroundElevation, getIgcTerrainCacheStats, ICGC_MDT_CACHE_REVISION } from './domain/visibility/icgcObserverElevation';
+import {
+  calculatePeakGeometricVisibilities,
+  createPeakVisibilityCacheKey,
+  getUncachedEligiblePeaks,
+  selectPeaksForVisibility,
+  type PeakVisibilityResult,
+} from './domain/visibility/peakVisibility';
 import { isLatestRequest } from './domain/visibility/latestRequest';
 import { visibilityDebug } from './domain/visibility/visibilityDebug';
 import { getDeviceCompassHeading, resolveObservationBearing, type ObservationOrientationMode } from './domain/orientation';
 
 type VisibilityRadiusKm = 10 | 25 | 50 | 100;
+
+interface VisibilitySession {
+  key: string;
+  catalog: readonly Peak[];
+  geometricResults: Map<string, PeakVisibilityResult>;
+  inFlight: Set<string>;
+}
+
+function getVisibilityView(
+  session: VisibilitySession,
+  observerPosition: GeographicPosition,
+  peaks: readonly Peak[],
+  radiusKm: VisibilityRadiusKm,
+  bearing: number,
+): Map<string, PeakVisibilityResult> {
+  const selection = selectPeaksForVisibility(observerPosition, peaks, radiusKm * 1000, bearing);
+  const view = new Map(selection.immediateResults);
+  for (const { peak } of selection.eligible) {
+    view.set(peak.id, session.geometricResults.get(peak.id) ?? {
+      state: 'indeterminate',
+      reason: 'missing-terrain-data',
+    });
+  }
+  return view;
+}
 
 function App() {
   const [selectedPeakSet, setSelectedPeakSet] = useState<PeakSet>('100-cims');
@@ -30,7 +61,6 @@ function App() {
   const [observerPosition, setObserverPosition] = useState<GeographicPosition | null>(null);
   const [observerElevation, setObserverElevation] = useState<TerrainElevationLookup | null>(null);
   const elevationRequestId = useRef(0);
-  const calculationRequestId = useRef(0);
   const orientationGeneration = useRef(0);
   const lastBearingCommitTime = useRef(0);
   const pendingBearingCommit = useRef<number | null>(null);
@@ -38,8 +68,32 @@ function App() {
   const [visibilityRadiusKm, setVisibilityRadiusKm] = useState<VisibilityRadiusKm>(50);
   const [settledObservationBearing, setSettledObservationBearing] = useState(0);
   const [settledOrientationGeneration, setSettledOrientationGeneration] = useState(0);
-  const [visibilityByPeak, setVisibilityByPeak] = useState<Map<string, PeakVisibilityResult>>(new Map());
+  const [visibilitySession, setVisibilitySession] = useState<VisibilitySession | null>(null);
+  const visibilitySessionRef = useRef<VisibilitySession | null>(null);
+  const [visibilityRevision, setVisibilityRevision] = useState(0);
   const [selectedPeakId, setSelectedPeakId] = useState<string | null>(null);
+  const visibilityContextKey = observerPosition && observerElevation
+    ? createPeakVisibilityCacheKey(observerPosition, observerElevation, ICGC_MDT_CACHE_REVISION)
+    : null;
+  useEffect(() => {
+    if (!visibilityContextKey || !observerPosition || !observerElevation) {
+      visibilitySessionRef.current = null;
+      setVisibilitySession(null);
+      return;
+    }
+    const current = visibilitySessionRef.current;
+    if (current?.key === visibilityContextKey && current.catalog === peakCatalog) return;
+    const session: VisibilitySession = {
+      key: visibilityContextKey,
+      catalog: peakCatalog,
+      geometricResults: new Map(),
+      inFlight: new Set(),
+    };
+    visibilitySessionRef.current = session;
+    setVisibilitySession(session);
+    setVisibilityRevision((revision) => revision + 1);
+  }, [visibilityContextKey, observerPosition, observerElevation, peakCatalog]);
+
   const handleObserverPositionChange = useCallback((position: GeographicPosition) => {
     elevationRequestId.current += 1;
     const requestId = elevationRequestId.current;
@@ -117,6 +171,10 @@ function App() {
     };
   }, []);
   const observationBearing = resolveObservationBearing(orientationMode, mapBearing, compassBearing);
+  const visibilityByPeak = useMemo(() => {
+    if (!observerPosition || !visibilitySession || visibilitySession.key !== visibilityContextKey) return new Map<string, PeakVisibilityResult>();
+    return getVisibilityView(visibilitySession, observerPosition, peakCatalog, visibilityRadiusKm, observationBearing);
+  }, [visibilitySession, visibilityContextKey, observerPosition, peakCatalog, visibilityRadiusKm, observationBearing, visibilityRevision]);
   useEffect(() => {
     if (orientationMode === 'automatic' && compassBearing !== null) {
       mapOrientationActions?.setBearing(compassBearing, 200);
@@ -156,7 +214,7 @@ function App() {
   const selectedPeak = peakCatalog.find((peak) => peak.id === selectedPeakId) ?? null;
 
   useEffect(() => {
-    const counts = { visible: 0, occluded: 0, indeterminate: 0, outsideRadius: 0, outsideFov: 0 };
+    const counts = { visible: 0, partiallyVisible: 0, occluded: 0, indeterminate: 0, outsideRadius: 0, outsideFov: 0 };
     for (const status of visibilityByPeak.values()) counts[status.state] += 1;
     const example = peakFeatures.features.find((feature) => feature.properties.peakId === selectedPeakId) ??
       peakFeatures.features[0];
@@ -180,48 +238,77 @@ function App() {
   }, [peakFeatures, selectedPeakId]);
 
   useEffect(() => {
-    const requestId = ++calculationRequestId.current;
-    if (!observerPosition || !observerElevation) {
-      setVisibilityByPeak(new Map());
+    if (!observerPosition || !observerElevation || !visibilitySession ||
+      visibilitySessionRef.current !== visibilitySession || visibilitySession.key !== visibilityContextKey ||
+      settledObservationBearing !== observationBearing) return;
+
+    const selection = selectPeaksForVisibility(
+      observerPosition,
+      peakCatalog,
+      visibilityRadiusKm * 1000,
+      settledObservationBearing,
+    );
+    const uncached = getUncachedEligiblePeaks(
+      selection,
+      visibilitySession.geometricResults,
+      visibilitySession.inFlight,
+    );
+    const reusedGeometryCount = selection.eligible.length - uncached.length;
+    const inFlightCount = selection.eligible.filter(({ peak }) => visibilitySession.inFlight.has(peak.id)).length;
+    const metrics = {
+      bearingDegrees: settledObservationBearing,
+      radiusKm: visibilityRadiusKm,
+      inSectorCount: selection.eligible.length,
+      reusedGeometryCount,
+      alreadyInFlightCount: inFlightCount,
+      newlyCalculatedPeakCount: uncached.length,
+      previousBehaviorPeakCalculations: selection.eligible.length,
+      estimatedPreviousRoutePreparations: selection.eligible.length * 5,
+    };
+    visibilityDebug('heading-visibility-start', metrics);
+    if (uncached.length === 0) {
+      visibilityDebug('heading-visibility-performance', {
+        ...metrics,
+        routePreparations: 0,
+        mdtBlockReadRequests: 0,
+        mdtCachedBlocks: null,
+      });
       return;
     }
-    let current = true;
-    const isCurrent = () => current && isLatestRequest(requestId, calculationRequestId.current);
-    if (settledObservationBearing !== observationBearing) {
-      setVisibilityByPeak(new Map());
-      return () => { current = false; };
-    }
-    setVisibilityByPeak(new Map());
-    const currentOrientationGeneration = orientationGeneration.current;
-    const isRequestCurrent = () => isCurrent() && currentOrientationGeneration === orientationGeneration.current;
-    visibilityDebug('calculation-start', {
-      requestId,
-      peakCount: peakCatalog.length,
-      observerPosition,
-      radiusKm: visibilityRadiusKm,
-      directionBearingDegrees: settledObservationBearing,
-    });
-    void calculatePeakVisibilities(observerPosition, observerElevation, peakCatalog, {
-      maxDistanceMeters: visibilityRadiusKm * 1000,
-      directionBearingDegrees: settledObservationBearing,
-      onProgress: (results) => {
-        if (isRequestCurrent()) setVisibilityByPeak(new Map(results));
+
+    for (const { peak } of uncached) visibilitySession.inFlight.add(peak.id);
+    const beforeTerrain = getIgcTerrainCacheStats().catch(() => null);
+    let routePreparations = 0;
+    void calculatePeakGeometricVisibilities(observerPosition, observerElevation, uncached, {
+      onRoutePreparation: () => { routePreparations += 1; },
+      onProgress: (updates) => {
+        if (updates.size === 0) return;
+        if (visibilitySessionRef.current !== visibilitySession) return;
+        for (const [peakId, result] of updates) {
+          visibilitySession.geometricResults.set(peakId, result);
+          visibilitySession.inFlight.delete(peakId);
+        }
+        setVisibilityRevision((revision) => revision + 1);
       },
-    }).then((results) => {
-      if (!isRequestCurrent()) return;
-      const counts = { visible: 0, occluded: 0, indeterminate: 0, outsideRadius: 0, outsideFov: 0 };
-      const examples: Record<string, string[]> = { visible: [], occluded: [], indeterminate: [], outsideRadius: [], outsideFov: [] };
-      for (const [peakId, status] of results) {
-        counts[status.state] += 1;
-        if (examples[status.state].length < 2) examples[status.state].push(peakId);
-      }
-      visibilityDebug('calculation-complete', { requestId, counts, examples });
-      setVisibilityByPeak(results);
+    }).then(async () => {
+      if (visibilitySessionRef.current !== visibilitySession) return;
+      for (const { peak } of uncached) visibilitySession.inFlight.delete(peak.id);
+      setVisibilityRevision((revision) => revision + 1);
+      const [before, after] = await Promise.all([beforeTerrain, getIgcTerrainCacheStats().catch(() => null)]);
+      visibilityDebug('heading-visibility-performance', {
+        ...metrics,
+        routePreparations,
+        mdtBlockReadRequests: before && after ? after.blockReadRequests - before.blockReadRequests : null,
+        mdtCachedBlocks: after?.cachedBlocks ?? null,
+        note: 'MDT block reads are provider cache misses, not HTTP Range request counts.',
+      });
     }).catch((error) => {
-      if (isRequestCurrent()) console.warn('Visibility calculation could not be completed:', error);
+      if (visibilitySessionRef.current !== visibilitySession) return;
+      for (const { peak } of uncached) visibilitySession.inFlight.delete(peak.id);
+      console.warn('Visibility calculation could not be completed:', error);
+      setVisibilityRevision((revision) => revision + 1);
     });
-    return () => { current = false; };
-  }, [observerPosition, observerElevation, peakCatalog, visibilityRadiusKm, settledObservationBearing, settledOrientationGeneration]);
+  }, [observerPosition, observerElevation, visibilitySession, visibilityContextKey, peakCatalog, visibilityRadiusKm, settledObservationBearing, observationBearing, settledOrientationGeneration]);
 
   useEffect(() => {
     let isCurrent = true;

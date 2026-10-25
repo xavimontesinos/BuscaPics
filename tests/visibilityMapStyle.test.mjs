@@ -18,7 +18,7 @@ test('state colors are applied to the visible SDF marker and selected label emph
 
   const markers = layer('peak-visibility-markers');
   assert.deepEqual(markers.paint['circle-color'], [
-    'match', ['get', 'visibility'], 'visible', '#16834a', 'occluded', '#b53b36', 'outsideRadius', '#c1c7c3', 'outsideFov', '#aebbc2', '#788078',
+    'match', ['get', 'visibility'], 'visible', '#16834a', 'partiallyVisible', '#d48b13', 'occluded', '#b53b36', 'outsideRadius', '#c1c7c3', 'outsideFov', '#aebbc2', '#788078',
   ]);
 
   const mountainMarkers = PEAK_CANDIDATE_MARKER_LAYER;
@@ -36,7 +36,7 @@ test('state colors are applied to the visible SDF marker and selected label emph
   assert.deepEqual(textColor[1], ['boolean', ['feature-state', 'selected'], false]);
   assert.equal(textColor[2], '#9a3f26');
   assert.deepEqual(textColor[3], [
-    'match', ['get', 'visibility'], 'visible', '#126b3d', 'occluded', '#a4312d', 'outsideRadius', '#929994', 'outsideFov', '#74858d', '#555d57',
+    'match', ['get', 'visibility'], 'visible', '#126b3d', 'partiallyVisible', '#9b6500', 'occluded', '#a4312d', 'outsideRadius', '#929994', 'outsideFov', '#74858d', '#555d57',
   ]);
   assert.deepEqual(labels.paint['text-halo-width'][1], ['boolean', ['feature-state', 'selected'], false]);
   assert.equal(Object.hasOwn(labels.paint, 'icon-opacity'), false);
