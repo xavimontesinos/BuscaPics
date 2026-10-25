@@ -2,8 +2,9 @@ import { GeoTiffRasterBlockReader } from "./geoTiffRasterBlockReader";
 import { Proj4HorizontalCoordinateTransformer } from "./Proj4HorizontalCoordinateTransformer";
 import type { GeographicPosition, TerrainElevationLookup } from "./types";
 import { PreparedRasterElevationProvider } from "./rasterElevationProvider";
+import { getIgcMdtUrl, ICGC_MDT_SOURCE_URL } from "./icgcMdtConfig";
 
-const ICGC_MDT_URL = "https://datacloud.icgc.cat/datacloud/model-elevacions-terreny/tif_unzip/model-elevacions-terreny-lidar-catalunya-5m-2021-2023.tif";
+const ICGC_MDT_URL = getIgcMdtUrl(import.meta.env.DEV);
 const WGS84 = {
   kind: "geographic" as const, code: "EPSG:4326", axisOrder: "longitude-latitude" as const, angularUnit: "degree" as const,
 };
@@ -20,7 +21,7 @@ function getProvider(): Promise<PreparedRasterElevationProvider> {
       product: {
         id: "model-elevacions-terreny-lidar-catalunya-5m-2021-2023",
         producer: "Institut Cartogràfic i Geològic de Catalunya",
-        source: ICGC_MDT_URL,
+        source: ICGC_MDT_SOURCE_URL,
         version: "2021-2023",
         dataDate: "2023-11-20",
         license: { status: "confirmed", identifier: "CC BY 4.0", attribution: "Institut Cartogràfic i Geològic de Catalunya (ICGC)" },

@@ -502,3 +502,26 @@ button.control-button:disabled {
   font-size: 12px;
   pointer-events: none;
 }
+.visibility-radius {
+  position: absolute;
+  z-index: 2;
+  left: calc(16px + var(--safe-left, 0px));
+  bottom: calc(58px + var(--safe-bottom, 0px));
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 10px;
+  background: rgb(24 31 28 / 88%);
+  color: #f3f5f1;
+  font-size: 12px;
+}
+.visibility-radius select {
+  border: 0;
+  border-radius: 5px;
+  padding: 3px 5px;
+  background: #f3f5f1;
+  color: #202722;
+  font: inherit;
+}

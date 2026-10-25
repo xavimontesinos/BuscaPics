@@ -114,6 +114,18 @@ test('all essential waypoints match one catalog peak; selection returns exact se
   const states = new Map([[catalog.peaks[0].id, 'visible']]);
   const styledFeature = domain.toPeakFeatureCollection([catalog.peaks[0]], { id: '100-cims' }, states).features[0];
   assert.equal(styledFeature.properties.visibility, 'visible');
+  const outsideRadius = domain.toPeakFeatureCollection(
+    [catalog.peaks[0]],
+    { id: '100-cims' },
+    new Map([[catalog.peaks[0].id, 'outsideRadius']]),
+  ).features[0];
+  assert.equal(outsideRadius.properties.visibility, 'outsideRadius');
+  const outsideFov = domain.toPeakFeatureCollection(
+    [catalog.peaks[0]],
+    { id: '100-cims' },
+    new Map([[catalog.peaks[0].id, 'outsideFov']]),
+  ).features[0];
+  assert.equal(outsideFov.properties.visibility, 'outsideFov');
 });
 
 test('coordinate fallback leaves multiple nearby candidates ambiguous', () => {

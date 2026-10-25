@@ -1,10 +1,29 @@
-import type { StyleSpecification } from 'maplibre-gl';
+import type { StyleSpecification, SymbolLayerSpecification } from 'maplibre-gl';
 
 const ICGC_TOPOGRAPHIC_TILES =
   'https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wmts/topografic-mut/MON3857NW/{z}/{x}/{y}.png';
 const ICGC_POPULATION_LABELS = '/data/localitats-baga-10km.geojson';
 const EMPTY_PEAK_FEATURES = { type: 'FeatureCollection' as const, features: [] };
 export const PEAK_MOUNTAIN_ICON = 'peak-mountain-icon';
+
+/** Added only after the SDF icon is registered, and again after each style reload. */
+export const PEAK_CANDIDATE_MARKER_LAYER = {
+  id: 'peak-candidate-markers',
+  type: 'symbol',
+  source: 'peak-candidates',
+  minzoom: 9,
+  layout: {
+    'icon-image': PEAK_MOUNTAIN_ICON,
+    'icon-size': ['interpolate', ['linear'], ['zoom'], 9, 0.85, 12, 1, 14, 1.15],
+    'icon-anchor': 'bottom',
+    'icon-allow-overlap': true,
+    'icon-ignore-placement': true,
+  },
+  paint: {
+    'icon-color': ['match', ['get', 'visibility'], 'visible', '#16834a', 'occluded', '#b53b36', 'outsideRadius', '#c1c7c3', 'outsideFov', '#aebbc2', '#788078'],
+    'icon-opacity': ['case', ['boolean', ['feature-state', 'selected'], false], 1, ['match', ['get', 'visibility'], 'outsideRadius', 0.35, 'outsideFov', 0.25, 'indeterminate', 0.55, 0.85]],
+  },
+} as const satisfies SymbolLayerSpecification;
 
 export const MAP_STYLE: StyleSpecification = {
   version: 8,
@@ -72,22 +91,9 @@ export const MAP_STYLE: StyleSpecification = {
       minzoom: 9,
       paint: {
         'circle-radius': 5,
-        'circle-color': ['match', ['get', 'visibility'], 'visible', '#16834a', 'occluded', '#b53b36', '#788078'],
+        'circle-color': ['match', ['get', 'visibility'], 'visible', '#16834a', 'occluded', '#b53b36', 'outsideRadius', '#c1c7c3', 'outsideFov', '#aebbc2', '#788078'],
         'circle-stroke-color': '#fffdf5',
         'circle-stroke-width': 1.5,
-      },
-    },
-    {
-      id: 'peak-candidate-markers',
-      type: 'symbol',
-      source: 'peak-candidates',
-      minzoom: 9,
-      layout: {
-        'icon-image': PEAK_MOUNTAIN_ICON,
-        'icon-size': ['interpolate', ['linear'], ['zoom'], 9, 0.85, 12, 1, 14, 1.15],
-        'icon-anchor': 'bottom',
-        'icon-allow-overlap': true,
-        'icon-ignore-placement': true,
       },
     },
     {
@@ -119,8 +125,7 @@ export const MAP_STYLE: StyleSpecification = {
         'text-padding': 3,
       },
       paint: {
-        'icon-opacity': ['case', ['boolean', ['feature-state', 'selected'], false], 1, ['==', ['get', 'visibility'], 'indeterminate'], 0.55, 0.65],
-        'text-color': ['case', ['boolean', ['feature-state', 'selected'], false], '#9a3f26', ['match', ['get', 'visibility'], 'visible', '#126b3d', 'occluded', '#a4312d', '#555d57']],
+        'text-color': ['case', ['boolean', ['feature-state', 'selected'], false], '#9a3f26', ['match', ['get', 'visibility'], 'visible', '#126b3d', 'occluded', '#a4312d', 'outsideRadius', '#929994', 'outsideFov', '#74858d', '#555d57']],
         'text-halo-color': '#fffdf5',
         'text-halo-width': ['case', ['boolean', ['feature-state', 'selected'], false], 2, 1.15],
         'text-halo-blur': 0.2,

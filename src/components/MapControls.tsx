@@ -1,5 +1,6 @@
 import { Icon } from './icons';
 import { OrientationControl } from './OrientationControl';
+import type { ObservationOrientationMode } from '../domain/orientation';
 
 type MapControlsProps = {
   onZoomIn?: () => void;
@@ -7,6 +8,8 @@ type MapControlsProps = {
   bearing: number;
   onSetBearing?: (bearing: number) => void;
   onResetNorth?: () => void;
+  orientationMode?: ObservationOrientationMode;
+  compassAvailable?: boolean;
 };
 
 export function MapControls({
@@ -15,6 +18,8 @@ export function MapControls({
   bearing,
   onSetBearing,
   onResetNorth,
+  orientationMode,
+  compassAvailable,
 }: MapControlsProps) {
   return (
     <>
@@ -83,6 +88,8 @@ export function MapControls({
           bearing={bearing}
           onSetBearing={onSetBearing}
           onResetNorth={onResetNorth}
+          orientationMode={orientationMode}
+          compassAvailable={compassAvailable}
         />
       </div>
     </>

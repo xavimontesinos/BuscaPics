@@ -1,5 +1,7 @@
 import type { Elevation, SummitTarget, VisibilityStatus } from "./visibility/types";
 
+export type PeakVisibilityState = VisibilityStatus["state"] | "outsideRadius" | "outsideFov";
+
 /** A summit imported from the local development GPX catalog. */
 export interface Peak {
   id: string;
@@ -26,7 +28,7 @@ export interface PeakFeatureCollection {
     type: "Feature";
     id: string;
     geometry: { type: "Point"; coordinates: [number, number] };
-    properties: { peakId: string; name: string; elevationM: number; elevationLabel: string; latitude: number; longitude: number; visibility: VisibilityStatus["state"] };
+    properties: { peakId: string; name: string; elevationM: number; elevationLabel: string; latitude: number; longitude: number; visibility: PeakVisibilityState };
   }>;
 }
 
@@ -56,7 +58,7 @@ export function toSummitTarget(peak: Peak): SummitTarget | null {
 export function toPeakFeatureCollection(
   peaks: readonly Peak[],
   filter: PeakFilter,
-  visibility: ReadonlyMap<string, VisibilityStatus["state"]> = new Map(),
+  visibility: ReadonlyMap<string, PeakVisibilityState> = new Map(),
 ): PeakFeatureCollection {
   return {
     type: "FeatureCollection",

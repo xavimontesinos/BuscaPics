@@ -1,9 +1,12 @@
 import { useRef, type PointerEvent as ReactPointerEvent } from 'react';
+import type { ObservationOrientationMode } from '../domain/orientation';
 
 type OrientationControlProps = {
   bearing: number;
   onSetBearing?: (bearing: number) => void;
   onResetNorth?: () => void;
+  orientationMode?: ObservationOrientationMode;
+  compassAvailable?: boolean;
 };
 
 type PointerDrag = {
@@ -46,11 +49,18 @@ export function OrientationControl({
   bearing,
   onSetBearing,
   onResetNorth,
+  orientationMode = 'automatic',
+  compassAvailable = false,
 }: OrientationControlProps) {
   const dragRef = useRef<PointerDrag | null>(null);
   const suppressPointerClickRef = useRef(false);
   const normalizedBearing = normalizeBearing(bearing);
   const accessibleBearing = describeBearing(bearing);
+  const orientationDescription = orientationMode === 'manual'
+    ? `Orientación manual ${accessibleBearing}; pulsa para reanudar la brújula automática`
+    : compassAvailable
+      ? `Orientación automática con brújula ${accessibleBearing}`
+      : `Orientación automática sin brújula: ${accessibleBearing}; puedes girar manualmente`;
 
   function handlePointerDown(event: ReactPointerEvent<HTMLButtonElement>) {
     if (!event.isPrimary || (event.pointerType === 'mouse' && event.button !== 0)) return;
@@ -126,10 +136,10 @@ export function OrientationControl({
       className="control-button orientation-button"
       type="button"
       disabled={!onSetBearing || !onResetNorth}
-      aria-label={`Orientación del mapa: ${accessibleBearing}. Pulsa para volver al norte.`}
+      aria-label={orientationDescription}
       aria-describedby="orientation-control-hint"
       aria-keyshortcuts="ArrowUp ArrowRight ArrowDown ArrowLeft Home Enter Space"
-      title={`Orientación ${accessibleBearing} · pulsar para norte`}
+      title={`${orientationDescription} · Inicio o pulsación para modo automático`}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
@@ -158,7 +168,7 @@ export function OrientationControl({
       </svg>
       <span id="orientation-control-hint" className="visually-hidden">
         Arrastra para girar el mapa. Usa las flechas para girar en pasos de 15 grados y
-        Inicio para volver al norte.
+        Inicio o pulsa para reanudar la orientación automática.
       </span>
     </button>
   );

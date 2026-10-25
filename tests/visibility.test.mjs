@@ -128,6 +128,14 @@ test('flat synthetic terrain leaves an elevated target visible', () => {
   assert.ok(result.distanceMeters > 0);
 });
 
+test('the observer eye endpoint uses terrain elevation plus exactly 1.8 metres', () => {
+  const result = resultFor((fraction) => (fraction > 0.49 && fraction < 0.51 ? 107.3 : 100), {
+    observer: { eyeHeightAboveGroundMeters: 1.8 },
+  });
+  assert.equal(result.state, 'occluded');
+  assert.equal(observer.terrainElevation.meters, 100);
+});
+
 test('an intermediate ridge blocks the target and reports its approximate location', () => {
   const result = resultFor((fraction) => (fraction > 0.2 && fraction < 0.3 ? 120 : 100));
   assert.equal(result.state, 'occluded');

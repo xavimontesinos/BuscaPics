@@ -14,8 +14,17 @@ import {
   MAP_STYLE,
   PEAK_MOUNTAIN_ICON,
 } from '../map/mapConfig';
+import { ensurePeakMarkerLayer } from '../map/peakMarkerLayer';
+import {
+  getObserverBearingEaseOptions,
+  getObserverMapEaseOptions,
+  getObserverMapPadding,
+  getObserverZoomEaseOptions,
+  OBSERVER_ANCHORED_GESTURES,
+} from '../map/observerMapPosition';
 import type { PeakFeatureCollection } from '../domain/peaks';
 import type { GeographicPosition } from '../domain/visibility/types';
+import { visibilityDebug } from '../domain/visibility/visibilityDebug';
 
 setWorkerUrl(maplibreWorkerUrl);
 
@@ -25,7 +34,7 @@ export type MapZoomActions = {
 };
 
 export type MapOrientationActions = {
-  setBearing: (bearing: number) => void;
+  setBearing: (bearing: number, durationMilliseconds?: number) => void;
   resetNorth: () => void;
   centerAt: (center: [number, number]) => void;
 };
@@ -56,10 +65,13 @@ export function MapViewport({
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
   const observerMarkerRef = useRef<Marker | null>(null);
+  const observerPositionRef = useRef(observerPosition);
   const peakFeaturesRef = useRef(peakFeatures);
   const selectedPeakIdRef = useRef(selectedPeakId);
+  const lastVisibilityDiagnosticRef = useRef('');
   peakFeaturesRef.current = peakFeatures;
   selectedPeakIdRef.current = selectedPeakId;
+  observerPositionRef.current = observerPosition;
 
   useEffect(() => {
     const container = mapContainerRef.current;
@@ -71,12 +83,14 @@ export function MapViewport({
       ...INITIAL_MAP_VIEW,
       attributionControl: { compact: false },
       dragRotate: false,
+      ...OBSERVER_ANCHORED_GESTURES,
     });
     map.touchZoomRotate.disableRotation();
     mapRef.current = map;
     let isActive = true;
-    let peakImagesStarted = false;
-    const peakImages: HTMLImageElement[] = [];
+    let peakIconPromise: Promise<HTMLImageElement> | null = null;
+    let styleLoadSequence = 0;
+    let markerInteractionsRegistered = false;
     const canvas = map.getCanvas();
     const activePointers = new Set<number>();
     let longPressTimer: number | null = null;
@@ -136,6 +150,14 @@ export function MapViewport({
     window.addEventListener('pointercancel', handlePointerEnd, true);
 
     const handleRotate = () => onMapBearingChange(map.getBearing());
+    const syncObserverPadding = () => {
+      const padding = getObserverMapPadding(map.getContainer().clientHeight, Boolean(observerPositionRef.current));
+      const current = map.getPadding();
+      if (current.top !== padding.top || current.right !== padding.right ||
+        current.bottom !== padding.bottom || current.left !== padding.left) {
+        map.setPadding(padding);
+      }
+    };
     const handlePeakClick = (event: MapLayerMouseEvent) => {
       if (suppressNextClick) {
         suppressNextClick = false;
@@ -149,23 +171,44 @@ export function MapViewport({
     const handlePeakPointerMove = (event: MapLayerMouseEvent) => {
       map.getCanvas().style.cursor = event.features?.length ? 'pointer' : '';
     };
-    const handleLoad = () => {
-      const source = map.getSource('peak-candidates') as GeoJSONSource | undefined;
-      source?.setData(peakFeaturesRef.current);
-      applySelectedPeakState();
-
-      if (peakImagesStarted) return;
-      peakImagesStarted = true;
+    const loadPeakIcon = () => {
+      if (peakIconPromise) return peakIconPromise;
       const url = '/images/peak-mountain.svg';
-      if (map.hasImage(PEAK_MOUNTAIN_ICON)) return;
       const image = new Image();
-      peakImages.push(image);
-      image.onload = () => {
-        if (!isActive || map.hasImage(PEAK_MOUNTAIN_ICON)) return;
-        map.addImage(PEAK_MOUNTAIN_ICON, image);
-      };
-      image.onerror = () => console.warn(`Could not load peak map image: ${url}`);
+      peakIconPromise = new Promise((resolve, reject) => {
+        image.onload = () => resolve(image);
+        image.onerror = () => {
+          peakIconPromise = null;
+          reject(new Error(`Could not load peak map image: ${url}`));
+        };
+      });
       image.src = url;
+      return peakIconPromise;
+    };
+    const handleStyleLoad = () => {
+      const sequence = ++styleLoadSequence;
+      void loadPeakIcon().then((image) => {
+        if (!isActive || sequence !== styleLoadSequence) return;
+        ensurePeakMarkerLayer(map, image);
+        visibilityDebug('map-icon-ready', {
+          name: PEAK_MOUNTAIN_ICON,
+          sdf: map.getImage(PEAK_MOUNTAIN_ICON).sdf,
+          markerLayerAddedAfterImage: Boolean(map.getLayer('peak-candidate-markers')),
+        });
+        if (!markerInteractionsRegistered) {
+          map.on('click', 'peak-candidate-markers', handlePeakClick);
+          map.on('mousemove', 'peak-candidate-markers', handlePeakPointerMove);
+          markerInteractionsRegistered = true;
+        }
+        const source = map.getSource('peak-candidates') as GeoJSONSource | undefined;
+        source?.setData(peakFeaturesRef.current);
+        applySelectedPeakState();
+      }).catch((error: unknown) => {
+        if (isActive && sequence === styleLoadSequence) {
+          console.warn('Could not initialize peak map marker:', error);
+          visibilityDebug('map-icon-initialization-failed', { name: PEAK_MOUNTAIN_ICON, error });
+        }
+      });
     };
     const applySelectedPeakState = () => {
       for (const feature of peakFeaturesRef.current.features) {
@@ -183,24 +226,50 @@ export function MapViewport({
     canvas.addEventListener('click', handleCanvasClick, true);
     map.on('movestart', cancelLongPress);
     map.on('rotate', handleRotate);
-    map.on('click', 'peak-candidate-markers', handlePeakClick);
+    map.on('resize', syncObserverPadding);
     map.on('click', 'peak-candidate-labels', handlePeakClick);
-    map.on('mousemove', 'peak-candidate-markers', handlePeakPointerMove);
     map.on('mousemove', 'peak-candidate-labels', handlePeakPointerMove);
-    map.on('load', handleLoad);
+    map.on('style.load', handleStyleLoad);
     map.on('error', handleMapError);
     onMapBearingChange(map.getBearing());
 
+    const zoomAroundObserver = (zoomDelta: number) => {
+      const activeMap = mapRef.current;
+      if (!activeMap) return;
+      const observer = observerPositionRef.current;
+      if (observer) {
+        activeMap.easeTo(getObserverZoomEaseOptions(observer, activeMap.getZoom() + zoomDelta, 220));
+      } else if (zoomDelta > 0) {
+        activeMap.zoomIn({ duration: 220 });
+      } else {
+        activeMap.zoomOut({ duration: 220 });
+      }
+    };
     onMapZoomActionsChange({
-      zoomIn: () => mapRef.current?.zoomIn({ duration: 220 }),
-      zoomOut: () => mapRef.current?.zoomOut({ duration: 220 }),
+      zoomIn: () => zoomAroundObserver(1),
+      zoomOut: () => zoomAroundObserver(-1),
     });
+    const setBearingAroundObserver = (bearing: number, durationMilliseconds = 0) => {
+      const activeMap = mapRef.current;
+      if (!activeMap) return;
+      const observer = observerPositionRef.current;
+      if (observer) {
+        activeMap.easeTo(getObserverBearingEaseOptions(
+          observer,
+          bearing,
+          activeMap.getZoom(),
+          durationMilliseconds,
+        ));
+      } else {
+        activeMap.easeTo({ bearing, zoom: activeMap.getZoom(), duration: durationMilliseconds });
+      }
+    };
     onMapOrientationActionsChange({
-      setBearing: (bearing) => mapRef.current?.setBearing(bearing),
+      setBearing: setBearingAroundObserver,
       centerAt: (center) => mapRef.current?.easeTo({ center, duration: 400 }),
       resetNorth: () => {
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        mapRef.current?.resetNorth({ duration: reduceMotion ? 0 : 450 });
+        setBearingAroundObserver(0, reduceMotion ? 0 : 450);
       },
     });
 
@@ -213,17 +282,16 @@ export function MapViewport({
       window.removeEventListener('pointerup', handlePointerEnd, true);
       window.removeEventListener('pointercancel', handlePointerEnd, true);
       canvas.removeEventListener('click', handleCanvasClick, true);
-      for (const image of peakImages) {
-        image.onload = null;
-        image.onerror = null;
-      }
       map.off('movestart', cancelLongPress);
       map.off('rotate', handleRotate);
-      map.off('click', 'peak-candidate-markers', handlePeakClick);
+      map.off('resize', syncObserverPadding);
+      if (markerInteractionsRegistered) {
+        map.off('click', 'peak-candidate-markers', handlePeakClick);
+        map.off('mousemove', 'peak-candidate-markers', handlePeakPointerMove);
+      }
       map.off('click', 'peak-candidate-labels', handlePeakClick);
-      map.off('mousemove', 'peak-candidate-markers', handlePeakPointerMove);
       map.off('mousemove', 'peak-candidate-labels', handlePeakPointerMove);
-      map.off('load', handleLoad);
+      map.off('style.load', handleStyleLoad);
       map.off('error', handleMapError);
       map.remove();
       mapRef.current = null;
@@ -244,14 +312,46 @@ export function MapViewport({
         selected: feature.id === selectedPeakId,
       });
     }
+    const counts = { visible: 0, occluded: 0, indeterminate: 0, outsideRadius: 0, outsideFov: 0 };
+    for (const feature of peakFeatures.features) counts[feature.properties.visibility] += 1;
+    const sample = peakFeatures.features.find((feature) => feature.properties.peakId === selectedPeakId) ??
+      peakFeatures.features.find((feature) => feature.properties.visibility !== 'indeterminate') ??
+      peakFeatures.features[0];
+    const signature = `${JSON.stringify(counts)}:${sample?.properties.peakId}:${sample?.properties.visibility}`;
+    if (sample && signature !== lastVisibilityDiagnosticRef.current) {
+      lastVisibilityDiagnosticRef.current = signature;
+      const markerLayerAvailable = Boolean(map.getLayer('peak-candidate-markers'));
+      visibilityDebug('map-source-setData', {
+        source: 'peak-candidates',
+        featureCount: peakFeatures.features.length,
+        counts,
+        sample: sample.properties,
+        iconRegistered: map.hasImage(PEAK_MOUNTAIN_ICON),
+        iconSdf: map.hasImage(PEAK_MOUNTAIN_ICON) ? map.getImage(PEAK_MOUNTAIN_ICON).sdf : null,
+        layerIcon: markerLayerAvailable ? map.getLayoutProperty('peak-candidate-markers', 'icon-image') : null,
+        iconColorExpression: markerLayerAvailable ? map.getPaintProperty('peak-candidate-markers', 'icon-color') : null,
+      });
+      map.once('idle', () => {
+        const renderedLayers = map.getLayer('peak-candidate-markers')
+          ? ['peak-candidate-markers', 'peak-candidate-labels']
+          : ['peak-candidate-labels'];
+        const rendered = map.queryRenderedFeatures(undefined, {
+          layers: renderedLayers,
+        });
+        visibilityDebug('map-rendered-features', {
+          samplePeakId: sample.properties.peakId,
+          renderedSample: rendered.find((feature) => feature.properties?.peakId === sample.properties.peakId)?.properties ?? null,
+          renderedFeatureCount: rendered.length,
+        });
+      });
+    }
   }, [peakFeatures, selectedPeakId]);
 
   useEffect(() => {
-    if (!observerPosition) return;
-    mapRef.current?.easeTo({
-      center: [observerPosition.longitudeDegrees, observerPosition.latitudeDegrees],
-      duration: 400,
-    });
+    const map = mapRef.current;
+    if (!map) return;
+    map.setPadding(getObserverMapPadding(map.getContainer().clientHeight, Boolean(observerPosition)));
+    if (observerPosition) map.easeTo(getObserverMapEaseOptions(observerPosition, map.getZoom()));
   }, [observerPosition]);
 
   useEffect(() => {
