@@ -2,7 +2,7 @@ import type { StyleSpecification, SymbolLayerSpecification } from 'maplibre-gl';
 
 const ICGC_TOPOGRAPHIC_TILES =
   'https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wmts/topografic-mut/MON3857NW/{z}/{x}/{y}.png';
-const ICGC_POPULATION_LABELS = '/data/localitats-baga-10km.geojson';
+const ICGC_POPULATION_LABELS = `${import.meta.env.BASE_URL}data/localitats-baga-10km.geojson`;
 const EMPTY_PEAK_FEATURES = { type: 'FeatureCollection' as const, features: [] };
 export const PEAK_MOUNTAIN_ICON = 'peak-mountain-icon';
 

@@ -6,7 +6,7 @@ import ts from 'typescript';
 const source = await readFile(new URL('../src/map/mapConfig.ts', import.meta.url), 'utf8');
 const javascript = ts.transpileModule(source, {
   compilerOptions: { module: ts.ModuleKind.ES2022, target: ts.ScriptTarget.ES2022 },
-}).outputText;
+}).outputText.replaceAll('import.meta.env.BASE_URL', JSON.stringify('/'));
 const { MAP_STYLE, PEAK_CANDIDATE_MARKER_LAYER } = await import(`data:text/javascript;base64,${Buffer.from(javascript).toString('base64')}`);
 const viewportSource = await readFile(new URL('../src/components/MapViewport.tsx', import.meta.url), 'utf8');
 const layer = (id) => MAP_STYLE.layers.find((candidate) => candidate.id === id);

@@ -173,7 +173,7 @@ export function MapViewport({
     };
     const loadPeakIcon = () => {
       if (peakIconPromise) return peakIconPromise;
-      const url = '/images/peak-mountain.svg';
+      const url = `${import.meta.env.BASE_URL}images/peak-mountain.svg`;
       const image = new Image();
       peakIconPromise = new Promise((resolve, reject) => {
         image.onload = () => resolve(image);

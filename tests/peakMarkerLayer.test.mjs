@@ -11,6 +11,7 @@ function compile(source, replacements = {}) {
     javascript = javascript.replaceAll(`from "${specifier}"`, `from ${JSON.stringify(replacement)}`);
     javascript = javascript.replaceAll(`from '${specifier}'`, `from ${JSON.stringify(replacement)}`);
   }
+  javascript = javascript.replaceAll('import.meta.env.BASE_URL', JSON.stringify('/'));
   return `data:text/javascript;base64,${Buffer.from(javascript).toString('base64')}`;
 }
 

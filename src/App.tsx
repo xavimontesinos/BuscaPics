@@ -504,7 +504,7 @@ function App() {
 
     async function loadPeakCatalog() {
       try {
-        const response = await fetch('/data/100-cims-catalog.json');
+        const response = await fetch(`${import.meta.env.BASE_URL}data/100-cims-catalog.json`);
         if (!response.ok) throw new Error(`Catalog request failed: ${response.status}`);
         const catalog = (await response.json()) as { peaks: Peak[] };
         if (!Array.isArray(catalog.peaks)) throw new Error('Catalog has no peaks array');
