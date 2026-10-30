@@ -23,9 +23,11 @@ const proxyUrl = compile(proxySource, { '../src/domain/visibility/icgcMdtConfig'
 const { ICGC_MDT_DEV_PROXY_PATH, ICGC_MDT_SOURCE_URL, getIgcMdtUrl } = await import(appConfigUrl);
 const { createIgcMdtProxy } = await import(proxyUrl);
 
-test('development MDT URL uses Vite proxy while production retains official source', () => {
+test('development MDT URL uses Vite proxy and production can use the configured Worker', () => {
   assert.equal(getIgcMdtUrl(true), ICGC_MDT_DEV_PROXY_PATH);
   assert.equal(getIgcMdtUrl(false), ICGC_MDT_SOURCE_URL);
+  assert.equal(getIgcMdtUrl(false, 'https://buscapics.example.workers.dev/mdt.tif'), 'https://buscapics.example.workers.dev/mdt.tif');
+  assert.equal(getIgcMdtUrl(true, 'https://buscapics.example.workers.dev/mdt.tif'), ICGC_MDT_DEV_PROXY_PATH);
 });
 
 test('Vite proxy forwards Range and preserves a partial TIFF response', async (t) => {

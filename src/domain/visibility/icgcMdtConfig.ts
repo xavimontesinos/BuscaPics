@@ -4,7 +4,9 @@ export const ICGC_MDT_UPSTREAM_PATH =
 export const ICGC_MDT_SOURCE_URL = ICGC_MDT_UPSTREAM_ORIGIN + ICGC_MDT_UPSTREAM_PATH;
 export const ICGC_MDT_DEV_PROXY_PATH = "/__icgc_mdt__";
 
-/** Use Vite's same-origin proxy only during development; production keeps the official URL. */
-export function getIgcMdtUrl(isDevelopment: boolean): string {
-  return isDevelopment ? ICGC_MDT_DEV_PROXY_PATH : ICGC_MDT_SOURCE_URL;
+/** Use Vite locally and the fixed-resource CORS Worker on production static hosting. */
+export function getIgcMdtUrl(isDevelopment: boolean, productionWorkerUrl?: string): string {
+  if (isDevelopment) return ICGC_MDT_DEV_PROXY_PATH;
+  const configuredUrl = productionWorkerUrl?.trim();
+  return configuredUrl ? configuredUrl : ICGC_MDT_SOURCE_URL;
 }

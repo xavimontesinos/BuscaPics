@@ -1,0 +1,4 @@
+name = "buscapics-icgc-mdt"
+main = "index.mjs"
+compatibility_date = "2026-10-25"
+workers_dev = true

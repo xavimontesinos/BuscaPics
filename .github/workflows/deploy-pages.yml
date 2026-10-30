@@ -34,7 +34,18 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
+      - name: Require the production MDT Worker URL
+        if: github.event_name != 'pull_request'
+        env:
+          VITE_ICGC_MDT_WORKER_URL: ${{ vars.ICGC_MDT_WORKER_URL }}
+        run: |
+          if [ -z "$VITE_ICGC_MDT_WORKER_URL" ]; then
+            echo "::error::Set the Actions variable ICGC_MDT_WORKER_URL to the deployed Worker URL ending in /mdt.tif."
+            exit 1
+          fi
       - name: Build site
+        env:
+          VITE_ICGC_MDT_WORKER_URL: ${{ vars.ICGC_MDT_WORKER_URL }}
         run: npm run build
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4

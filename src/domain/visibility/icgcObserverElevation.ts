@@ -4,7 +4,7 @@ import type { GeographicPosition, TerrainElevationLookup } from "./types";
 import { PreparedRasterElevationProvider } from "./rasterElevationProvider";
 import { getIgcMdtUrl, ICGC_MDT_SOURCE_URL } from "./icgcMdtConfig";
 
-const ICGC_MDT_URL = getIgcMdtUrl(import.meta.env.DEV);
+const ICGC_MDT_URL = getIgcMdtUrl(import.meta.env.DEV, import.meta.env.VITE_ICGC_MDT_WORKER_URL);
 const WGS84 = {
   kind: "geographic" as const, code: "EPSG:4326", axisOrder: "longitude-latitude" as const, angularUnit: "degree" as const,
 };
