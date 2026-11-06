@@ -16,17 +16,32 @@ import {
 } from '../map/mapConfig';
 import { ensurePeakMarkerLayer } from '../map/peakMarkerLayer';
 import {
-  getObserverBearingEaseOptions,
-  getObserverMapEaseOptions,
-  getObserverMapPadding,
-  getObserverZoomEaseOptions,
-  OBSERVER_ANCHORED_GESTURES,
+  getCameraBearingEaseOptions,
+  getCameraZoomEaseOptions,
+  getObserverAnchoredCameraOptions,
+  getWheelZoomDelta,
+  getTouchRotationBearingDelta,
+  getObserverCameraOffset,
 } from '../map/observerMapPosition';
 import type { PeakFeatureCollection } from '../domain/peaks';
 import type { GeographicPosition } from '../domain/visibility/types';
 import { visibilityDebug } from '../domain/visibility/visibilityDebug';
 
 setWorkerUrl(maplibreWorkerUrl);
+
+type ObserverAnchoredCameraOptions = {
+  around: [number, number];
+  zoom: number;
+  bearing: number;
+};
+
+function easeToObserverAnchor(
+  map: MapLibreMap,
+  options: ObserverAnchoredCameraOptions,
+  duration: number,
+) {
+  map.easeTo({ ...options, duration });
+}
 
 export type MapZoomActions = {
   zoomIn: () => void;
@@ -36,7 +51,8 @@ export type MapZoomActions = {
 export type MapOrientationActions = {
   setBearing: (bearing: number, durationMilliseconds?: number) => void;
   resetNorth: () => void;
-  centerAt: (center: [number, number]) => void;
+  centerAt: (center: [number, number], bearing?: number) => void;
+  centerObserverAt: (center: [number, number], bearing?: number) => void;
 };
 
 type MapViewportProps = {
@@ -49,6 +65,7 @@ type MapViewportProps = {
   onMapZoomActionsChange: (actions: MapZoomActions | null) => void;
   onMapOrientationActionsChange: (actions: MapOrientationActions | null) => void;
   onMapBearingChange: (bearing: number | null) => void;
+  onManualCameraInteraction: () => void;
 };
 
 export function MapViewport({
@@ -61,17 +78,18 @@ export function MapViewport({
   onMapZoomActionsChange,
   onMapOrientationActionsChange,
   onMapBearingChange,
+  onManualCameraInteraction,
 }: MapViewportProps) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
-  const observerMarkerRef = useRef<Marker | null>(null);
   const observerPositionRef = useRef(observerPosition);
+  observerPositionRef.current = observerPosition;
+  const observerMarkerRef = useRef<Marker | null>(null);
   const peakFeaturesRef = useRef(peakFeatures);
   const selectedPeakIdRef = useRef(selectedPeakId);
   const lastVisibilityDiagnosticRef = useRef('');
   peakFeaturesRef.current = peakFeatures;
   selectedPeakIdRef.current = selectedPeakId;
-  observerPositionRef.current = observerPosition;
 
   useEffect(() => {
     const container = mapContainerRef.current;
@@ -82,17 +100,21 @@ export function MapViewport({
       style: MAP_STYLE,
       ...INITIAL_MAP_VIEW,
       attributionControl: { compact: false },
-      dragRotate: false,
-      ...OBSERVER_ANCHORED_GESTURES,
+      dragRotate: true,
     });
-    map.touchZoomRotate.disableRotation();
+    map.scrollZoom.disable();
+    map.touchZoomRotate.disable();
     mapRef.current = map;
     let isActive = true;
     let peakIconPromise: Promise<HTMLImageElement> | null = null;
     let styleLoadSequence = 0;
     let markerInteractionsRegistered = false;
     const canvas = map.getCanvas();
+    canvas.style.touchAction = 'none';
     const activePointers = new Set<number>();
+    const pointerPositions = new Map<number, { x: number; y: number }>();
+    let touchGesturePrevious: { angle: number; distance: number } | null = null;
+    let dragPanDisabledForMultiTouch = false;
     let longPressTimer: number | null = null;
     let longPressPointerId: number | null = null;
     let longPressStart: { x: number; y: number } | null = null;
@@ -112,6 +134,19 @@ export function MapViewport({
       if (event.pointerType === 'mouse' && event.button !== 0) return;
 
       activePointers.add(event.pointerId);
+      pointerPositions.set(event.pointerId, { x: event.clientX, y: event.clientY });
+      if (pointerPositions.size === 2) {
+        event.preventDefault();
+        if (map.dragPan.isEnabled()) {
+          map.dragPan.disable();
+          dragPanDisabledForMultiTouch = true;
+        }
+        const [first, second] = [...pointerPositions.values()];
+        touchGesturePrevious = {
+          angle: Math.atan2(second.y - first.y, second.x - first.x) * 180 / Math.PI,
+          distance: Math.hypot(second.x - first.x, second.y - first.y),
+        };
+      }
       cancelLongPress();
       if (activePointers.size !== 1) return;
 
@@ -128,12 +163,37 @@ export function MapViewport({
           latitudeDegrees: location.lat,
           longitudeDegrees: longitude,
         });
-        map.easeTo({ center: [longitude, location.lat], duration: 400 });
         suppressNextClick = true;
         cancelLongPress();
       }, 650);
     };
     const handlePointerMove = (event: PointerEvent) => {
+      if (pointerPositions.has(event.pointerId)) {
+        pointerPositions.set(event.pointerId, { x: event.clientX, y: event.clientY });
+        if (pointerPositions.size === 2 && touchGesturePrevious) {
+          event.preventDefault();
+          const [first, second] = [...pointerPositions.values()];
+          const angle = Math.atan2(second.y - first.y, second.x - first.x) * 180 / Math.PI;
+          const distance = Math.hypot(second.x - first.x, second.y - first.y);
+          const rotationDelta = getTouchRotationBearingDelta(angle, touchGesturePrevious.angle);
+          const zoomDelta = Math.log2(distance / touchGesturePrevious.distance);
+          const observer = observerPositionRef.current;
+          if (observer && (Math.abs(rotationDelta) > 0.1 || Math.abs(zoomDelta) > 0.001)) {
+            const options = getObserverAnchoredCameraOptions(
+              observer,
+              map.getZoom() + zoomDelta,
+              map.getBearing() + rotationDelta,
+            );
+            easeToObserverAnchor(map, options, 0);
+            if (Math.abs(rotationDelta) > 0.1) onManualCameraInteraction();
+            onMapBearingChange(map.getBearing());
+          } else if (!observer && Math.abs(rotationDelta) > 0.1) {
+            map.rotateTo(map.getBearing() + rotationDelta, { duration: 0 });
+            onManualCameraInteraction();
+          }
+          touchGesturePrevious = { angle, distance };
+        }
+      }
       if (longPressPointerId !== event.pointerId || !longPressStart) return;
       if (Math.hypot(event.clientX - longPressStart.x, event.clientY - longPressStart.y) > 10) {
         cancelLongPress();
@@ -141,6 +201,12 @@ export function MapViewport({
     };
     const handlePointerEnd = (event: PointerEvent) => {
       activePointers.delete(event.pointerId);
+      pointerPositions.delete(event.pointerId);
+      touchGesturePrevious = null;
+      if (activePointers.size < 2 && dragPanDisabledForMultiTouch) {
+        map.dragPan.enable();
+        dragPanDisabledForMultiTouch = false;
+      }
       if (longPressPointerId === event.pointerId) cancelLongPress();
     };
 
@@ -150,13 +216,8 @@ export function MapViewport({
     window.addEventListener('pointercancel', handlePointerEnd, true);
 
     const handleRotate = () => onMapBearingChange(map.getBearing());
-    const syncObserverPadding = () => {
-      const padding = getObserverMapPadding(map.getContainer().clientHeight, Boolean(observerPositionRef.current));
-      const current = map.getPadding();
-      if (current.top !== padding.top || current.right !== padding.right ||
-        current.bottom !== padding.bottom || current.left !== padding.left) {
-        map.setPadding(padding);
-      }
+    const handleUserMoveStart = (event: { originalEvent?: Event }) => {
+      if (event.originalEvent) onManualCameraInteraction();
     };
     const handlePeakClick = (event: MapLayerMouseEvent) => {
       if (suppressNextClick) {
@@ -223,53 +284,104 @@ export function MapViewport({
     const handleCanvasClick = () => {
       if (suppressNextClick) suppressNextClick = false;
     };
+    const handleWheelZoom = (event: WheelEvent) => {
+      event.preventDefault();
+      const observer = observerPositionRef.current;
+      const currentZoom = map.getZoom();
+      const lineHeight = Number.parseFloat(window.getComputedStyle(canvas).lineHeight) || 40;
+      const targetZoom = currentZoom + getWheelZoomDelta(
+        event.deltaY,
+        event.deltaMode,
+        lineHeight,
+        canvas.clientHeight,
+      );
+      if (observer) {
+        const options = getObserverAnchoredCameraOptions(
+          observer,
+          targetZoom,
+          map.getBearing(),
+        );
+        easeToObserverAnchor(map, options, 120);
+      } else {
+        map.easeTo({ zoom: targetZoom, duration: 120 });
+      }
+    };
+    canvas.addEventListener('wheel', handleWheelZoom, { capture: true, passive: false });
     canvas.addEventListener('click', handleCanvasClick, true);
     map.on('movestart', cancelLongPress);
+    map.on('dragstart', handleUserMoveStart);
+    map.on('rotatestart', handleUserMoveStart);
     map.on('rotate', handleRotate);
-    map.on('resize', syncObserverPadding);
     map.on('click', 'peak-candidate-labels', handlePeakClick);
     map.on('mousemove', 'peak-candidate-labels', handlePeakPointerMove);
     map.on('style.load', handleStyleLoad);
     map.on('error', handleMapError);
     onMapBearingChange(map.getBearing());
 
-    const zoomAroundObserver = (zoomDelta: number) => {
+    const zoomCamera = (zoomDelta: number) => {
       const activeMap = mapRef.current;
       if (!activeMap) return;
       const observer = observerPositionRef.current;
       if (observer) {
-        activeMap.easeTo(getObserverZoomEaseOptions(observer, activeMap.getZoom() + zoomDelta, 220));
-      } else if (zoomDelta > 0) {
-        activeMap.zoomIn({ duration: 220 });
+        easeToObserverAnchor(activeMap, getObserverAnchoredCameraOptions(
+          observer,
+          activeMap.getZoom() + zoomDelta,
+          activeMap.getBearing(),
+        ), 220);
       } else {
-        activeMap.zoomOut({ duration: 220 });
+        activeMap.easeTo(getCameraZoomEaseOptions(activeMap.getZoom() + zoomDelta, 220));
       }
     };
     onMapZoomActionsChange({
-      zoomIn: () => zoomAroundObserver(1),
-      zoomOut: () => zoomAroundObserver(-1),
+      zoomIn: () => zoomCamera(1),
+      zoomOut: () => zoomCamera(-1),
     });
-    const setBearingAroundObserver = (bearing: number, durationMilliseconds = 0) => {
+    const setBearingAroundCameraCenter = (bearing: number, durationMilliseconds = 0) => {
       const activeMap = mapRef.current;
       if (!activeMap) return;
       const observer = observerPositionRef.current;
+      const bearingOptions = getCameraBearingEaseOptions(
+        bearing,
+        activeMap.getZoom(),
+        durationMilliseconds,
+        observer ?? undefined,
+      );
       if (observer) {
-        activeMap.easeTo(getObserverBearingEaseOptions(
-          observer,
+        easeToObserverAnchor(activeMap, {
+          around: [observer.longitudeDegrees, observer.latitudeDegrees],
+          zoom: activeMap.getZoom(),
           bearing,
-          activeMap.getZoom(),
-          durationMilliseconds,
-        ));
+        }, durationMilliseconds);
       } else {
-        activeMap.easeTo({ bearing, zoom: activeMap.getZoom(), duration: durationMilliseconds });
+        activeMap.easeTo(bearingOptions);
       }
     };
     onMapOrientationActionsChange({
-      setBearing: setBearingAroundObserver,
-      centerAt: (center) => mapRef.current?.easeTo({ center, duration: 400 }),
+      setBearing: setBearingAroundCameraCenter,
+      centerAt: (center, bearing) => {
+        const activeMap = mapRef.current;
+        if (!activeMap) return;
+        activeMap.easeTo({
+          center,
+          ...(bearing === undefined ? {} : { bearing }),
+          zoom: activeMap.getZoom(),
+          duration: 400,
+        });
+      },
+      centerObserverAt: (center, bearing) => {
+        const activeMap = mapRef.current;
+        if (!activeMap) return;
+        activeMap.easeTo({
+          center,
+          offset: getObserverCameraOffset(activeMap.getContainer().clientHeight),
+          ...(bearing === undefined ? {} : { bearing }),
+          zoom: activeMap.getZoom(),
+          duration: 400,
+        });
+      },
       resetNorth: () => {
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        setBearingAroundObserver(0, reduceMotion ? 0 : 450);
+        setBearingAroundCameraCenter(0, reduceMotion ? 0 : 450);
       },
     });
 
@@ -277,14 +389,17 @@ export function MapViewport({
       isActive = false;
       cancelLongPress();
       activePointers.clear();
+      if (dragPanDisabledForMultiTouch) map.dragPan.enable();
       window.removeEventListener('pointerdown', handlePointerDown, true);
       window.removeEventListener('pointermove', handlePointerMove, true);
       window.removeEventListener('pointerup', handlePointerEnd, true);
       window.removeEventListener('pointercancel', handlePointerEnd, true);
+      canvas.removeEventListener('wheel', handleWheelZoom, true);
       canvas.removeEventListener('click', handleCanvasClick, true);
       map.off('movestart', cancelLongPress);
+      map.off('dragstart', handleUserMoveStart);
+      map.off('rotatestart', handleUserMoveStart);
       map.off('rotate', handleRotate);
-      map.off('resize', syncObserverPadding);
       if (markerInteractionsRegistered) {
         map.off('click', 'peak-candidate-markers', handlePeakClick);
         map.off('mousemove', 'peak-candidate-markers', handlePeakPointerMove);
@@ -300,7 +415,7 @@ export function MapViewport({
       onMapOrientationActionsChange(null);
       onMapBearingChange(null);
     };
-  }, [onMapBearingChange, onMapOrientationActionsChange, onMapZoomActionsChange, onObserverPositionChange, onPeakSelect]);
+  }, [onMapBearingChange, onMapOrientationActionsChange, onMapZoomActionsChange, onObserverPositionChange, onPeakSelect, onManualCameraInteraction]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -349,16 +464,18 @@ export function MapViewport({
 
   useEffect(() => {
     const map = mapRef.current;
-    if (!map) return;
-    map.setPadding(getObserverMapPadding(map.getContainer().clientHeight, Boolean(observerPosition)));
-    if (observerPosition) map.easeTo(getObserverMapEaseOptions(observerPosition, map.getZoom()));
-  }, [observerPosition]);
-
-  useEffect(() => {
-    const map = mapRef.current;
     if (!map || !observerPosition) return;
 
-    const marker = new Marker({ color: '#d1495b' })
+    const markerElement = document.createElement('img');
+    markerElement.className = 'observer-position-marker';
+    markerElement.src = `${import.meta.env.BASE_URL}images/observer-position.svg`;
+    markerElement.alt = 'Observador';
+    const marker = new Marker({
+      element: markerElement,
+      anchor: 'center',
+      rotationAlignment: 'viewport',
+      pitchAlignment: 'viewport',
+    })
       .setLngLat([observerPosition.longitudeDegrees, observerPosition.latitudeDegrees])
       .addTo(map);
     observerMarkerRef.current = marker;

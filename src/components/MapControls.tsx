@@ -1,54 +1,31 @@
 import { Icon } from './icons';
-import { OrientationControl } from './OrientationControl';
 import type { ObservationOrientationMode } from '../domain/orientation';
+import type { CSSProperties } from 'react';
+import { getContextButtonKind } from '../domain/observerCameraState';
 
 type MapControlsProps = {
   onZoomIn?: () => void;
   onZoomOut?: () => void;
   bearing: number;
-  onSetBearing?: (bearing: number) => void;
-  onResetNorth?: () => void;
-  orientationMode?: ObservationOrientationMode;
-  compassAvailable?: boolean;
-  gpsTracking?: boolean;
-  gpsStatus?: string;
-  gpsMessage?: string | null;
-  onGpsToggle?: () => void;
-  onManualObserver?: () => void;
-  compassStatus?: string | null;
+  orientationMode: ObservationOrientationMode;
+  compassAvailable: boolean;
+  gpsAvailable: boolean;
+  onContextAction: () => void;
 };
 
 export function MapControls({
   onZoomIn,
   onZoomOut,
   bearing,
-  onSetBearing,
-  onResetNorth,
   orientationMode,
   compassAvailable,
-  gpsTracking = false,
-  gpsStatus = 'idle',
-  gpsMessage = null,
-  onGpsToggle,
-  onManualObserver,
-  compassStatus = null,
+  gpsAvailable,
+  onContextAction,
 }: MapControlsProps) {
+  const buttonKind = getContextButtonKind(orientationMode);
   return (
     <>
-      <div className="top-controls" role="group" aria-label="Controles principales">
-        <button
-          className="control-button gps-button"
-          type="button"
-          disabled={!onGpsToggle}
-          onClick={onGpsToggle}
-          aria-label={gpsTracking ? 'Detener seguimiento GPS' : 'Activar seguimiento GPS'}
-          title={gpsTracking ? 'Detener GPS' : 'Seguir posición GPS'}
-        >
-          <Icon name="location" />
-          <span>{gpsTracking ? 'Detener GPS' : 'GPS'}</span>
-          {gpsStatus !== 'idle' && <span className="gps-state-tag">{gpsStatus}</span>}
-        </button>
-
+      <div className="top-controls">
         <div className="top-controls__right">
           <button
             className="control-button top-action"
@@ -73,19 +50,6 @@ export function MapControls({
           </button>
         </div>
       </div>
-
-      {(gpsMessage || compassStatus) && (
-        <div className="sensor-status" role="status" aria-live="polite">
-          {gpsMessage && <p>{gpsMessage}</p>}
-          {compassStatus && <p>{compassStatus}</p>}
-          {gpsStatus !== 'idle' && onManualObserver && (
-            <button className="sensor-status__manual" type="button" onClick={onManualObserver}>
-              Detener GPS y elegir posición manual
-            </button>
-          )}
-        </div>
-      )}
-
       <div className="map-navigation-controls">
         <div className="zoom-controls" role="group" aria-label="Controles de zoom">
           <button
@@ -109,13 +73,25 @@ export function MapControls({
             <Icon name="minus" />
           </button>
         </div>
-        <OrientationControl
-          bearing={bearing}
-          onSetBearing={onSetBearing}
-          onResetNorth={onResetNorth}
-          orientationMode={orientationMode}
-          compassAvailable={compassAvailable}
-        />
+        <button
+          className="control-button orientation-button"
+          type="button"
+          disabled={buttonKind === 'target' && !gpsAvailable}
+          onClick={onContextAction}
+          aria-label={buttonKind === 'target'
+            ? 'Volver a la posición GPS'
+            : orientationMode === 'compass'
+              ? 'Desactivar brújula y orientar al norte'
+              : 'Activar brújula del teléfono'}
+          title={buttonKind === 'target'
+            ? 'Volver al GPS'
+            : orientationMode === 'compass'
+              ? 'Norte arriba'
+              : 'Orientación por brújula'}
+          style={{ '--compass-rotation': `${orientationMode === 'compass' && compassAvailable ? bearing : 0}deg` } as CSSProperties}
+        >
+          {buttonKind === 'target' ? <Icon name="myLocation" /> : <Icon name="explore" />}
+        </button>
       </div>
     </>
   );

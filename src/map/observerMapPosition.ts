@@ -1,53 +1,72 @@
-import type { GeographicPosition } from "../domain/visibility/types";
+export function getObserverCameraOffset(viewportHeight: number) {
+  return [0, viewportHeight * 0.25] as [number, number];
+}
 
-export const OBSERVER_ANCHORED_GESTURES = {
-  scrollZoom: { around: "center" as const },
-  touchZoomRotate: { around: "center" as const },
-};
-
-export function getObserverZoomEaseOptions(
-  position: GeographicPosition,
+export function getCameraZoomEaseOptions(
   targetZoom: number,
   durationMilliseconds: number,
+  observer?: { longitudeDegrees: number; latitudeDegrees: number },
 ) {
   return {
-    around: [position.longitudeDegrees, position.latitudeDegrees] as [number, number],
+    ...(observer ? { around: [observer.longitudeDegrees, observer.latitudeDegrees] as [number, number] } : {}),
     zoom: targetZoom,
     duration: durationMilliseconds,
   };
 }
 
-/** Moves MapLibre's effective center point to the observer's screen position at 75% height. */
-export function getObserverMapPadding(containerHeightPixels: number, hasObserver: boolean) {
-  return {
-    top: hasObserver ? Math.max(0, containerHeightPixels) * 0.5 : 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-  };
-}
-
-/** Centers the observer in the padded viewport while preserving its geographic coordinates and zoom. */
-export function getObserverMapEaseOptions(
-  position: GeographicPosition,
-  currentZoom: number,
+/** MapLibre resolves `around` to its current screen point when each camera transition starts. */
+export function getObserverAnchoredCameraOptions(
+  observer: { longitudeDegrees: number; latitudeDegrees: number },
+  zoom: number,
+  bearing: number,
 ) {
   return {
-    center: [position.longitudeDegrees, position.latitudeDegrees] as [number, number],
-    zoom: currentZoom,
-    duration: 400,
+    around: [observer.longitudeDegrees, observer.latitudeDegrees] as [number, number],
+    zoom,
+    bearing,
   };
 }
 
-/** Rotates MapLibre around the observer's geographic point while retaining zoom. */
-export function getObserverBearingEaseOptions(
-  position: GeographicPosition,
+export function getWheelZoomDelta(
+  deltaY: number,
+  deltaMode: number,
+  lineHeight = 40,
+  viewportHeight = 800,
+) {
+  const normalizedDelta = deltaMode === 1
+    ? deltaY * lineHeight
+    : deltaMode === 2
+      ? deltaY * viewportHeight
+      : deltaY;
+  return -normalizedDelta / 450;
+}
+
+export function getShortestAngleDelta(currentDegrees: number, previousDegrees: number) {
+  return ((currentDegrees - previousDegrees + 540) % 360) - 180;
+}
+
+export function getTouchRotationBearingDelta(currentDegrees: number, previousDegrees: number) {
+  return -getShortestAngleDelta(currentDegrees, previousDegrees);
+}
+
+/** Changes orientation while keeping the observer at its current viewport pixel. */
+export function getCameraBearingEaseOptions(
   bearingDegrees: number,
   currentZoom: number,
   durationMilliseconds: number,
+  observer?: { longitudeDegrees: number; latitudeDegrees: number },
 ) {
+  if (observer) {
+    return {
+      ...getObserverAnchoredCameraOptions(
+        observer,
+        currentZoom,
+        bearingDegrees,
+      ),
+      duration: durationMilliseconds,
+    };
+  }
   return {
-    around: [position.longitudeDegrees, position.latitudeDegrees] as [number, number],
     bearing: bearingDegrees,
     zoom: currentZoom,
     duration: durationMilliseconds,

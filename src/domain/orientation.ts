@@ -1,4 +1,4 @@
-export type ObservationOrientationMode = "automatic" | "manual";
+export type ObservationOrientationMode = "north" | "compass" | "manual";
 
 export type CompassPermissionResult = "granted" | "denied" | "unsupported" | "error";
 
@@ -67,10 +67,7 @@ export function getDeviceCompassHeading(
   return normalizeBearingDegrees(360 - (event.alpha as number) + screenAngleDegrees);
 }
 
-export function resolveObservationBearing(
-  mode: ObservationOrientationMode,
-  manualBearing: number,
-  compassBearing: number | null,
-): number {
-  return mode === "automatic" && compassBearing !== null ? compassBearing : manualBearing;
+/** Returns the direction at the top edge of the rendered map for visibility calculations. */
+export function resolveObservationBearing(mapBearing: number): number {
+  return normalizeBearingDegrees(mapBearing);
 }

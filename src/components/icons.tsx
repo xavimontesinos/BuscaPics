@@ -2,10 +2,12 @@ import type { ReactNode } from 'react';
 
 type IconName =
   | 'camera'
+  | 'explore'
   | 'chevronDown'
   | 'chevronUp'
   | 'layers'
   | 'location'
+  | 'myLocation'
   | 'minus'
   | 'mountain'
   | 'plus';
@@ -15,11 +17,22 @@ type IconProps = {
 };
 
 const paths: Record<IconName, ReactNode> = {
+  explore: <>
+    <circle cx="12" cy="13" r="8.75" />
+    <path className="compass-north" d="m12 8-2.2 6.2 2.2-1.1 2.2 1.1L12 8Z" />
+    <path className="compass-south" d="m12 13.1-2.2 1.1L12 19l2.2-4.8-2.2-1.1Z" />
+    <text className="compass-north-label" x="12" y="7" textAnchor="middle">N</text>
+  </>,
   camera: <><path d="M14 4H8l-1.5 2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-2.5L16 4h-2Z" /><circle cx="12" cy="12.5" r="3.5" /></>,
   chevronDown: <path d="m6 9 6 6 6-6" />,
   chevronUp: <path d="m6 15 6-6 6 6" />,
   layers: <><path d="m12 3 9 5-9 5-9-5 9-5Z" /><path d="m3 12 9 5 9-5M3 16l9 5 9-5" /></>,
   location: <><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></>,
+  myLocation: <>
+    <circle cx="12" cy="12" r="7.25" />
+    <circle className="target-center" cx="12" cy="12" r="2" />
+    <path d="M12 1.5v3M12 19.5v3M1.5 12h3m15 0h3" />
+  </>,
   minus: <path d="M5 12h14" />,
   mountain: <><path d="m3 20 7-13 4 7 2-3 5 9H3Z" /><path d="m8 11 2 2 2-1" /></>,
   plus: <><path d="M12 5v14M5 12h14" /></>,
@@ -37,7 +50,7 @@ export function Icon({ name }: IconProps) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      {paths[name]}
+      <g className={`icon__${name}`}>{paths[name]}</g>
     </svg>
   );
 }

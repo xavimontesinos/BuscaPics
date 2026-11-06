@@ -26,11 +26,10 @@ import {
   subscribeToDeviceCompass,
   type ObservationOrientationMode,
 } from './domain/orientation';
-import { classifyGpsError, isGpsFixAccurate, readGpsFix, shouldPublishGpsFix, type GpsFix } from './domain/gps';
+import { isGpsFixAccurate, readGpsFix, shouldPublishGpsFix, type GpsFix } from './domain/gps';
+import { getGpsObserverAction, type ObserverOrigin } from './domain/observerCameraState';
 
 type VisibilityRadiusKm = 10 | 25 | 50 | 100;
-type GpsStatus = 'idle' | 'waiting-permission' | 'searching' | 'available' | 'low-accuracy' | 'error';
-type CompassStatus = 'inactive' | 'requesting' | 'searching' | 'available' | 'denied' | 'unsupported' | 'no-data' | 'insecure' | 'error';
 
 interface VisibilitySession {
   key: string;
@@ -65,19 +64,23 @@ function App() {
   const [mapOrientationActions, setMapOrientationActions] =
     useState<MapOrientationActions | null>(null);
   const [mapBearing, setMapBearing] = useState(0);
-  const [orientationMode, setOrientationMode] = useState<ObservationOrientationMode>('automatic');
+  const [orientationMode, setOrientationMode] = useState<ObservationOrientationMode>('north');
   const [compassBearing, setCompassBearing] = useState<number | null>(null);
   const [observerPosition, setObserverPosition] = useState<GeographicPosition | null>(null);
+  const [gpsPosition, setGpsPosition] = useState<GeographicPosition | null>(null);
+  const [gpsAvailable, setGpsAvailable] = useState(false);
   const [observerElevation, setObserverElevation] = useState<TerrainElevationLookup | null>(null);
   const elevationRequestId = useRef(0);
   const gpsWatchId = useRef<number | null>(null);
   const gpsTracking = useRef(false);
   const gpsLastFix = useRef<GpsFix | null>(null);
-  const gpsPermissionTimer = useRef<number | null>(null);
-  const [gpsStatus, setGpsStatus] = useState<GpsStatus>('idle');
-  const [gpsMessage, setGpsMessage] = useState<string | null>(null);
-  const [isGpsTracking, setIsGpsTracking] = useState(false);
-  const [compassStatus, setCompassStatus] = useState<CompassStatus>('inactive');
+  const hasGpsInitializedObserver = useRef(false);
+  const observerOriginRef = useRef<ObserverOrigin>(null);
+  const orientationModeRef = useRef(orientationMode);
+  orientationModeRef.current = orientationMode;
+  const gpsWasUnavailable = useRef(false);
+  const pendingGpsCameraReset = useRef<{ position: GeographicPosition; resetNorth: boolean } | null>(null);
+  const mapOrientationActionsRef = useRef<MapOrientationActions | null>(null);
   const [compassListening, setCompassListening] = useState(false);
   const smoothedCompassBearing = useRef<number | null>(null);
   const compassPermissionGranted = useRef(false);
@@ -116,9 +119,10 @@ function App() {
     setVisibilityRevision((revision) => revision + 1);
   }, [visibilityContextKey, observerPosition, observerElevation, peakCatalog]);
 
-  const updateObserverPosition = useCallback((position: GeographicPosition) => {
+  const updateObserverPosition = useCallback((position: GeographicPosition, origin: Exclude<ObserverOrigin, null>) => {
     elevationRequestId.current += 1;
     const requestId = elevationRequestId.current;
+    observerOriginRef.current = origin;
     visibilityDebug('observer-selected', { requestId, position });
     setObserverPosition(position);
     setObserverElevation({ state: 'missing' });
@@ -133,105 +137,83 @@ function App() {
   }, []);
   const stopGps = useCallback(() => {
     gpsTracking.current = false;
-    setIsGpsTracking(false);
     if (gpsWatchId.current !== null && navigator.geolocation) {
       navigator.geolocation.clearWatch(gpsWatchId.current);
       gpsWatchId.current = null;
     }
-    if (gpsPermissionTimer.current !== null) {
-      window.clearTimeout(gpsPermissionTimer.current);
-      gpsPermissionTimer.current = null;
-    }
   }, []);
   const handleManualObserverPositionChange = useCallback((position: GeographicPosition) => {
-    stopGps();
-    setGpsStatus('idle');
-    setGpsMessage(null);
-    gpsLastFix.current = null;
-    updateObserverPosition(position);
-  }, [stopGps, updateObserverPosition]);
-  const handleGpsToggle = useCallback(() => {
-    if (gpsTracking.current) {
-      stopGps();
-      setGpsStatus('idle');
-      setGpsMessage(null);
-      return;
-    }
+    updateObserverPosition(position, 'manual');
+    setOrientationMode('north');
+    setCompassListening(false);
+    mapOrientationActionsRef.current?.centerObserverAt([position.longitudeDegrees, position.latitudeDegrees], 0);
+  }, [updateObserverPosition]);
+  const startGpsTracking = useCallback(() => {
+    if (gpsTracking.current) return;
     if (!navigator.geolocation) {
-      setGpsStatus('error');
-      setGpsMessage('Este navegador no ofrece geolocalización. Puedes elegir el observador manteniendo pulsado el mapa.');
       return;
     }
 
     gpsTracking.current = true;
-    setIsGpsTracking(true);
-    setGpsStatus('waiting-permission');
-    setGpsMessage('Esperando permiso de ubicación…');
-    gpsPermissionTimer.current = window.setTimeout(() => {
-      if (gpsTracking.current) {
-        setGpsStatus((status) => status === 'waiting-permission' ? 'searching' : status);
-        setGpsMessage((message) => message === 'Esperando permiso de ubicación…' ? 'Buscando posición GPS…' : message);
-      }
-    }, 1800);
-
     let watchId: number;
     try {
       watchId = navigator.geolocation.watchPosition((position) => {
         if (!gpsTracking.current) return;
-        if (gpsPermissionTimer.current !== null) {
-          window.clearTimeout(gpsPermissionTimer.current);
-          gpsPermissionTimer.current = null;
-        }
         const fix = readGpsFix(position);
         if (!fix) {
-          setGpsStatus('error');
-          setGpsMessage('El GPS devolvió coordenadas no válidas.');
+          setGpsAvailable(false);
+          gpsWasUnavailable.current = true;
           return;
         }
         if (!isGpsFixAccurate(fix)) {
-          setGpsStatus('low-accuracy');
-          setGpsMessage(`Precisión GPS baja (${Math.round(fix.accuracyMeters)} m); esperando una señal mejor.`);
+          setGpsAvailable(false);
+          gpsWasUnavailable.current = true;
           return;
         }
-        if (shouldPublishGpsFix(gpsLastFix.current, fix)) {
+        setGpsAvailable(true);
+        const isRecovery = gpsWasUnavailable.current;
+        gpsWasUnavailable.current = false;
+        setGpsPosition(fix.position);
+        const isInitialFix = !hasGpsInitializedObserver.current;
+        hasGpsInitializedObserver.current = true;
+        if (shouldPublishGpsFix(gpsLastFix.current, fix) || isRecovery) {
           gpsLastFix.current = fix;
-          updateObserverPosition(fix.position);
+          const observerAction = getGpsObserverAction(observerOriginRef.current, isInitialFix, isRecovery);
+          if (observerAction.updateObserver) updateObserverPosition(fix.position, 'gps');
+          if (observerAction.centerCamera) {
+            pendingGpsCameraReset.current = { position: fix.position, resetNorth: observerAction.resetNorth };
+            const actions = mapOrientationActionsRef.current;
+            if (actions) {
+              pendingGpsCameraReset.current = null;
+              actions.centerObserverAt(
+                [fix.position.longitudeDegrees, fix.position.latitudeDegrees],
+                observerAction.resetNorth ? 0 : undefined,
+              );
+              if (observerAction.resetNorth) {
+                setCompassListening(false);
+                setOrientationMode('north');
+              }
+            }
+          }
         }
-        setGpsStatus('available');
-        setGpsMessage(`Posición GPS disponible · precisión ±${Math.round(fix.accuracyMeters)} m.`);
-      }, (error) => {
-        const kind = classifyGpsError(error);
-        if (kind === 'permission-denied') {
-          stopGps();
-          setGpsStatus('error');
-          setGpsMessage('Permiso de ubicación denegado. Puedes permitirlo en el navegador o elegir la posición manualmente.');
-        } else if (kind === 'timeout') {
-          setGpsStatus('searching');
-          setGpsMessage('El GPS tarda en responder; buscando señal…');
-        } else {
-          setGpsStatus('error');
-          setGpsMessage('No hay señal GPS disponible. Mantendré la última posición y seguiré intentando.');
-        }
+      }, () => {
+        setGpsAvailable(false);
+        gpsWasUnavailable.current = true;
       }, { enableHighAccuracy: true, maximumAge: 3_000, timeout: 20_000 });
     } catch {
       stopGps();
-      setGpsStatus('error');
-      setGpsMessage('No se pudo iniciar el GPS. Comprueba que la página usa HTTPS y permite la ubicación.');
       return;
     }
     if (gpsTracking.current) gpsWatchId.current = watchId;
     else navigator.geolocation.clearWatch(watchId);
   }, [stopGps, updateObserverPosition]);
-  const handleSelectManualObserver = useCallback(() => {
-    stopGps();
-    setGpsStatus('idle');
-    setGpsMessage(null);
-    gpsLastFix.current = null;
-  }, [stopGps]);
+  useEffect(() => {
+    startGpsTracking();
+    return () => stopGps();
+  }, [startGpsTracking, stopGps]);
   useEffect(() => () => {
     gpsTracking.current = false;
     if (gpsWatchId.current !== null && navigator.geolocation) navigator.geolocation.clearWatch(gpsWatchId.current);
-    if (gpsPermissionTimer.current !== null) window.clearTimeout(gpsPermissionTimer.current);
   }, []);
   const handlePeakSelect = useCallback((peakId: string) => {
     setSelectedPeakId(peakId);
@@ -241,67 +223,87 @@ function App() {
   }, []);
   const handleMapOrientationActionsChange = useCallback(
     (actions: MapOrientationActions | null) => {
+      mapOrientationActionsRef.current = actions;
       setMapOrientationActions(actions);
+      const pendingReset = pendingGpsCameraReset.current;
+      if (actions && pendingReset) {
+        pendingGpsCameraReset.current = null;
+        actions.centerObserverAt(
+          [pendingReset.position.longitudeDegrees, pendingReset.position.latitudeDegrees],
+          pendingReset.resetNorth ? 0 : undefined,
+        );
+        if (pendingReset.resetNorth) {
+          setCompassListening(false);
+          setOrientationMode('north');
+        }
+      }
     },
     [],
   );
+  const handleManualCameraInteraction = useCallback(() => {
+    if (orientationModeRef.current !== 'manual') {
+      setOrientationMode('manual');
+      setCompassListening(false);
+    }
+  }, []);
   const handleMapBearingChange = useCallback((bearing: number | null) => {
     if (bearing !== null) setMapBearing(bearing);
   }, []);
-  const handleManualBearingChange = useCallback((bearing: number) => {
-    setOrientationMode('manual');
-    mapOrientationActions?.setBearing(bearing, 0);
-  }, [mapOrientationActions]);
-  const handleResumeAutomaticOrientation = useCallback(() => {
+  const handleContextAction = useCallback(() => {
+    if (orientationMode === 'manual') {
+      if (!gpsAvailable || !gpsPosition) return;
+      updateObserverPosition(gpsPosition, 'gps');
+      mapOrientationActions?.centerObserverAt([gpsPosition.longitudeDegrees, gpsPosition.latitudeDegrees], 0);
+      setCompassListening(false);
+      setOrientationMode('north');
+      return;
+    }
+    if (orientationMode === 'compass') {
+      setCompassListening(false);
+      setOrientationMode('north');
+      mapOrientationActions?.setBearing(0, 250);
+      return;
+    }
     if (!window.isSecureContext) {
-      setCompassStatus('insecure');
       return;
     }
     if (compassPermissionPending.current) return;
     if (compassPermissionDenied.current) {
-      setCompassStatus('denied');
       return;
     }
     const orientationApi = window.DeviceOrientationEvent as typeof DeviceOrientationEvent & {
       requestPermission?: (absolute?: boolean) => Promise<'granted' | 'denied'>;
     } | undefined;
     if (compassPermissionGranted.current) {
-      setCompassStatus('searching');
       setCompassListening(true);
-      setOrientationMode('automatic');
+      setOrientationMode('compass');
       return;
     }
 
     // Call requestPermission(true) synchronously in this click handler, before state work or await.
     const permissionRequest = beginDeviceOrientationPermissionRequest(orientationApi);
     compassPermissionPending.current = true;
-    setCompassStatus('requesting');
     void permissionRequest.then((permission) => {
       compassPermissionPending.current = false;
       if (permission === 'denied') {
         compassPermissionDenied.current = true;
-        setCompassStatus('denied');
         return;
       }
       if (permission === 'unsupported') {
-        setCompassStatus('unsupported');
         return;
       }
       if (permission === 'error') {
-        setCompassStatus('error');
         return;
       }
       compassPermissionGranted.current = true;
       smoothedCompassBearing.current = null;
       setCompassBearing(null);
-      setCompassStatus('searching');
       setCompassListening(true);
-      setOrientationMode('automatic');
+      setOrientationMode('compass');
     }).catch(() => {
       compassPermissionPending.current = false;
-      setCompassStatus('error');
     });
-  }, []);
+  }, [gpsAvailable, gpsPosition, mapOrientationActions, orientationMode, updateObserverPosition]);
   useEffect(() => {
     if (!compassListening) return undefined;
     let pendingHeading: number | null = null;
@@ -310,8 +312,9 @@ function App() {
     let receivedHeading = false;
     const noSensorTimer = window.setTimeout(() => {
       if (!receivedHeading) {
-        setCompassStatus('no-data');
         setCompassListening(false);
+        setOrientationMode('north');
+        mapOrientationActionsRef.current?.setBearing(0, 200);
       }
     }, 8_000);
     const publishPendingHeading = () => {
@@ -323,7 +326,6 @@ function App() {
     const unsubscribe = subscribeToDeviceCompass(window, (heading) => {
       receivedHeading = true;
       window.clearTimeout(noSensorTimer);
-      setCompassStatus('available');
       pendingHeading = smoothBearingDegrees(smoothedCompassBearing.current, heading);
       smoothedCompassBearing.current = pendingHeading;
       const delay = 100 - (Date.now() - lastPublishedAt);
@@ -340,32 +342,13 @@ function App() {
       if (headingUpdateTimer !== null) window.clearTimeout(headingUpdateTimer);
     };
   }, [compassListening]);
-  const observationBearing = resolveObservationBearing(orientationMode, mapBearing, compassBearing);
-  const gpsStatusLabel: Record<GpsStatus, string> = {
-    idle: 'idle',
-    'waiting-permission': 'Permiso…',
-    searching: 'Buscando',
-    available: 'Activo',
-    'low-accuracy': 'Señal débil',
-    error: 'Error',
-  };
-  const compassStatusMessage = compassStatus === 'inactive' ? null
-    : orientationMode === 'manual' && compassStatus === 'available'
-      ? 'Brújula disponible; la orientación manual está activa.'
-      : compassStatus === 'requesting' ? 'Solicitando permiso de orientación…'
-        : compassStatus === 'searching' ? 'Buscando rumbo absoluto de brújula…'
-          : compassStatus === 'available' ? 'Brújula automática activa; arrastra el control para cambiar a orientación manual.'
-              : compassStatus === 'denied' ? 'Permiso de brújula denegado; revísalo en los ajustes del sitio y vuelve a intentarlo.'
-              : compassStatus === 'error' ? 'No se pudo completar la solicitud de brújula. Vuelve a pulsar el control de orientación.'
-                : compassStatus === 'insecure' ? 'La brújula requiere HTTPS; abre BuscaPics en una conexión segura.'
-                  : compassStatus === 'no-data' ? 'El sensor no está enviando rumbo absoluto; usa la orientación manual.'
-                    : 'Este navegador no ofrece acceso a la brújula; usa la orientación manual.';
+  const observationBearing = resolveObservationBearing(mapBearing);
   const visibilityByPeak = useMemo(() => {
     if (!observerPosition || !visibilitySession || visibilitySession.key !== visibilityContextKey) return new Map<string, PeakVisibilityResult>();
     return getVisibilityView(visibilitySession, observerPosition, peakCatalog, visibilityRadiusKm, observationBearing);
   }, [visibilitySession, visibilityContextKey, observerPosition, peakCatalog, visibilityRadiusKm, observationBearing, visibilityRevision]);
   useEffect(() => {
-    if (orientationMode === 'automatic' && compassBearing !== null) {
+    if (orientationMode === 'compass' && compassBearing !== null) {
       mapOrientationActions?.setBearing(compassBearing, 200);
     }
   }, [orientationMode, compassBearing, mapOrientationActions]);
@@ -531,6 +514,7 @@ function App() {
       onMapZoomActionsChange={handleMapZoomActionsChange}
       onMapOrientationActionsChange={handleMapOrientationActionsChange}
       onMapBearingChange={handleMapBearingChange}
+      onManualCameraInteraction={handleManualCameraInteraction}
     >
       {catalogError && (
         <p className="peak-catalog-error" role="status">
@@ -541,16 +525,10 @@ function App() {
         onZoomIn={mapZoomActions?.zoomIn}
         onZoomOut={mapZoomActions?.zoomOut}
         bearing={mapBearing}
-        onSetBearing={handleManualBearingChange}
-        onResetNorth={handleResumeAutomaticOrientation}
         orientationMode={orientationMode}
         compassAvailable={compassBearing !== null}
-        gpsTracking={isGpsTracking}
-        gpsStatus={gpsStatusLabel[gpsStatus]}
-        gpsMessage={gpsMessage}
-        onGpsToggle={handleGpsToggle}
-        onManualObserver={handleSelectManualObserver}
-        compassStatus={compassStatusMessage}
+        gpsAvailable={gpsAvailable}
+        onContextAction={handleContextAction}
       />
       <PeakFilter value={selectedPeakSet} onChange={setSelectedPeakSet} />
       <label className="visibility-radius" htmlFor="visibility-radius-select">

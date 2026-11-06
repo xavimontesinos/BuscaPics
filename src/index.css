@@ -130,60 +130,48 @@ button.control-button:disabled {
   flex: 0 0 auto;
 }
 
-.gps-button,
+.orientation-button .icon {
+  width: 24px;
+  height: 24px;
+  transform: rotate(var(--compass-rotation, 0deg));
+  transition: transform 120ms linear;
+}
+
+.icon__explore .compass-north {
+  fill: #ad6352;
+  stroke: #ad6352;
+  stroke-width: 1.1;
+}
+
+.icon__explore .compass-south {
+  fill: #aeb8af;
+  stroke: #718076;
+  stroke-width: 0.9;
+}
+
+.icon__explore .compass-north-label {
+  fill: #46574b;
+  stroke: none;
+  font: 600 4px sans-serif;
+}
+
+.icon__myLocation .target-center {
+  fill: #ad6352;
+  stroke-width: 1;
+}
+
 .top-action {
   min-height: 50px;
   padding: 0 14px;
 }
 
-.gps-button {
-  color: #3a5c47;
-}
-
-.gps-state-tag {
+.provisional-tag {
   padding: 4px 7px;
   border-radius: 999px;
-  background: #e8efe8;
-  color: #46614d;
+  background: #eff2ed;
+  color: #748078;
   font-size: 10px;
   font-weight: 600;
-}
-
-.sensor-status {
-  position: absolute;
-  z-index: 2;
-  top: calc(var(--safe-top) + 58px);
-  left: var(--safe-left);
-  max-width: min(440px, calc(100vw - var(--safe-left) - var(--safe-right)));
-  padding: 7px 10px;
-  border: 1px solid var(--control-border);
-  border-radius: 11px;
-  background: var(--control-surface);
-  color: #46544b;
-  box-shadow: var(--control-shadow);
-  font-size: 11px;
-  line-height: 1.35;
-  pointer-events: auto;
-}
-
-.sensor-status p {
-  margin: 0;
-}
-
-.sensor-status p + p {
-  margin-top: 3px;
-}
-
-.sensor-status__manual {
-  margin-top: 6px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: #3a6548;
-  font: inherit;
-  font-weight: 700;
-  text-align: left;
-  cursor: pointer;
 }
 
 .provisional-tag {
@@ -278,6 +266,14 @@ button.control-button:disabled {
   touch-action: none;
   user-select: none;
   -webkit-user-select: none;
+}
+
+.observer-position-marker {
+  display: block;
+  width: 34px;
+  height: 34px;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 35%));
 }
 
 .orientation-button__compass {
@@ -438,40 +434,6 @@ button.control-button:disabled {
     gap: 6px;
   }
 
-  .gps-button,
-  .top-action {
-    min-height: 46px;
-    gap: 6px;
-    padding: 0 10px;
-    border-radius: 13px;
-    font-size: 12px;
-  }
-
-  .gps-button .provisional-tag {
-    padding: 3px 4px;
-    font-size: 8px;
-  }
-
-  .gps-state-tag {
-    padding: 3px 4px;
-    font-size: 8px;
-  }
-
-  .camera-button > span:first-of-type {
-    display: none;
-  }
-
-  .camera-button .provisional-tag {
-    padding: 4px 6px;
-    font-size: 9px;
-  }
-
-  .top-action .icon,
-  .gps-button .icon {
-    width: 17px;
-    height: 17px;
-  }
-
   .zoom-controls {
     gap: 6px;
   }
@@ -502,31 +464,6 @@ button.control-button:disabled {
 }
 
 @media (max-width: 370px) {
-  .top-controls__right {
-    gap: 5px;
-  }
-
-  .gps-button,
-  .top-action {
-    min-height: 44px;
-    gap: 5px;
-    padding: 0 8px;
-    font-size: 11px;
-  }
-
-  .gps-button .provisional-tag,
-  .gps-state-tag,
-  .camera-button .provisional-tag {
-    padding: 3px 4px;
-    font-size: 8px;
-  }
-
-  .top-action .icon,
-  .gps-button .icon {
-    width: 16px;
-    height: 16px;
-  }
-
   .peak-filter__current {
     display: none;
   }

@@ -26,8 +26,8 @@ sobre el mapa.
 
 ### DI-02. Distribución de los controles
 
-- En la parte superior se situarán los botones para volver a la posición
-  GPS, abrir la gestión de mapas descargados y acceder al modo cámara.
+- La pantalla incluye un único botón contextual de brújula o diana para
+  orientación y recuperación de la posición GPS.
 - Los controles de zoom serán botones flotantes agrupados en un lateral.
 - El selector de cimas será un botón flotante. Al activarlo, abrirá un
   menú superpuesto con las cuatro opciones definidas en RF-14.
@@ -60,17 +60,23 @@ disponibilidad, el origen, la resolución y la licencia de los datos
 cartográficos deberán verificarse antes de seleccionar la fuente
 definitiva.
 
-### RF-03. Posición inicial mediante GPS
+### RF-03. GPS, observador y cámara
 
-En un dispositivo compatible, la aplicación intentará obtener la
-posición actual mediante GPS y centrar el mapa en ella.
+La aplicación inicia el seguimiento GPS al abrirse y lo mantiene activo
+mientras esté en uso si el navegador ofrece geolocalización y el usuario
+concede permiso. Se mantienen independientes la posición GPS (último fix
+válido), el observador (origen del cálculo, con origen GPS o manual) y la
+cámara (centro, zoom y orientación).
 
--   Si se concede el permiso de ubicación, el mapa se centrará en la
-    posición obtenida.
--   Si se deniega el permiso o la ubicación no está disponible, la
-    aplicación seguirá permitiendo explorar el mapa manualmente.
--   La aplicación indicará de forma comprensible cuándo no puede obtener
-    la ubicación.
+El primer fix válido establece el observador con origen GPS, centra la
+cámara en él, horizontalmente centrado y al 75 % de la altura visible, y deja el mapa en norte arriba, salvo que el usuario ya haya
+seleccionado un observador manual antes de recibir ese fix. Mientras el
+origen sea GPS, las actualizaciones GPS aceptadas actualizan el observador;
+no recentran la cámara en cada actualización. Si el origen es manual, los
+fixes GPS solo actualizan la posición GPS. Al perder señal se conserva el
+último fix y el observador actual. Al recuperarse, un observador de origen
+GPS se actualiza y la cámara se centra en él al 75 % de la altura, conservando la orientación;
+un observador manual y la cámara permanecen sin cambios.
 
 ### RF-04. Escala inicial
 
@@ -82,39 +88,38 @@ pantalla y de la cartografía disponible. La aplicación deberá mostrar
 una referencia de escala en el mapa; no deberá presentar una escala
 1:5.000 como exacta si no puede garantizarla.
 
-### RF-05. Control para volver a la posición GPS
+### RF-05. Botón contextual de brújula y diana
 
-La interfaz incluirá un control estándar para volver a centrar el mapa
-en la posición GPS actual.
+Hay un único botón contextual. En modo norte muestra la brújula apuntando
+al norte; pulsarla activa la orientación del teléfono. En modo brújula,
+el mapa y la brújula siguen el rumbo del dispositivo; pulsarla vuelve a
+norte. Al desplazar o rotar manualmente la cámara se conserva el bearing,
+se desactiva el sensor y se muestra la diana. La diana requiere un fix GPS
+válido; al pulsarla restablece el origen GPS del observador, centra la
+cámara con el observador al 75 % de la altura, conserva el zoom y vuelve a norte. Sin fix, queda desactivada.
 
-Al activarlo, el mapa volverá a la ubicación actual y, si procede,
-recuperará la orientación basada en el rumbo del dispositivo.
-
-El botón correspondiente se ubicará en la parte superior de la pantalla,
-superpuesto sobre el mapa, según DI-02. Mientras la función no esté
-implementada, el control deberá identificarse como provisional conforme
-a DI-04.
+Colocar un observador manual centra la cámara en él, horizontalmente y al 75 % de la altura visible, conserva el zoom, restablece norte y
+muestra la brújula fija al norte. Esa selección no cambia la posición GPS.
 
 ### RF-06. Control de zoom
 
-La interfaz incluirá controles de zoom estándar para acercar y alejar el
-mapa. También se podrá cambiar el zoom mediante los gestos habituales de
-la plataforma.
+La interfaz incluye botones flotantes para acercar y alejar, además de
+rueda de ratón y gesto de pellizco. Los tres mantienen el observador en su
+píxel actual de pantalla, tanto si está al 75 % de altura como si se desplazó
+manualmente. El zoom no cambia las coordenadas del observador ni desactiva la
+orientación automática por sí solo.
 
-Los controles de zoom serán botones flotantes agrupados en un lateral y
-superpuestos sobre el mapa, según DI-02. Mientras el zoom no esté
-implementado, los botones deberán identificarse como provisionales
-conforme a DI-04.
+### RF-07. Desplazamiento, zoom y rotación del mapa
 
-### RF-07. Desplazamiento del mapa
-
-El usuario podrá desplazarse por el mapa: - En ordenador, arrastrándolo
-con el ratón. - En dispositivos táctiles, arrastrándolo con un dedo. -
-En dispositivos táctiles, utilizando el gesto habitual de pellizcar para
-acercar o alejar.
-
-Los controles y gestos no deberán impedir la selección de un punto de
-observación.
+El usuario podrá desplazar la cámara con ratón o un dedo, acercar o alejar
+con rueda o pellizco y girar con dos dedos en pantalla táctil (y mediante
+la interacción de rotación disponible en escritorio). Desplazar y rotar
+solo cambian la cámara, no el observador; desactivan la brújula y conservan
+el bearing actual. Los botones, la rueda y el pellizco conservan el píxel
+actual del observador mientras hacen zoom. Las rotaciones automáticas y manuales
+mantienen fija en pantalla su posición actual, sin recentrarlo si se desplazó
+manualmente. El zoom no desactiva la brújula. Ninguna operación de cámara modifica sus coordenadas geográficas. Los gestos no
+impedirán seleccionar un observador con pulsación prolongada.
 
 ## 3. Selección del punto de observación y orientación
 
@@ -128,34 +133,40 @@ visibles.
 -   En ordenador, se implementará una interacción equivalente adecuada
     para ratón.
 -   La posición seleccionada se distinguirá visualmente de la posición
-    GPS.
+    GPS y centrará la cámara en ella al 75 % de la altura visible,
+    conservando el zoom.
+-   El marcador del observador será una flecha de navegación orientada hacia
+    la parte superior de la pantalla. No girará con el bearing del mapa y se
+    mantendrá separado del indicador de ubicación GPS.
+-   La selección cambia el origen del observador a manual, restablece norte
+    arriba y muestra la brújula fija al norte.
+-   El seguimiento GPS continuará en segundo plano y no moverá el
+    observador manual.
 -   La aplicación actualizará los resultados de visibilidad para la
     nueva posición.
 
 La posición de observación seleccionada manualmente podrá ser distinta
 de la posición GPS real.
 
-### RF-09. Orientación del mapa
+### RF-09. Orientación norte, brújula y manual
 
-El mapa se orientará según la dirección de observación, de forma que las
-montañas situadas delante del usuario aparezcan hacia la parte superior
-de la pantalla.
+- **Norte:** norte geográfico arriba y sin seguimiento del teléfono.
+- **Brújula:** el mapa sigue la orientación del teléfono después de obtener
+  los permisos de la plataforma. El icono refleja el mismo rumbo.
+- **Manual:** se activa al desplazar o rotar manualmente la cámara; conserva
+  ese rumbo y no consulta un rumbo independiente del GPS.
 
--   En el prototipo de ordenador, el usuario podrá modificar manualmente
-    el rumbo mediante un control de orientación.
--   En iPhone, la orientación se obtendrá de la brújula/sensores de
-    orientación, con los permisos correspondientes.
--   El usuario podrá girar la orientación para explorar qué montañas hay
-    en otras direcciones.
--   La aplicación deberá distinguir entre la orientación real del
-    dispositivo y la orientación modificada manualmente, si ambas están
-    disponibles.
+El botón contextual alterna norte y brújula. Desde modo manual, la diana
+recupera el último fix GPS válido y vuelve a norte. La lectura de
+Safari/iOS, incluido `webkitCompassHeading`, mantiene el suavizado y el
+tratamiento del cruce norte.
 
 ### RF-10. Montañas en la parte superior
 
-La parte superior del mapa representará siempre la dirección hacia la
-que se está mirando. Por tanto, al cambiar el rumbo, el mapa girará para
-mantener esa dirección arriba.
+El rumbo de observación es la dirección geográfica que apunta al borde
+superior de la pantalla. En modo norte es 0°; en modo brújula usa el rumbo
+del sensor; en modo manual usa el bearing actual de la cámara. El centro de
+la cámara nunca sustituye a las coordenadas del observador.
 
 La orientación deberá comprobarse con casos conocidos, por ejemplo:
 rumbo norte, este, sur y oeste. El sentido de giro se validará durante
@@ -303,14 +314,19 @@ por un menú.
 
 ### RC-02. Ubicación
 
-Si el usuario concede el permiso de GPS y el dispositivo obtiene una
-posición válida, el mapa se centra en ella. Si no, el usuario puede
-seguir usando el mapa manualmente.
+El seguimiento comienza al iniciar. El primer fix fija el observador GPS,
+lo coloca al 75 % de la altura al centrar la cámara y deja norte arriba. Las actualizaciones mueven el
+observador solo si su origen es GPS; no recentran cada vez. Si el origen es
+manual, los fixes solo actualizan GPS. La recuperación recentra únicamente
+un observador de origen GPS y conserva su bearing. La diana restaura GPS y
+norte; sin fix está desactivada.
 
 ### RC-03. Navegación
 
-El usuario puede arrastrar el mapa y acercar/alejar mediante los
-controles habituales, tanto con ratón como con pantalla táctil.
+El usuario puede arrastrar, hacer zoom y rotar el mapa con las interacciones
+habituales. Arrastrar o rotar cambia solo la cámara, desactiva la brújula y
+conserva el bearing. La rotación conserva el píxel actual del observador
+como ancla. El zoom conserva el observador y no desactiva la brújula.
 
 ### RC-04. Escala
 
@@ -319,13 +335,15 @@ de escala. Cualquier limitación de precisión deberá documentarse.
 
 ### RC-05. Punto de observación
 
-Una pulsación prolongada selecciona un punto y actualiza la posición
-desde la que se calculan las cimas visibles.
+Una pulsación prolongada selecciona un observador de origen manual,
+centra la cámara con el punto al 75 % de la altura, conserva el zoom y
+vuelve a norte arriba sin alterar GPS.
 
 ### RC-06. Orientación
 
-La dirección de observación queda representada en la parte superior del
-mapa. Cambiar el rumbo hace girar el mapa de forma coherente.
+El mapa ofrece los modos norte, brújula y manual. La parte superior de la
+pantalla define el rumbo usado en visibilidad. La brújula contextual cambia
+a diana durante navegación manual y gira con el sensor en modo brújula.
 
 ### RC-07. Etiquetas
 

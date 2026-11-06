@@ -9,10 +9,11 @@ const javascript = ts.transpileModule(source, {
 }).outputText;
 const orientation = await import(`data:text/javascript;base64,${Buffer.from(javascript).toString('base64')}`);
 
-test('manual orientation wins until automatic mode is explicitly restored', () => {
-  assert.equal(orientation.resolveObservationBearing('manual', 125, 270), 125);
-  assert.equal(orientation.resolveObservationBearing('automatic', 125, 270), 270);
-  assert.equal(orientation.resolveObservationBearing('automatic', 125, null), 125);
+test('visibility bearing always comes from the current map direction at screen top', () => {
+  assert.equal(orientation.resolveObservationBearing(0), 0);
+  assert.equal(orientation.resolveObservationBearing(125), 125);
+  assert.equal(orientation.resolveObservationBearing(-10), 350);
+  assert.equal(orientation.resolveObservationBearing(361), 1);
 });
 
 test('device compass headings are clockwise from north and normalized across 360 degrees', () => {

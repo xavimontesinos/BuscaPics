@@ -49,7 +49,7 @@ export function OrientationControl({
   bearing,
   onSetBearing,
   onResetNorth,
-  orientationMode = 'automatic',
+  orientationMode = 'north',
   compassAvailable = false,
 }: OrientationControlProps) {
   const dragRef = useRef<PointerDrag | null>(null);
@@ -57,10 +57,12 @@ export function OrientationControl({
   const normalizedBearing = normalizeBearing(bearing);
   const accessibleBearing = describeBearing(bearing);
   const orientationDescription = orientationMode === 'manual'
-    ? `Orientación manual ${accessibleBearing}; pulsa para reanudar la brújula automática`
-    : compassAvailable
-      ? `Orientación automática con brújula ${accessibleBearing}`
-      : `Orientación automática sin brújula: ${accessibleBearing}; puedes girar manualmente`;
+    ? `Orientación manual ${accessibleBearing}`
+    : orientationMode === 'compass'
+      ? compassAvailable
+        ? `Orientación por brújula ${accessibleBearing}`
+        : 'Buscando rumbo de brújula'
+      : 'Norte arriba';
 
   function handlePointerDown(event: ReactPointerEvent<HTMLButtonElement>) {
     if (!event.isPrimary || (event.pointerType === 'mouse' && event.button !== 0)) return;
@@ -139,7 +141,7 @@ export function OrientationControl({
       aria-label={orientationDescription}
       aria-describedby="orientation-control-hint"
       aria-keyshortcuts="ArrowUp ArrowRight ArrowDown ArrowLeft Home Enter Space"
-      title={`${orientationDescription} · Inicio o pulsación para modo automático`}
+      title={`${orientationDescription} · Inicio o pulsación para alternar norte y brújula`}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
@@ -168,7 +170,7 @@ export function OrientationControl({
       </svg>
       <span id="orientation-control-hint" className="visually-hidden">
         Arrastra para girar el mapa. Usa las flechas para girar en pasos de 15 grados y
-        Inicio o pulsa para reanudar la orientación automática.
+        Inicio o pulsa para alternar norte y brújula automática.
       </span>
     </button>
   );
